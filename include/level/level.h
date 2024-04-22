@@ -1,7 +1,7 @@
 #pragma once
 
 #include "room.h"
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <vector>
 #include <memory>
 #include <random>

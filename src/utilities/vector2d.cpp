@@ -1,4 +1,4 @@
-#include <geometry/vector2d.h>
+#include <utility/vector2d.h>
 #include <cmath>
 
 Vector2D::Vector2D(void) noexcept :

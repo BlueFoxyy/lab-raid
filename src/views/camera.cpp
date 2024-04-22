@@ -28,30 +28,21 @@ namespace Views {
 		return position;
 	}
 
-	SDL_FRect* Camera::getRect(const Objects::Object& renderObject) const noexcept {
-		SDL_FRect* retRect = new SDL_FRect();
+	SDL_FRect Camera::getRect(const Objects::Object& renderObject) const noexcept {
 		double sw = Config::screenWidth;
 		double sh = Config::screenHeight;
-		float x, y, w, h;
 		Vector2D objectPosition = renderObject.getPosition();
 		Vector2D objectDimension = renderObject.getDimension();
-		x = objectPosition.getX(), y = objectPosition.getY();
-		w = objectDimension.getX(), h = objectDimension.getY();
+		Vector2D renderPosition = transform(objectPosition - objectDimension / 2);
+		float x = renderPosition.getX();
+		float y = renderPosition.getY();
+		float w = objectDimension.getX();
+		float h = objectDimension.getY();
 
 		SDL_LogVerbose(
 			SDL_LOG_CATEGORY_APPLICATION,
 			"Camera: Object Rect before translate: {%lf, %lf, %lf, %lf}",
 			x, y, w, h
-		);
-
-		Vector2D cameraPosition = this->getPosition();
-		x -= cameraPosition.getX();
-		y -= cameraPosition.getY();
-
-		SDL_LogVerbose(
-			SDL_LOG_CATEGORY_APPLICATION,
-			"Camera: Pivot object position: (%lf, %lf)",
-			cameraPosition.getX(), cameraPosition.getY()
 		);
 
 		SDL_LogVerbose(
@@ -60,13 +51,8 @@ namespace Views {
 			x, y, w, h
 		);
 
-		x = x / dimension.getX() * sw;
-		y = y / dimension.getY() * sh;
 		w = w / dimension.getX() * sw;
 		h = h / dimension.getY() * sh;
-		x -= w / 2, y -= h / 2;
-		x += sw / 2;
-		y += sh / 2;
 
 		SDL_LogVerbose(
 			SDL_LOG_CATEGORY_APPLICATION,
@@ -74,6 +60,16 @@ namespace Views {
 			x, y, w, h
 		);
 
-		return new SDL_FRect{ x, y, w, h };
+		return SDL_FRect{ x, y, w, h };
+	}
+
+	Vector2D Camera::transform(const Vector2D& position) const noexcept {
+		const Vector2D& cameraPosition = this->getPosition();
+		Vector2D relativePosition = position - cameraPosition;
+		double x = relativePosition.getX();
+		double y = relativePosition.getY();
+		x = x / dimension.getX() * Config::screenWidth + Config::screenWidth / 2.0;
+		y = y / dimension.getY() * Config::screenHeight + Config::screenHeight / 2.0;
+		return { x, y };
 	}
 }

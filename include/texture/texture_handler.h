@@ -1,8 +1,9 @@
 #pragma once
 
+#include "texture_info.h"
 #include <utility/pointer_wrappers.h>
 #include <object/object.h>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <string>
 #include <map>
 #include <memory>

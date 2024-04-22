@@ -1,12 +1,4 @@
 #include <object/object.h>
-#include <geometry/vector2d.h>
-#include <texture_handler.h>
-#include <SDL.h>
-#include <string>
-#include <memory>
-#include <stdexcept>
-#include <format>
-
 
 namespace Objects {
 	/// <summary>
@@ -25,19 +17,20 @@ namespace Objects {
 
 	Object::Object(
 		const std::vector<std::string>& textureNames,
-		const Views::View* _view, 
-		const Vector2D& _position, 
+		const Views::View* _view,
+		const Vector2D& _position,
 		const Vector2D& _dimension
-	) :	
+	) :
 		textures(textureNames.size()),
+		visible(true),
 		angle(0),
 		/*	rect(std::unique_ptr<SDL_FRect>(new SDL_FRect({
-				_position.getX(),
+				_position.getX£¦(),
 				_position.getY(),
 				_dimension.getX(),
 				_dimension.getY()
 			}))), */
-		alpha(255),
+		colorMask({255, 255, 255, 255}),
 		flipFlag(SDL_FLIP_NONE),
 		position(_position),
 		dimension(_dimension),
@@ -102,12 +95,22 @@ namespace Objects {
 		flipFlag = static_cast<SDL_RendererFlip>(flipFlag ^ SDL_FLIP_VERTICAL);
 	}
 
+	void Object::setVisibility(bool visibility) noexcept {
+		visible = visibility;
+	}
+
+	bool Object::getVisibility(void) const noexcept {
+		return visible;
+	}
+
 	void Object::lookAt(const Vector2D& targetPosition) noexcept {
 		Vector2D offset = targetPosition - this->position;
+		offset = offset.norm();
 		angle = -atan2(offset.getY(), offset.getX());
 		angle = normalizeAngle(angle);
 		
-		SDL_LogInfo(
+		/*
+		SDL_LogDebug(
 			SDL_LOG_CATEGORY_APPLICATION,
 			"LookAt(): (%lf, %lf) - (%lf, %lf) = (%lf, %lf) : %lf",
 			targetPosition.getX(), targetPosition.getY(),
@@ -115,19 +118,19 @@ namespace Objects {
 			offset.getX(), offset.getY(),
 			angle
 		);
+		*/
 	}
 
-	SDL_FRect* Object::getRenderRect(void) const noexcept {
+	SDL_FRect Object::getRenderRect(void) const noexcept {
 		return view->getRect(*this);
 	}
 
-	void Object::setAlpha(uint8_t newAlpha) noexcept {
-		SDL_assert(0 <= newAlpha and newAlpha <= 255);
-		alpha = newAlpha;
+	SDL_Color Object::getColorMask(void) const noexcept {
+		return colorMask;
 	}
 
-	uint8_t Object::getAlpha(void) const noexcept {
-		return alpha;
+	void Object::setColorMask(const SDL_Color& newColorMask) noexcept {
+		colorMask = newColorMask;
 	}
 
 	int Object::nextTexture(void) noexcept {
@@ -163,7 +166,7 @@ namespace Objects {
 			SDL_LogVerbose(
 				SDL_LOG_CATEGORY_APPLICATION,
 				"Object::setTexture(): Failed to set texture to '%s'.",
-				textureName
+				textureName.c_str()
 			);
 			return currentTextureId;
 		}
@@ -188,7 +191,7 @@ namespace Objects {
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Textures:");
 		for (const auto& [textureName, textureId] : textureIdMap) {
 			SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "\tID = %d, name = '%s'",
-				textureId, textureName
+				textureId, textureName.c_str()
 			);
 		}
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Position: (%lf, %lf)",
@@ -206,12 +209,24 @@ namespace Objects {
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "VerticalFlip: %s",
 			(flipFlag & SDL_FLIP_VERTICAL ? "true" : "false")
 		);
-		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Alpha: %lf",
-			getAlpha()
+		SDL_LogDebug(
+			SDL_LOG_CATEGORY_APPLICATION,
+			"ColorMask: (r: %u, g: %u, b: %u, a: %u)",
+			colorMask.r, colorMask.g, colorMask.b, colorMask.a
 		);
 	}
 
-	void Object::update() noexcept {
-
+	Vector2D Object::getRenderRelativePosition(Vector2D renderPosition) const noexcept {
+		auto renderRect = getRenderRect();
+		Vector2D objectRenderPosition = { renderRect.x, renderRect.y };
+		Vector2D diffVector = renderPosition - objectRenderPosition;
+		diffVector = {
+			diffVector.getX() * Views::VIEW_WIDTH / Config::screenWidth,
+			diffVector.getY() * Views::VIEW_HEIGHT / Config::screenHeight
+		};
+		diffVector -= getDimension() / 2;
+		return diffVector;
 	}
+
+	void Object::update(void) noexcept {}
 }

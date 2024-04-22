@@ -1,8 +1,8 @@
-#include <texture_handler.h>
+#include <texture/texture_handler.h>
 #include <utility/pointer_wrappers.h>
 #include <renderer.h>
 #include <object/object.h>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <cstdlib>
 #include <memory>
 #include <string>
@@ -22,11 +22,12 @@ static const char* getResource(const std::string& resourceName) {
 const std::string TextureHandler::errorTextureName = "error";
 
 void TextureHandler::loadTexture(const std::string& textureName) {
+	SDL_Surface* surface;
 	std::string textureFile = getResource(textureName);
-	SDL_Surface* surface = SDL_LoadBMP(textureFile.c_str());
+	surface = SDL_LoadBMP(textureFile.c_str());
 	if (surface == nullptr)
 		throw std::logic_error(std::format(
-			"Cannot load '{}'. SDL_GetError(): {}", textureFile, SDL_GetError()
+			"Cannot load '{}'. SDL_GetError(): {}", textureName, SDL_GetError()
 		));
 	SDL_Texture* texture;
 	try {
@@ -83,10 +84,12 @@ TextureHandler& TextureHandler::getInstance(void) {
 
 void TextureHandler::loadTexture(Objects::Object& object) {
 	for (const auto& [textureName, textureId] : object.textureIdMap) {
+		/*
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION,
 			"Processing texture \'%s\', id: %d",
 			textureName.c_str(), textureId
 		);
+		*/
 		if (textureDB.find(textureName) == textureDB.end()) {
 			try {
 				loadTexture(textureName);

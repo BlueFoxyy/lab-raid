@@ -2,9 +2,9 @@
 
 #include "level.h"
 #include <object/object.h>
-#include <geometry/vector2d.h>
+#include <utility/vector2d.h>
 #include <geometry/line.h>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <vector>
 #include <fstream>
 
@@ -19,14 +19,7 @@ namespace Rooms {
 
 		std::vector<Line> walls;
 
-		void loadFromFile(const std::string& roomName) {
-			std::ifstream roomFile;
-			try {
-				roomFile = std::ifstream(roomDir + roomName + ".lvl");
-			} catch (...) {
-				roomFile.close();
-			}
-		}
+		void loadFromFile(const std::string& roomName);
 	public:
 		virtual ~Room() = 0;
 

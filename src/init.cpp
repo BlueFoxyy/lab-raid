@@ -1,32 +1,27 @@
-#include <object/object.h>
-#include <view/views.h>
-#include <renderer.h>
-#include <SDL.h>
-#include <SDL2_framerate.h>
-#include <memory>
-#include <string>
-#include <format>
-#include <vector>
-#include <geometry/vector2d.h>
+#include <init.h>
 
 namespace Global {
 	extern std::unique_ptr<FPSmanager> fpsManager;
 	extern std::unique_ptr<Views::Camera> playerCamera;
 	extern std::unique_ptr<Views::HUD> hud;
 
-	extern std::shared_ptr<Objects::Object> playerObject, object;
+	extern std::shared_ptr<Objects::Object> playerObject, arrowObject;
 
 	void init(void) {
+		SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_VERBOSE);
+		//SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO);
+
 		if (SDL_InitSubSystem(SDL_INIT_EVERYTHING) < 0) {
-			throw std::logic_error(std::format(
-				"Failed to initialize SDL. SDL_GetError(): {}",
+			SDL_LogCritical(
+				SDL_LOG_CATEGORY_APPLICATION,
+				"Failed to initialize SDL. SDL_GetError(): %s",
 				SDL_GetError()
-			));
+			);
 		}
 
+		fpsManager = std::make_unique<FPSmanager>();
 		SDL_initFramerate(fpsManager.get());
-
-		SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_VERBOSE);
+		SDL_setFramerate(fpsManager.get(), Config::framerate);
 
 		playerCamera = std::make_unique<Views::Camera>();
 
@@ -37,17 +32,17 @@ namespace Global {
 			Vector2D{ 128, 128 }
 		);
 		if (not Renderer::getInstance().registerObject(playerObject)) {
-			SDL_LogCritical(SDL_LOG_CATEGORY_APPLICATION, "Failed to register object.");
+			SDL_LogCritical(SDL_LOG_CATEGORY_APPLICATION, "Failed to register arrowObject.");
 			exit(EXIT_FAILURE);
 		}
 
-		object = std::make_shared<Objects::Object>(
+		arrowObject = std::make_shared<Objects::Object>(
 			std::vector<std::string>{ "arrow" },
 			playerCamera.get(),
 			Vector2D{ -100, -100 },
 			Vector2D{ 128, 128 }
 		);
-		if (not Renderer::getInstance().registerObject(object)) {
+		if (not Renderer::getInstance().registerObject(arrowObject)) {
 			SDL_LogCritical(SDL_LOG_CATEGORY_APPLICATION, "Failed to register object.");
 			exit(EXIT_FAILURE);
 		}

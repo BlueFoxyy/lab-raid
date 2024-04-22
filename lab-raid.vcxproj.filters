@@ -13,18 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\entity">
-      <UniqueIdentifier>{39008ec9-394d-40ce-82c8-2f58868638c9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\geometry">
-      <UniqueIdentifier>{1503d1a2-0db3-4832-9d52-a251d5eb33f5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\input">
-      <UniqueIdentifier>{3cfc2d20-998b-481f-bef4-fa56f5f279ff}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\item">
-      <UniqueIdentifier>{5435b957-c05d-48a5-9c75-86211cbd45d1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\level">
       <UniqueIdentifier>{66af6195-3766-44e8-901b-d2de12fc7276}</UniqueIdentifier>
     </Filter>
@@ -46,15 +34,45 @@
     <Filter Include="Source Files\objects">
       <UniqueIdentifier>{f8ec3600-35b0-4cf4-88aa-0c57fe32b781}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\geometry">
+    <Filter Include="Header Files\scene">
+      <UniqueIdentifier>{3f05c991-02c8-4d06-a017-6e57cc90ce14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\input">
+      <UniqueIdentifier>{2f96639e-d0a9-4ca9-8354-09ff982a0a6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\command">
+      <UniqueIdentifier>{3cfc2d20-998b-481f-bef4-fa56f5f279ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures">
+      <UniqueIdentifier>{0bc146d2-4ecd-40a8-9f5b-e3f702cd2813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\object\item">
+      <UniqueIdentifier>{6857737d-bcb2-40b0-b155-83bf4f222b82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\object\entity">
+      <UniqueIdentifier>{6fd0d7f2-832e-411a-9f91-b2d2e74791c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\texture">
+      <UniqueIdentifier>{0c2ef8b8-f6a6-4c3a-bb3e-8bce81c795ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shape">
+      <UniqueIdentifier>{1503d1a2-0db3-4832-9d52-a251d5eb33f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shapes">
       <UniqueIdentifier>{55d6b486-5e3d-4e84-b0f9-45c9944b10fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utilities">
+      <UniqueIdentifier>{f2238152-46df-406a-899d-2448e5dadad9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\texture">
+      <UniqueIdentifier>{159cbe5e-5e23-45c0-9b81-058c9ae02f0a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\game.h">
+    <ClInclude Include="include\game_manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\init.h">
@@ -62,33 +80,6 @@
     </ClInclude>
     <ClInclude Include="include\renderer.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\texture_handler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\entity\entity.h">
-      <Filter>Header Files\entity</Filter>
-    </ClInclude>
-    <ClInclude Include="include\entity\enemy.h">
-      <Filter>Header Files\entity</Filter>
-    </ClInclude>
-    <ClInclude Include="include\entity\player.h">
-      <Filter>Header Files\entity</Filter>
-    </ClInclude>
-    <ClInclude Include="include\geometry\line.h">
-      <Filter>Header Files\geometry</Filter>
-    </ClInclude>
-    <ClInclude Include="include\geometry\vector2d.h">
-      <Filter>Header Files\geometry</Filter>
-    </ClInclude>
-    <ClInclude Include="include\item\item.h">
-      <Filter>Header Files\item</Filter>
-    </ClInclude>
-    <ClInclude Include="include\input\command.h">
-      <Filter>Header Files\input</Filter>
-    </ClInclude>
-    <ClInclude Include="include\input\input_handler.h">
-      <Filter>Header Files\input</Filter>
     </ClInclude>
     <ClInclude Include="include\level\level.h">
       <Filter>Header Files\level</Filter>
@@ -123,6 +114,57 @@
     <ClInclude Include="include\view\views.h">
       <Filter>Header Files\view</Filter>
     </ClInclude>
+    <ClInclude Include="include\scene\scene.h">
+      <Filter>Header Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="include\command_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\input_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\command\command.h">
+      <Filter>Header Files\command</Filter>
+    </ClInclude>
+    <ClInclude Include="include\object\button.h">
+      <Filter>Header Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="include\inventory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\object\item\item.h">
+      <Filter>Header Files\object\item</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\texture_info.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\texture\texture_handler.h">
+      <Filter>Header Files\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="include\object\player.h">
+      <Filter>Header Files\object\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="include\geometry\shapes.h">
+      <Filter>Header Files\shape</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utility\vector2d.h">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shape\circle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shape\line.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shape\rect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shape\shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shape\shapes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\init.cpp">
@@ -146,11 +188,50 @@
     <ClCompile Include="src\objects\object.cpp">
       <Filter>Source Files\objects</Filter>
     </ClCompile>
-    <ClCompile Include="src\geometry\line.cpp">
-      <Filter>Source Files\geometry</Filter>
+    <ClCompile Include="src\input_handler.cpp">
+      <Filter>Source Files\input</Filter>
     </ClCompile>
-    <ClCompile Include="src\geometry\vector2d.cpp">
-      <Filter>Source Files\geometry</Filter>
+    <ClCompile Include="src\command_manager.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\utilities\vector2d.cpp">
+      <Filter>Source Files\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\button.cpp">
+      <Filter>Source Files\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture\texture_info.cpp">
+      <Filter>Source Files\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shapes\circle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shapes\line.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shapes\shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\textures\arrow.bmp">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\textures\player.bmp">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\textures\wall.bmp">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\textures\button-idle.bmp">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="resources\textures\button-1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="resources\rooms\small_room.lvl" />
   </ItemGroup>
 </Project>

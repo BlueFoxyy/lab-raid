@@ -1,13 +1,9 @@
 #pragma once
 
 #include "view.h"
-#include <SDL.h>
-#include <object/object.h>
-#include <geometry/vector2d.h>
-#include <memory>
 
-class Objects::Object;
 namespace Views {
+
 	/// <summary>
 	/// Camera for following object or stationary view.
 	/// </summary>
@@ -22,6 +18,7 @@ namespace Views {
 		void setPivotObject(std::shared_ptr<Objects::Object> bindObject) noexcept;
 //		const std::weak_ptr<Objects::Object> getPivotObject(void) const noexcept;
 
-		SDL_FRect* getRect(const Objects::Object&) const noexcept override;
+		SDL_FRect getRect(const Objects::Object& object) const noexcept override;
+		Vector2D transform(const Vector2D& position) const noexcept override;
 	};
 }

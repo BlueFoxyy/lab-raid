@@ -1,14 +1,16 @@
 #pragma once
 
 #include <utility/pointer_wrappers.h>
-#include <geometry/vector2d.h>
-#include <texture_handler.h>
+#include <utility/vector2d.h>
+#include <texture/texture_handler.h>
 #include <view/view.h>
-#include <SDL.h>
+#include <config.h>
+#include <SDL2/SDL.h>
 #include <memory>
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <stdexcept>
 
 namespace Views {
 	class View;
@@ -16,7 +18,7 @@ namespace Views {
 class TextureHandler;
 
 namespace Objects {
-	const int TEXTURE_NOT_SET = -1;
+	static const int TEXTURE_NOT_SET = -1;
 
 	/// <summary>
 	/// Object type for all renderable objects in the world
@@ -28,10 +30,11 @@ namespace Objects {
 		std::unordered_map<std::string, int> textureIdMap;
 		std::vector<std::weak_ptr<SDL_Texture>> textures;
 		int currentTextureId;
-		
+		bool visible;
+
 		float angle; // stored as radians
 		SDL_RendererFlip flipFlag;
-		uint8_t alpha;
+		SDL_Color colorMask; // color mod mask
 		Vector2D position; // actual position in the world
 		Vector2D dimension; // height and width
 		const Views::View* view;
@@ -93,16 +96,16 @@ namespace Objects {
 		Vector2D getDimension(void) const noexcept;
 
 		/// <summary>
-		/// Gets the alpha value of the object. (Opacity/Transparency)
+		/// Gets the color mask of the object.
 		/// </summary>
-		/// <returns>The object's alpha value.</returns>
-		uint8_t getAlpha(void) const noexcept;
+		/// <returns>The object's color mask.</returns>
+		SDL_Color getColorMask(void) const noexcept;
 
 		/// <summary>
 		/// Sets the alpha value of the object. (Opacity/Transparency)
 		/// </summary>
 		/// <param name="newAlpha">New alpha value.</param>
-		void setAlpha(uint8_t newAlpha) noexcept;
+		void setColorMask(const SDL_Color& newColorMask) noexcept;
 		
 		/// <summary>
 		/// Moves the object by the translate vector.
@@ -136,9 +139,20 @@ namespace Objects {
 		/// <summary>
 		/// Flips the object vertically.
 		/// </summary>
-		/// <param name=""></param>
 		void flipVertical(void) noexcept;
+
+		/// <summary>
+		/// Sets the object's visibility.
+		/// </summary>
+		/// <param name="visibility">The object's visibility.</param>
+		void setVisibility(bool visibility) noexcept;
 		
+		/// <summary>
+		/// Gets the object's visibility.
+		/// </summary>
+		/// <returns>The object's visibility.</returns>
+		bool getVisibility(void) const noexcept;
+
 		/* TEXTURES */
 		
 		/// <summary>
@@ -189,13 +203,22 @@ namespace Objects {
 		/// <summary>
 		/// Gets render rectangle for rendering.
 		/// </summary>
-		/// <returns>The SDL_FRect raw pointer for rendering.</returns>
-		SDL_FRect* getRenderRect(void) const noexcept;
+		/// <returns>The SDL_FRect for rendering.</returns>
+		SDL_FRect getRenderRect(void) const noexcept;
+
+		/// <summary>
+		/// Gets the relative render distance vector between 
+		/// this object and @param renderPosition.
+		/// The vector is stretched to view dimensions.
+		/// </summary>
+		/// <param name="renderPosition">The position to be compared.</param>
+		/// <returns>The difference vector from object to @param renderPosition.</returns>
+		Vector2D getRenderRelativePosition(Vector2D renderPosition) const noexcept;
 
 		/// <summary>
 		/// Updates the object state.
 		/// </summary>
-		virtual void update() noexcept;
+		void update(void) noexcept;
 
 		// debug
 		void debug(void) const;

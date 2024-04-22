@@ -1,8 +1,8 @@
 #pragma once
 
-#include <SDL.h>
 #include <object/object.h>
-#include <geometry/vector2d.h>
+#include <utility/vector2d.h>
+#include <SDL2/SDL.h>
 #include <memory>
 
 namespace Objects {
@@ -22,8 +22,21 @@ namespace Views {
 		View(const Vector2D& _position, const Vector2D& _dimension) :
 			position(_position), dimension(_dimension) {}
 	public:
-		virtual ~View() = default;
-		virtual SDL_FRect* getRect(const Objects::Object&) const noexcept = 0;
+		virtual ~View() {};
+
+		/// <summary>
+		/// Gets the render rect for @param object.
+		/// </summary>
+		/// <param name="object">The object to be rendered.</param>
+		/// <returns>The render rect of @param object.</returns>
+		virtual SDL_FRect getRect(const Objects::Object& object) const noexcept = 0;
+
+		/// <summary>
+		/// Gets the transformed render position of @param position.
+		/// </summary>
+		/// <param name="position">The virtual position to be transformed.</param>
+		/// <returns>The render position.</returns>
+		virtual Vector2D transform(const Vector2D& position) const noexcept = 0;
 	};
 
 	const int VIEW_WIDTH = 1600;

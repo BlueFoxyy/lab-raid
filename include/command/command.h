@@ -1,6 +1,5 @@
 #pragma once
 
-#include <object/object.h>
 #include <memory>
 
 namespace Commands {
@@ -10,7 +9,7 @@ namespace Commands {
 	/// </summary>
 	class Command {
 	public:
-		virtual ~Command() = delete;
-		virtual void execute(std::weak_ptr<Objects::Object> object) = delete;
+		virtual ~Command() {};
+		virtual void execute(void) {};
 	};
 }

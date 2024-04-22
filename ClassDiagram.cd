@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CommandManager" Collapsed="true">
+	<Position X="12.25" Y="1.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAIAAAAAAAAAAAAAEAAA=</HashCode>
+	  <FileName>include\command_manager.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="GameManager" Collapsed="true">
+	<Position X="14" Y="1.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAEAAAAAAAAIAA=</HashCode>
+	  <FileName>include\game_manager.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="InputHandler" Collapsed="true">
+	<Position X="15.75" Y="1.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAQBAAAIABAAAAAQACQJAAAAAAAARAAAggAAQBAAA=</HashCode>
+	  <FileName>include\input_handler.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Renderer" Collapsed="true">
+	<Position X="15.75" Y="2.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AEAgAAAAAAAAAAAAAACAACAAAYAAAAQIAACgAAAQgAA=</HashCode>
+	  <FileName>include\renderer.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="TextureHandler" Collapsed="true">
+	<Position X="14" Y="3.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AEgAAAAABAQQAAAAAAAAAAQAAAAAAAQAAAAgAABAAAA=</HashCode>
+	  <FileName>include\texture_handler.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Enemy" Collapsed="true">
+	<Position X="1.75" Y="9" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+	  <FileName>include\entity\enemy.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Player" Collapsed="true">
+	<Position X="4" Y="9" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+	  <FileName>include\entity\player.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Line" Collapsed="true">
+	<Position X="14" Y="2.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAEAAAAAAAAAAEAQAAAAAAAAAAEAAAUAAAABAAA=</HashCode>
+	  <FileName>include\geometry\line.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Vector2D" Collapsed="true">
+	<Position X="15.75" Y="3.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAEAAAIACZAAAAAAAAAIAAAABgAGAAAAE=</HashCode>
+	  <FileName>include\geometry\vector2d.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Objects::Button" Collapsed="true">
+	<Position X="3" Y="3" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AEAAAAAAAAAAAAAAAAAEAAAQAAABAgAIAAAAAAAEAQA=</HashCode>
+	  <FileName>include\object\button.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Objects::Object" Collapsed="true">
+	<Position X="3" Y="1.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>BAAQIsQARUAAAgCkAAiQIAJCQCAAABSgAQAAgABEIAA=</HashCode>
+	  <FileName>include\object\object.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Entities::Entity" Collapsed="true">
+	<Position X="3" Y="7.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+	  <FileName>include\entity\entity.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Items::Item" Collapsed="true">
+	<Position X="10.5" Y="2.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAEAAAAAAAAAAAFAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+	  <FileName>include\item\item.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Levels::Level" Collapsed="true">
+	<Position X="12.25" Y="2.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAEAAAAAIAAAAAAAAIAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+	  <FileName>include\level\level.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Rooms::Room" Collapsed="true">
+	<Position X="10.5" Y="3.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAAAAAAAAAIABAAAAAAEAAAIAQAAAAAAA=</HashCode>
+	  <FileName>include\level\room.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Views::View" Collapsed="true">
+	<Position X="7" Y="4.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAACAAAAAAAEAAIABAAAABAAAAAAAAAAAAAAA=</HashCode>
+	  <FileName>include\view\view.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Views::Camera" Collapsed="true">
+	<Position X="8" Y="6" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAACIgAAACAAAAAAAAAAAAACAAAAAIAAAAAAAAAAAAA=</HashCode>
+	  <FileName>include\view\camera.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Views::HUD" Collapsed="true">
+	<Position X="5.75" Y="6" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+	  <FileName>include\view\hud.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Obstacles::Obstacle" Collapsed="true">
+	<Position X="6" Y="3.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBEAAAkAAAAAA=</HashCode>
+	  <FileName>include\obstacle\obstacle.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Obstacles::WoodenCrate" Collapsed="true">
+	<Position X="3" Y="5" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+	  <FileName>include\obstacle\obstacles.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Scenes::Scene" Collapsed="true">
+	<Position X="12.25" Y="3.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+	  <FileName>include\scene\scene.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Class Name="Commands::Command" Collapsed="true">
+	<Position X="10.5" Y="1.75" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+	  <FileName>include\command\command.h</FileName>
+	</TypeIdentifier>
+  </Class>
+  <Struct Name="KeyBind" Collapsed="true">
+	<Position X="10.5" Y="5" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAgAIiAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+	  <FileName>include\command_manager.h</FileName>
+	</TypeIdentifier>
+  </Struct>
+  <Struct Name="sdl_deleter" Collapsed="true">
+	<Position X="12.25" Y="5" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+	  <FileName>include\utility\pointer_wrappers.h</FileName>
+	</TypeIdentifier>
+  </Struct>
+  <Enum Name="MouseButton" Collapsed="true">
+	<Position X="10.5" Y="6.25" Width="1.5" />
+	<TypeIdentifier>
+	  <HashCode>AAAAAAAAAAAAAgAAAAABAAAAAIAAABAgAAAAAAAAAAA=</HashCode>
+	  <FileName>include\input_handler.h</FileName>
+	</TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft JhengHei UI" Size="9" />
+</ClassDiagram>

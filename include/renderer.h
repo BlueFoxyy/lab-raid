@@ -2,8 +2,8 @@
 
 #include <object/object.h>
 #include <utility/pointer_wrappers.h>
-
-#include <SDL.h>
+#include <texture/texture_handler.h>
+#include <SDL2/SDL.h>
 #include <memory>
 #include <set>
 
@@ -15,7 +15,7 @@ const int SCREEN_HEIGHT = 900;
  * Keeps track of current objects and renders everything onto a set window.
  */
 class Renderer {
-	friend TextureHandler;
+	friend class TextureHandler;
 
 private:
 	sdl_unique_ptr<SDL_Window> window;
@@ -33,8 +33,14 @@ public:
 	/* SINGLETON PATTERN */
 	Renderer(const Renderer&) = delete;
 	void operator = (const Renderer&) = delete;
-	static Renderer& getInstance(void);
+	static Renderer& getInstance(void) noexcept;
 	/* SINGLETON PATTERN */
+
+	/// <summary>
+	/// Get underlying SDL_Renderer renderer.
+	/// </summary>
+	/// <returns>The underlying renderer.</returns>
+	//SDL_Renderer* getRenderer(void) noexcept;
 
 	/// <summary>
 	/// Registers the object for rendering, and loads texture for the object.

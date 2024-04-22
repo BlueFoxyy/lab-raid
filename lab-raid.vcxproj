@@ -23,7 +23,7 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{9935ecad-df9b-4cc7-ba74-0108edbc2557}</ProjectGuid>
     <RootNamespace>labraid</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -51,6 +51,7 @@
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <EnableASAN>Yes</EnableASAN>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -70,6 +71,14 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ExternalIncludePath>
+    </ExternalIncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(VCPKG_ROOT)\installed\x64-windows\debug\lib\manual-link</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(VCPKG_ROOT)\installed\x64-windows\lib\manual-link</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -104,10 +113,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);SDL2d.lib;SDL2maind.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -118,50 +131,78 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);SDL2main.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\command\command.h" />
+    <ClInclude Include="include\command_manager.h" />
     <ClInclude Include="include\config.h" />
-    <ClInclude Include="include\entity\enemy.h" />
-    <ClInclude Include="include\entity\entity.h" />
-    <ClInclude Include="include\entity\player.h" />
-    <ClInclude Include="include\game.h" />
-    <ClInclude Include="include\geometry\line.h" />
-    <ClInclude Include="include\geometry\vector2d.h" />
+    <ClInclude Include="include\game_manager.h" />
+    <ClInclude Include="include\geometry\shapes.h" />
     <ClInclude Include="include\init.h" />
-    <ClInclude Include="include\input\command.h" />
-    <ClInclude Include="include\input\input_handler.h" />
-    <ClInclude Include="include\item\item.h" />
+    <ClInclude Include="include\input_handler.h" />
+    <ClInclude Include="include\inventory.h" />
     <ClInclude Include="include\level\level.h" />
     <ClInclude Include="include\level\room.h" />
+    <ClInclude Include="include\object\button.h" />
+    <ClInclude Include="include\object\item\item.h" />
     <ClInclude Include="include\object\object.h" />
+    <ClInclude Include="include\object\player.h" />
     <ClInclude Include="include\obstacle\obstacle.h" />
     <ClInclude Include="include\obstacle\obstacles.h" />
     <ClInclude Include="include\renderer.h" />
-    <ClInclude Include="include\texture_handler.h" />
+    <ClInclude Include="include\scene\scene.h" />
+    <ClInclude Include="include\shape\circle.h" />
+    <ClInclude Include="include\shape\line.h" />
+    <ClInclude Include="include\shape\rect.h" />
+    <ClInclude Include="include\shape\shape.h" />
+    <ClInclude Include="include\shape\shapes.h" />
+    <ClInclude Include="include\texture\texture_handler.h" />
+    <ClInclude Include="include\texture\texture_info.h" />
     <ClInclude Include="include\utility\functions.h" />
     <ClInclude Include="include\utility\pointer_wrappers.h" />
+    <ClInclude Include="include\utility\vector2d.h" />
     <ClInclude Include="include\view\camera.h" />
     <ClInclude Include="include\view\hud.h" />
     <ClInclude Include="include\view\view.h" />
     <ClInclude Include="include\view\views.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\geometry\line.cpp" />
-    <ClCompile Include="src\geometry\vector2d.cpp" />
+    <ClCompile Include="src\command_manager.cpp" />
     <ClCompile Include="src\init.cpp" />
+    <ClCompile Include="src\input_handler.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\objects\button.cpp" />
     <ClCompile Include="src\objects\object.cpp" />
     <ClCompile Include="src\renderer.cpp" />
+    <ClCompile Include="src\shapes\circle.cpp" />
+    <ClCompile Include="src\shapes\line.cpp" />
+    <ClCompile Include="src\shapes\shape.cpp" />
+    <ClCompile Include="src\texture\texture_info.cpp" />
     <ClCompile Include="src\texture_handler.cpp" />
+    <ClCompile Include="src\utilities\vector2d.cpp" />
     <ClCompile Include="src\views\camera.cpp" />
     <ClCompile Include="src\views\hud.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\textures\arrow.bmp" />
+    <Image Include="resources\textures\button-1.bmp" />
+    <Image Include="resources\textures\button-idle.bmp" />
+    <Image Include="resources\textures\player.bmp" />
+    <Image Include="resources\textures\wall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="resources\rooms\small_room.lvl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

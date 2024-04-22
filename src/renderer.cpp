@@ -1,10 +1,10 @@
 #include <renderer.h>
 #include <object/object.h>
 #include <config.h>
-#include <texture_handler.h>
+#include <texture/texture_handler.h>
 #include <utility/pointer_wrappers.h>
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include <cstdlib>
 #include <vector>
@@ -42,10 +42,16 @@ Renderer::Renderer() {
 	SDL_LogInfo(SDL_LOG_CATEGORY_APPLICATION, "Initialized Renderer.");
 }
 
-Renderer& Renderer::getInstance(void) {
+Renderer& Renderer::getInstance(void) noexcept {
 	static Renderer gRenderer;
 	return gRenderer;
 }
+
+/*
+SDL_Renderer* Renderer::getRenderer(void) noexcept {
+	return renderer.get();
+}
+*/
 
 SDL_Texture* Renderer::createTexture(SDL_Surface* surface) const {
 	SDL_Texture* createdTexture = SDL_CreateTextureFromSurface(renderer.get(), surface);
@@ -91,18 +97,26 @@ void Renderer::render() {
 	std::vector<std::weak_ptr<Objects::Object>> deleteVec;
 	for (auto& objectWeakPtr : objects) {
 		if (auto objectPtr = objectWeakPtr.lock()) {
+			if (not objectPtr->getVisibility()) continue;
 //			SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Rendering object: "); // DEBUG
 //			objectPtr->debug(); // DEBUG
 			auto rect = objectPtr->getRenderRect();
 //			SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Target Rect: {%lf, %lf, %lf, %lf}",
 //				rect->x, rect->y, rect->w, rect->h
 //			); // DEBUG
-			SDL_SetTextureAlphaMod(objectPtr->getTexture(), objectPtr->getAlpha());
+			SDL_Color colorMask = objectPtr->getColorMask();
+			SDL_SetTextureAlphaMod(objectPtr->getTexture(), colorMask.a);
+			SDL_SetTextureColorMod(
+				objectPtr->getTexture(),
+				colorMask.r,
+				colorMask.g,
+				colorMask.b
+			);
 			renderSuccess = SDL_RenderCopyExF(
 				renderer.get(),
 				objectPtr->getTexture(),
 				NULL,
-				objectPtr->getRenderRect(),
+				std::make_unique<SDL_FRect>(objectPtr->getRenderRect()).get(),
 				- objectPtr->getAngle() * 180 / PI,
 				NULL,
 				objectPtr->getFlipFlag()
