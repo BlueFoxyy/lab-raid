@@ -2,13 +2,10 @@
 
 #include <command/command.h>
 #include <input_handler.h>
-#include <SDL2/SDL.h>
 #include <map>
 #include <memory>
-#include <utility>
 
 enum class MouseButton : uint8_t;
-
 /// <summary>
 /// KeyBind structure for key bindings.
 /// </summary>

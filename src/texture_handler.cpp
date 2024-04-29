@@ -1,14 +1,4 @@
 #include <texture/texture_handler.h>
-#include <utility/pointer_wrappers.h>
-#include <renderer.h>
-#include <object/object.h>
-#include <SDL2/SDL.h>
-#include <cstdlib>
-#include <memory>
-#include <string>
-#include <map>
-#include <stdexcept>
-#include <format>
 
 const std::string fileExtension = ".bmp";
 
@@ -31,7 +21,7 @@ void TextureHandler::loadTexture(const std::string& textureName) {
 		));
 	SDL_Texture* texture;
 	try {
-		texture = Renderer::getInstance().createTexture(surface);
+		texture = Renderer::getInstance().createTexture({}, surface);
 	} catch (std::exception& e) {
 		SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, e.what());
 		throw std::logic_error(std::format(
@@ -39,7 +29,7 @@ void TextureHandler::loadTexture(const std::string& textureName) {
 		));
 	}
 
-	textureDB[textureName] = sdl_make_shared<SDL_Texture>(texture);
+	textureDB[textureName] = sdl_unique_ptr<SDL_Texture>(texture);
 	SDL_LogVerbose(SDL_LOG_CATEGORY_APPLICATION, std::format(
 		"Loaded texture '{}'", textureFile
 	).c_str());
@@ -67,7 +57,7 @@ TextureHandler::TextureHandler() {
 
 	SDL_Texture* errorTexture;
 	try {
-		errorTexture = Renderer::getInstance().createTexture(errorSurface);
+		errorTexture = Renderer::getInstance().createTexture({}, errorSurface);
 	} catch (std::exception& e) {
 		SDL_LogCritical(SDL_LOG_CATEGORY_APPLICATION, std::format(
 			"Failed to create 'error' texture. what(): {}", e.what()
@@ -82,55 +72,8 @@ TextureHandler& TextureHandler::getInstance(void) {
 	return textureHandler;
 }
 
-void TextureHandler::loadTexture(Objects::Object& object) {
-	for (const auto& [textureName, textureId] : object.textureIdMap) {
-		/*
-		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION,
-			"Processing texture \'%s\', id: %d",
-			textureName.c_str(), textureId
-		);
-		*/
-		if (textureDB.find(textureName) == textureDB.end()) {
-			try {
-				loadTexture(textureName);
-				object.textures[textureId] = textureDB.at(textureName);
-			} catch (std::exception& e) {
-				SDL_LogError(
-					SDL_LOG_CATEGORY_APPLICATION,
-					"Cannot load texture \'%s\'.\nwhat(): %s",
-					textureName.c_str(),
-					e.what()
-				);
-				SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Using error texture.");
-				object.textures[textureId] = textureDB.at(errorTextureName);
-			}
-		}
-	}
-
-	object.currentTextureId = 0; // set object to use the first texture.
-}
-
-void TextureHandler::unloadTexture(Objects::Object& object) {
-	for (int textureId = 0; textureId < object.getTextureCount(); textureId++) {
-		object.textures[textureId].reset();
-	}
-	
-	object.currentTextureId = Objects::TEXTURE_NOT_SET;
-}
-
-void TextureHandler::reloadTexture(Objects::Object& object) {
-	try {
-		unloadTexture(object);
-		loadTexture(object);
-	} catch (...) {
-		throw;
-	}
-}
-
-void TextureHandler::clear(void) {
-	for (auto& [name, _] : textureDB) {
-		if (name != "error") {
-			textureDB.erase(name);
-		}
-	}
+SDL_Texture* TextureHandler::getTexture(TextureRequestKey key, const std::string& textureName) {
+	if (textureDB.find(textureName) == textureDB.end())
+		loadTexture(textureName);
+	return textureDB.at(textureName).get();
 }

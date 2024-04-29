@@ -2,9 +2,11 @@
 
 #include <utility/pointer_wrappers.h>
 #include <utility/vector2d.h>
+#include <utility/selection_manager.h>
 #include <texture/texture_handler.h>
 #include <view/view.h>
 #include <config.h>
+#include <shape/shape.h>
 #include <SDL2/SDL.h>
 #include <memory>
 #include <string>
@@ -12,13 +14,15 @@
 #include <unordered_map>
 #include <stdexcept>
 
-namespace Views {
-	class View;
-}
+namespace Views { class View; }
 class TextureHandler;
+namespace Shapes { class Shape; }
 
 namespace Objects {
 	static const int TEXTURE_NOT_SET = -1;
+	static const int SHAPE_NOT_SET = -2;
+
+	// TODO: add 'shapes' field to `Objects::Object`
 
 	/// <summary>
 	/// Object type for all renderable objects in the world
@@ -27,9 +31,9 @@ namespace Objects {
 	class Object {
 		friend class TextureHandler;
 	private:
-		std::unordered_map<std::string, int> textureIdMap;
-		std::vector<std::weak_ptr<SDL_Texture>> textures;
+		SelectionManager<SDL_Texture*> textures;
 		int currentTextureId;
+		int currentShapeId;
 		bool visible;
 
 		float angle; // stored as radians
@@ -49,8 +53,8 @@ namespace Objects {
 		/// <param name="_dimension">Initial Dimension. (width, height)</param>
 		Object(
 			const std::vector<std::string>& textureNames,
-			const Views::View* _view, 
-			const Vector2D& _position, 
+			const Views::View* _view,
+			const Vector2D& _position,
 			const Vector2D& _dimension
 		);
 
@@ -102,9 +106,9 @@ namespace Objects {
 		SDL_Color getColorMask(void) const noexcept;
 
 		/// <summary>
-		/// Sets the alpha value of the object. (Opacity/Transparency)
+		/// Sets the color mask of the object.
 		/// </summary>
-		/// <param name="newAlpha">New alpha value.</param>
+		/// <param name="newColorMask">New color mask.</param>
 		void setColorMask(const SDL_Color& newColorMask) noexcept;
 		
 		/// <summary>
@@ -153,38 +157,29 @@ namespace Objects {
 		/// <returns>The object's visibility.</returns>
 		bool getVisibility(void) const noexcept;
 
+
 		/* TEXTURES */
 		
 		/// <summary>
 		/// Set to next texture, texture ID wraps around.
 		/// </summary>
-		/// <returns>New texture ID.</returns>
-		int nextTexture(void) noexcept;
+		void nextTexture(void) noexcept;
 
 		/// <summary>
 		/// Set to previous texture, texture ID wraps around.
 		/// </summary>
-		/// <returns>New texture ID.</returns>
-		int previousTexture(void) noexcept;
+		void previousTexture(void) noexcept;
 
 		/// <summary>
 		/// Sets texture to @param textureId.
 		/// </summary>
 		/// <param name="textureId">The ID of the texture to be set. Should be in [0, textureCount).</param>
-		/// <returns>New texture ID.</returns>
-		int setTexture(int textureId) noexcept;
-
-		/// <summary>
-		/// Sets texture to @param textureName.
-		/// </summary>
-		/// <param name="textureName">The name of the texture to be set.</param>
-		/// <returns>New texture ID.</returns>
-		int setTexture(const std::string& textureName) noexcept;
+		void setTexture(int textureId) noexcept;
 
 		/// <summary>
 		/// Gets the number of textures this object has.
 		/// </summary>
-		/// <returns>Numbeer of textures</returns>
+		/// <returns>Numbeer of textures.</returns>
 		size_t getTextureCount(void) const noexcept;
 		
 		/// <summary>
@@ -192,8 +187,10 @@ namespace Objects {
 		/// </summary>
 		/// <returns>The current texture the object is using.</returns>
 		SDL_Texture* getTexture(void) const noexcept;
+
 		/* TEXTURES */
 		
+
 		/// <summary>
 		/// Make the object face @param position coordinates.
 		/// </summary>

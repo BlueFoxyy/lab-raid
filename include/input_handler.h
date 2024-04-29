@@ -20,8 +20,6 @@ enum class MouseButton : uint8_t {
 /// </summary>
 class InputHandler {
 private:
-//	friend class CommandManager;
-
 	struct KeyState {
 		enum { PRESSED, RELEASED, NONE } toggle;
 		enum { UP, DOWN } hold;

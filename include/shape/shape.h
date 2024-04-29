@@ -3,6 +3,7 @@
 #include <view/view.h>
 #include <renderer.h>
 #include <SDL2/SDL.h>
+#include <vector>
 
 namespace Views {
 	class View;
@@ -16,7 +17,7 @@ namespace Shapes {
 		/// Calls draw function after transforming coordinates with view.
 		/// </summary>
 		/// <param name="view">The target view port.</param>
-		virtual void draw(SDL_Renderer* renderer, const Views::View* view) const noexcept = 0;
+		virtual void draw(SDL_Renderer* renderer, const Views::View* view) const noexcept {};
 	protected:
 		SDL_Color color;
 	public:
@@ -27,3 +28,5 @@ namespace Shapes {
 		SDL_Color getColor(void) const noexcept;
 	};
 }
+
+using ShapeCollection = std::vector<Shapes::Shape>;

@@ -1,20 +1,6 @@
 #include <renderer.h>
-#include <object/object.h>
-#include <config.h>
-#include <texture/texture_handler.h>
-#include <utility/pointer_wrappers.h>
 
-#include <SDL2/SDL.h>
-
-#include <cstdlib>
-#include <vector>
-#include <memory>
-#include <set>
-#include <format>
-#include <string>
-#include <exception>
-
-const double PI = acos(-1);
+const float PI = acosf(-1);
 
 Renderer::Renderer() {
 	SDL_Window* windowPtr;
@@ -27,10 +13,10 @@ Renderer::Renderer() {
 		&rendererPtr
 	);
 	if (returnSuccess < 0) {
-		SDL_LogCritical(SDL_LOG_CATEGORY_APPLICATION, std::format(
-			"Window & Renderer could not be created. SDL_GetError(): {}",
+		SDL_LogCritical(SDL_LOG_CATEGORY_APPLICATION,
+			"Window & Renderer could not be created. SDL_GetError(): %s",
 			SDL_GetError()
-		).c_str());
+		);
 		exit(EXIT_FAILURE);
 	}
 	SDL_SetWindowTitle(windowPtr, Config::gameTitle.c_str());
@@ -53,7 +39,7 @@ SDL_Renderer* Renderer::getRenderer(void) noexcept {
 }
 */
 
-SDL_Texture* Renderer::createTexture(SDL_Surface* surface) const {
+SDL_Texture* Renderer::createTexture(CreateTextureKey key, SDL_Surface* surface) const {
 	SDL_Texture* createdTexture = SDL_CreateTextureFromSurface(renderer.get(), surface);
 	if (createdTexture == nullptr)
 		throw std::logic_error(std::format(
@@ -67,7 +53,6 @@ bool Renderer::registerObject(const std::shared_ptr<Objects::Object>& objectPtr)
 	auto it = objects.find(objectPtr);
 	if (it != objects.end()) return false;
 	objects.insert(objectPtr);
-	TextureHandler::getInstance().loadTexture(*objectPtr);
 	
 	SDL_LogVerbose(SDL_LOG_CATEGORY_APPLICATION, "Renderer: registered object at %p.", objectPtr.get());
 
@@ -78,12 +63,11 @@ bool Renderer::removeObject(const std::shared_ptr<Objects::Object>& objectPtr) n
 	if (objectPtr.get() == nullptr) return false;
 	auto it = objects.find(objectPtr);
 	if (it == objects.end()) return false;
-	TextureHandler::getInstance().unloadTexture(*objectPtr);
 	objects.erase(it);
 	return true;
 }
 
-void Renderer::render() {
+void Renderer::render(RenderKey key) {
 	static int beginTick, endTick;
 	beginTick = SDL_GetTicks();
 
@@ -93,6 +77,7 @@ void Renderer::render() {
 			"SDL_GetError(): {}", SDL_GetError()
 		));
 	}
+
 	int renderSuccess;
 	std::vector<std::weak_ptr<Objects::Object>> deleteVec;
 	for (auto& objectWeakPtr : objects) {
@@ -132,7 +117,7 @@ void Renderer::render() {
 		}
 	}
 	for (auto& objectWeakPtr : deleteVec) {
-		SDL_LogVerbose(SDL_LOG_CATEGORY_APPLICATION,
+		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION,
 			"Renderer: removed deleted object."
 		);
 		objects.erase(objectWeakPtr);
@@ -149,9 +134,8 @@ void Renderer::render() {
 	//debug(); // DEBUG
 }
 
-void Renderer::clear() {
+void Renderer::clear() noexcept {
 	objects.clear();
-	TextureHandler::getInstance().clear();
 }
 
 void Renderer::debug() const noexcept {

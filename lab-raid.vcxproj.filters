@@ -90,12 +90,6 @@
     <ClInclude Include="include\object\object.h">
       <Filter>Header Files\object</Filter>
     </ClInclude>
-    <ClInclude Include="include\obstacle\obstacle.h">
-      <Filter>Header Files\obstacle</Filter>
-    </ClInclude>
-    <ClInclude Include="include\obstacle\obstacles.h">
-      <Filter>Header Files\obstacle</Filter>
-    </ClInclude>
     <ClInclude Include="include\utility\functions.h">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
@@ -114,9 +108,6 @@
     <ClInclude Include="include\view\views.h">
       <Filter>Header Files\view</Filter>
     </ClInclude>
-    <ClInclude Include="include\scene\scene.h">
-      <Filter>Header Files\scene</Filter>
-    </ClInclude>
     <ClInclude Include="include\command_manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -129,14 +120,8 @@
     <ClInclude Include="include\object\button.h">
       <Filter>Header Files\object</Filter>
     </ClInclude>
-    <ClInclude Include="include\inventory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\object\item\item.h">
       <Filter>Header Files\object\item</Filter>
-    </ClInclude>
-    <ClInclude Include="include\texture\texture_info.h">
-      <Filter>Header Files\texture</Filter>
     </ClInclude>
     <ClInclude Include="include\texture\texture_handler.h">
       <Filter>Header Files\texture</Filter>
@@ -150,6 +135,9 @@
     <ClInclude Include="include\utility\vector2d.h">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
+    <ClInclude Include="include\shape\shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\shape\circle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -159,10 +147,10 @@
     <ClInclude Include="include\shape\rect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\shape\shape.h">
+    <ClInclude Include="include\shape\shapes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\shape\shapes.h">
+    <ClInclude Include="include\utility\selection_manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -200,9 +188,6 @@
     <ClCompile Include="src\objects\button.cpp">
       <Filter>Source Files\objects</Filter>
     </ClCompile>
-    <ClCompile Include="src\texture\texture_info.cpp">
-      <Filter>Source Files\texture</Filter>
-    </ClCompile>
     <ClCompile Include="src\shapes\circle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -233,5 +218,6 @@
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
     <None Include="resources\rooms\small_room.lvl" />
+    <None Include="src\utilities\selection_manager.tpp" />
   </ItemGroup>
 </Project>

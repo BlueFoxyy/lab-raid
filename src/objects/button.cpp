@@ -1,5 +1,4 @@
 #include <object/button.h>
-#include <view/view.h>
 
 namespace Objects {
 	Button::Button(
@@ -11,7 +10,7 @@ namespace Objects {
 			std::function<void(void)> action
 		) :
 		Object(
-			{ "button-1", "button-2", "button-3" },
+			{"button-1", "button-2", "button-3"},
 			view,
 			position,
 			dimension
@@ -32,16 +31,16 @@ namespace Objects {
 	}
 
 	void Button::onClick(void) noexcept {
-		Object::setTexture("button-3");
+		Object::setTexture(2);
 		actionFunc();
 	}
 
 	void Button::update(void) noexcept {
 		Object::update();
 		if (pollHover()) {
-			Object::setTexture("button-2");
+			Object::setTexture(1);
 		} else {
-			Object::setTexture("button-1");
+			Object::setTexture(0);
 		}
 	}
 }

@@ -12,13 +12,14 @@
 #include <vector>
 
 namespace Global {
-	std::unique_ptr<FPSmanager> fpsManager;
+	extern std::unique_ptr<FPSmanager> fpsManager;
 
-	std::unique_ptr<Views::Camera> playerCamera;
-	std::unique_ptr<Views::HUD> hudView;
-	std::unique_ptr<Views::HUD> menuView;
+	extern std::unique_ptr<Views::Camera> playerCamera;
+	extern std::unique_ptr<Views::HUD> hudView;
+	extern std::unique_ptr<Views::HUD> menuView;
 
-	std::shared_ptr<Objects::Object> playerObject, arrowObject;
+	extern std::shared_ptr<Objects::Object> playerObject, arrowObject1;
+	extern std::shared_ptr<Objects::Object> arrowObject2;
 
 	void init();
 }

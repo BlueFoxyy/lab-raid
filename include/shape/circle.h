@@ -15,15 +15,15 @@ namespace Shapes {
 		void draw(SDL_Renderer* renderer, const Views::View* view) const noexcept override;
 	protected:
 		Vector2D center;
-		double radius;
+		float radius;
 	public:
 		Circle(
 			const Vector2D& center,
-			double radius,
+			float radius,
 			SDL_Color color = { 0, 0, 0, 255 }
 		) noexcept;
 		void setCenter(const Vector2D& newCenter) noexcept;
-		void setRadius(double newRadius) noexcept;
+		void setRadius(float newRadius) noexcept;
 	};
 
 	class HollowCircle : public Circle {
@@ -32,14 +32,14 @@ namespace Shapes {
 
 		void draw(SDL_Renderer* renderer, const Views::View* view) const noexcept override;
 	protected:
-		double thickness;
+		uint8_t thickness;
 	public:
 		HollowCircle(
-			double thickness,
+			uint8_t thickness,
 			const Vector2D& center,
-			double radius,
+			float radius,
 			SDL_Color color = { 0, 0, 0, 255 }
 		) noexcept;
-		void setThickness(double newThickness) noexcept;
+		void setThickness(uint8_t newThickness) noexcept;
 	};
 }

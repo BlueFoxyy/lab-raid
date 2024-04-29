@@ -1,5 +1,5 @@
 #pragma once
-[
+
 #include <shape/shape.h>
 #include <utility/vector2d.h>
 #include <SDL2/SDL.h>
@@ -8,20 +8,20 @@
 namespace Shapes {
 	class Line : public Shape {
 	private:
+		void draw(SDL_Renderer* renderer, const Views::View* view) const noexcept override;
+	protected:
 		Vector2D beginPoint;
 		Vector2D endPoint;
-		double thickness;
-
-		void draw(SDL_Renderer* renderer, const Views::View* view) const noexcept override;
+		uint8_t thickness;
 	public:
 		Line(
 			Vector2D _beginPoint,
 			Vector2D _endPoint, 
-			double _thickness, 
+			uint8_t _thickness,
 			SDL_Color color = {0, 0, 0, 255}
 		) noexcept;
 		void setBeginPoint(Vector2D newBeginPoint) noexcept;
 		void setEndPoint(Vector2D newEndPoint) noexcept;
-		void setThickness(double newThickness) noexcept;
+		void setThickness(uint8_t newThickness) noexcept;
 	};
 }

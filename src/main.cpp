@@ -6,14 +6,13 @@
 #include <SDL2/SDL.h>
 #include <cstdlib>
 #include <stdexcept>
-#include <algorithm>
-#include <iostream>
-#include <map>
+
+#include <shape/shapes.h>
 
 static const int TICKS_PER_SEC = 1000;
-static const double gunOffset = 16.5;
+static const float gunOffset = 16.5;
 static bool quit = false;
-static double playerSpeed = 500;
+static float playerSpeed = 500;
 static std::weak_ptr<Objects::Object> controlledObject;
 static uint32_t curTick, prevTick, diffTick;
 
@@ -52,7 +51,7 @@ public:
 	void execute(void) noexcept override {
 		auto tempObject = controlledObject.lock();
 		if (tempObject == Global::playerObject)
-			controlledObject = Global::arrowObject;
+			controlledObject = Global::arrowObject1;
 		else
 			controlledObject = Global::playerObject;
 		Global::playerCamera->setPivotObject(controlledObject.lock());
@@ -131,20 +130,32 @@ int main(int argc, char* argv[]) {
 			);
 		Global::playerObject->lookAt(cursorPosition);
 
-		Vector2D distVector = Global::arrowObject->getPosition() - Global::playerObject->getPosition();
-		double offsetAngle = distVector.len() >= 1 ? asin(
+		Vector2D distVector = Global::arrowObject1->getPosition() - Global::playerObject->getPosition();
+		float offsetAngle = distVector.len() >= 1 ? asin(
 			gunOffset / distVector.len()
 		) : 0;
 //		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "offsetAngle = %lf", offsetAngle);
 		Global::playerObject->rotate(
 			offsetAngle
 		);
-		Global::arrowObject->lookAt(Global::playerObject->getPosition());
+		Global::arrowObject1->lookAt(Global::playerObject->getPosition());
 
-		SDL_framerateDelay(Global::fpsManager.get());
+		/*
+		Shapes::Line line1({0, 0}, {1600, 900}, 3, {0xFF, 0x00, 0x00, 0x7F});
+		Shapes::Line line2({ 0, 900 }, { 1600, 0 }, 2, {0x00, 0xFF, 0x00, 0x7F});
+
+		line1.draw(Renderer::getInstance().getRawRenderer(), Global::hudView.get());
+		line2.draw(Renderer::getInstance().getRawRenderer(), Global::hudView.get());
+
+		Shapes::Circle circle({ 0, 0 }, 250, { 0, 0, 0xFF, 0x7F });
+
+		circle.draw(Renderer::getInstance().getRawRenderer(), Global::playerCamera.get());
+
+		SDL_SetRenderDrawColor(Renderer::getInstance().getRawRenderer(), 0xFF, 0xFF, 0xFF, 0xFF);
+		*/
 
 		try {
-			Renderer::getInstance().render();
+			Renderer::getInstance().render({});
 		} catch (std::logic_error& e) {
 			SDL_LogCritical(
 				SDL_LOG_CATEGORY_APPLICATION, 
@@ -153,6 +164,8 @@ int main(int argc, char* argv[]) {
 			);
 			exit(EXIT_FAILURE);
 		}
+
+		SDL_framerateDelay(Global::fpsManager.get());
 
 		/*
 		SDL_LogInfo(

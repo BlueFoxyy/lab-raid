@@ -1,18 +1,15 @@
 #include <shape/line.h>
-#include <object/object.h>
-#include <view/view.h>
-#include <renderer.h>
 
 namespace Shapes {
 	Line::Line(
-		Vector2D _beginPoint,
-		Vector2D _endPoint, 
-		double _thickness,
+		Vector2D beginPoint,
+		Vector2D endPoint, 
+		uint8_t thickness,
 		SDL_Color color
 	) noexcept :
-		beginPoint(_beginPoint), 
-		endPoint(_endPoint), 
-		thickness(_thickness),
+		beginPoint(beginPoint), 
+		endPoint(endPoint), 
+		thickness(thickness),
 		Shape(color) {}
 
 	void Line::setBeginPoint(Vector2D newBeginPoint) noexcept {
@@ -23,18 +20,28 @@ namespace Shapes {
 		endPoint = newEndPoint;
 	}
 
-	void Line::setThickness(double newThickness) noexcept {
+	void Line::setThickness(uint8_t newThickness) noexcept {
 		thickness = newThickness;
 	}
 
 	void Line::draw(SDL_Renderer* renderer, const Views::View* view) const noexcept {
 		Vector2D renderBeginPoint = view->transform(beginPoint);
 		Vector2D renderEndPoint = view->transform(endPoint);
-		thickLineRGBA(
-			renderer,
+		SDL_LogDebug(
+			SDL_LOG_CATEGORY_APPLICATION,
+			"Line::draw(): (%lf, %lf) -> (%lf, %lf), width: %u",
 			renderBeginPoint.getX(), renderBeginPoint.getY(),
 			renderEndPoint.getX(), renderEndPoint.getY(),
-			thickness, color.r, color.g, color.b, color.a
+			thickness
+		);
+		thickLineRGBA(
+			renderer,
+			static_cast<Sint16>(renderBeginPoint.getX()),
+			static_cast<Sint16>(renderBeginPoint.getY()),
+			static_cast<Sint16>(renderEndPoint.getX()),
+			static_cast<Sint16>(renderEndPoint.getY()),
+			thickness,
+			color.r, color.g, color.b, color.a
 		);
 	}
 }

@@ -1,6 +1,5 @@
 #pragma once
 
-#include <scene/scene.h>
 #include <SDL2/SDL.h>
 #include <vector>
 #include <memory>
@@ -14,5 +13,4 @@ private:
 		GAME_END = 3
 	} state;
 
-	std::vector<Scenes::Scene> scenes;
 };

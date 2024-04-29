@@ -1,22 +1,24 @@
 #pragma once
 
+#include <cmath>
+
 class Vector2D {
 private:
-	double x;
-	double y;
+	float x;
+	float y;
 public:
 // Constructors
 	Vector2D(void) noexcept;
-	Vector2D(double _x, double _y) noexcept;
+	Vector2D(float _x, float _y) noexcept;
 
 // Member Functions
-	double getX(void) const noexcept;	// x factor
-	double getY(void) const noexcept;	// y factor
+	float getX(void) const noexcept;	// x factor
+	float getY(void) const noexcept;	// y factor
 	Vector2D norm(void) const noexcept;	// normalized vector
-	double len(void) const noexcept;		// length of vector
-	double len2(void) const noexcept;	// squared length of vector
+	float len(void) const noexcept;		// length of vector
+	float len2(void) const noexcept;	// squared length of vector
 	
-	void rotate(double theta) noexcept;	// rotates the vector by @param theta radians
+	void rotate(float theta) noexcept;	// rotates the vector by @param theta radians
 	
 // Static functions
 	static Vector2D zero(void) noexcept; // returns a zero-vector
@@ -25,13 +27,13 @@ public:
 	friend Vector2D operator + (const Vector2D&, const Vector2D&) noexcept;
 	friend Vector2D operator - (const Vector2D&) noexcept;
 	friend Vector2D operator - (const Vector2D&, const Vector2D&) noexcept;
-	friend Vector2D operator * (const Vector2D&, double) noexcept;
-	friend Vector2D operator / (const Vector2D&, double) noexcept;
+	friend Vector2D operator * (const Vector2D&, float) noexcept;
+	friend Vector2D operator / (const Vector2D&, float) noexcept;
 	friend Vector2D& operator += (Vector2D&, const Vector2D&) noexcept;
 	friend Vector2D& operator -= (Vector2D&, const Vector2D&) noexcept;
-	friend Vector2D& operator *= (Vector2D&, double) noexcept;
-	friend Vector2D& operator /= (Vector2D&, double) noexcept;
-	static double dot(const Vector2D&, const Vector2D&) noexcept;
-	static double cross(const Vector2D&, const Vector2D&) noexcept;
-	static Vector2D rotate(Vector2D, double) noexcept;
+	friend Vector2D& operator *= (Vector2D&, float) noexcept;
+	friend Vector2D& operator /= (Vector2D&, float) noexcept;
+	static float dot(const Vector2D&, const Vector2D&) noexcept;
+	static float cross(const Vector2D&, const Vector2D&) noexcept;
+	static Vector2D rotate(Vector2D, float) noexcept;
 };

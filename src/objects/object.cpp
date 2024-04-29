@@ -8,9 +8,9 @@ namespace Objects {
 	/// <returns>normalized angle</returns>
 	static float normalizeAngle(float angle) noexcept {
 		if (angle < 0) {
-			angle += -ceil(angle / (2 * M_PI)) * (2 * M_PI);
+			angle += static_cast<float>(-ceil(angle / (2 * M_PI)) * (2 * M_PI));
 		} else {
-			angle -= floor(angle / (2 * M_PI)) * (2 * M_PI);
+			angle -= static_cast<float>(floor(angle / (2 * M_PI)) * (2 * M_PI));
 		}
 		return angle;
 	}
@@ -21,11 +21,10 @@ namespace Objects {
 		const Vector2D& _position,
 		const Vector2D& _dimension
 	) :
-		textures(textureNames.size()),
 		visible(true),
 		angle(0),
 		/*	rect(std::unique_ptr<SDL_FRect>(new SDL_FRect({
-				_position.getX£¦(),
+				_position.getX(),
 				_position.getY(),
 				_dimension.getX(),
 				_dimension.getY()
@@ -34,14 +33,12 @@ namespace Objects {
 		flipFlag(SDL_FLIP_NONE),
 		position(_position),
 		dimension(_dimension),
-		view(_view) {
-		for (int textureId = 0; textureId < (int)textureNames.size(); textureId++) {
-			const std::string& textureName = textureNames[textureId];
-			// assert the texture isn't already registered
-			SDL_assert(textureIdMap.find(textureName) == textureIdMap.end());
-			textureIdMap[textureName] = textureId;
+		view(_view),
+		currentTextureId(TEXTURE_NOT_SET),
+		currentShapeId(SHAPE_NOT_SET) {
+		for (const std::string& textureName : textureNames) {
+			textures.add(TextureHandler::getInstance().getTexture({}, textureName));
 		}
-		currentTextureId = TEXTURE_NOT_SET;
 	}
 	
 	float Object::getAngle(void) const noexcept {
@@ -133,67 +130,33 @@ namespace Objects {
 		colorMask = newColorMask;
 	}
 
-	int Object::nextTexture(void) noexcept {
-		if (currentTextureId == TEXTURE_NOT_SET)
-			return TEXTURE_NOT_SET;
-		currentTextureId = (currentTextureId + 1) % getTextureCount();
-		return currentTextureId;
+	void Object::nextTexture(void) noexcept {
+		textures.next();
 	}
 
-	int Object::previousTexture(void) noexcept {
-		if (currentTextureId == TEXTURE_NOT_SET)
-			return TEXTURE_NOT_SET;
-		currentTextureId = currentTextureId - 1;
-		if (currentTextureId < 0) currentTextureId += getTextureCount();
-		return currentTextureId;
+	void Object::previousTexture(void) noexcept {
+		textures.prev();
 	}
 
-	int Object::setTexture(int textureId) noexcept {
-		if (currentTextureId == TEXTURE_NOT_SET)
-			return TEXTURE_NOT_SET;
-		if (not (0 <= textureId and textureId < getTextureCount()))
-			return currentTextureId;
-		currentTextureId = textureId;
-		return currentTextureId;
-	}
-
-	int Object::setTexture(const std::string& textureName) noexcept {
-		if (currentTextureId == TEXTURE_NOT_SET)
-			return TEXTURE_NOT_SET;
-		try {
-			currentTextureId = textureIdMap.at(textureName);
-		} catch (std::out_of_range& e) {
-			SDL_LogVerbose(
-				SDL_LOG_CATEGORY_APPLICATION,
-				"Object::setTexture(): Failed to set texture to '%s'.",
-				textureName.c_str()
-			);
-			return currentTextureId;
-		}
-		return currentTextureId;
+	void Object::setTexture(int textureId) noexcept {
+		textures.set(textureId);
 	}
 
 	size_t Object::getTextureCount(void) const noexcept {
-		return textureIdMap.size();
+		return textures.size();
 	}
 
 	SDL_Texture* Object::getTexture(void) const noexcept {
-		if (currentTextureId == TEXTURE_NOT_SET)
+		try {
+			return textures.get();
+		} catch (...) {
 			return nullptr;
-		if (auto tmp = textures[currentTextureId].lock())
-			return tmp.get();
-		return nullptr;
+		}
 	}
 
 	void Object::debug(void) const {
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Object:");
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Address: %p", this);
-		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Textures:");
-		for (const auto& [textureName, textureId] : textureIdMap) {
-			SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "\tID = %d, name = '%s'",
-				textureId, textureName.c_str()
-			);
-		}
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Position: (%lf, %lf)",
 			position.getX(), position.getY()
 		);

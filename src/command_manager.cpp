@@ -1,6 +1,4 @@
 #include <command_manager.h>
-#include <command/command.h>
-#include <input_handler.h>
 
 unsigned int KeyBind::KeyBindCount = 0;
 

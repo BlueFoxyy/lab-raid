@@ -6,4 +6,7 @@ namespace Shapes {
 	void Shape::setColor(const SDL_Color& newColor) noexcept {
 		color = newColor;
 	}
+	SDL_Color Shape::getColor(void) const noexcept {
+		return color;
+	}
 }

@@ -7,16 +7,18 @@
  * For use with std smart pointers.
  */
 struct sdl_deleter {
-	// Generate "free" calls.
-# define FREE_ME(type, fn_name) inline void operator()(type* thing)  \
-	const noexcept { if (thing) SDL_##fn_name(thing); }
-	FREE_ME(SDL_RWops, FreeRW)			 FREE_ME(SDL_cond, DestroyCond)
-		FREE_ME(SDL_Cursor, FreeCursor)		FREE_ME(SDL_PixelFormat, FreeFormat)
-		FREE_ME(SDL_mutex, DestroyMutex)	   FREE_ME(SDL_Palette, FreePalette)
-		FREE_ME(SDL_Renderer, DestroyRenderer) FREE_ME(SDL_sem, DestroySemaphore)
-		FREE_ME(SDL_Surface, FreeSurface)	  FREE_ME(SDL_Texture, DestroyTexture)
-		FREE_ME(Uint8, FreeWAV)				FREE_ME(SDL_Window, DestroyWindow)
-#undef FREE_ME
+	inline void operator () (SDL_RWops* thing) const noexcept		{ if (thing) SDL_FreeRW(thing); }
+	inline void operator () (SDL_cond* thing) const noexcept		{ if (thing) SDL_DestroyCond(thing); }
+	inline void operator () (SDL_Cursor* thing) const noexcept		{ if (thing) SDL_FreeCursor(thing); }
+	inline void operator () (SDL_PixelFormat* thing) const noexcept { if (thing) SDL_FreeFormat(thing); }
+	inline void operator () (SDL_mutex* thing) const noexcept		{ if (thing) SDL_DestroyMutex(thing); }
+	inline void operator () (SDL_Palette* thing) const noexcept		{ if (thing) SDL_FreePalette(thing); }
+	inline void operator () (SDL_Renderer* thing) const noexcept	{ if (thing) SDL_DestroyRenderer(thing); }
+	inline void operator () (SDL_sem* thing) const noexcept			{ if (thing) SDL_DestroySemaphore(thing); }
+	inline void operator () (SDL_Surface* thing) const noexcept		{ if (thing) SDL_FreeSurface(thing); }
+	inline void operator () (SDL_Texture* thing) const noexcept		{ if (thing) SDL_DestroyTexture(thing); }
+	inline void operator () (Uint8* thing) const noexcept			{ if (thing) SDL_FreeWAV(thing); }
+	inline void operator () (SDL_Window* thing) const noexcept		{ if (thing) SDL_DestroyWindow(thing); }
 };
 
 template <typename Resource>

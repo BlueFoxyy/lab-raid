@@ -1,7 +1,6 @@
 #pragma once
 
 #include "object.h"
-#include <view/view.h>
 #include <string>
 #include <functional>
 
