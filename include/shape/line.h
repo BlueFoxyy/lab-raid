@@ -7,14 +7,13 @@
 
 namespace Shapes {
 	class Line : public Shape {
-	private:
-		void draw(SDL_Renderer* renderer, const Views::View* view) const noexcept override;
 	protected:
 		Vector2D beginPoint;
 		Vector2D endPoint;
 		uint8_t thickness;
 	public:
 		Line(
+			Views::View* view,
 			Vector2D _beginPoint,
 			Vector2D _endPoint, 
 			uint8_t _thickness,
@@ -23,5 +22,6 @@ namespace Shapes {
 		void setBeginPoint(Vector2D newBeginPoint) noexcept;
 		void setEndPoint(Vector2D newEndPoint) noexcept;
 		void setThickness(uint8_t newThickness) noexcept;
+		void draw(SDL_Renderer* renderer) const noexcept override;
 	};
 }

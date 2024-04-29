@@ -150,13 +150,12 @@
     <ClInclude Include="include\geometry\shapes.h" />
     <ClInclude Include="include\init.h" />
     <ClInclude Include="include\input_handler.h" />
-    <ClInclude Include="include\level\level.h" />
-    <ClInclude Include="include\level\room.h" />
     <ClInclude Include="include\object\button.h" />
     <ClInclude Include="include\object\item\item.h" />
     <ClInclude Include="include\object\object.h" />
     <ClInclude Include="include\object\player.h" />
     <ClInclude Include="include\renderer.h" />
+    <ClInclude Include="include\render_object_base.h" />
     <ClInclude Include="include\shape\circle.h" />
     <ClInclude Include="include\shape\line.h" />
     <ClInclude Include="include\shape\rect.h" />
@@ -165,6 +164,7 @@
     <ClInclude Include="include\texture\texture_handler.h" />
     <ClInclude Include="include\utility\functions.h" />
     <ClInclude Include="include\utility\pointer_wrappers.h" />
+    <ClInclude Include="include\utility\utility.h" />
     <ClInclude Include="include\utility\vector2d.h" />
     <ClInclude Include="include\view\camera.h" />
     <ClInclude Include="include\view\hud.h" />
@@ -180,10 +180,12 @@
     <ClCompile Include="src\objects\button.cpp" />
     <ClCompile Include="src\objects\object.cpp" />
     <ClCompile Include="src\renderer.cpp" />
+    <ClCompile Include="src\render_object_base.cpp" />
     <ClCompile Include="src\shapes\circle.cpp" />
     <ClCompile Include="src\shapes\line.cpp" />
     <ClCompile Include="src\shapes\shape.cpp" />
     <ClCompile Include="src\texture_handler.cpp" />
+    <ClCompile Include="src\utilities\utility.cpp" />
     <ClCompile Include="src\utilities\vector2d.cpp" />
     <ClCompile Include="src\views\camera.cpp" />
     <ClCompile Include="src\views\hud.cpp" />

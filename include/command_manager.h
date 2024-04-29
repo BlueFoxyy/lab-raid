@@ -5,6 +5,8 @@
 #include <map>
 #include <memory>
 
+namespace Commands { class Command; }
+
 enum class MouseButton : uint8_t;
 /// <summary>
 /// KeyBind structure for key bindings.
@@ -39,7 +41,7 @@ public:
 	/// <param name="keyBind">The key bind of this command.</param>
 	/// <param name="command">The command to execute if the key bind is pressed.</param>
 	/// <returns>Whether the command was successfully registered, fails if @param keyBind is already registered.</returns>
-	bool registerCommand(const KeyBind& keyBind, const std::shared_ptr<Commands::Command>& command);
+	bool registerCommand(KeyBind keyBind, std::shared_ptr<Commands::Command> command);
 
 	/// <summary>
 	/// Executes corresponding command if a key bind was matched.

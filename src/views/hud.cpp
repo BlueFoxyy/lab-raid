@@ -2,7 +2,7 @@
 
 namespace Views {
 	HUD::HUD() :
-		View({ 0, 0 }, { VIEW_WIDTH, VIEW_HEIGHT }) {}
+		View({ 0, 0 }, { INIT_VIEW_WIDTH, INIT_VIEW_HEIGHT }) {}
 
 	SDL_FRect HUD::getRect(const Objects::Object& renderObject) const noexcept {
 		Vector2D objectPosition = renderObject.getPosition();

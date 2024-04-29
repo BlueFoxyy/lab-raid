@@ -1,6 +1,9 @@
 #pragma once
 
+#include <command_manager.h>
 #include <memory>
+
+class CommandManager;
 
 namespace Commands {
 
@@ -8,8 +11,15 @@ namespace Commands {
 	/// Commands base abstract class.
 	/// </summary>
 	class Command {
+	protected:
+		class ExecuteKey {
+			friend class CommandManager;
+		private:
+			ExecuteKey() = default;
+			ExecuteKey(const ExecuteKey&) = default;
+		};
 	public:
 		virtual ~Command() {};
-		virtual void execute(void) {};
+		virtual void execute(ExecuteKey) {};
 	};
 }

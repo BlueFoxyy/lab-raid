@@ -45,7 +45,7 @@ public:
 	/// </summary>
 	/// <param name="key">Access Control Key</param>
 	/// <param name="textureName">The name of the texture.</param>
-	/// <returns>The weak pointer of the requested texture.</returns>
+	/// <returns>The raw pointer of the requested texture.</returns>
 	SDL_Texture* getTexture(TextureRequestKey key, const std::string& textureName);
 
 public:

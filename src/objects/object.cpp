@@ -1,20 +1,6 @@
 #include <object/object.h>
 
 namespace Objects {
-	/// <summary>
-	/// Helper function to normalize angle to [0, 360)
-	/// </summary>
-	/// <param name="angle">input angle</param>
-	/// <returns>normalized angle</returns>
-	static float normalizeAngle(float angle) noexcept {
-		if (angle < 0) {
-			angle += static_cast<float>(-ceil(angle / (2 * M_PI)) * (2 * M_PI));
-		} else {
-			angle -= static_cast<float>(floor(angle / (2 * M_PI)) * (2 * M_PI));
-		}
-		return angle;
-	}
-
 	Object::Object(
 		const std::vector<std::string>& textureNames,
 		const Views::View* _view,
@@ -29,7 +15,7 @@ namespace Objects {
 				_dimension.getX(),
 				_dimension.getY()
 			}))), */
-		colorMask({255, 255, 255, 255}),
+//		colorMask({255, 255, 255, 255}),
 		flipFlag(SDL_FLIP_NONE),
 		position(_position),
 		dimension(_dimension),
@@ -42,7 +28,7 @@ namespace Objects {
 	}
 	
 	float Object::getAngle(void) const noexcept {
-		return angle;
+		return angle - view->getAngle();
 	}
 
 	SDL_RendererFlip Object::getFlipFlag(void) const noexcept {
@@ -122,13 +108,13 @@ namespace Objects {
 		return view->getRect(*this);
 	}
 
-	SDL_Color Object::getColorMask(void) const noexcept {
-		return colorMask;
-	}
+//	SDL_Color Object::getColorMask(void) const noexcept {
+//		return colorMask;
+//	}
 
-	void Object::setColorMask(const SDL_Color& newColorMask) noexcept {
-		colorMask = newColorMask;
-	}
+//	void Object::setColorMask(const SDL_Color& newColorMask) noexcept {
+//		colorMask = newColorMask;
+//	}
 
 	void Object::nextTexture(void) noexcept {
 		textures.next();
@@ -154,7 +140,7 @@ namespace Objects {
 		}
 	}
 
-	void Object::debug(void) const {
+	void Object::debug(void) const noexcept {
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Object:");
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Address: %p", this);
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Position: (%lf, %lf)",
@@ -172,11 +158,6 @@ namespace Objects {
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "VerticalFlip: %s",
 			(flipFlag & SDL_FLIP_VERTICAL ? "true" : "false")
 		);
-		SDL_LogDebug(
-			SDL_LOG_CATEGORY_APPLICATION,
-			"ColorMask: (r: %u, g: %u, b: %u, a: %u)",
-			colorMask.r, colorMask.g, colorMask.b, colorMask.a
-		);
 	}
 
 	Vector2D Object::getRenderRelativePosition(Vector2D renderPosition) const noexcept {
@@ -184,8 +165,8 @@ namespace Objects {
 		Vector2D objectRenderPosition = { renderRect.x, renderRect.y };
 		Vector2D diffVector = renderPosition - objectRenderPosition;
 		diffVector = {
-			diffVector.getX() * Views::VIEW_WIDTH / Config::screenWidth,
-			diffVector.getY() * Views::VIEW_HEIGHT / Config::screenHeight
+			diffVector.getX() * Views::INIT_VIEW_WIDTH / Config::screenWidth,
+			diffVector.getY() * Views::INIT_VIEW_HEIGHT / Config::screenHeight
 		};
 		diffVector -= getDimension() / 2;
 		return diffVector;

@@ -81,12 +81,6 @@
     <ClInclude Include="include\renderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\level\level.h">
-      <Filter>Header Files\level</Filter>
-    </ClInclude>
-    <ClInclude Include="include\level\room.h">
-      <Filter>Header Files\level</Filter>
-    </ClInclude>
     <ClInclude Include="include\object\object.h">
       <Filter>Header Files\object</Filter>
     </ClInclude>
@@ -153,6 +147,12 @@
     <ClInclude Include="include\utility\selection_manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\utility\utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\render_object_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\init.cpp">
@@ -195,6 +195,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\shapes\shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utilities\utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render_object_base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

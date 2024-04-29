@@ -15,7 +15,6 @@ namespace Objects {
 			position,
 			dimension
 		), text(text), actionFunc(action), hover(false) {
-		Object::setColorMask(color);
 	}
 
 	bool Button::pollHover(void) noexcept {

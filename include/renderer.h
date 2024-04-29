@@ -1,5 +1,6 @@
 #pragma once
 
+#include <render_object_base.h>
 #include <object/object.h>
 #include <utility/pointer_wrappers.h>
 #include <texture/texture_handler.h>
@@ -17,7 +18,7 @@ namespace Objects {
 // Singleton is needed as the renderer can only be initialized at runtime.
 /**
  * This is a global singleton class for rendering.
- * Keeps track of current objects and renders everything onto a set window.
+ * Keeps track of current objects, shapes and renders everything onto a set window.
  */
 class Renderer {
 	/// <summary>
@@ -43,7 +44,7 @@ public: // TODO: change this to private, this is for testing purposes.
 private:
 	sdl_unique_ptr<SDL_Window> window;
 	sdl_unique_ptr<SDL_Renderer> renderer;
-	std::set<std::weak_ptr<Objects::Object>, std::owner_less<std::weak_ptr<Objects::Object>>> objects;
+	std::set<std::weak_ptr<RenderObjectBase>, std::owner_less<std::weak_ptr<RenderObjectBase>>> objects;
 
 	/// <summary>
 	/// Creates window and renderer.
@@ -75,15 +76,15 @@ public:
 	/// Registers the object for rendering.
 	/// </summary>
 	/// <param name="objectPtr">std::shared_ptr of the object</param>
-	/// <returns>returns whether the object was successfully registered</returns>
-	bool registerObject(const std::shared_ptr<Objects::Object>& objectPtr) noexcept;
+	/// <returns>Whether the object was successfully registered</returns>
+	bool registerObject(std::shared_ptr<RenderObjectBase> objectPtr) noexcept;
 
 	/// <summary>
 	/// Unregisters the object for rendering.
 	/// </summary>
 	/// <param name="objectPtr">std::shared_ptr of the object</param>
-	/// <returns>returns whether the object was successfully unregistered.</returns>
-	bool removeObject(const std::shared_ptr<Objects::Object>& objectPtr) noexcept;
+	/// <returns>Whether the object was successfully unregistered.</returns>
+	bool removeObject(std::shared_ptr<RenderObjectBase> objectPtr) noexcept;
 
 	/// <summary>
 	/// Renders every registered object.

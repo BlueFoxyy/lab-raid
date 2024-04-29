@@ -18,7 +18,7 @@ public:
 	float len(void) const noexcept;		// length of vector
 	float len2(void) const noexcept;	// squared length of vector
 	
-	void rotate(float theta) noexcept;	// rotates the vector by @param theta radians
+	Vector2D rotate(float theta) const noexcept; // rotates the vector by @param theta radians
 	
 // Static functions
 	static Vector2D zero(void) noexcept; // returns a zero-vector

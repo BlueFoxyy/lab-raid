@@ -4,6 +4,7 @@
 #include <utility/vector2d.h>
 #include <SDL2/SDL.h>
 #include <memory>
+#include <format>
 
 namespace Objects {
 	class Object;
@@ -37,8 +38,11 @@ namespace Views {
 		/// <param name="position">The virtual position to be transformed.</param>
 		/// <returns>The render position.</returns>
 		virtual Vector2D transform(const Vector2D& position) const noexcept = 0;
+
+		virtual float getAngle(void) const noexcept { return 0.0f; }
+		virtual float getZoom(void) const noexcept { return 1.0f; }
 	};
 
-	const int VIEW_WIDTH = 1600;
-	const int VIEW_HEIGHT = 900;
+	const int INIT_VIEW_WIDTH = 1600;
+	const int INIT_VIEW_HEIGHT = 900;
 }

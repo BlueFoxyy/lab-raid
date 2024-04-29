@@ -1,5 +1,7 @@
 #pragma once
 
+#include <render_object_base.h>
+#include <utility/utility.h>
 #include <utility/pointer_wrappers.h>
 #include <utility/vector2d.h>
 #include <utility/selection_manager.h>
@@ -28,7 +30,7 @@ namespace Objects {
 	/// Object type for all renderable objects in the world
 	/// note: the texture won't be created until loaded into the renderer.
 	/// </summary>
-	class Object {
+	class Object : public RenderObjectBase {
 		friend class TextureHandler;
 	private:
 		SelectionManager<SDL_Texture*> textures;
@@ -38,7 +40,7 @@ namespace Objects {
 
 		float angle; // stored as radians
 		SDL_RendererFlip flipFlag;
-		SDL_Color colorMask; // color mod mask
+//		SDL_Color colorMask; // color mod mask
 		Vector2D position; // actual position in the world
 		Vector2D dimension; // height and width
 		const Views::View* view;
@@ -98,18 +100,6 @@ namespace Objects {
 		/// </summary>
 		/// <returns>The object's dimension.</returns>
 		Vector2D getDimension(void) const noexcept;
-
-		/// <summary>
-		/// Gets the color mask of the object.
-		/// </summary>
-		/// <returns>The object's color mask.</returns>
-		SDL_Color getColorMask(void) const noexcept;
-
-		/// <summary>
-		/// Sets the color mask of the object.
-		/// </summary>
-		/// <param name="newColorMask">New color mask.</param>
-		void setColorMask(const SDL_Color& newColorMask) noexcept;
 		
 		/// <summary>
 		/// Moves the object by the translate vector.
@@ -189,7 +179,7 @@ namespace Objects {
 		SDL_Texture* getTexture(void) const noexcept;
 
 		/* TEXTURES */
-		
+
 
 		/// <summary>
 		/// Make the object face @param position coordinates.
@@ -218,6 +208,6 @@ namespace Objects {
 		void update(void) noexcept;
 
 		// debug
-		void debug(void) const;
+		void debug(void) const noexcept;
 	};
 }

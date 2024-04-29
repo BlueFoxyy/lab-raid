@@ -3,8 +3,8 @@
 unsigned int KeyBind::KeyBindCount = 0;
 
 bool CommandManager::registerCommand(
-	const KeyBind& keyBind,
-	const std::shared_ptr<Commands::Command>& command
+	KeyBind keyBind,
+	std::shared_ptr<Commands::Command> command
 ) {
 	if (commandDB.find(keyBind) != commandDB.end())
 		return false;
@@ -73,7 +73,7 @@ void CommandManager::update(void) noexcept {
 			}
 		}
 		if (match) {
-			commandPtr->execute();
+			commandPtr->execute({});
 		}
 
 		/*

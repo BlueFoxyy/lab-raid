@@ -27,11 +27,10 @@ float Vector2D::len2(void) const noexcept {
 	return x * x + y * y;
 }
 
-void Vector2D::rotate(float theta) noexcept {
-	float newX = x * cos(theta) - y * sin(theta);
-	float newY = x * sin(theta) - y * cos(theta);
-	x = newX;
-	y = newY;
+Vector2D Vector2D::rotate(float theta) const noexcept {
+	float newX = x * cos(theta) + y * sin(theta);
+	float newY = - x * sin(theta) + y * cos(theta);
+	return { newX, newY };
 }
 
 Vector2D Vector2D::zero(void) noexcept {

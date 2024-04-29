@@ -48,22 +48,30 @@ SDL_Texture* Renderer::createTexture(CreateTextureKey key, SDL_Surface* surface)
 	return createdTexture;
 }
 
-bool Renderer::registerObject(const std::shared_ptr<Objects::Object>& objectPtr) noexcept {
+bool Renderer::registerObject(std::shared_ptr<RenderObjectBase> objectPtr) noexcept {
 	if (objectPtr.get() == nullptr) return false;
 	auto it = objects.find(objectPtr);
 	if (it != objects.end()) return false;
 	objects.insert(objectPtr);
 	
 	SDL_LogVerbose(SDL_LOG_CATEGORY_APPLICATION, "Renderer: registered object at %p.", objectPtr.get());
+	if (std::dynamic_pointer_cast<Objects::Object>(objectPtr)) {
+		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Renderer: registered object type is Object.");
+	} else if (std::dynamic_pointer_cast<Shapes::Shape>(objectPtr)) {
+		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Renderer: registered object type is Shape.");
+	}
 
 	return true;
 }
 
-bool Renderer::removeObject(const std::shared_ptr<Objects::Object>& objectPtr) noexcept {
+bool Renderer::removeObject(std::shared_ptr<RenderObjectBase> objectPtr) noexcept {
 	if (objectPtr.get() == nullptr) return false;
 	auto it = objects.find(objectPtr);
 	if (it == objects.end()) return false;
 	objects.erase(it);
+
+	SDL_LogVerbose(SDL_LOG_CATEGORY_APPLICATION, "Renderer: unregistered object at %p.", objectPtr.get());
+
 	return true;
 }
 
@@ -79,38 +87,41 @@ void Renderer::render(RenderKey key) {
 	}
 
 	int renderSuccess;
-	std::vector<std::weak_ptr<Objects::Object>> deleteVec;
+	std::vector<std::weak_ptr<RenderObjectBase>> deleteVec;
 	for (auto& objectWeakPtr : objects) {
-		if (auto objectPtr = objectWeakPtr.lock()) {
-			if (not objectPtr->getVisibility()) continue;
-//			SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Rendering object: "); // DEBUG
-//			objectPtr->debug(); // DEBUG
-			auto rect = objectPtr->getRenderRect();
-//			SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Target Rect: {%lf, %lf, %lf, %lf}",
-//				rect->x, rect->y, rect->w, rect->h
-//			); // DEBUG
-			SDL_Color colorMask = objectPtr->getColorMask();
-			SDL_SetTextureAlphaMod(objectPtr->getTexture(), colorMask.a);
-			SDL_SetTextureColorMod(
-				objectPtr->getTexture(),
-				colorMask.r,
-				colorMask.g,
-				colorMask.b
-			);
-			renderSuccess = SDL_RenderCopyExF(
-				renderer.get(),
-				objectPtr->getTexture(),
-				NULL,
-				std::make_unique<SDL_FRect>(objectPtr->getRenderRect()).get(),
-				- objectPtr->getAngle() * 180 / PI,
-				NULL,
-				objectPtr->getFlipFlag()
-			);
-			if (renderSuccess < 0) {
-				throw std::logic_error(std::format(
-					"Error while rendering object. "
-					"SDL_GetError(): {}", SDL_GetError()
-				));
+		if (auto objectSharedPtr = objectWeakPtr.lock()) {
+//			SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION,
+//				"Rendering object at %p.",
+//				objectSharedPtr.get()
+//			);
+			if (auto objectPtr = std::dynamic_pointer_cast<Objects::Object>(objectSharedPtr)) {
+				if (not objectPtr->getVisibility()) continue;
+				//			SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Rendering object: "); // DEBUG
+				//			objectPtr->debug(); // DEBUG
+				auto rect = objectPtr->getRenderRect();
+				//			SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Target Rect: {%lf, %lf, %lf, %lf}",
+				//				rect->x, rect->y, rect->w, rect->h
+				//			); // DEBUG
+				renderSuccess = SDL_RenderCopyExF(
+					renderer.get(),
+					objectPtr->getTexture(),
+					NULL,
+					std::make_unique<SDL_FRect>(objectPtr->getRenderRect()).get(),
+					-objectPtr->getAngle() * 180 / PI,
+					NULL,
+					objectPtr->getFlipFlag()
+				);
+				if (renderSuccess < 0) {
+					throw std::logic_error(std::format(
+						"Error while rendering object. "
+						"SDL_GetError(): {}", SDL_GetError()
+					));
+				}
+			} else if (auto shapePtr = std::dynamic_pointer_cast<Shapes::Shape>(objectSharedPtr)) {
+//				SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION,
+//					"Renderer::render(): Rendering shape."
+//				);
+				shapePtr->draw(renderer.get());
 			}
 		} else {
 			deleteVec.push_back(objectWeakPtr);
@@ -120,8 +131,18 @@ void Renderer::render(RenderKey key) {
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION,
 			"Renderer: removed deleted object."
 		);
+		system("pause");
 		objects.erase(objectWeakPtr);
 	}
+
+	SDL_SetRenderDrawColor(
+		renderer.get(),
+		Config::backgroundColor.r,
+		Config::backgroundColor.g,
+		Config::backgroundColor.b,
+		Config::backgroundColor.a
+	);
+
 	SDL_RenderPresent(renderer.get());
 
 	endTick = SDL_GetTicks();

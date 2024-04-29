@@ -5,6 +5,7 @@
 #include <renderer.h>
 #include <config.h>
 #include <utility/vector2d.h>
+#include <shape/shapes.h>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL2_framerate.h>
 #include <memory>

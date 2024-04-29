@@ -8,6 +8,11 @@ namespace Global {
 
 	std::shared_ptr<Objects::Object> playerObject, arrowObject1;
 	std::shared_ptr<Objects::Object> arrowObject2;
+	std::shared_ptr<Shapes::Circle> yellowCircle;
+	std::shared_ptr<Shapes::Circle> greenCircle;
+	std::shared_ptr<Shapes::Circle> blueCircle;
+	std::shared_ptr<Shapes::Circle> redCircle;
+	std::shared_ptr<Shapes::Circle> purpleCircle;
 
 	void init(void) {
 		SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_VERBOSE);
@@ -42,9 +47,10 @@ namespace Global {
 		arrowObject1 = std::make_shared<Objects::Object>(
 			std::vector<std::string>{ "arrow" },
 			playerCamera.get(),
-			Vector2D{ -100, -100 },
+			Vector2D{ -150, -150 },
 			Vector2D{ 50, 50 }
 		);
+
 		if (not Renderer::getInstance().registerObject(arrowObject1)) {
 			SDL_LogCritical(SDL_LOG_CATEGORY_APPLICATION, "Failed to register arrowObject1.");
 			exit(EXIT_FAILURE);
@@ -60,8 +66,42 @@ namespace Global {
 			exit(EXIT_FAILURE);
 		}
 
-		arrowObject2->setColorMask({ 255, 255, 255, 128 });
-
+		yellowCircle = std::make_shared<Shapes::Circle>(
+			playerCamera.get(),
+			Vector2D{ -150, -150 },
+			50,
+			SDL_Color{ 127, 127, 0, 127 }
+		);
+		Renderer::getInstance().registerObject(yellowCircle);
+		greenCircle = std::make_shared<Shapes::Circle>(
+			playerCamera.get(),
+			Vector2D{ -150, 150 },
+			50,
+			SDL_Color{ 0, 127, 0, 127 }
+		);
+		Renderer::getInstance().registerObject(greenCircle);
+		blueCircle = std::make_shared<Shapes::Circle>(
+			playerCamera.get(),
+			Vector2D{ 150, -150 },
+			50,
+			SDL_Color{ 0, 0, 127, 127 }
+		);
+		Renderer::getInstance().registerObject(blueCircle);
+		redCircle = std::make_shared<Shapes::Circle>(
+			playerCamera.get(),
+			Vector2D{ 150, 150 },
+			50,
+			SDL_Color{ 127, 0, 0, 127 }
+		);
+		Renderer::getInstance().registerObject(redCircle);
+		purpleCircle = std::make_shared<Shapes::Circle>(
+			playerCamera.get(),
+			Vector2D{ 0, 0 },
+			180,
+			SDL_Color{ 220, 36, 200, 127 }
+		);
+		Renderer::getInstance().registerObject(purpleCircle);
+		
 		//object->rotate(M_PI / 2);
 		//object->flipHorizontal();
 
