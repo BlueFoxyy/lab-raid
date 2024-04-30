@@ -1,0 +1,125 @@
+\doxysection{Shapes\+::Circle Class Reference}
+\hypertarget{class_shapes_1_1_circle}{}\label{class_shapes_1_1_circle}\index{Shapes::Circle@{Shapes::Circle}}
+
+
+{\ttfamily \#include $<$circle.\+h$>$}
+
+
+
+Inheritance diagram for Shapes\+::Circle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_shapes_1_1_circle__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Shapes\+::Circle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_shapes_1_1_circle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shapes_1_1_circle_af2b86b09157025218324c9b0c66d835f}{Circle}} (\mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_shapes_1_1_shape_a61b5c9d0178925857cc03cb894d6a878}{view}}, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&\mbox{\hyperlink{class_shapes_1_1_circle_a8a09fe40aa9a590bf91c9d0112371de6}{center}}, float \mbox{\hyperlink{class_shapes_1_1_circle_aeca157e196fc8f6ad2a54c5617b49e96}{radius}}, SDL\+\_\+\+Color \mbox{\hyperlink{class_shapes_1_1_shape_a4a82ce802aea95a2b68588d9dc6a891f}{color}}=\{ 0, 0, 0, 255 \}) noexcept
+\item 
+void \mbox{\hyperlink{class_shapes_1_1_circle_ae864b3463b5415bb55fc07a991f13378}{set\+Center}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&new\+Center) noexcept
+\item 
+void \mbox{\hyperlink{class_shapes_1_1_circle_a19f3ba261b037dec93fe15cee5a331bd}{set\+Radius}} (float new\+Radius) noexcept
+\item 
+void \mbox{\hyperlink{class_shapes_1_1_circle_a0f026a3675eb7e796c58447e8baad7a1}{draw}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer) const noexcept override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_shapes_1_1_shape}{Shapes\+::\+Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shapes_1_1_shape_a43dde932255e213ddef0bae12c1025c4}{Shape}} (\mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_shapes_1_1_shape_a61b5c9d0178925857cc03cb894d6a878}{view}}, const SDL\+\_\+\+Color \&\mbox{\hyperlink{class_shapes_1_1_shape_a4a82ce802aea95a2b68588d9dc6a891f}{color}}=\{ 0, 0, 0, 255 \})
+\item 
+virtual \mbox{\hyperlink{class_shapes_1_1_shape_ae3a5e797f28757c8060df14e2c2e20df}{\texorpdfstring{$\sim$}{\string~}\+Shape}} ()
+\item 
+void \mbox{\hyperlink{class_shapes_1_1_shape_ad4ff5aadd6850816218acaac75f091bb}{set\+Color}} (const SDL\+\_\+\+Color \&new\+Color) noexcept
+\item 
+SDL\+\_\+\+Color \mbox{\hyperlink{class_shapes_1_1_shape_aed2988789e73cfdc900816b86acf6f58}{get\+Color}} (void) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_render_object_base_ab640bb12371cdff15da2694777db1961}{debug}} (void) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_shapes_1_1_circle_a8a09fe40aa9a590bf91c9d0112371de6}{center}}
+\item 
+float \mbox{\hyperlink{class_shapes_1_1_circle_aeca157e196fc8f6ad2a54c5617b49e96}{radius}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_shapes_1_1_shape}{Shapes\+::\+Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_shapes_1_1_shape_a61b5c9d0178925857cc03cb894d6a878}{view}}
+\begin{DoxyCompactList}\small\item\em Calls draw function after transforming coordinates with view. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Color \mbox{\hyperlink{class_shapes_1_1_shape_a4a82ce802aea95a2b68588d9dc6a891f}{color}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_shapes_1_1_circle_af2b86b09157025218324c9b0c66d835f}\label{class_shapes_1_1_circle_af2b86b09157025218324c9b0c66d835f} 
+\index{Shapes::Circle@{Shapes::Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!Shapes::Circle@{Shapes::Circle}}
+\doxysubsubsection{\texorpdfstring{Circle()}{Circle()}}
+{\footnotesize\ttfamily Shapes\+::\+Circle\+::\+Circle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}}]{view,  }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{center,  }\item[{float}]{radius,  }\item[{SDL\+\_\+\+Color}]{color = {\ttfamily \{~0,~0,~0,~255~\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shapes_1_1_circle_a0f026a3675eb7e796c58447e8baad7a1}\label{class_shapes_1_1_circle_a0f026a3675eb7e796c58447e8baad7a1} 
+\index{Shapes::Circle@{Shapes::Circle}!draw@{draw}}
+\index{draw@{draw}!Shapes::Circle@{Shapes::Circle}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Shapes\+::\+Circle\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_shapes_1_1_shape_a89d9f9daa494e1ccdfb5fc6dc930b20e}{Shapes\+::\+Shape}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_shapes_1_1_hollow_circle_a07fc83df8fad5d58b8f895b10fdb1e3b}{Shapes\+::\+Hollow\+Circle}}.
+
+\Hypertarget{class_shapes_1_1_circle_ae864b3463b5415bb55fc07a991f13378}\label{class_shapes_1_1_circle_ae864b3463b5415bb55fc07a991f13378} 
+\index{Shapes::Circle@{Shapes::Circle}!setCenter@{setCenter}}
+\index{setCenter@{setCenter}!Shapes::Circle@{Shapes::Circle}}
+\doxysubsubsection{\texorpdfstring{setCenter()}{setCenter()}}
+{\footnotesize\ttfamily void Shapes\+::\+Circle\+::set\+Center (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{new\+Center }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_shapes_1_1_circle_a19f3ba261b037dec93fe15cee5a331bd}\label{class_shapes_1_1_circle_a19f3ba261b037dec93fe15cee5a331bd} 
+\index{Shapes::Circle@{Shapes::Circle}!setRadius@{setRadius}}
+\index{setRadius@{setRadius}!Shapes::Circle@{Shapes::Circle}}
+\doxysubsubsection{\texorpdfstring{setRadius()}{setRadius()}}
+{\footnotesize\ttfamily void Shapes\+::\+Circle\+::set\+Radius (\begin{DoxyParamCaption}\item[{float}]{new\+Radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_shapes_1_1_circle_a8a09fe40aa9a590bf91c9d0112371de6}\label{class_shapes_1_1_circle_a8a09fe40aa9a590bf91c9d0112371de6} 
+\index{Shapes::Circle@{Shapes::Circle}!center@{center}}
+\index{center@{center}!Shapes::Circle@{Shapes::Circle}}
+\doxysubsubsection{\texorpdfstring{center}{center}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Shapes\+::\+Circle\+::center\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_shapes_1_1_circle_aeca157e196fc8f6ad2a54c5617b49e96}\label{class_shapes_1_1_circle_aeca157e196fc8f6ad2a54c5617b49e96} 
+\index{Shapes::Circle@{Shapes::Circle}!radius@{radius}}
+\index{radius@{radius}!Shapes::Circle@{Shapes::Circle}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily float Shapes\+::\+Circle\+::radius\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/shape/\mbox{\hyperlink{circle_8h}{circle.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\doxysection{renderer.\+h}
+\hypertarget{renderer_8h_source}{}\label{renderer_8h_source}\index{include/renderer.h@{include/renderer.h}}
+\mbox{\hyperlink{renderer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{render__object__base_8h}{render\_object\_base.h}}>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{object_8h}{object/object.h}}>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{pointer__wrappers_8h}{utility/pointer\_wrappers.h}}>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{texture__handler_8h}{texture/texture\_handler.h}}>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{shape_8h}{shape/shape.h}}>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <format>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_objects}{Objects}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }Object;}
+\DoxyCodeLine{00017\ \}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ TODO:\ Consider\ wrapping\ object\ layer\ management\ into\ a\ LayerManager\ class.}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ Singleton\ is\ needed\ as\ the\ renderer\ can\ only\ be\ initialized\ at\ runtime.}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_renderer}{Renderer}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }CreateTextureKey\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_texture_handler}{TextureHandler}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ CreateTextureKey()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ CreateTextureKey(\textcolor{keyword}{const}\ CreateTextureKey\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00035\ \ \ \ \ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ TODO:\ change\ this\ to\ private,\ this\ is\ for\ testing\ purposes.}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_renderer_1_1_render_key}{RenderKey}}\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ TODO:\ change\ this\ to\ private,\ this\ is\ for\ testing\ purposes.}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_renderer_1_1_render_key_a8883ed7e2131969ec4d4ce5221ffd332}{RenderKey}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_renderer_1_1_render_key_a2d68bf80066a5decae136a1b219324af}{RenderKey}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_renderer_1_1_render_key}{RenderKey}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00045\ \ \ \ \ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{using\ }ObjectWeakPtr\ =\ std::weak\_ptr<RenderObjectBase>;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{using\ }ObjectList\ =\ std::list<ObjectWeakPtr>;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{pointer__wrappers_8h_ad0468ce334010879cf52d7f821d98871}{sdl\_unique\_ptr<SDL\_Window>}}\ window;}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{pointer__wrappers_8h_ad0468ce334010879cf52d7f821d98871}{sdl\_unique\_ptr<SDL\_Renderer>}}\ renderer;}
+\DoxyCodeLine{00054\ \ \ \ \ std::map<ObjectWeakPtr,\ ObjectList::iterator,\ std::owner\_less<ObjectWeakPtr>>\ objectListMap;}
+\DoxyCodeLine{00055\ \ \ \ \ ObjectList\ objectList;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_renderer}{Renderer}}();}
+\DoxyCodeLine{00062\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{/*\ SINGLETON\ PATTERN\ */}}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_renderer_a8c6e15f666cb188a936004add75e6c6b}{Renderer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_renderer}{Renderer}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_aa42607899757d0a1c5e8fe0aa4cb5a7f}{operator\ =\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_renderer}{Renderer}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_renderer}{Renderer}}\&\ \mbox{\hyperlink{class_renderer_a043ea67562a907724f13b6c91705fcb1}{getInstance}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{/*\ SINGLETON\ PATTERN\ */}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00075\ \ \ \ \ SDL\_Texture*\ \mbox{\hyperlink{class_renderer_a3d386b12348c2d9e9de33765bc034e87}{createTexture}}(CreateTextureKey\ key,\ SDL\_Surface*\ surface)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//SDL\_Renderer*\ getRenderer(void)\ noexcept;}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_renderer_ab965431b93fb4daf2fa2af00b328856a}{registerObject}}(std::shared\_ptr<RenderObjectBase>\ objectPtr)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_renderer_acb90c123d62f544427b8a3550d1ce2eb}{removeObject}}(std::shared\_ptr<RenderObjectBase>\ objectPtr)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a154b7f1b2005a663edb91f6aaa4088dc}{render}}(\mbox{\hyperlink{class_renderer_1_1_render_key}{RenderKey}}\ key);}
+\DoxyCodeLine{00103\ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a30d63627ebb7bb28e455cdbb5a9aa4cf}{moveLayerUp}}(std::shared\_ptr<RenderObjectBase>\ objectPtr);}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_acdcbdbc2de3e4ee79e9ddcbb20269139}{moveLayerDown}}(std::shared\_ptr<RenderObjectBase>\ objectPtr);}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a33bea341dec4876252bd11c461d4e0b2}{moveLayerTop}}(std::shared\_ptr<RenderObjectBase>\ objectPtr);}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a79f800b2a66fad3a0941c417700c2aed}{moveLayerBottom}}(std::shared\_ptr<RenderObjectBase>\ objectPtr);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a80dbe663620281582a04e1707da26c16}{clear}}()\ noexcept;}
+\DoxyCodeLine{00118\ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a06e99214736750f87bc1ffc375e0fc8a}{debug}}(\textcolor{keywordtype}{void})\ const\ noexcept;}
+\DoxyCodeLine{00123\ \};}
+
+\end{DoxyCode}

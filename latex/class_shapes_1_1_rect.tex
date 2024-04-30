@@ -1,0 +1,79 @@
+\doxysection{Shapes\+::Rect Class Reference}
+\hypertarget{class_shapes_1_1_rect}{}\label{class_shapes_1_1_rect}\index{Shapes::Rect@{Shapes::Rect}}
+
+
+{\ttfamily \#include $<$rect.\+h$>$}
+
+
+
+Inheritance diagram for Shapes\+::Rect\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_shapes_1_1_rect__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Shapes\+::Rect\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_shapes_1_1_rect__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_shapes_1_1_rect_a1569ab2963e5e7893d09b9524e9e05d9}{position}}
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_shapes_1_1_rect_a4ca1faed6f3a5e586a4b506622fdc7ea}{dimension}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_shapes_1_1_shape}{Shapes\+::\+Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_shapes_1_1_shape_a61b5c9d0178925857cc03cb894d6a878}{view}}
+\begin{DoxyCompactList}\small\item\em Calls draw function after transforming coordinates with view. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Color \mbox{\hyperlink{class_shapes_1_1_shape_a4a82ce802aea95a2b68588d9dc6a891f}{color}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_shapes_1_1_shape}{Shapes\+::\+Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_shapes_1_1_shape_a89d9f9daa494e1ccdfb5fc6dc930b20e}{draw}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer) const noexcept
+\item 
+\mbox{\hyperlink{class_shapes_1_1_shape_a43dde932255e213ddef0bae12c1025c4}{Shape}} (\mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_shapes_1_1_shape_a61b5c9d0178925857cc03cb894d6a878}{view}}, const SDL\+\_\+\+Color \&\mbox{\hyperlink{class_shapes_1_1_shape_a4a82ce802aea95a2b68588d9dc6a891f}{color}}=\{ 0, 0, 0, 255 \})
+\item 
+virtual \mbox{\hyperlink{class_shapes_1_1_shape_ae3a5e797f28757c8060df14e2c2e20df}{\texorpdfstring{$\sim$}{\string~}\+Shape}} ()
+\item 
+void \mbox{\hyperlink{class_shapes_1_1_shape_ad4ff5aadd6850816218acaac75f091bb}{set\+Color}} (const SDL\+\_\+\+Color \&new\+Color) noexcept
+\item 
+SDL\+\_\+\+Color \mbox{\hyperlink{class_shapes_1_1_shape_aed2988789e73cfdc900816b86acf6f58}{get\+Color}} (void) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_render_object_base_ab640bb12371cdff15da2694777db1961}{debug}} (void) const noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_shapes_1_1_rect_a4ca1faed6f3a5e586a4b506622fdc7ea}\label{class_shapes_1_1_rect_a4ca1faed6f3a5e586a4b506622fdc7ea} 
+\index{Shapes::Rect@{Shapes::Rect}!dimension@{dimension}}
+\index{dimension@{dimension}!Shapes::Rect@{Shapes::Rect}}
+\doxysubsubsection{\texorpdfstring{dimension}{dimension}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Shapes\+::\+Rect\+::dimension\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_shapes_1_1_rect_a1569ab2963e5e7893d09b9524e9e05d9}\label{class_shapes_1_1_rect_a1569ab2963e5e7893d09b9524e9e05d9} 
+\index{Shapes::Rect@{Shapes::Rect}!position@{position}}
+\index{position@{position}!Shapes::Rect@{Shapes::Rect}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Shapes\+::\+Rect\+::position\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/shape/\mbox{\hyperlink{rect_8h}{rect.\+h}}\end{DoxyCompactItemize}

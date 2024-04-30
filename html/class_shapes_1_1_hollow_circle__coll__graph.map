@@ -1,0 +1,14 @@
+<map id="Shapes::HollowCircle" name="Shapes::HollowCircle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="172,353,316,380"/>
+<area shape="rect" id="Node000002" href="$class_shapes_1_1_circle.html" title=" " alt="" coords="191,279,297,305"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,321,247,353,241,353,241,321"/>
+<area shape="rect" id="Node000003" href="$class_shapes_1_1_shape.html" title=" " alt="" coords="143,203,254,229"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="216,241,238,277,234,280,212,244"/>
+<area shape="rect" id="Node000004" href="$class_render_object_base.html" title="Empty render object base class category." alt="" coords="5,112,136,139"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="103,146,182,200,179,204,100,150"/>
+<area shape="rect" id="Node000005" href="$class_views_1_1_view.html" title="View: defines a view area, translates the objects&#39; virtual rects to real rendering rects." alt="" coords="160,112,253,139"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="207,155,202,202,197,202,201,154"/>
+<area shape="rect" id="Node000006" href="$class_vector2_d.html" title=" " alt="" coords="212,5,287,32"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="270,44,274,55,281,75,284,101,281,148,268,230,252,279,247,277,263,229,276,148,279,102,275,76,269,57,265,46"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="220,44,211,57,205,86,207,112,201,112,200,85,206,55,216,41"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Views::HUD" name="Views::HUD">
+<area shape="rect" id="Node000001" title=" " alt="" coords="6,187,97,213"/>
+<area shape="rect" id="Node000002" href="$class_views_1_1_view.html" title="View: defines a view area, translates the objects&#39; virtual rects to real rendering rects." alt="" coords="5,112,98,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,154,54,186,49,186,49,154"/>
+<area shape="rect" id="Node000003" href="$class_vector2_d.html" title=" " alt="" coords="14,5,89,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="54,47,54,112,49,112,49,47"/>
+</map>

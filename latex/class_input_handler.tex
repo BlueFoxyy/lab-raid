@@ -1,0 +1,230 @@
+\doxysection{Input\+Handler Class Reference}
+\hypertarget{class_input_handler}{}\label{class_input_handler}\index{InputHandler@{InputHandler}}
+
+
+This is a global singleton class of handling user inputs. Wrapper class of SDL\+\_\+\+Poll\+Event and events handling.  
+
+
+
+
+{\ttfamily \#include $<$input\+\_\+handler.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_handler_add1535256e6bfda1899af61bc8915e2e}{Input\+Handler}} (const \mbox{\hyperlink{class_input_handler}{Input\+Handler}} \&)=delete
+\item 
+void \mbox{\hyperlink{class_input_handler_a06449d8500ed922ed79744f27299d56f}{operator=}} (const \mbox{\hyperlink{class_input_handler}{Input\+Handler}} \&)=delete
+\item 
+bool \mbox{\hyperlink{class_input_handler_aec26e0472ad335f89ea32a5bce2e4046}{poll\+Key\+Press}} (SDL\+\_\+\+Keycode key) noexcept
+\begin{DoxyCompactList}\small\item\em Checks if a key is pressed. (SDL\+\_\+\+Key\+Down) Is only true when the key was not held down. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_handler_abc3a82d1161a8e15d16a3e1911fe9f50}{poll\+Key\+Release}} (SDL\+\_\+\+Keycode key) noexcept
+\begin{DoxyCompactList}\small\item\em Checks if a key is released. (SDL\+\_\+\+Key\+Up) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_handler_abdb221ae93829471cc9bf105a412b49b}{is\+Key\+Down}} (SDL\+\_\+\+Keycode key) const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if a key is held down. (SDL\+\_\+\+Key\+Down) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_handler_adf349eb1e2419ed4ae0e570df3f6583e}{is\+Key\+Up}} (SDL\+\_\+\+Keycode key) const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if a key is not held down. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_input_handler_a6acc5bdaf2397209fc23679b518594cb}{hold\+Time}} (SDL\+\_\+\+Keycode key) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the time a key was held down in SDL\+\_\+\+Ticks. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_handler_acc1726f5273e78f99010f753d4ce2b36}{poll\+Button\+Press}} (\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}} button) noexcept
+\item 
+bool \mbox{\hyperlink{class_input_handler_aef5048be09023c87e2eded9de0edd460}{poll\+Button\+Release}} (\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}} button) noexcept
+\item 
+bool \mbox{\hyperlink{class_input_handler_a5f7c1e0576e991e5a5c69b443388d890}{is\+Button\+Down}} (\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}} button) const noexcept
+\item 
+bool \mbox{\hyperlink{class_input_handler_a301a5eb11e8f3da4cd73aed196753da2}{is\+Button\+Up}} (\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}} button) const noexcept
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_input_handler_ac02c713f90711160356c4963fa975d18}{hold\+Time}} (\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}} button) const noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_input_handler_a489d583d594fd5f5084cdb65539e5c75}{get\+Mouse\+Position}} (void) const noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_input_handler_a90fc0562dec804b94c57953c90ae9829}{poll\+Mouse\+Scroll}} (void) noexcept
+\item 
+void \mbox{\hyperlink{class_input_handler_a78d7f6abb9931a2a5e2157306fa7d03b}{receive\+Event}} (SDL\+\_\+\+Keyboard\+Event keyboard\+Event) noexcept
+\item 
+void \mbox{\hyperlink{class_input_handler_aa82cf451a8b8aeaf70195c0f349a68d7}{receive\+Event}} (SDL\+\_\+\+Mouse\+Button\+Event mouse\+Button\+Event) noexcept
+\item 
+void \mbox{\hyperlink{class_input_handler_a7115a26f190ce47d5a7d3716045f5240}{receive\+Event}} (SDL\+\_\+\+Mouse\+Wheel\+Event mouse\+Wheel\+Event) noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_input_handler}{Input\+Handler}} \& \mbox{\hyperlink{class_input_handler_a6362f1fe316a4322f2679ceb5f551731}{get\+Instance}} (void) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a global singleton class of handling user inputs. Wrapper class of SDL\+\_\+\+Poll\+Event and events handling. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_input_handler_add1535256e6bfda1899af61bc8915e2e}\label{class_input_handler_add1535256e6bfda1899af61bc8915e2e} 
+\index{InputHandler@{InputHandler}!InputHandler@{InputHandler}}
+\index{InputHandler@{InputHandler}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{InputHandler()}{InputHandler()}}
+{\footnotesize\ttfamily Input\+Handler\+::\+Input\+Handler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_input_handler}{Input\+Handler}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_input_handler_a6362f1fe316a4322f2679ceb5f551731}\label{class_input_handler_a6362f1fe316a4322f2679ceb5f551731} 
+\index{InputHandler@{InputHandler}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_input_handler}{Input\+Handler}} \& Input\+Handler\+::get\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_input_handler_a489d583d594fd5f5084cdb65539e5c75}\label{class_input_handler_a489d583d594fd5f5084cdb65539e5c75} 
+\index{InputHandler@{InputHandler}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Input\+Handler\+::get\+Mouse\+Position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_input_handler_ac02c713f90711160356c4963fa975d18}\label{class_input_handler_ac02c713f90711160356c4963fa975d18} 
+\index{InputHandler@{InputHandler}!holdTime@{holdTime}}
+\index{holdTime@{holdTime}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{holdTime()}{holdTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t Input\+Handler\+::hold\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}}}]{button }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_input_handler_a6acc5bdaf2397209fc23679b518594cb}\label{class_input_handler_a6acc5bdaf2397209fc23679b518594cb} 
+\index{InputHandler@{InputHandler}!holdTime@{holdTime}}
+\index{holdTime@{holdTime}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{holdTime()}{holdTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t Input\+Handler\+::hold\+Time (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Keycode}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the time a key was held down in SDL\+\_\+\+Ticks. 
+
+\begin{DoxyReturn}{Returns}
+How long the key was held down.
+\end{DoxyReturn}
+\Hypertarget{class_input_handler_a5f7c1e0576e991e5a5c69b443388d890}\label{class_input_handler_a5f7c1e0576e991e5a5c69b443388d890} 
+\index{InputHandler@{InputHandler}!isButtonDown@{isButtonDown}}
+\index{isButtonDown@{isButtonDown}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{isButtonDown()}{isButtonDown()}}
+{\footnotesize\ttfamily bool Input\+Handler\+::is\+Button\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}}}]{button }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_input_handler_a301a5eb11e8f3da4cd73aed196753da2}\label{class_input_handler_a301a5eb11e8f3da4cd73aed196753da2} 
+\index{InputHandler@{InputHandler}!isButtonUp@{isButtonUp}}
+\index{isButtonUp@{isButtonUp}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{isButtonUp()}{isButtonUp()}}
+{\footnotesize\ttfamily bool Input\+Handler\+::is\+Button\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}}}]{button }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_input_handler_abdb221ae93829471cc9bf105a412b49b}\label{class_input_handler_abdb221ae93829471cc9bf105a412b49b} 
+\index{InputHandler@{InputHandler}!isKeyDown@{isKeyDown}}
+\index{isKeyDown@{isKeyDown}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{isKeyDown()}{isKeyDown()}}
+{\footnotesize\ttfamily bool Input\+Handler\+::is\+Key\+Down (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Keycode}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Checks if a key is held down. (SDL\+\_\+\+Key\+Down) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & SDL\+\_\+\+Keycode key value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the key was held down.
+\end{DoxyReturn}
+\Hypertarget{class_input_handler_adf349eb1e2419ed4ae0e570df3f6583e}\label{class_input_handler_adf349eb1e2419ed4ae0e570df3f6583e} 
+\index{InputHandler@{InputHandler}!isKeyUp@{isKeyUp}}
+\index{isKeyUp@{isKeyUp}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{isKeyUp()}{isKeyUp()}}
+{\footnotesize\ttfamily bool Input\+Handler\+::is\+Key\+Up (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Keycode}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Checks if a key is not held down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & SDL\+\_\+\+Keycode key value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the key was not held down.
+\end{DoxyReturn}
+\Hypertarget{class_input_handler_a06449d8500ed922ed79744f27299d56f}\label{class_input_handler_a06449d8500ed922ed79744f27299d56f} 
+\index{InputHandler@{InputHandler}!operator=@{operator=}}
+\index{operator=@{operator=}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Input\+Handler\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_input_handler}{Input\+Handler}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{class_input_handler_acc1726f5273e78f99010f753d4ce2b36}\label{class_input_handler_acc1726f5273e78f99010f753d4ce2b36} 
+\index{InputHandler@{InputHandler}!pollButtonPress@{pollButtonPress}}
+\index{pollButtonPress@{pollButtonPress}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{pollButtonPress()}{pollButtonPress()}}
+{\footnotesize\ttfamily bool Input\+Handler\+::poll\+Button\+Press (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}}}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_input_handler_aef5048be09023c87e2eded9de0edd460}\label{class_input_handler_aef5048be09023c87e2eded9de0edd460} 
+\index{InputHandler@{InputHandler}!pollButtonRelease@{pollButtonRelease}}
+\index{pollButtonRelease@{pollButtonRelease}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{pollButtonRelease()}{pollButtonRelease()}}
+{\footnotesize\ttfamily bool Input\+Handler\+::poll\+Button\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}}}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_input_handler_aec26e0472ad335f89ea32a5bce2e4046}\label{class_input_handler_aec26e0472ad335f89ea32a5bce2e4046} 
+\index{InputHandler@{InputHandler}!pollKeyPress@{pollKeyPress}}
+\index{pollKeyPress@{pollKeyPress}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{pollKeyPress()}{pollKeyPress()}}
+{\footnotesize\ttfamily bool Input\+Handler\+::poll\+Key\+Press (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Keycode}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Checks if a key is pressed. (SDL\+\_\+\+Key\+Down) Is only true when the key was not held down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & SDL\+\_\+\+Keycode key value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the key was pressed.
+\end{DoxyReturn}
+\Hypertarget{class_input_handler_abc3a82d1161a8e15d16a3e1911fe9f50}\label{class_input_handler_abc3a82d1161a8e15d16a3e1911fe9f50} 
+\index{InputHandler@{InputHandler}!pollKeyRelease@{pollKeyRelease}}
+\index{pollKeyRelease@{pollKeyRelease}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{pollKeyRelease()}{pollKeyRelease()}}
+{\footnotesize\ttfamily bool Input\+Handler\+::poll\+Key\+Release (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Keycode}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Checks if a key is released. (SDL\+\_\+\+Key\+Up) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & SDL\+\_\+\+Keycode key value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the key was released.
+\end{DoxyReturn}
+\Hypertarget{class_input_handler_a90fc0562dec804b94c57953c90ae9829}\label{class_input_handler_a90fc0562dec804b94c57953c90ae9829} 
+\index{InputHandler@{InputHandler}!pollMouseScroll@{pollMouseScroll}}
+\index{pollMouseScroll@{pollMouseScroll}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{pollMouseScroll()}{pollMouseScroll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Input\+Handler\+::poll\+Mouse\+Scroll (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_input_handler_a78d7f6abb9931a2a5e2157306fa7d03b}\label{class_input_handler_a78d7f6abb9931a2a5e2157306fa7d03b} 
+\index{InputHandler@{InputHandler}!receiveEvent@{receiveEvent}}
+\index{receiveEvent@{receiveEvent}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{receiveEvent()}{receiveEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Input\+Handler\+::receive\+Event (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Keyboard\+Event}]{keyboard\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_input_handler_aa82cf451a8b8aeaf70195c0f349a68d7}\label{class_input_handler_aa82cf451a8b8aeaf70195c0f349a68d7} 
+\index{InputHandler@{InputHandler}!receiveEvent@{receiveEvent}}
+\index{receiveEvent@{receiveEvent}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{receiveEvent()}{receiveEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Input\+Handler\+::receive\+Event (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Mouse\+Button\+Event}]{mouse\+Button\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_input_handler_a7115a26f190ce47d5a7d3716045f5240}\label{class_input_handler_a7115a26f190ce47d5a7d3716045f5240} 
+\index{InputHandler@{InputHandler}!receiveEvent@{receiveEvent}}
+\index{receiveEvent@{receiveEvent}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{receiveEvent()}{receiveEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Input\+Handler\+::receive\+Event (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Mouse\+Wheel\+Event}]{mouse\+Wheel\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{input__handler_8h}{input\+\_\+handler.\+h}}\end{DoxyCompactItemize}

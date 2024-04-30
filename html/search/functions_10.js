@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['sdl_5fmake_5fshared_0',['sdl_make_shared',['../pointer__wrappers_8h.html#a78d8e7ad3bf7e47bf6f6bdda0dc5f6b6',1,'pointer_wrappers.h']]],
+  ['selectionmanager_1',['SelectionManager',['../class_selection_manager.html#ae0cb236e49a6b360c29d768c2b282607',1,'SelectionManager::SelectionManager()'],['../class_selection_manager.html#a90bd7c98c9d5835d2a795145877e4d3e',1,'SelectionManager::SelectionManager(const std::vector&lt; T &gt; &amp;selections)']]],
+  ['set_2',['set',['../class_selection_manager.html#a4ae8946a290e27847ad69f5279fff920',1,'SelectionManager']]],
+  ['setangle_3',['setAngle',['../class_objects_1_1_object.html#a851f5b67467fb7c2ba7cdbabaafef1a8',1,'Objects::Object::setAngle()'],['../class_views_1_1_camera.html#a1869bfea8e47fc1878a1275a1fe67601',1,'Views::Camera::setAngle()']]],
+  ['setbeginpoint_4',['setBeginPoint',['../class_shapes_1_1_line.html#a6db51d8a1b4c156be8020d1ecfc43c25',1,'Shapes::Line']]],
+  ['setcenter_5',['setCenter',['../class_shapes_1_1_circle.html#ae864b3463b5415bb55fc07a991f13378',1,'Shapes::Circle']]],
+  ['setcolor_6',['setColor',['../class_shapes_1_1_shape.html#ad4ff5aadd6850816218acaac75f091bb',1,'Shapes::Shape']]],
+  ['setdimension_7',['setDimension',['../class_views_1_1_camera.html#a8ba4e3d8001c3b3a3700ec662e400086',1,'Views::Camera']]],
+  ['setendpoint_8',['setEndPoint',['../class_shapes_1_1_line.html#a5e6dc803510cfb27d59a9e2dbd99dcd1',1,'Shapes::Line']]],
+  ['sethovered_9',['setHovered',['../class_objects_1_1_button.html#aac2b0e7efbfcb7e3550f922412582d46',1,'Objects::Button']]],
+  ['setpivotobject_10',['setPivotObject',['../class_views_1_1_camera.html#aa6f898f4c59c73fa5d4ab45d2dbc3d3c',1,'Views::Camera']]],
+  ['setposition_11',['setPosition',['../class_views_1_1_camera.html#ab1fd8660bd01ae2a30135f18fbff971c',1,'Views::Camera']]],
+  ['setradius_12',['setRadius',['../class_shapes_1_1_circle.html#a19f3ba261b037dec93fe15cee5a331bd',1,'Shapes::Circle']]],
+  ['settexture_13',['setTexture',['../class_objects_1_1_object.html#a4fb08ddfcc7f2d4d94899e1a530cd003',1,'Objects::Object']]],
+  ['setthickness_14',['setThickness',['../class_shapes_1_1_hollow_circle.html#a3ffca57250baa0f34dc3c6e5da7e5240',1,'Shapes::HollowCircle::setThickness()'],['../class_shapes_1_1_line.html#a4ec01290dd6ceb4231b884c7a1bedf7f',1,'Shapes::Line::setThickness()']]],
+  ['setvisibility_15',['setVisibility',['../class_objects_1_1_object.html#a9178f5e6996cd09c1cc1537bfcaed9cc',1,'Objects::Object']]],
+  ['setzoom_16',['setZoom',['../class_views_1_1_camera.html#ad2cd0b64c9e9aec8a9af30bdc2e44649',1,'Views::Camera']]],
+  ['shape_17',['Shape',['../class_shapes_1_1_shape.html#a43dde932255e213ddef0bae12c1025c4',1,'Shapes::Shape']]],
+  ['size_18',['size',['../class_selection_manager.html#a8eed0c99b742d48db665813c85f0e0c3',1,'SelectionManager']]],
+  ['stretch_19',['stretch',['../class_objects_1_1_object.html#a1e8d224e3f4b88dccafea0d58b76d247',1,'Objects::Object']]],
+  ['stretchx_20',['stretchX',['../class_objects_1_1_object.html#a6eca4e624d67f8f4d3816bf385766e1f',1,'Objects::Object']]],
+  ['stretchy_21',['stretchY',['../class_objects_1_1_object.html#ae7cfe6efac43137c0c317ce33901af13',1,'Objects::Object']]]
+];

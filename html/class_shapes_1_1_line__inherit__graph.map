@@ -1,0 +1,7 @@
+<map id="Shapes::Line" name="Shapes::Line">
+<area shape="rect" id="Node000001" title=" " alt="" coords="22,155,119,181"/>
+<area shape="rect" id="Node000002" href="$class_shapes_1_1_shape.html" title=" " alt="" coords="15,80,126,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,122,73,154,68,154,68,122"/>
+<area shape="rect" id="Node000003" href="$class_render_object_base.html" title="Empty render object base class category." alt="" coords="5,5,136,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="73,48,73,80,68,80,68,48"/>
+</map>

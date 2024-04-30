@@ -1,0 +1,213 @@
+\doxysection{Renderer Class Reference}
+\hypertarget{class_renderer}{}\label{class_renderer}\index{Renderer@{Renderer}}
+
+
+Required key to call \doxylink{class_renderer_a154b7f1b2005a663edb91f6aaa4088dc}{render()} in.  
+
+
+
+
+{\ttfamily \#include $<$renderer.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_renderer_1_1_render_key}{Render\+Key}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_renderer_a8c6e15f666cb188a936004add75e6c6b}{Renderer}} (const \mbox{\hyperlink{class_renderer}{Renderer}} \&)=delete
+\item 
+void \mbox{\hyperlink{class_renderer_aa42607899757d0a1c5e8fe0aa4cb5a7f}{operator=}} (const \mbox{\hyperlink{class_renderer}{Renderer}} \&)=delete
+\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_renderer_a3d386b12348c2d9e9de33765bc034e87}{create\+Texture}} (Create\+Texture\+Key key, SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*}surface) const
+\begin{DoxyCompactList}\small\item\em Creates a texture from a SDL\+\_\+\+Surface. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_renderer_ab965431b93fb4daf2fa2af00b328856a}{register\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$ object\+Ptr) noexcept
+\begin{DoxyCompactList}\small\item\em Get underlying SDL\+\_\+\+Renderer renderer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_renderer_acb90c123d62f544427b8a3550d1ce2eb}{remove\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$ object\+Ptr) noexcept
+\begin{DoxyCompactList}\small\item\em Unregisters the object for rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_a154b7f1b2005a663edb91f6aaa4088dc}{render}} (\mbox{\hyperlink{class_renderer_1_1_render_key}{Render\+Key}} key)
+\begin{DoxyCompactList}\small\item\em Renders every registered object. Note\+: SDL has built-\/in out of boundaries check. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_a30d63627ebb7bb28e455cdbb5a9aa4cf}{move\+Layer\+Up}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$ object\+Ptr)
+\begin{DoxyCompactList}\small\item\em Moves the object up one layer. Throws std\+::invalid\+\_\+argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_acdcbdbc2de3e4ee79e9ddcbb20269139}{move\+Layer\+Down}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$ object\+Ptr)
+\item 
+void \mbox{\hyperlink{class_renderer_a33bea341dec4876252bd11c461d4e0b2}{move\+Layer\+Top}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$ object\+Ptr)
+\item 
+void \mbox{\hyperlink{class_renderer_a79f800b2a66fad3a0941c417700c2aed}{move\+Layer\+Bottom}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$ object\+Ptr)
+\item 
+void \mbox{\hyperlink{class_renderer_a80dbe663620281582a04e1707da26c16}{clear}} () noexcept
+\begin{DoxyCompactList}\small\item\em Clears object set and unloads all textures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_a06e99214736750f87bc1ffc375e0fc8a}{debug}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Prints renderer debug info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_renderer}{Renderer}} \& \mbox{\hyperlink{class_renderer_a043ea67562a907724f13b6c91705fcb1}{get\+Instance}} (void) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Required key to call \doxylink{class_renderer_a154b7f1b2005a663edb91f6aaa4088dc}{render()} in. 
+
+This is a global singleton class for rendering. Keeps track of current objects, shapes and renders everything onto a set window. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_renderer_a8c6e15f666cb188a936004add75e6c6b}\label{class_renderer_a8c6e15f666cb188a936004add75e6c6b} 
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}}
+{\footnotesize\ttfamily Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_renderer}{Renderer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_renderer_a80dbe663620281582a04e1707da26c16}\label{class_renderer_a80dbe663620281582a04e1707da26c16} 
+\index{Renderer@{Renderer}!clear@{clear}}
+\index{clear@{clear}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Renderer\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Clears object set and unloads all textures. 
+
+\Hypertarget{class_renderer_a3d386b12348c2d9e9de33765bc034e87}\label{class_renderer_a3d386b12348c2d9e9de33765bc034e87} 
+\index{Renderer@{Renderer}!createTexture@{createTexture}}
+\index{createTexture@{createTexture}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{createTexture()}{createTexture()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} Renderer\+::create\+Texture (\begin{DoxyParamCaption}\item[{Create\+Texture\+Key}]{key,  }\item[{SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*}}]{surface }\end{DoxyParamCaption}) const}
+
+
+
+Creates a texture from a SDL\+\_\+\+Surface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Required key to use this function.\\
+\hline
+{\em surface} & The source surface.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the allocated SDL\+\_\+\+Texture object.
+\end{DoxyReturn}
+\Hypertarget{class_renderer_a06e99214736750f87bc1ffc375e0fc8a}\label{class_renderer_a06e99214736750f87bc1ffc375e0fc8a} 
+\index{Renderer@{Renderer}!debug@{debug}}
+\index{debug@{debug}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily void Renderer\+::debug (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Prints renderer debug info. 
+
+\Hypertarget{class_renderer_a043ea67562a907724f13b6c91705fcb1}\label{class_renderer_a043ea67562a907724f13b6c91705fcb1} 
+\index{Renderer@{Renderer}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_renderer}{Renderer}} \& Renderer\+::get\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_renderer_a79f800b2a66fad3a0941c417700c2aed}\label{class_renderer_a79f800b2a66fad3a0941c417700c2aed} 
+\index{Renderer@{Renderer}!moveLayerBottom@{moveLayerBottom}}
+\index{moveLayerBottom@{moveLayerBottom}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{moveLayerBottom()}{moveLayerBottom()}}
+{\footnotesize\ttfamily void Renderer\+::move\+Layer\+Bottom (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$}]{object\+Ptr }\end{DoxyParamCaption})}
+
+\Hypertarget{class_renderer_acdcbdbc2de3e4ee79e9ddcbb20269139}\label{class_renderer_acdcbdbc2de3e4ee79e9ddcbb20269139} 
+\index{Renderer@{Renderer}!moveLayerDown@{moveLayerDown}}
+\index{moveLayerDown@{moveLayerDown}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{moveLayerDown()}{moveLayerDown()}}
+{\footnotesize\ttfamily void Renderer\+::move\+Layer\+Down (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$}]{object\+Ptr }\end{DoxyParamCaption})}
+
+\Hypertarget{class_renderer_a33bea341dec4876252bd11c461d4e0b2}\label{class_renderer_a33bea341dec4876252bd11c461d4e0b2} 
+\index{Renderer@{Renderer}!moveLayerTop@{moveLayerTop}}
+\index{moveLayerTop@{moveLayerTop}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{moveLayerTop()}{moveLayerTop()}}
+{\footnotesize\ttfamily void Renderer\+::move\+Layer\+Top (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$}]{object\+Ptr }\end{DoxyParamCaption})}
+
+\Hypertarget{class_renderer_a30d63627ebb7bb28e455cdbb5a9aa4cf}\label{class_renderer_a30d63627ebb7bb28e455cdbb5a9aa4cf} 
+\index{Renderer@{Renderer}!moveLayerUp@{moveLayerUp}}
+\index{moveLayerUp@{moveLayerUp}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{moveLayerUp()}{moveLayerUp()}}
+{\footnotesize\ttfamily void Renderer\+::move\+Layer\+Up (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$}]{object\+Ptr }\end{DoxyParamCaption})}
+
+
+
+Moves the object up one layer. Throws std\+::invalid\+\_\+argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+Ptr} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_renderer_aa42607899757d0a1c5e8fe0aa4cb5a7f}\label{class_renderer_aa42607899757d0a1c5e8fe0aa4cb5a7f} 
+\index{Renderer@{Renderer}!operator=@{operator=}}
+\index{operator=@{operator=}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Renderer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_renderer}{Renderer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{class_renderer_ab965431b93fb4daf2fa2af00b328856a}\label{class_renderer_ab965431b93fb4daf2fa2af00b328856a} 
+\index{Renderer@{Renderer}!registerObject@{registerObject}}
+\index{registerObject@{registerObject}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{registerObject()}{registerObject()}}
+{\footnotesize\ttfamily bool Renderer\+::register\+Object (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$}]{object\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get underlying SDL\+\_\+\+Renderer renderer. 
+
+\begin{DoxyReturn}{Returns}
+The underlying renderer.
+\end{DoxyReturn}
+
+
+Registers the object for rendering.
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+Ptr} & std\+::shared\+\_\+ptr of the object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the object was successfully registered
+\end{DoxyReturn}
+\Hypertarget{class_renderer_acb90c123d62f544427b8a3550d1ce2eb}\label{class_renderer_acb90c123d62f544427b8a3550d1ce2eb} 
+\index{Renderer@{Renderer}!removeObject@{removeObject}}
+\index{removeObject@{removeObject}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{removeObject()}{removeObject()}}
+{\footnotesize\ttfamily bool Renderer\+::remove\+Object (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$}]{object\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Unregisters the object for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+Ptr} & std\+::shared\+\_\+ptr of the object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the object was successfully unregistered.
+\end{DoxyReturn}
+\Hypertarget{class_renderer_a154b7f1b2005a663edb91f6aaa4088dc}\label{class_renderer_a154b7f1b2005a663edb91f6aaa4088dc} 
+\index{Renderer@{Renderer}!render@{render}}
+\index{render@{render}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Renderer\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_renderer_1_1_render_key}{Render\+Key}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Renders every registered object. Note\+: SDL has built-\/in out of boundaries check. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Access Control Key\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{renderer_8h}{renderer.\+h}}\end{DoxyCompactItemize}

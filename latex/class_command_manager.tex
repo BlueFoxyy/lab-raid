@@ -1,0 +1,61 @@
+\doxysection{Command\+Manager Class Reference}
+\hypertarget{class_command_manager}{}\label{class_command_manager}\index{CommandManager@{CommandManager}}
+
+
+Manages a map from key bindings to various functions. e.\+g. player.\+move(), current\+Scene.\+set(main\+Menu), or renderer.\+draw\+Cone().  
+
+
+
+
+{\ttfamily \#include $<$command\+\_\+manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_command_manager_a02e4cd8e8ae8bd80645bef3f95e5f46d}{register\+Command}} (\mbox{\hyperlink{struct_key_bind}{Key\+Bind}} key\+Bind, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_commands_1_1_command}{Commands\+::\+Command}} $>$ command)
+\begin{DoxyCompactList}\small\item\em Registers a command for the specified key bind. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_manager_a143c1ae2ae2f513cd9eeacc8a8f72a01}{update}} () noexcept
+\begin{DoxyCompactList}\small\item\em Executes corresponding command if a key bind was matched. Note\+: beware of thread safety. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages a map from key bindings to various functions. e.\+g. player.\+move(), current\+Scene.\+set(main\+Menu), or renderer.\+draw\+Cone(). 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_command_manager_a02e4cd8e8ae8bd80645bef3f95e5f46d}\label{class_command_manager_a02e4cd8e8ae8bd80645bef3f95e5f46d} 
+\index{CommandManager@{CommandManager}!registerCommand@{registerCommand}}
+\index{registerCommand@{registerCommand}!CommandManager@{CommandManager}}
+\doxysubsubsection{\texorpdfstring{registerCommand()}{registerCommand()}}
+{\footnotesize\ttfamily bool Command\+Manager\+::register\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_key_bind}{Key\+Bind}}}]{key\+Bind,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_commands_1_1_command}{Commands\+::\+Command}} $>$}]{command }\end{DoxyParamCaption})}
+
+
+
+Registers a command for the specified key bind. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Bind} & The key bind of this command.\\
+\hline
+{\em command} & The command to execute if the key bind is pressed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the command was successfully registered, fails if
+
+key\+Bind is already registered.
+\end{DoxyReturn}
+\Hypertarget{class_command_manager_a143c1ae2ae2f513cd9eeacc8a8f72a01}\label{class_command_manager_a143c1ae2ae2f513cd9eeacc8a8f72a01} 
+\index{CommandManager@{CommandManager}!update@{update}}
+\index{update@{update}!CommandManager@{CommandManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Command\+Manager\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Executes corresponding command if a key bind was matched. Note\+: beware of thread safety. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{command__manager_8h}{command\+\_\+manager.\+h}}\end{DoxyCompactItemize}

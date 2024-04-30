@@ -1,0 +1,43 @@
+\doxysection{selection\+\_\+manager.\+h}
+\hypertarget{selection__manager_8h_source}{}\label{selection__manager_8h_source}\index{include/utility/selection\_manager.h@{include/utility/selection\_manager.h}}
+\mbox{\hyperlink{selection__manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <format>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ TODO:\ Complete\ SelectionManager.}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_selection_manager}{SelectionManager}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ std::vector<T>\ selections;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ currentSelection;\ \textcolor{comment}{//\ mutable:\ this\ field\ should\ ALWAYS\ be\ modifiable.}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_selection_manager_af6e299dee65dc6462c0bbfce183e2fd1}{SELECTION\_NOT\_SET}}\ =\ -\/1;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_selection_manager_ae0cb236e49a6b360c29d768c2b282607}{SelectionManager}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_selection_manager_a90bd7c98c9d5835d2a795145877e4d3e}{SelectionManager}}(\textcolor{keyword}{const}\ std::vector<T>\&\ selections);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_selection_manager_ae9309ad047e8157023dd9cbd772a5d9e}{next}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_selection_manager_affba0d9e7a32ad476a3e426cd0979fb8}{prev}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_selection_manager_a4ae8946a290e27847ad69f5279fff920}{set}}(\textcolor{keywordtype}{int}\ newSelection)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_selection_manager_a8eed0c99b742d48db665813c85f0e0c3}{size}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_selection_manager_a92edaf873deb5db9fb7fd156aff0f496}{add}}(T\ newSelection)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_selection_manager_a4d67b38366e42cb6c4afab1d014bb6d0}{remove}}(\textcolor{keywordtype}{size\_t}\ selectionId);}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ T\ \mbox{\hyperlink{class_selection_manager_adcebe7ee4ea43f9129a342413fee4d90}{get}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_selection_manager_a81fead026435900bdf6a5080a170ce6d}{getSelectionId}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#include\ "{}../../src/utilities/selection\_manager.tpp"{}}}
+
+\end{DoxyCode}

@@ -1,0 +1,45 @@
+\doxysection{vector2d.\+h}
+\hypertarget{vector2d_8h_source}{}\label{vector2d_8h_source}\index{include/utility/vector2d.h@{include/utility/vector2d.h}}
+\mbox{\hyperlink{vector2d_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{float}\ x;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{float}\ y;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ Constructors}}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_vector2_d_a6fc34e1533ff011c411e41a6c7315db1}{Vector2D}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_vector2_d_a3b1a739c12f84c6664023732daf84e05}{Vector2D}}(\textcolor{keywordtype}{float}\ \_x,\ \textcolor{keywordtype}{float}\ \_y)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ Member\ Functions}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_vector2_d_a2a0ad3acac338642105d42f02a97f49b}{getX}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};\ \ \ \ \textcolor{comment}{//\ x\ factor}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_vector2_d_a407f8bde87bb84ad073f83ceda8c1849}{getY}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};\ \ \ \ \textcolor{comment}{//\ y\ factor}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_a1304a3478566f7e6906022d968e0b675}{norm}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};\ \textcolor{comment}{//\ normalized\ vector}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_vector2_d_aa39bcefceb1e6d123461199d48a317e4}{len}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};\ \ \ \ \ \ \textcolor{comment}{//\ length\ of\ vector}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_vector2_d_a5e8673badff46fe1c6ba6dd48efa568d}{len2}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};\ \ \ \ \textcolor{comment}{//\ squared\ length\ of\ vector}}
+\DoxyCodeLine{00020\ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_adc047d48b809e4f3c122fc41d4acf471}{rotate}}(\textcolor{keywordtype}{float}\ theta)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};\ \textcolor{comment}{//\ rotates\ the\ vector\ by\ @param\ theta\ radians}}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ Static\ functions}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_a51e94c6919d5bca5a091e3772b7c3e57}{zero}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{noexcept};\ \textcolor{comment}{//\ returns\ a\ zero-\/vector}}
+\DoxyCodeLine{00025\ \ \ \ \ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ Operators}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_a4ae8b29d19501efccc892e1a637cfb1b}{operator\ +\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_a3f639fc9dc3c0250a231e12b6b702234}{operator\ -\/\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_a3f639fc9dc3c0250a231e12b6b702234}{operator\ -\/\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_ab816737cada1d04371396511936f9cfd}{operator\ *\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\ \textcolor{keywordtype}{float})\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_a5885c8f38f453b096ea6cdaab46fbdd6}{operator\ /\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\ \textcolor{keywordtype}{float})\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&\ \mbox{\hyperlink{class_vector2_d_a7f9bc4f498c9bf2aec4200f57350406e}{operator\ +=\ }}(\mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&\ \mbox{\hyperlink{class_vector2_d_a60d012b8f0e6cb449a7065a682ce2ff6}{operator\ -\/=\ }}(\mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&\ \mbox{\hyperlink{class_vector2_d_aba61c893e73c1103e56a8e8256c1aeda}{operator\ *=\ }}(\mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\ \textcolor{keywordtype}{float})\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&\ \mbox{\hyperlink{class_vector2_d_aae458b5de2c38fd50cd0761edbc795fd}{operator\ /=\ }}(\mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\ \textcolor{keywordtype}{float})\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_vector2_d_ac16c0bf7915927717395d60e6c2c06e5}{dot}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_vector2_d_ad599665e3c7d781adef3f9d9180826ba}{cross}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_vector2_d_ac43dbbe54d6a92b2386e9ae2ef127c4a}{rotate}}(\mbox{\hyperlink{class_vector2_d}{Vector2D}},\ \textcolor{keywordtype}{float})\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00039\ \};}
+
+\end{DoxyCode}

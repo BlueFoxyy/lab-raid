@@ -1,0 +1,33 @@
+\doxysection{pointer\+\_\+wrappers.\+h}
+\hypertarget{pointer__wrappers_8h_source}{}\label{pointer__wrappers_8h_source}\index{include/utility/pointer\_wrappers.h@{include/utility/pointer\_wrappers.h}}
+\mbox{\hyperlink{pointer__wrappers_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsdl__deleter}{sdl\_deleter}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structsdl__deleter_a51bb55803e49772fd2bffa7df4c23524}{operator\ ()\ }}(SDL\_RWops*\ thing)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{if}\ (thing)\ SDL\_FreeRW(thing);\ \}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structsdl__deleter_a51bb55803e49772fd2bffa7df4c23524}{operator\ ()\ }}(SDL\_cond*\ thing)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{if}\ (thing)\ SDL\_DestroyCond(thing);\ \}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structsdl__deleter_a51bb55803e49772fd2bffa7df4c23524}{operator\ ()\ }}(SDL\_Cursor*\ thing)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \ \ \ \ \{\ \textcolor{keywordflow}{if}\ (thing)\ SDL\_FreeCursor(thing);\ \}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structsdl__deleter_a51bb55803e49772fd2bffa7df4c23524}{operator\ ()\ }}(SDL\_PixelFormat*\ thing)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{if}\ (thing)\ SDL\_FreeFormat(thing);\ \}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structsdl__deleter_a51bb55803e49772fd2bffa7df4c23524}{operator\ ()\ }}(SDL\_mutex*\ thing)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{if}\ (thing)\ SDL\_DestroyMutex(thing);\ \}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structsdl__deleter_a51bb55803e49772fd2bffa7df4c23524}{operator\ ()\ }}(SDL\_Palette*\ thing)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \ \ \ \{\ \textcolor{keywordflow}{if}\ (thing)\ SDL\_FreePalette(thing);\ \}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structsdl__deleter_a51bb55803e49772fd2bffa7df4c23524}{operator\ ()\ }}(SDL\_Renderer*\ thing)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \ \ \{\ \textcolor{keywordflow}{if}\ (thing)\ SDL\_DestroyRenderer(thing);\ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structsdl__deleter_a51bb55803e49772fd2bffa7df4c23524}{operator\ ()\ }}(SDL\_sem*\ thing)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{if}\ (thing)\ SDL\_DestroySemaphore(thing);\ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structsdl__deleter_a51bb55803e49772fd2bffa7df4c23524}{operator\ ()\ }}(SDL\_Surface*\ thing)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \ \ \ \{\ \textcolor{keywordflow}{if}\ (thing)\ SDL\_FreeSurface(thing);\ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structsdl__deleter_a51bb55803e49772fd2bffa7df4c23524}{operator\ ()\ }}(SDL\_Texture*\ thing)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \ \ \ \{\ \textcolor{keywordflow}{if}\ (thing)\ SDL\_DestroyTexture(thing);\ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structsdl__deleter_a51bb55803e49772fd2bffa7df4c23524}{operator\ ()\ }}(Uint8*\ thing)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{if}\ (thing)\ SDL\_FreeWAV(thing);\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structsdl__deleter_a51bb55803e49772fd2bffa7df4c23524}{operator\ ()\ }}(SDL\_Window*\ thing)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \ \ \ \ \ \{\ \textcolor{keywordflow}{if}\ (thing)\ SDL\_DestroyWindow(thing);\ \}}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Resource>}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }\mbox{\hyperlink{pointer__wrappers_8h_ad0468ce334010879cf52d7f821d98871}{sdl\_unique\_ptr}}\ =\ std::unique\_ptr<Resource,\ sdl\_deleter>;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Resource>}
+\DoxyCodeLine{00028\ std::shared\_ptr<Resource>\ \mbox{\hyperlink{pointer__wrappers_8h_a78d8e7ad3bf7e47bf6f6bdda0dc5f6b6}{sdl\_make\_shared}}(Resource*\ resource)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{return}\ std::shared\_ptr<Resource>(resource,\ \mbox{\hyperlink{structsdl__deleter}{sdl\_deleter}}());}
+\DoxyCodeLine{00030\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,119 @@
+\doxysection{Key\+Bind Struct Reference}
+\hypertarget{struct_key_bind}{}\label{struct_key_bind}\index{KeyBind@{KeyBind}}
+
+
+\doxylink{struct_key_bind}{Key\+Bind} structure for key bindings.  
+
+
+
+
+{\ttfamily \#include $<$command\+\_\+manager.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885}{Trigger}} \{ \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885afcd6420c60a17418a6de745d6546d966}{TAP}}
+, \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885a0c6d9dfb485b43c6fba87439f9f73ac4}{HOLD}}
+, \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885a7d649ef069df9885e382417c79f3d5cd}{RELEASE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_key_bind_a2067fb5296763e19d3d73d3374e53de8}{Key\+Bind}} (const std\+::map$<$ SDL\+\_\+\+Keycode, \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885}{Trigger}} $>$ \&\mbox{\hyperlink{struct_key_bind_abf3b69ea4715f56394402325e68b96a1}{keys}}, const std\+::map$<$ \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}}, \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885}{Trigger}} $>$ \mbox{\hyperlink{struct_key_bind_aceb199ca5a7c9d386079ed9b952a7af8}{buttons}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_key_bind_a9d2e2e593e32fb1022daae036035bb4f}{ID}}
+\item 
+std\+::map$<$ SDL\+\_\+\+Keycode, \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885}{Trigger}} $>$ \mbox{\hyperlink{struct_key_bind_abf3b69ea4715f56394402325e68b96a1}{keys}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}}, \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885}{Trigger}} $>$ \mbox{\hyperlink{struct_key_bind_aceb199ca5a7c9d386079ed9b952a7af8}{buttons}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \mbox{\hyperlink{struct_key_bind_a59ecc44932e884e53ccc023c2a34e386}{Key\+Bind\+Count}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_key_bind_a4865ba9480be0f0d9282b825c88ab3f7}{operator$<$}} (const \mbox{\hyperlink{struct_key_bind}{Key\+Bind}} \&a, const \mbox{\hyperlink{struct_key_bind}{Key\+Bind}} \&b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_key_bind}{Key\+Bind} structure for key bindings. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885}\label{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885} 
+\index{KeyBind@{KeyBind}!Trigger@{Trigger}}
+\index{Trigger@{Trigger}!KeyBind@{KeyBind}}
+\doxysubsubsection{\texorpdfstring{Trigger}{Trigger}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885}{Key\+Bind\+::\+Trigger}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TAP@{TAP}!KeyBind@{KeyBind}}\index{KeyBind@{KeyBind}!TAP@{TAP}}}\Hypertarget{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885afcd6420c60a17418a6de745d6546d966}\label{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885afcd6420c60a17418a6de745d6546d966} 
+TAP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HOLD@{HOLD}!KeyBind@{KeyBind}}\index{KeyBind@{KeyBind}!HOLD@{HOLD}}}\Hypertarget{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885a0c6d9dfb485b43c6fba87439f9f73ac4}\label{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885a0c6d9dfb485b43c6fba87439f9f73ac4} 
+HOLD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELEASE@{RELEASE}!KeyBind@{KeyBind}}\index{KeyBind@{KeyBind}!RELEASE@{RELEASE}}}\Hypertarget{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885a7d649ef069df9885e382417c79f3d5cd}\label{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885a7d649ef069df9885e382417c79f3d5cd} 
+RELEASE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_key_bind_a2067fb5296763e19d3d73d3374e53de8}\label{struct_key_bind_a2067fb5296763e19d3d73d3374e53de8} 
+\index{KeyBind@{KeyBind}!KeyBind@{KeyBind}}
+\index{KeyBind@{KeyBind}!KeyBind@{KeyBind}}
+\doxysubsubsection{\texorpdfstring{KeyBind()}{KeyBind()}}
+{\footnotesize\ttfamily Key\+Bind\+::\+Key\+Bind (\begin{DoxyParamCaption}\item[{const std\+::map$<$ SDL\+\_\+\+Keycode, \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885}{Trigger}} $>$ \&}]{keys,  }\item[{const std\+::map$<$ \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}}, \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885}{Trigger}} $>$}]{buttons }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{struct_key_bind_a4865ba9480be0f0d9282b825c88ab3f7}\label{struct_key_bind_a4865ba9480be0f0d9282b825c88ab3f7} 
+\index{KeyBind@{KeyBind}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!KeyBind@{KeyBind}}
+\doxysubsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_key_bind}{Key\+Bind}} \&}]{a,  }\item[{const \mbox{\hyperlink{struct_key_bind}{Key\+Bind}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_key_bind_aceb199ca5a7c9d386079ed9b952a7af8}\label{struct_key_bind_aceb199ca5a7c9d386079ed9b952a7af8} 
+\index{KeyBind@{KeyBind}!buttons@{buttons}}
+\index{buttons@{buttons}!KeyBind@{KeyBind}}
+\doxysubsubsection{\texorpdfstring{buttons}{buttons}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}}, \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885}{Trigger}}$>$ Key\+Bind\+::buttons}
+
+\Hypertarget{struct_key_bind_a9d2e2e593e32fb1022daae036035bb4f}\label{struct_key_bind_a9d2e2e593e32fb1022daae036035bb4f} 
+\index{KeyBind@{KeyBind}!ID@{ID}}
+\index{ID@{ID}!KeyBind@{KeyBind}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily int Key\+Bind\+::\+ID}
+
+\Hypertarget{struct_key_bind_a59ecc44932e884e53ccc023c2a34e386}\label{struct_key_bind_a59ecc44932e884e53ccc023c2a34e386} 
+\index{KeyBind@{KeyBind}!KeyBindCount@{KeyBindCount}}
+\index{KeyBindCount@{KeyBindCount}!KeyBind@{KeyBind}}
+\doxysubsubsection{\texorpdfstring{KeyBindCount}{KeyBindCount}}
+{\footnotesize\ttfamily unsigned int Key\+Bind\+::\+Key\+Bind\+Count\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{struct_key_bind_abf3b69ea4715f56394402325e68b96a1}\label{struct_key_bind_abf3b69ea4715f56394402325e68b96a1} 
+\index{KeyBind@{KeyBind}!keys@{keys}}
+\index{keys@{keys}!KeyBind@{KeyBind}}
+\doxysubsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily std\+::map$<$SDL\+\_\+\+Keycode, \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885}{Trigger}}$>$ Key\+Bind\+::keys}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{command__manager_8h}{command\+\_\+manager.\+h}}\end{DoxyCompactItemize}

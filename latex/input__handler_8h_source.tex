@@ -1,0 +1,95 @@
+\doxysection{input\+\_\+handler.\+h}
+\hypertarget{input__handler_8h_source}{}\label{input__handler_8h_source}\index{include/input\_handler.h@{include/input\_handler.h}}
+\mbox{\hyperlink{input__handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{vector2d_8h}{utility/vector2d.h}}>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{MouseButton}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a684d325a7303f52e64011467ff5c5758}{LEFT}}\ \ \ \ =\ SDL\_BUTTON\_LEFT,}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a43eedd8685eb86592022f8da962e3474}{MIDDLE}}\ \ \ \ =\ SDL\_BUTTON\_MIDDLE,}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a21507b40c80068eda19865706fdc2403}{RIGHT}}\ \ =\ SDL\_BUTTON\_RIGHT,}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63abb7f5ae6220c9828e5ec91faf054197c}{X1}}\ \ \ \ \ \ \ \ =\ SDL\_BUTTON\_X1,}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a54105bddbfe3f639d49cbe8f5182c958}{X2}}\ \ \ \ \ \ \ \ =\ SDL\_BUTTON\_X2}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_input_handler}{InputHandler}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{struct\ }KeyState\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \{\ PRESSED,\ RELEASED,\ NONE\ \}\ toggle;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \{\ UP,\ DOWN\ \}\ hold;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ uint32\_t\ holdStart;\ \textcolor{comment}{//\ The\ tick\ this\ key\ was\ first\ held\ down.}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ KeyState()\ :}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ toggle(NONE),}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ hold(UP),}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ holdStart(0)\ \{\}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ toggleDown(\textcolor{keywordtype}{void})\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hold\ ==\ UP)\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ toggle\ =\ PRESSED;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ holdStart\ =\ SDL\_GetTicks();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ hold\ =\ DOWN;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ toggleUp(\textcolor{keywordtype}{void})\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hold\ ==\ DOWN)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ toggle\ =\ RELEASED;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ hold\ =\ UP;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ uint32\_t\ getHoldTime(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hold\ ==\ DOWN)}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_GetTicks()\ -\/\ holdStart;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \};}
+\DoxyCodeLine{00050\ \ \ \ \ std::map<SDL\_Keycode,\ KeyState>\ keyStateDB;}
+\DoxyCodeLine{00051\ \ \ \ \ std::map<MouseButton,\ KeyState>\ mouseButtonStateDB;}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ mouseScroll;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_input_handler}{InputHandler}}();}
+\DoxyCodeLine{00055\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_input_handler_add1535256e6bfda1899af61bc8915e2e}{InputHandler}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_input_handler}{InputHandler}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_handler_a06449d8500ed922ed79744f27299d56f}{operator\ =\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_input_handler}{InputHandler}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_input_handler}{InputHandler}}\&\ \mbox{\hyperlink{class_input_handler_a6362f1fe316a4322f2679ceb5f551731}{getInstance}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ Keyboard\ functions}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_handler_aec26e0472ad335f89ea32a5bce2e4046}{pollKeyPress}}(SDL\_Keycode\ key)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00071\ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_handler_abc3a82d1161a8e15d16a3e1911fe9f50}{pollKeyRelease}}(SDL\_Keycode\ key)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_handler_abdb221ae93829471cc9bf105a412b49b}{isKeyDown}}(SDL\_Keycode\ key)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_handler_adf349eb1e2419ed4ae0e570df3f6583e}{isKeyUp}}(SDL\_Keycode\ key)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_input_handler_a6acc5bdaf2397209fc23679b518594cb}{holdTime}}(SDL\_Keycode\ key)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//\ Mouse\ functions}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_handler_acc1726f5273e78f99010f753d4ce2b36}{pollButtonPress}}(\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{MouseButton}}\ button)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_handler_aef5048be09023c87e2eded9de0edd460}{pollButtonRelease}}(\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{MouseButton}}\ button)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_handler_a5f7c1e0576e991e5a5c69b443388d890}{isButtonDown}}(\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{MouseButton}}\ button)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_handler_a301a5eb11e8f3da4cd73aed196753da2}{isButtonUp}}(\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{MouseButton}}\ button)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00106\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_input_handler_ac02c713f90711160356c4963fa975d18}{holdTime}}(\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{MouseButton}}\ button)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_input_handler_a489d583d594fd5f5084cdb65539e5c75}{getMousePosition}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{class_vector2_d}{Vector2D}}\ \mbox{\hyperlink{class_input_handler_a90fc0562dec804b94c57953c90ae9829}{pollMouseScroll}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00111\ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//\ Event\ Receivers}}
+\DoxyCodeLine{00113\ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_handler_a78d7f6abb9931a2a5e2157306fa7d03b}{receiveEvent}}(SDL\_KeyboardEvent\ keyboardEvent)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_handler_aa82cf451a8b8aeaf70195c0f349a68d7}{receiveEvent}}(SDL\_MouseButtonEvent\ mouseButtonEvent)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_handler_a7115a26f190ce47d5a7d3716045f5240}{receiveEvent}}(SDL\_MouseWheelEvent\ mouseWheelEvent)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ receiveEvent(SDL\_MouseMotionEvent\ mouseMotionEvent)\ noexcept;}}
+\DoxyCodeLine{00118\ \};}
+
+\end{DoxyCode}

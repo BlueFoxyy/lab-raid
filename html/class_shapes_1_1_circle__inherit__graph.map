@@ -1,0 +1,9 @@
+<map id="Shapes::Circle" name="Shapes::Circle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="24,155,131,181"/>
+<area shape="rect" id="Node000004" href="$class_shapes_1_1_hollow_circle.html" title=" " alt="" coords="5,229,150,256"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="80,197,80,229,75,229,75,197"/>
+<area shape="rect" id="Node000002" href="$class_shapes_1_1_shape.html" title=" " alt="" coords="22,80,133,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,122,80,154,75,154,75,122"/>
+<area shape="rect" id="Node000003" href="$class_render_object_base.html" title="Empty render object base class category." alt="" coords="12,5,143,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="80,48,80,80,75,80,75,48"/>
+</map>

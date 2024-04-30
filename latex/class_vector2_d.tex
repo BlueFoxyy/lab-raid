@@ -1,0 +1,197 @@
+\doxysection{Vector2D Class Reference}
+\hypertarget{class_vector2_d}{}\label{class_vector2_d}\index{Vector2D@{Vector2D}}
+
+
+{\ttfamily \#include $<$vector2d.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector2_d_a6fc34e1533ff011c411e41a6c7315db1}{Vector2D}} (void) noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d_a3b1a739c12f84c6664023732daf84e05}{Vector2D}} (float \+\_\+x, float \+\_\+y) noexcept
+\item 
+float \mbox{\hyperlink{class_vector2_d_a2a0ad3acac338642105d42f02a97f49b}{getX}} (void) const noexcept
+\item 
+float \mbox{\hyperlink{class_vector2_d_a407f8bde87bb84ad073f83ceda8c1849}{getY}} (void) const noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_vector2_d_a1304a3478566f7e6906022d968e0b675}{norm}} (void) const noexcept
+\item 
+float \mbox{\hyperlink{class_vector2_d_aa39bcefceb1e6d123461199d48a317e4}{len}} (void) const noexcept
+\item 
+float \mbox{\hyperlink{class_vector2_d_a5e8673badff46fe1c6ba6dd48efa568d}{len2}} (void) const noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_vector2_d_adc047d48b809e4f3c122fc41d4acf471}{rotate}} (float theta) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_vector2_d_a51e94c6919d5bca5a091e3772b7c3e57}{zero}} (void) noexcept
+\item 
+static float \mbox{\hyperlink{class_vector2_d_ac16c0bf7915927717395d60e6c2c06e5}{dot}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&) noexcept
+\item 
+static float \mbox{\hyperlink{class_vector2_d_ad599665e3c7d781adef3f9d9180826ba}{cross}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&) noexcept
+\item 
+static \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_vector2_d_ac43dbbe54d6a92b2386e9ae2ef127c4a}{rotate}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}}, float) noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_vector2_d_a4ae8b29d19501efccc892e1a637cfb1b}{operator+}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&) noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_vector2_d_a3f639fc9dc3c0250a231e12b6b702234}{operator-\/}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&) noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_vector2_d_acdced01b94064a61e02ce794732b4dba}{operator-\/}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&) noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_vector2_d_ab816737cada1d04371396511936f9cfd}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&, float) noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_vector2_d_a5885c8f38f453b096ea6cdaab46fbdd6}{operator/}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&, float) noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \& \mbox{\hyperlink{class_vector2_d_a7f9bc4f498c9bf2aec4200f57350406e}{operator+=}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} \&, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&) noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \& \mbox{\hyperlink{class_vector2_d_a60d012b8f0e6cb449a7065a682ce2ff6}{operator-\/=}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} \&, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&) noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \& \mbox{\hyperlink{class_vector2_d_aba61c893e73c1103e56a8e8256c1aeda}{operator\texorpdfstring{$\ast$}{*}=}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} \&, float) noexcept
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \& \mbox{\hyperlink{class_vector2_d_aae458b5de2c38fd50cd0761edbc795fd}{operator/=}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} \&, float) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vector2_d_a6fc34e1533ff011c411e41a6c7315db1}\label{class_vector2_d_a6fc34e1533ff011c411e41a6c7315db1} 
+\index{Vector2D@{Vector2D}!Vector2D@{Vector2D}}
+\index{Vector2D@{Vector2D}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{Vector2D()}{Vector2D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Vector2\+D\+::\+Vector2D (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_vector2_d_a3b1a739c12f84c6664023732daf84e05}\label{class_vector2_d_a3b1a739c12f84c6664023732daf84e05} 
+\index{Vector2D@{Vector2D}!Vector2D@{Vector2D}}
+\index{Vector2D@{Vector2D}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{Vector2D()}{Vector2D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Vector2\+D\+::\+Vector2D (\begin{DoxyParamCaption}\item[{float}]{\+\_\+x,  }\item[{float}]{\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vector2_d_ad599665e3c7d781adef3f9d9180826ba}\label{class_vector2_d_ad599665e3c7d781adef3f9d9180826ba} 
+\index{Vector2D@{Vector2D}!cross@{cross}}
+\index{cross@{cross}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily static float Vector2\+D\+::cross (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{,  }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_vector2_d_ac16c0bf7915927717395d60e6c2c06e5}\label{class_vector2_d_ac16c0bf7915927717395d60e6c2c06e5} 
+\index{Vector2D@{Vector2D}!dot@{dot}}
+\index{dot@{dot}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily static float Vector2\+D\+::dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{,  }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_vector2_d_a2a0ad3acac338642105d42f02a97f49b}\label{class_vector2_d_a2a0ad3acac338642105d42f02a97f49b} 
+\index{Vector2D@{Vector2D}!getX@{getX}}
+\index{getX@{getX}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily float Vector2\+D\+::getX (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_vector2_d_a407f8bde87bb84ad073f83ceda8c1849}\label{class_vector2_d_a407f8bde87bb84ad073f83ceda8c1849} 
+\index{Vector2D@{Vector2D}!getY@{getY}}
+\index{getY@{getY}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily float Vector2\+D\+::getY (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_vector2_d_aa39bcefceb1e6d123461199d48a317e4}\label{class_vector2_d_aa39bcefceb1e6d123461199d48a317e4} 
+\index{Vector2D@{Vector2D}!len@{len}}
+\index{len@{len}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{len()}{len()}}
+{\footnotesize\ttfamily float Vector2\+D\+::len (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_vector2_d_a5e8673badff46fe1c6ba6dd48efa568d}\label{class_vector2_d_a5e8673badff46fe1c6ba6dd48efa568d} 
+\index{Vector2D@{Vector2D}!len2@{len2}}
+\index{len2@{len2}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{len2()}{len2()}}
+{\footnotesize\ttfamily float Vector2\+D\+::len2 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_vector2_d_a1304a3478566f7e6906022d968e0b675}\label{class_vector2_d_a1304a3478566f7e6906022d968e0b675} 
+\index{Vector2D@{Vector2D}!norm@{norm}}
+\index{norm@{norm}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Vector2\+D\+::norm (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_vector2_d_adc047d48b809e4f3c122fc41d4acf471}\label{class_vector2_d_adc047d48b809e4f3c122fc41d4acf471} 
+\index{Vector2D@{Vector2D}!rotate@{rotate}}
+\index{rotate@{rotate}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Vector2\+D\+::rotate (\begin{DoxyParamCaption}\item[{float}]{theta }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_vector2_d_ac43dbbe54d6a92b2386e9ae2ef127c4a}\label{class_vector2_d_ac43dbbe54d6a92b2386e9ae2ef127c4a} 
+\index{Vector2D@{Vector2D}!rotate@{rotate}}
+\index{rotate@{rotate}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_vector2_d}{Vector2D}} Vector2\+D\+::rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{,  }\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{class_vector2_d_a51e94c6919d5bca5a091e3772b7c3e57}\label{class_vector2_d_a51e94c6919d5bca5a091e3772b7c3e57} 
+\index{Vector2D@{Vector2D}!zero@{zero}}
+\index{zero@{zero}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{zero()}{zero()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_vector2_d}{Vector2D}} Vector2\+D\+::zero (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_vector2_d_ab816737cada1d04371396511936f9cfd}\label{class_vector2_d_ab816737cada1d04371396511936f9cfd} 
+\index{Vector2D@{Vector2D}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}}{operator*}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{,  }\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_vector2_d_aba61c893e73c1103e56a8e8256c1aeda}\label{class_vector2_d_aba61c893e73c1103e56a8e8256c1aeda} 
+\index{Vector2D@{Vector2D}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=}{operator*=}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} \& operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{,  }\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_vector2_d_a4ae8b29d19501efccc892e1a637cfb1b}\label{class_vector2_d_a4ae8b29d19501efccc892e1a637cfb1b} 
+\index{Vector2D@{Vector2D}!operator+@{operator+}}
+\index{operator+@{operator+}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{,  }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_vector2_d_a7f9bc4f498c9bf2aec4200f57350406e}\label{class_vector2_d_a7f9bc4f498c9bf2aec4200f57350406e} 
+\index{Vector2D@{Vector2D}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{operator+=}{operator+=}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} \& operator+= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{,  }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_vector2_d_a3f639fc9dc3c0250a231e12b6b702234}\label{class_vector2_d_a3f639fc9dc3c0250a231e12b6b702234} 
+\index{Vector2D@{Vector2D}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_vector2_d_acdced01b94064a61e02ce794732b4dba}\label{class_vector2_d_acdced01b94064a61e02ce794732b4dba} 
+\index{Vector2D@{Vector2D}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{,  }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_vector2_d_a60d012b8f0e6cb449a7065a682ce2ff6}\label{class_vector2_d_a60d012b8f0e6cb449a7065a682ce2ff6} 
+\index{Vector2D@{Vector2D}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{operator-\/=}{operator-=}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} \& operator-\/= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{,  }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_vector2_d_a5885c8f38f453b096ea6cdaab46fbdd6}\label{class_vector2_d_a5885c8f38f453b096ea6cdaab46fbdd6} 
+\index{Vector2D@{Vector2D}!operator/@{operator/}}
+\index{operator/@{operator/}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{operator/}{operator/}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{,  }\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_vector2_d_aae458b5de2c38fd50cd0761edbc795fd}\label{class_vector2_d_aae458b5de2c38fd50cd0761edbc795fd} 
+\index{Vector2D@{Vector2D}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Vector2D@{Vector2D}}
+\doxysubsubsection{\texorpdfstring{operator/=}{operator/=}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} \& operator/= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{,  }\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utility/\mbox{\hyperlink{vector2d_8h}{vector2d.\+h}}\end{DoxyCompactItemize}

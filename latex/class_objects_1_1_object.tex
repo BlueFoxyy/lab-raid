@@ -1,0 +1,476 @@
+\doxysection{Objects\+::Object Class Reference}
+\hypertarget{class_objects_1_1_object}{}\label{class_objects_1_1_object}\index{Objects::Object@{Objects::Object}}
+
+
+\doxylink{class_objects_1_1_object}{Object} type for all renderable objects in the world note\+: the texture won\textquotesingle{}t be created until loaded into the renderer.  
+
+
+
+
+{\ttfamily \#include $<$object.\+h$>$}
+
+
+
+Inheritance diagram for Objects\+::Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_objects_1_1_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Objects\+::Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_objects_1_1_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_objects_1_1_object_a9c2567e44dc7e393e2ce3f367ed43bcb}{Object}} (const std\+::vector$<$ std\+::string $>$ \&texture\+Names, const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}\+\_\+view, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&\+\_\+position, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&\+\_\+dimension)
+\begin{DoxyCompactList}\small\item\em Constructs a new object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_objects_1_1_object_a3234bb30a32db3f9468749593e81f0d8}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()=default
+\item 
+float \mbox{\hyperlink{class_objects_1_1_object_abec1786bb427077ac389a0e369b798e4}{get\+Angle}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the angle of the object in radians. The returned angle will be in \mbox{[}0, 2pi), with 0 set at positive x direction, and going counter-\/clockwise. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a851f5b67467fb7c2ba7cdbabaafef1a8}{set\+Angle}} (float new\+Angle) noexcept
+\begin{DoxyCompactList}\small\item\em Sets rotation angle to. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a178460e994fa4d4726f3aab4b58785b4}{rotate}} (float diff\+Angle) noexcept
+\begin{DoxyCompactList}\small\item\em Rotates the object by. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Renderer\+Flip \mbox{\hyperlink{class_objects_1_1_object_ab919f32b4301ed69e3aa2ba171313e0d}{get\+Flip\+Flag}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the flip flag used by SDL. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_objects_1_1_object_ac84e98c02aeab7997429428f762a9638}{get\+Position}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the position of the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_objects_1_1_object_a737a4e82c567b7b9ed88a13c56141559}{get\+Dimension}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the dimension of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a9234b7b93dad47988ddc0c18f0cbf417}{move}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&translate) noexcept
+\begin{DoxyCompactList}\small\item\em Moves the object by the translate vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a6eca4e624d67f8f4d3816bf385766e1f}{stretchX}} (float ratio) noexcept
+\begin{DoxyCompactList}\small\item\em Stretches the object\textquotesingle{}s width by. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_ae7cfe6efac43137c0c317ce33901af13}{stretchY}} (float ratio) noexcept
+\begin{DoxyCompactList}\small\item\em Stretches the object\textquotesingle{}s height by. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a1e8d224e3f4b88dccafea0d58b76d247}{stretch}} (float ratio) noexcept
+\begin{DoxyCompactList}\small\item\em Stretches both the object\textquotesingle{}s width and height by. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_adcf195a1c0c5b681cef2e853cef36151}{flip\+Horizontal}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Flips the object horizontally. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a4ed85eff09dcdfb05f59e1923fdcc3da}{flip\+Vertical}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Flips the object vertically. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a9178f5e6996cd09c1cc1537bfcaed9cc}{set\+Visibility}} (bool visibility) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s visibility. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_objects_1_1_object_a0eae3493810e3a2c20783ee22a3f0636}{get\+Visibility}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the object\textquotesingle{}s visibility. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a76b312de48c23b0453166916f381d4f5}{next\+Texture}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Set to next texture, texture ID wraps around. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_aefdb938836233aeb16cb583af56518f3}{previous\+Texture}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Set to previous texture, texture ID wraps around. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a4fb08ddfcc7f2d4d94899e1a530cd003}{set\+Texture}} (int texture\+Id) noexcept
+\begin{DoxyCompactList}\small\item\em Sets texture to. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_objects_1_1_object_afa7a354ed265f7f4e5335e607567ba56}{get\+Texture\+Count}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the number of textures this object has. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_objects_1_1_object_af311007e173e77796feb3dc7015bbb4a}{get\+Texture}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets current texture. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_objects_1_1_object_ad1a9d89d2ee5aa3bb2b6df7f8b1c2fbf}{look\+At}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&position) noexcept
+\begin{DoxyCompactList}\small\item\em Make the object face. \end{DoxyCompactList}\item 
+SDL\+\_\+\+FRect \mbox{\hyperlink{class_objects_1_1_object_a8c7b5dbbb37f5ea6e3e6a521a2f5a60f}{get\+Render\+Rect}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets render rectangle for rendering. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_objects_1_1_object_a2458681e54b5bb4a385cf2118e12aa89}{get\+Render\+Relative\+Position}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} render\+Position) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the relative render distance vector between this object and. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a400221e58f512b410d5f55e6677c3367}{update}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Updates the object state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_abb70a9ac7dd473ae23e2a787a08fd7ef}{debug}} (void) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_objects_1_1_object_a3eb9b31633b4f47ec6f12bca0cdafd4b}{Texture\+Handler}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_objects_1_1_object}{Object} type for all renderable objects in the world note\+: the texture won\textquotesingle{}t be created until loaded into the renderer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_objects_1_1_object_a9c2567e44dc7e393e2ce3f367ed43bcb}\label{class_objects_1_1_object_a9c2567e44dc7e393e2ce3f367ed43bcb} 
+\index{Objects::Object@{Objects::Object}!Object@{Object}}
+\index{Object@{Object}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily Objects\+::\+Object\+::\+Object (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{texture\+Names,  }\item[{const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}}]{\+\_\+view,  }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{\+\_\+position,  }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{\+\_\+dimension }\end{DoxyParamCaption})}
+
+
+
+Constructs a new object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+Names} & The list of texture names.\\
+\hline
+{\em \+\_\+view} & The viewport of the object.\\
+\hline
+{\em \+\_\+position} & Initial position. (x, y)\\
+\hline
+{\em \+\_\+dimension} & Initial Dimension. (width, height)\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_objects_1_1_object_a3234bb30a32db3f9468749593e81f0d8}\label{class_objects_1_1_object_a3234bb30a32db3f9468749593e81f0d8} 
+\index{Objects::Object@{Objects::Object}!````~Object@{\texorpdfstring{$\sim$}{\string~}Object}}
+\index{````~Object@{\texorpdfstring{$\sim$}{\string~}Object}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Object()}{\string~Object()}}
+{\footnotesize\ttfamily virtual Objects\+::\+Object\+::\texorpdfstring{$\sim$}{\string~}\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_objects_1_1_object_abb70a9ac7dd473ae23e2a787a08fd7ef}\label{class_objects_1_1_object_abb70a9ac7dd473ae23e2a787a08fd7ef} 
+\index{Objects::Object@{Objects::Object}!debug@{debug}}
+\index{debug@{debug}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::debug (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_render_object_base_ab640bb12371cdff15da2694777db1961}{Render\+Object\+Base}}.
+
+\Hypertarget{class_objects_1_1_object_adcf195a1c0c5b681cef2e853cef36151}\label{class_objects_1_1_object_adcf195a1c0c5b681cef2e853cef36151} 
+\index{Objects::Object@{Objects::Object}!flipHorizontal@{flipHorizontal}}
+\index{flipHorizontal@{flipHorizontal}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{flipHorizontal()}{flipHorizontal()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::flip\+Horizontal (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Flips the object horizontally. 
+
+\Hypertarget{class_objects_1_1_object_a4ed85eff09dcdfb05f59e1923fdcc3da}\label{class_objects_1_1_object_a4ed85eff09dcdfb05f59e1923fdcc3da} 
+\index{Objects::Object@{Objects::Object}!flipVertical@{flipVertical}}
+\index{flipVertical@{flipVertical}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{flipVertical()}{flipVertical()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::flip\+Vertical (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Flips the object vertically. 
+
+\Hypertarget{class_objects_1_1_object_abec1786bb427077ac389a0e369b798e4}\label{class_objects_1_1_object_abec1786bb427077ac389a0e369b798e4} 
+\index{Objects::Object@{Objects::Object}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{getAngle()}{getAngle()}}
+{\footnotesize\ttfamily float Objects\+::\+Object\+::get\+Angle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the angle of the object in radians. The returned angle will be in \mbox{[}0, 2pi), with 0 set at positive x direction, and going counter-\/clockwise. 
+
+\begin{DoxyReturn}{Returns}
+The angle which the object is facing.
+\end{DoxyReturn}
+\Hypertarget{class_objects_1_1_object_a737a4e82c567b7b9ed88a13c56141559}\label{class_objects_1_1_object_a737a4e82c567b7b9ed88a13c56141559} 
+\index{Objects::Object@{Objects::Object}!getDimension@{getDimension}}
+\index{getDimension@{getDimension}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{getDimension()}{getDimension()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Objects\+::\+Object\+::get\+Dimension (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the dimension of the object. 
+
+\begin{DoxyReturn}{Returns}
+The object\textquotesingle{}s dimension.
+\end{DoxyReturn}
+\Hypertarget{class_objects_1_1_object_ab919f32b4301ed69e3aa2ba171313e0d}\label{class_objects_1_1_object_ab919f32b4301ed69e3aa2ba171313e0d} 
+\index{Objects::Object@{Objects::Object}!getFlipFlag@{getFlipFlag}}
+\index{getFlipFlag@{getFlipFlag}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{getFlipFlag()}{getFlipFlag()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Renderer\+Flip Objects\+::\+Object\+::get\+Flip\+Flag (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the flip flag used by SDL. 
+
+\begin{DoxyReturn}{Returns}
+A SDL\+\_\+\+Renderer\+Flip flag.
+\end{DoxyReturn}
+\Hypertarget{class_objects_1_1_object_ac84e98c02aeab7997429428f762a9638}\label{class_objects_1_1_object_ac84e98c02aeab7997429428f762a9638} 
+\index{Objects::Object@{Objects::Object}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Objects\+::\+Object\+::get\+Position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the position of the object. 
+
+\begin{DoxyReturn}{Returns}
+The object\textquotesingle{}s location.
+\end{DoxyReturn}
+\Hypertarget{class_objects_1_1_object_a8c7b5dbbb37f5ea6e3e6a521a2f5a60f}\label{class_objects_1_1_object_a8c7b5dbbb37f5ea6e3e6a521a2f5a60f} 
+\index{Objects::Object@{Objects::Object}!getRenderRect@{getRenderRect}}
+\index{getRenderRect@{getRenderRect}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{getRenderRect()}{getRenderRect()}}
+{\footnotesize\ttfamily SDL\+\_\+\+FRect Objects\+::\+Object\+::get\+Render\+Rect (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets render rectangle for rendering. 
+
+\begin{DoxyReturn}{Returns}
+The SDL\+\_\+\+FRect for rendering.
+\end{DoxyReturn}
+\Hypertarget{class_objects_1_1_object_a2458681e54b5bb4a385cf2118e12aa89}\label{class_objects_1_1_object_a2458681e54b5bb4a385cf2118e12aa89} 
+\index{Objects::Object@{Objects::Object}!getRenderRelativePosition@{getRenderRelativePosition}}
+\index{getRenderRelativePosition@{getRenderRelativePosition}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{getRenderRelativePosition()}{getRenderRelativePosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Objects\+::\+Object\+::get\+Render\+Relative\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{render\+Position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the relative render distance vector between this object and. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+Position.} & The vector is stretched to view dimensions.\\
+\hline
+{\em render\+Position} & The position to be compared.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The difference vector from object to
+
+render\+Position.
+\end{DoxyReturn}
+\Hypertarget{class_objects_1_1_object_af311007e173e77796feb3dc7015bbb4a}\label{class_objects_1_1_object_af311007e173e77796feb3dc7015bbb4a} 
+\index{Objects::Object@{Objects::Object}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} Objects\+::\+Object\+::get\+Texture (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets current texture. 
+
+\begin{DoxyReturn}{Returns}
+The current texture the object is using.
+\end{DoxyReturn}
+\Hypertarget{class_objects_1_1_object_afa7a354ed265f7f4e5335e607567ba56}\label{class_objects_1_1_object_afa7a354ed265f7f4e5335e607567ba56} 
+\index{Objects::Object@{Objects::Object}!getTextureCount@{getTextureCount}}
+\index{getTextureCount@{getTextureCount}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{getTextureCount()}{getTextureCount()}}
+{\footnotesize\ttfamily size\+\_\+t Objects\+::\+Object\+::get\+Texture\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the number of textures this object has. 
+
+\begin{DoxyReturn}{Returns}
+Numbeer of textures.
+\end{DoxyReturn}
+\Hypertarget{class_objects_1_1_object_a0eae3493810e3a2c20783ee22a3f0636}\label{class_objects_1_1_object_a0eae3493810e3a2c20783ee22a3f0636} 
+\index{Objects::Object@{Objects::Object}!getVisibility@{getVisibility}}
+\index{getVisibility@{getVisibility}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{getVisibility()}{getVisibility()}}
+{\footnotesize\ttfamily bool Objects\+::\+Object\+::get\+Visibility (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the object\textquotesingle{}s visibility. 
+
+\begin{DoxyReturn}{Returns}
+The object\textquotesingle{}s visibility.
+\end{DoxyReturn}
+\Hypertarget{class_objects_1_1_object_ad1a9d89d2ee5aa3bb2b6df7f8b1c2fbf}\label{class_objects_1_1_object_ad1a9d89d2ee5aa3bb2b6df7f8b1c2fbf} 
+\index{Objects::Object@{Objects::Object}!lookAt@{lookAt}}
+\index{lookAt@{lookAt}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{lookAt()}{lookAt()}}
+{\footnotesize\ttfamily virtual void Objects\+::\+Object\+::look\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Make the object face. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & coordinates.\\
+\hline
+{\em position} & The coordinate of where the object should look at.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_objects_1_1_object_a9234b7b93dad47988ddc0c18f0cbf417}\label{class_objects_1_1_object_a9234b7b93dad47988ddc0c18f0cbf417} 
+\index{Objects::Object@{Objects::Object}!move@{move}}
+\index{move@{move}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{translate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Moves the object by the translate vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em translate} & The offset vector to move by.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_objects_1_1_object_a76b312de48c23b0453166916f381d4f5}\label{class_objects_1_1_object_a76b312de48c23b0453166916f381d4f5} 
+\index{Objects::Object@{Objects::Object}!nextTexture@{nextTexture}}
+\index{nextTexture@{nextTexture}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{nextTexture()}{nextTexture()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::next\+Texture (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set to next texture, texture ID wraps around. 
+
+\Hypertarget{class_objects_1_1_object_aefdb938836233aeb16cb583af56518f3}\label{class_objects_1_1_object_aefdb938836233aeb16cb583af56518f3} 
+\index{Objects::Object@{Objects::Object}!previousTexture@{previousTexture}}
+\index{previousTexture@{previousTexture}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{previousTexture()}{previousTexture()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::previous\+Texture (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set to previous texture, texture ID wraps around. 
+
+\Hypertarget{class_objects_1_1_object_a178460e994fa4d4726f3aab4b58785b4}\label{class_objects_1_1_object_a178460e994fa4d4726f3aab4b58785b4} 
+\index{Objects::Object@{Objects::Object}!rotate@{rotate}}
+\index{rotate@{rotate}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::rotate (\begin{DoxyParamCaption}\item[{float}]{diff\+Angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Rotates the object by. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em diff\+Angle} & radians in the counter-\/clockwise direction.\\
+\hline
+{\em diff\+Angle} & Rotation angle.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_objects_1_1_object_a851f5b67467fb7c2ba7cdbabaafef1a8}\label{class_objects_1_1_object_a851f5b67467fb7c2ba7cdbabaafef1a8} 
+\index{Objects::Object@{Objects::Object}!setAngle@{setAngle}}
+\index{setAngle@{setAngle}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{setAngle()}{setAngle()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::set\+Angle (\begin{DoxyParamCaption}\item[{float}]{new\+Angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets rotation angle to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Angle} & radians.\\
+\hline
+{\em new\+Angle} & The new angle to set to. (in radians)\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_objects_1_1_object_a4fb08ddfcc7f2d4d94899e1a530cd003}\label{class_objects_1_1_object_a4fb08ddfcc7f2d4d94899e1a530cd003} 
+\index{Objects::Object@{Objects::Object}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::set\+Texture (\begin{DoxyParamCaption}\item[{int}]{texture\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets texture to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+Id.} & \\
+\hline
+{\em texture\+Id} & The ID of the texture to be set. Should be in \mbox{[}0, texture\+Count).\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_objects_1_1_object_a9178f5e6996cd09c1cc1537bfcaed9cc}\label{class_objects_1_1_object_a9178f5e6996cd09c1cc1537bfcaed9cc} 
+\index{Objects::Object@{Objects::Object}!setVisibility@{setVisibility}}
+\index{setVisibility@{setVisibility}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{setVisibility()}{setVisibility()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::set\+Visibility (\begin{DoxyParamCaption}\item[{bool}]{visibility }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the object\textquotesingle{}s visibility. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visibility} & The object\textquotesingle{}s visibility.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_objects_1_1_object_a1e8d224e3f4b88dccafea0d58b76d247}\label{class_objects_1_1_object_a1e8d224e3f4b88dccafea0d58b76d247} 
+\index{Objects::Object@{Objects::Object}!stretch@{stretch}}
+\index{stretch@{stretch}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{stretch()}{stretch()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::stretch (\begin{DoxyParamCaption}\item[{float}]{ratio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Stretches both the object\textquotesingle{}s width and height by. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ratio.} & \\
+\hline
+{\em ratio} & Stretch ratio.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_objects_1_1_object_a6eca4e624d67f8f4d3816bf385766e1f}\label{class_objects_1_1_object_a6eca4e624d67f8f4d3816bf385766e1f} 
+\index{Objects::Object@{Objects::Object}!stretchX@{stretchX}}
+\index{stretchX@{stretchX}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{stretchX()}{stretchX()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::stretchX (\begin{DoxyParamCaption}\item[{float}]{ratio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Stretches the object\textquotesingle{}s width by. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ratio.} & \\
+\hline
+{\em ratio} & Stretch ratio.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_objects_1_1_object_ae7cfe6efac43137c0c317ce33901af13}\label{class_objects_1_1_object_ae7cfe6efac43137c0c317ce33901af13} 
+\index{Objects::Object@{Objects::Object}!stretchY@{stretchY}}
+\index{stretchY@{stretchY}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{stretchY()}{stretchY()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::stretchY (\begin{DoxyParamCaption}\item[{float}]{ratio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Stretches the object\textquotesingle{}s height by. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ratio.} & \\
+\hline
+{\em ratio} & Stretch ratio.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_objects_1_1_object_a400221e58f512b410d5f55e6677c3367}\label{class_objects_1_1_object_a400221e58f512b410d5f55e6677c3367} 
+\index{Objects::Object@{Objects::Object}!update@{update}}
+\index{update@{update}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Updates the object state. 
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_objects_1_1_object_a3eb9b31633b4f47ec6f12bca0cdafd4b}\label{class_objects_1_1_object_a3eb9b31633b4f47ec6f12bca0cdafd4b} 
+\index{Objects::Object@{Objects::Object}!TextureHandler@{TextureHandler}}
+\index{TextureHandler@{TextureHandler}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{TextureHandler}{TextureHandler}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_texture_handler}{Texture\+Handler}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/object/\mbox{\hyperlink{object_8h}{object.\+h}}\end{DoxyCompactItemize}

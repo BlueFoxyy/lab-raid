@@ -1,0 +1,187 @@
+\doxysection{Selection\+Manager\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_selection_manager}{}\label{class_selection_manager}\index{SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}}
+
+
+{\ttfamily \#include $<$selection\+\_\+manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_selection_manager_ae0cb236e49a6b360c29d768c2b282607}{Selection\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_selection_manager_a90bd7c98c9d5835d2a795145877e4d3e}{Selection\+Manager}} (const std\+::vector$<$ T $>$ \&selections)
+\item 
+void \mbox{\hyperlink{class_selection_manager_ae9309ad047e8157023dd9cbd772a5d9e}{next}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Set to next selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_selection_manager_affba0d9e7a32ad476a3e426cd0979fb8}{prev}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Set to previous selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_selection_manager_a4ae8946a290e27847ad69f5279fff920}{set}} (int new\+Selection) const
+\begin{DoxyCompactList}\small\item\em Set current selection ID to. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_selection_manager_a8eed0c99b742d48db665813c85f0e0c3}{size}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the count of available selections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_selection_manager_a92edaf873deb5db9fb7fd156aff0f496}{add}} (T new\+Selection) noexcept
+\begin{DoxyCompactList}\small\item\em Adds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_selection_manager_a4d67b38366e42cb6c4afab1d014bb6d0}{remove}} (size\+\_\+t selection\+Id)
+\begin{DoxyCompactList}\small\item\em Removes the selection at. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_selection_manager_adcebe7ee4ea43f9129a342413fee4d90}{get}} (void) const
+\begin{DoxyCompactList}\small\item\em Gets the current selection. Throws std\+::logic\+\_\+error is current selection is SELECTION\+\_\+\+NOT\+\_\+\+SET. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_selection_manager_a81fead026435900bdf6a5080a170ce6d}{get\+Selection\+Id}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the current selection ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_selection_manager_af6e299dee65dc6462c0bbfce183e2fd1}{SELECTION\+\_\+\+NOT\+\_\+\+SET}} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_selection_manager_ae0cb236e49a6b360c29d768c2b282607}\label{class_selection_manager_ae0cb236e49a6b360c29d768c2b282607} 
+\index{SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}!SelectionManager@{SelectionManager}}
+\index{SelectionManager@{SelectionManager}!SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SelectionManager()}{SelectionManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_selection_manager}{Selection\+Manager}}$<$ T $>$\mbox{\hyperlink{class_selection_manager}{\+::\+Selection\+Manager}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_selection_manager_a90bd7c98c9d5835d2a795145877e4d3e}\label{class_selection_manager_a90bd7c98c9d5835d2a795145877e4d3e} 
+\index{SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}!SelectionManager@{SelectionManager}}
+\index{SelectionManager@{SelectionManager}!SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SelectionManager()}{SelectionManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_selection_manager}{Selection\+Manager}}$<$ T $>$\mbox{\hyperlink{class_selection_manager}{\+::\+Selection\+Manager}} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{selections }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_selection_manager_a92edaf873deb5db9fb7fd156aff0f496}\label{class_selection_manager_a92edaf873deb5db9fb7fd156aff0f496} 
+\index{SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}!add@{add}}
+\index{add@{add}!SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_selection_manager}{Selection\+Manager}}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{T}]{new\+Selection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Adds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Selection} & to the manager.\\
+\hline
+{\em new\+Selection} & The new selection.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_selection_manager_adcebe7ee4ea43f9129a342413fee4d90}\label{class_selection_manager_adcebe7ee4ea43f9129a342413fee4d90} 
+\index{SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}!get@{get}}
+\index{get@{get}!SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{class_selection_manager}{Selection\+Manager}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current selection. Throws std\+::logic\+\_\+error is current selection is SELECTION\+\_\+\+NOT\+\_\+\+SET. 
+
+\begin{DoxyReturn}{Returns}
+The current selection.
+\end{DoxyReturn}
+\Hypertarget{class_selection_manager_a81fead026435900bdf6a5080a170ce6d}\label{class_selection_manager_a81fead026435900bdf6a5080a170ce6d} 
+\index{SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}!getSelectionId@{getSelectionId}}
+\index{getSelectionId@{getSelectionId}!SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSelectionId()}{getSelectionId()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_selection_manager}{Selection\+Manager}}$<$ T $>$\+::get\+Selection\+Id (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the current selection ID. 
+
+\begin{DoxyReturn}{Returns}
+The current selection ID.
+\end{DoxyReturn}
+\Hypertarget{class_selection_manager_ae9309ad047e8157023dd9cbd772a5d9e}\label{class_selection_manager_ae9309ad047e8157023dd9cbd772a5d9e} 
+\index{SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}!next@{next}}
+\index{next@{next}!SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_selection_manager}{Selection\+Manager}}$<$ T $>$\+::next (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set to next selection. 
+
+\Hypertarget{class_selection_manager_affba0d9e7a32ad476a3e426cd0979fb8}\label{class_selection_manager_affba0d9e7a32ad476a3e426cd0979fb8} 
+\index{SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}!prev@{prev}}
+\index{prev@{prev}!SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{prev()}{prev()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_selection_manager}{Selection\+Manager}}$<$ T $>$\+::prev (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Set to previous selection. 
+
+\Hypertarget{class_selection_manager_a4d67b38366e42cb6c4afab1d014bb6d0}\label{class_selection_manager_a4d67b38366e42cb6c4afab1d014bb6d0} 
+\index{SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_selection_manager}{Selection\+Manager}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{selection\+Id }\end{DoxyParamCaption})}
+
+
+
+Removes the selection at. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em selection\+Id.} & Throws std\+::out\+\_\+of\+\_\+range if selection\+Id is inavlid.\\
+\hline
+{\em selection\+Id} & The position of where the selection is at.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_selection_manager_a4ae8946a290e27847ad69f5279fff920}\label{class_selection_manager_a4ae8946a290e27847ad69f5279fff920} 
+\index{SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}!set@{set}}
+\index{set@{set}!SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_selection_manager}{Selection\+Manager}}$<$ T $>$\+::set (\begin{DoxyParamCaption}\item[{int}]{new\+Selection }\end{DoxyParamCaption}) const}
+
+
+
+Set current selection ID to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Selection.} & Throws std\+::out\+\_\+of\+\_\+range if ID is not in range of \mbox{[}0, size) or SELECTION\+\_\+\+NOT\+\_\+\+SET.\\
+\hline
+{\em new\+Selection} & The new selection ID.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_selection_manager_a8eed0c99b742d48db665813c85f0e0c3}\label{class_selection_manager_a8eed0c99b742d48db665813c85f0e0c3} 
+\index{SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}!size@{size}}
+\index{size@{size}!SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_selection_manager}{Selection\+Manager}}$<$ T $>$\+::size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the count of available selections. 
+
+\begin{DoxyReturn}{Returns}
+The count of available selections.
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_selection_manager_af6e299dee65dc6462c0bbfce183e2fd1}\label{class_selection_manager_af6e299dee65dc6462c0bbfce183e2fd1} 
+\index{SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}!SELECTION\_NOT\_SET@{SELECTION\_NOT\_SET}}
+\index{SELECTION\_NOT\_SET@{SELECTION\_NOT\_SET}!SelectionManager$<$ T $>$@{SelectionManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SELECTION\_NOT\_SET}{SELECTION\_NOT\_SET}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const int \mbox{\hyperlink{class_selection_manager}{Selection\+Manager}}$<$ T $>$\+::\+SELECTION\+\_\+\+NOT\+\_\+\+SET = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utility/\mbox{\hyperlink{selection__manager_8h}{selection\+\_\+manager.\+h}}\end{DoxyCompactItemize}

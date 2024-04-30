@@ -1,0 +1,19 @@
+<map id="RenderObjectBase" name="RenderObjectBase">
+<area shape="rect" id="Node000001" title="Empty render object base class category." alt="" coords="200,5,331,32"/>
+<area shape="rect" id="Node000002" href="$class_objects_1_1_object.html" title="Object type for all renderable objects in the world note: the texture won&#39;t be created until loaded i..." alt="" coords="141,80,254,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,45,211,81,207,78,241,42"/>
+<area shape="rect" id="Node000005" href="$class_shapes_1_1_shape.html" title=" " alt="" coords="340,80,450,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="303,38,373,77,371,82,300,42"/>
+<area shape="rect" id="Node000003" href="$class_objects_1_1_button.html" title=" " alt="" coords="5,155,118,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="162,117,87,156,84,152,159,112"/>
+<area shape="rect" id="Node000004" href="$class_objects_1_1_player.html" title=" " alt="" coords="142,155,253,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="200,122,200,154,195,154,195,122"/>
+<area shape="rect" id="Node000006" href="$class_shapes_1_1_circle.html" title=" " alt="" coords="278,155,384,181"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="375,120,344,156,340,152,372,117"/>
+<area shape="rect" id="Node000008" href="$class_shapes_1_1_line.html" title=" " alt="" coords="408,155,505,181"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="417,117,448,153,444,156,413,120"/>
+<area shape="rect" id="Node000009" href="$class_shapes_1_1_rect.html" title=" " alt="" coords="529,155,629,181"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="442,110,548,152,546,157,440,115"/>
+<area shape="rect" id="Node000007" href="$class_shapes_1_1_hollow_circle.html" title=" " alt="" coords="259,229,403,256"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="334,197,334,229,328,229,328,197"/>
+</map>

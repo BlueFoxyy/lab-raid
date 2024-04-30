@@ -1,0 +1,40 @@
+\doxysection{command\+\_\+manager.\+h}
+\hypertarget{command__manager_8h_source}{}\label{command__manager_8h_source}\index{include/command\_manager.h@{include/command\_manager.h}}
+\mbox{\hyperlink{command__manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{command_8h}{command/command.h}}>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{input__handler_8h}{input\_handler.h}}>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_commands}{Commands}}\ \{\ \textcolor{keyword}{class\ }Command;\ \}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{MouseButton}}\ :\ uint8\_t;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_key_bind}{KeyBind}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_key_bind_a59ecc44932e884e53ccc023c2a34e386}{KeyBindCount}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_key_bind_a9d2e2e593e32fb1022daae036035bb4f}{ID}};\ \textcolor{comment}{//\ only\ used\ for\ sorting}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885}{Trigger}}\ \{\ \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885afcd6420c60a17418a6de745d6546d966}{TAP}},\ \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885a0c6d9dfb485b43c6fba87439f9f73ac4}{HOLD}},\ \mbox{\hyperlink{struct_key_bind_af33ad6a7381dc0d2bc38a8fb9777f885a7d649ef069df9885e382417c79f3d5cd}{RELEASE}}\ \};}
+\DoxyCodeLine{00018\ \ \ \ \ std::map<SDL\_Keycode,\ Trigger>\ \mbox{\hyperlink{struct_key_bind_abf3b69ea4715f56394402325e68b96a1}{keys}};}
+\DoxyCodeLine{00019\ \ \ \ \ std::map<MouseButton,\ Trigger>\ \mbox{\hyperlink{struct_key_bind_aceb199ca5a7c9d386079ed9b952a7af8}{buttons}};}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{struct_key_bind_a2067fb5296763e19d3d73d3374e53de8}{KeyBind}}(\textcolor{keyword}{const}\ std::map<SDL\_Keycode,\ Trigger>\&\ \mbox{\hyperlink{struct_key_bind_abf3b69ea4715f56394402325e68b96a1}{keys}},\ \textcolor{keyword}{const}\ std::map<MouseButton,\ Trigger>\ \mbox{\hyperlink{struct_key_bind_aceb199ca5a7c9d386079ed9b952a7af8}{buttons}}):}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_key_bind_abf3b69ea4715f56394402325e68b96a1}{keys}}(\mbox{\hyperlink{struct_key_bind_abf3b69ea4715f56394402325e68b96a1}{keys}}),\ \mbox{\hyperlink{struct_key_bind_aceb199ca5a7c9d386079ed9b952a7af8}{buttons}}(\mbox{\hyperlink{struct_key_bind_aceb199ca5a7c9d386079ed9b952a7af8}{buttons}})\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_key_bind_a9d2e2e593e32fb1022daae036035bb4f}{ID}}\ =\ \mbox{\hyperlink{struct_key_bind_a59ecc44932e884e53ccc023c2a34e386}{KeyBind::KeyBindCount}}++;}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_key_bind_a4865ba9480be0f0d9282b825c88ab3f7}{operator\ <\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_key_bind}{KeyBind}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_key_bind}{KeyBind}}\&\ b)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a.\mbox{\hyperlink{struct_key_bind_a9d2e2e593e32fb1022daae036035bb4f}{ID}}\ <\ b.\mbox{\hyperlink{struct_key_bind_a9d2e2e593e32fb1022daae036035bb4f}{ID}};}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_command_manager}{CommandManager}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ std::map<KeyBind,\ std::shared\_ptr<Commands::Command>>\ commandDB;}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_command_manager_a02e4cd8e8ae8bd80645bef3f95e5f46d}{registerCommand}}(\mbox{\hyperlink{struct_key_bind}{KeyBind}}\ keyBind,\ std::shared\_ptr<Commands::Command>\ command);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_command_manager_a143c1ae2ae2f513cd9eeacc8a8f72a01}{update}}()\ noexcept;}
+\DoxyCodeLine{00051\ \};}
+
+\end{DoxyCode}
