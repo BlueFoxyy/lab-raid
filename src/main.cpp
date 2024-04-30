@@ -275,16 +275,16 @@ int main(int argc, char* argv[]) {
 			InputHandler::getInstance().getMousePosition()
 		);
 		Global::crosshairLine1->setBeginPoint(
-			hudCursorPosition + Vector2D{ 0, -50 }
+			hudCursorPosition + Vector2D{ 0, -31 }
 		);
 		Global::crosshairLine1->setEndPoint(
-			hudCursorPosition + Vector2D{ 0, 50 }
+			hudCursorPosition + Vector2D{ 0, 31 }
 		);
 		Global::crosshairLine2->setBeginPoint(
-			hudCursorPosition + Vector2D{ -50, 0 }
+			hudCursorPosition + Vector2D{ -31, 0 }
 		);
 		Global::crosshairLine2->setEndPoint(
-			hudCursorPosition + Vector2D{ 50, 0 }
+			hudCursorPosition + Vector2D{ 31, 0 }
 		);
 		Global::crosshairCircle1->setCenter(
 			hudCursorPosition

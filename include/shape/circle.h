@@ -29,7 +29,7 @@ namespace Shapes {
 
 	class HollowCircle : public Circle {
 	private:
-		static const int renderEdges = 72;
+		static const int renderEdges = 36;
 	protected:
 		uint8_t thickness;
 	public:

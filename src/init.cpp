@@ -125,21 +125,21 @@ namespace Global {
 		// CROSSHAIR
 		crosshairLine1 = std::make_shared<Shapes::Line>(
 			Global::hudView.get(),
-			Vector2D{ 0, -50 },
-			Vector2D{ 0, 50 },
+			Vector2D{ 0, -31 },
+			Vector2D{ 0, 31 },
 			2
 		);
 		crosshairLine2 = std::make_shared<Shapes::Line>(
 			Global::hudView.get(),
-			Vector2D{ -50, 0 },
-			Vector2D{ 50, 0 },
+			Vector2D{ -31, 0 },
+			Vector2D{ 31, 0 },
 			2
 		);
 		crosshairCircle1 = std::make_shared<Shapes::HollowCircle>(
 			Global::hudView.get(),
 			2,
 			Vector2D{ 0, 0 },
-			25
+			13.5
 		);
 		SDL_ShowCursor(SDL_DISABLE);
 
