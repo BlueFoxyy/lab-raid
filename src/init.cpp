@@ -14,6 +14,16 @@ namespace Global {
 	std::shared_ptr<Shapes::Circle> redCircle;
 	std::shared_ptr<Shapes::Circle> purpleCircle;
 
+	std::shared_ptr<Shapes::HollowCircle> hollowCircle1;
+	std::shared_ptr<Shapes::Line> line1;
+	std::shared_ptr<Shapes::Line> line2;
+	std::shared_ptr<Shapes::Line> line3;
+	std::shared_ptr<Shapes::Line> line4;
+
+	std::shared_ptr<Shapes::Line> crosshairLine1;
+	std::shared_ptr<Shapes::Line> crosshairLine2;
+	std::shared_ptr<Shapes::HollowCircle> crosshairCircle1;
+
 	void init(void) {
 		SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_VERBOSE);
 		//SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO);
@@ -39,69 +49,117 @@ namespace Global {
 			Vector2D{ 0, 0 },
 			Vector2D{ 100, 100 }
 		);
-		if (not Renderer::getInstance().registerObject(playerObject)) {
-			SDL_LogCritical(SDL_LOG_CATEGORY_APPLICATION, "Failed to register playerObject.");
-			exit(EXIT_FAILURE);
-		}
-
 		arrowObject1 = std::make_shared<Objects::Object>(
 			std::vector<std::string>{ "arrow" },
 			playerCamera.get(),
 			Vector2D{ -150, -150 },
 			Vector2D{ 50, 50 }
 		);
-
-		if (not Renderer::getInstance().registerObject(arrowObject1)) {
-			SDL_LogCritical(SDL_LOG_CATEGORY_APPLICATION, "Failed to register arrowObject1.");
-			exit(EXIT_FAILURE);
-		}
 		arrowObject2 = std::make_shared<Objects::Object>(
 			std::vector<std::string>{ "arrow" },
 			hudView.get(),
 			Vector2D{ 0, 0 },
 			Vector2D{ 100, 100 }
 		);
-		if (not Renderer::getInstance().registerObject(arrowObject2)) {
-			SDL_LogCritical(SDL_LOG_CATEGORY_APPLICATION, "Failed to register arrowObject2.");
-			exit(EXIT_FAILURE);
-		}
-
 		yellowCircle = std::make_shared<Shapes::Circle>(
 			playerCamera.get(),
 			Vector2D{ -150, -150 },
 			50,
 			SDL_Color{ 127, 127, 0, 127 }
 		);
-		Renderer::getInstance().registerObject(yellowCircle);
 		greenCircle = std::make_shared<Shapes::Circle>(
 			playerCamera.get(),
 			Vector2D{ -150, 150 },
 			50,
 			SDL_Color{ 0, 127, 0, 127 }
 		);
-		Renderer::getInstance().registerObject(greenCircle);
 		blueCircle = std::make_shared<Shapes::Circle>(
 			playerCamera.get(),
 			Vector2D{ 150, -150 },
 			50,
 			SDL_Color{ 0, 0, 127, 127 }
 		);
-		Renderer::getInstance().registerObject(blueCircle);
 		redCircle = std::make_shared<Shapes::Circle>(
 			playerCamera.get(),
 			Vector2D{ 150, 150 },
 			50,
 			SDL_Color{ 127, 0, 0, 127 }
 		);
-		Renderer::getInstance().registerObject(redCircle);
 		purpleCircle = std::make_shared<Shapes::Circle>(
 			playerCamera.get(),
 			Vector2D{ 0, 0 },
 			180,
 			SDL_Color{ 220, 36, 200, 127 }
 		);
+		hollowCircle1 = std::make_shared<Shapes::HollowCircle>(
+			Global::playerCamera.get(),
+			10,
+			Vector2D{ 0, 0 },
+			100
+		);
+		line1 = std::make_shared<Shapes::Line>(
+			Global::playerCamera.get(),
+			Vector2D{ -100, -200 },
+			Vector2D{ -100, 200 },
+			10
+		);
+		line2 = std::make_shared<Shapes::Line>(
+			Global::playerCamera.get(),
+			Vector2D{ 100, -200 },
+			Vector2D{ 100, 200 },
+			10
+		);
+		line3 = std::make_shared<Shapes::Line>(
+			Global::playerCamera.get(),
+			Vector2D{ -200, -100 },
+			Vector2D{ 200, -100 },
+			10
+		);
+		line4 = std::make_shared<Shapes::Line>(
+			Global::playerCamera.get(),
+			Vector2D{ -200, 100 },
+			Vector2D{ 200, 100 },
+			10
+		);
+
+		// CROSSHAIR
+		crosshairLine1 = std::make_shared<Shapes::Line>(
+			Global::hudView.get(),
+			Vector2D{ 0, -50 },
+			Vector2D{ 0, 50 },
+			2
+		);
+		crosshairLine2 = std::make_shared<Shapes::Line>(
+			Global::hudView.get(),
+			Vector2D{ -50, 0 },
+			Vector2D{ 50, 0 },
+			2
+		);
+		crosshairCircle1 = std::make_shared<Shapes::HollowCircle>(
+			Global::hudView.get(),
+			2,
+			Vector2D{ 0, 0 },
+			25
+		);
+		SDL_ShowCursor(SDL_DISABLE);
+
+		Renderer::getInstance().registerObject(playerObject);
+		Renderer::getInstance().registerObject(arrowObject1);
+		Renderer::getInstance().registerObject(arrowObject2);
+		Renderer::getInstance().registerObject(yellowCircle);
+		Renderer::getInstance().registerObject(greenCircle);
+		Renderer::getInstance().registerObject(blueCircle);
+		Renderer::getInstance().registerObject(redCircle);
 		Renderer::getInstance().registerObject(purpleCircle);
-		
+		Renderer::getInstance().registerObject(hollowCircle1);
+		Renderer::getInstance().registerObject(line1);
+		Renderer::getInstance().registerObject(line2);
+		Renderer::getInstance().registerObject(line3);
+		Renderer::getInstance().registerObject(line4);
+		Renderer::getInstance().registerObject(crosshairLine1);
+		Renderer::getInstance().registerObject(crosshairLine2);
+		Renderer::getInstance().registerObject(crosshairCircle1);
+
 		//object->rotate(M_PI / 2);
 		//object->flipHorizontal();
 

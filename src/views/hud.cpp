@@ -44,4 +44,14 @@ namespace Views {
 		y = y / dimension.getY() * Config::screenHeight;
 		return { x, y };
 	}
+
+	Vector2D HUD::transformFromRender(const Vector2D& renderPosition) const noexcept {
+		const Vector2D& cameraPosition = this->position;
+		Vector2D relativePosition = renderPosition - transform(cameraPosition);
+		float x = relativePosition.getX();
+		float y = relativePosition.getY();
+		x = x * dimension.getX() / Config::screenWidth;
+		y = y * dimension.getY() / Config::screenHeight;
+		return { x, y };
+	}
 }

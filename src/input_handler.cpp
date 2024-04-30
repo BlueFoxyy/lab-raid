@@ -90,6 +90,11 @@ Vector2D InputHandler::getMousePosition(void) const noexcept {
 	return Vector2D(mouseX, mouseY);
 }
 
+Vector2D InputHandler::pollMouseScroll(void) noexcept {
+	Vector2D ret = mouseScroll;
+	mouseScroll = Vector2D::zero();
+	return ret;
+}
 
 void InputHandler::receiveEvent(SDL_KeyboardEvent keyboardEvent) noexcept {
 	SDL_Keycode key = keyboardEvent.keysym.sym;
@@ -113,4 +118,7 @@ void InputHandler::receiveEvent(SDL_MouseButtonEvent mouseButtonEvent) noexcept 
 	case SDL_MOUSEBUTTONUP:
 		state.toggleUp();
 	}
+}
+void InputHandler::receiveEvent(SDL_MouseWheelEvent mouseWheelEvent) noexcept {
+	mouseScroll = { static_cast<float>(mouseWheelEvent.x), static_cast<float>(mouseWheelEvent.y) };
 }

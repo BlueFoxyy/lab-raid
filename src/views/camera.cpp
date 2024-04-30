@@ -88,4 +88,14 @@ namespace Views {
 		y = y / dimension.getY() * Config::screenHeight + Config::screenHeight / 2.0f;
 		return { x, y };
 	}
+
+	Vector2D Camera::transformFromRender(const Vector2D& renderPosition) const noexcept {
+		const Vector2D& cameraPosition = this->getPosition();
+		float x = renderPosition.getX();
+		float y = renderPosition.getY();
+		x = (x - Config::screenWidth / 2.0f) * dimension.getX() / Config::screenWidth;
+		y = (y - Config::screenHeight / 2.0f) * dimension.getY() / Config::screenHeight;
+		Vector2D virtualPosition = (Vector2D(x, y) / zoom).rotate(angle) + cameraPosition;
+		return virtualPosition;
+	}
 }

@@ -165,8 +165,8 @@ namespace Objects {
 		Vector2D objectRenderPosition = { renderRect.x, renderRect.y };
 		Vector2D diffVector = renderPosition - objectRenderPosition;
 		diffVector = {
-			diffVector.getX() * Views::INIT_VIEW_WIDTH / Config::screenWidth,
-			diffVector.getY() * Views::INIT_VIEW_HEIGHT / Config::screenHeight
+			diffVector.getX() * view->getDimension().getX() / view->getZoom() / Config::screenWidth,
+			diffVector.getY() * view->getDimension().getY() / view->getZoom() / Config::screenHeight
 		};
 		diffVector -= getDimension() / 2;
 		return diffVector;

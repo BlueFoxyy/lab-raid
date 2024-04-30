@@ -49,6 +49,7 @@ private:
 	};
 	std::map<SDL_Keycode, KeyState> keyStateDB;
 	std::map<MouseButton, KeyState> mouseButtonStateDB;
+	Vector2D mouseScroll;
 
 	InputHandler();
 public:
@@ -103,13 +104,15 @@ public:
 	bool isButtonDown(MouseButton button) const noexcept;
 	bool isButtonUp(MouseButton button) const noexcept;
 	uint32_t holdTime(MouseButton button) const noexcept;
+
 	Vector2D getMousePosition(void) const noexcept;
 
+	Vector2D pollMouseScroll(void) noexcept;
 	
 	// Event Receivers
 	
 	void receiveEvent(SDL_KeyboardEvent keyboardEvent) noexcept;
 	void receiveEvent(SDL_MouseButtonEvent mouseButtonEvent) noexcept;
+	void receiveEvent(SDL_MouseWheelEvent mouseWheelEvent) noexcept;
 	//void receiveEvent(SDL_MouseMotionEvent mouseMotionEvent) noexcept;
-	//void receiveEvent(SDL_MouseWheelEvent mouseWheelEvent) noexcept;
 };

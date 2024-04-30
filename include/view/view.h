@@ -38,7 +38,16 @@ namespace Views {
 		/// <param name="position">The virtual position to be transformed.</param>
 		/// <returns>The render position.</returns>
 		virtual Vector2D transform(const Vector2D& position) const noexcept = 0;
+		
+		/// <summary>
+		/// Gets the virtual position of @param renderPosition.
+		/// </summary>
+		/// <param name="renderPosition">The render position to be transformed</param>
+		/// <returns>The virtual position.</returns>
+		virtual Vector2D transformFromRender(const Vector2D& renderPosition) const noexcept = 0;
 
+		virtual Vector2D getPosition(void) const noexcept { return position; }
+		virtual Vector2D getDimension(void) const noexcept { return dimension; }
 		virtual float getAngle(void) const noexcept { return 0.0f; }
 		virtual float getZoom(void) const noexcept { return 1.0f; }
 	};

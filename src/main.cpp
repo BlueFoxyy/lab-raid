@@ -20,7 +20,7 @@ static std::weak_ptr<Objects::Object> controlledObject;
 static uint32_t curTick, prevTick, diffTick;
 
 template<typename T>
-T timedDifference(T value) noexcept {
+static T timedDifference(T value) noexcept {
 	return value * diffTick / TICKS_PER_SEC;
 }
 
@@ -88,17 +88,27 @@ float zoomSpeed = 1.5f;
 
 class ZoomInCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	// for testing purposes
+	static void command() noexcept {
 		zoomMultiplier = std::min(zoomMultiplier + timedDifference(zoomSpeed), 4.0f);
 		Global::playerCamera->setZoom(zoomMultiplier);
+	}
+
+	void execute(ExecuteKey key) noexcept override {
+		command();
 	}
 };
 
 class ZoomOutCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	// for testing purposes
+	static void command() noexcept {
 		zoomMultiplier = std::max(zoomMultiplier - timedDifference(zoomSpeed), 0.25f);
 		Global::playerCamera->setZoom(zoomMultiplier);
+	}
+
+	void execute(ExecuteKey key) noexcept override {
+		command();
 	}
 };
 
@@ -112,7 +122,7 @@ public:
 /* CAMERA ZOOM TEST COMMANDS */
 
 /* CAMERA ROTATION TEST COMMANDS */
-float rotateSpeed = 2 * M_PI;
+float rotateSpeed = 2.0f * (float)M_PI;
 class RotateCameraClockwiseCommand : public Commands::Command {
 public:
 	void execute(ExecuteKey key) noexcept override {
@@ -128,97 +138,75 @@ public:
 };
 /* CAMERA ROTATION TEST COMMANDS */
 
+static void registerCommands(CommandManager& commandManager) {
+	commandManager.registerCommand({
+		{ {SDLK_q, KeyBind::Trigger::TAP} },
+		{}
+		}, std::make_shared<QuitCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_w, KeyBind::Trigger::HOLD} },
+		{}
+		}, std::make_shared<MoveUpCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_a, KeyBind::Trigger::HOLD} },
+		{}
+		}, std::make_shared<MoveLeftCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_s, KeyBind::Trigger::HOLD} },
+		{}
+		}, std::make_shared<MoveDownCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_d, KeyBind::Trigger::HOLD} },
+		{}
+		}, std::make_shared<MoveRightCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_TAB, KeyBind::Trigger::TAP}, {SDLK_LSHIFT, KeyBind::Trigger::HOLD} },
+		{}
+		}, std::make_shared<SwitchControlCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_RIGHTBRACKET, KeyBind::Trigger::HOLD} },
+		{}
+		}, std::make_shared<ZoomInCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_LEFTBRACKET, KeyBind::Trigger::HOLD} },
+		{}
+		}, std::make_shared<ZoomOutCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_BACKSLASH, KeyBind::Trigger::TAP} },
+		{}
+		}, std::make_shared<ResetZoomCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_LEFT, KeyBind::Trigger::HOLD} },
+		{}
+		}, std::make_shared<RotateCameraCounterClockwiseCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_RIGHT, KeyBind::Trigger::HOLD} },
+		{}
+		}, std::make_shared<RotateCameraClockwiseCommand>());
+}
+
 int main(int argc, char* argv[]) {
 	Global::init();
 
 	/*
-	// PENGAY mission 
+	// PENGAY mission
 	while (true) {
 		std::cout << "Hello PENGAY!\n";
 	}
 	*/
-	
+
 	curTick = prevTick = 0;
 	prevTick = SDL_GetTicks();
-	
+
 	controlledObject = Global::playerObject;
 
 	SDL_setFramerate(Global::fpsManager.get(), 144);
 
 	CommandManager commandManager;
-	commandManager.registerCommand(KeyBind(
-		{ {SDLK_q, KeyBind::Trigger::TAP} }, {}
-	), std::make_shared<QuitCommand>());
-	commandManager.registerCommand({
-		{ {SDLK_w, KeyBind::Trigger::HOLD} }, {}
-		}, std::make_shared<MoveUpCommand>());
-	commandManager.registerCommand({
-		{ {SDLK_a, KeyBind::Trigger::HOLD} }, {}
-		}, std::make_shared<MoveLeftCommand>());
-	commandManager.registerCommand({
-		{ {SDLK_s, KeyBind::Trigger::HOLD} }, {}
-		}, std::make_shared<MoveDownCommand>());
-	commandManager.registerCommand({
-		{ {SDLK_d, KeyBind::Trigger::HOLD} }, {}
-		}, std::make_shared<MoveRightCommand>());
-	commandManager.registerCommand({
-		{ {SDLK_TAB, KeyBind::Trigger::TAP}, {SDLK_LSHIFT, KeyBind::Trigger::HOLD} }, {}
-		}, std::make_shared<SwitchControlCommand>());
-	commandManager.registerCommand({
-		{ {SDLK_RIGHTBRACKET, KeyBind::Trigger::HOLD} }, {}
-		}, std::make_shared<ZoomInCommand>());
-	commandManager.registerCommand({
-		{ {SDLK_LEFTBRACKET, KeyBind::Trigger::HOLD} }, {}
-		}, std::make_shared<ZoomOutCommand>());
-	commandManager.registerCommand({
-		{ {SDLK_BACKSLASH, KeyBind::Trigger::TAP} }, {}
-		}, std::make_shared<ResetZoomCommand>());
-	commandManager.registerCommand({
-		{ {SDLK_LEFT, KeyBind::Trigger::HOLD} }, {}
-		}, std::make_shared<RotateCameraCounterClockwiseCommand>());
-	commandManager.registerCommand({
-		{ {SDLK_RIGHT, KeyBind::Trigger::HOLD} }, {}
-		}, std::make_shared<RotateCameraClockwiseCommand>());
-	std::shared_ptr<Shapes::HollowCircle> hollowCircle1
-		= std::make_shared<Shapes::HollowCircle>(
-			Global::playerCamera.get(),
-			10,
-			Vector2D{ 0, 0 },
-			100
-		);
-	std::shared_ptr<Shapes::Line> line1
-		= std::make_shared<Shapes::Line>(
-			Global::playerCamera.get(),
-			Vector2D{ -100, -200 },
-			Vector2D{ -100, 200 },
-			10
-		);
-	std::shared_ptr<Shapes::Line> line2
-		= std::make_shared<Shapes::Line>(
-			Global::playerCamera.get(),
-			Vector2D{ 100, -200 },
-			Vector2D{ 100, 200 },
-			10
-		);
-	std::shared_ptr<Shapes::Line> line3
-		= std::make_shared<Shapes::Line>(
-			Global::playerCamera.get(),
-			Vector2D{ -200, -100 },
-			Vector2D{ 200, -100 },
-			10
-		);
-	std::shared_ptr<Shapes::Line> line4
-		= std::make_shared<Shapes::Line>(
-			Global::playerCamera.get(),
-			Vector2D{ -200, 100 },
-			Vector2D{ 200, 100 },
-			10
-		);
-	Renderer::getInstance().registerObject(hollowCircle1);
-	Renderer::getInstance().registerObject(line1);
-	Renderer::getInstance().registerObject(line2);
-	Renderer::getInstance().registerObject(line3);
-	Renderer::getInstance().registerObject(line4);
+	registerCommands(commandManager);
+
+	int zoomInTimer = 0;
+	int zoomOutTimer = 0;
 
 	SDL_Event event;
 	while (not quit) {
@@ -239,6 +227,8 @@ int main(int argc, char* argv[]) {
 			case SDL_MOUSEBUTTONUP:
 				InputHandler::getInstance().receiveEvent(event.button);
 				break;
+			case SDL_MOUSEWHEEL:
+				InputHandler::getInstance().receiveEvent(event.wheel);
 			}
 		}
 
@@ -257,14 +247,48 @@ int main(int argc, char* argv[]) {
 		Global::playerObject->rotate(
 			Global::playerCamera->getAngle()
 		);
+		
+		float scrollY = InputHandler::getInstance().pollMouseScroll().getY();
+		if (scrollY > 0) {
+			zoomInTimer = 20;
+			zoomOutTimer = 0;
+		}
+		else if (scrollY < 0) {
+			zoomInTimer = 0;
+			zoomOutTimer = 20;
+		}
+		if (zoomInTimer > 0) {
+			zoomInTimer--;
+			ZoomInCommand::command();
+		} else if (zoomOutTimer > 0) {
+			zoomOutTimer--;
+			ZoomOutCommand::command();
+		}
 
-		Vector2D distVector = Global::arrowObject1->getPosition() - Global::playerObject->getPosition();
-		float offsetAngle = distVector.len() >= 1 ? asin(
-			gunOffset / distVector.len()
-		) : 0;
+		Vector2D distVector = cursorPosition - Global::playerObject->getPosition();
+		float offsetAngle = gunOffset / distVector.len();
 //		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "offsetAngle = %lf", offsetAngle);
 		Global::playerObject->rotate(offsetAngle);
 		Global::arrowObject1->lookAt(Global::playerObject->getPosition());
+
+		Vector2D hudCursorPosition = Global::hudView->transformFromRender(
+			InputHandler::getInstance().getMousePosition()
+		);
+		Global::crosshairLine1->setBeginPoint(
+			hudCursorPosition + Vector2D{ 0, -50 }
+		);
+		Global::crosshairLine1->setEndPoint(
+			hudCursorPosition + Vector2D{ 0, 50 }
+		);
+		Global::crosshairLine2->setBeginPoint(
+			hudCursorPosition + Vector2D{ -50, 0 }
+		);
+		Global::crosshairLine2->setEndPoint(
+			hudCursorPosition + Vector2D{ 50, 0 }
+		);
+		Global::crosshairCircle1->setCenter(
+			hudCursorPosition
+		);
 
 		/*
 		Shapes::Line line1({0, 0}, {1600, 900}, 3, {0xFF, 0x00, 0x00, 0x7F});
