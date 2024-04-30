@@ -19,9 +19,7 @@ namespace Objects {
 		flipFlag(SDL_FLIP_NONE),
 		position(_position),
 		dimension(_dimension),
-		view(_view),
-		currentTextureId(TEXTURE_NOT_SET),
-		currentShapeId(SHAPE_NOT_SET) {
+		view(_view) {
 		for (const std::string& textureName : textureNames) {
 			textures.add(TextureHandler::getInstance().getTexture({}, textureName));
 		}

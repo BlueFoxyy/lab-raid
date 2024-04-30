@@ -13,6 +13,6 @@ Sorry for using this as a note lol
 - Add support for object hitbox and collision.
 	- Implement interpolation for object collision
 - Rendering:
-	- Add layer priorities for object rendering. (Hint: `std::pair<RenderPriority, std::weak_ptr<RenderObjectBase>>`).
+	- ~~Add layer priorities for object rendering. (Hint: `std::pair<RenderPriority, std::weak_ptr<RenderObjectBase>>`).~~
 
 ### Reminder: Check TODO comments in code.

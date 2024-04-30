@@ -21,8 +21,6 @@ class TextureHandler;
 namespace Shapes { class Shape; }
 
 namespace Objects {
-	static const int TEXTURE_NOT_SET = -1;
-	static const int SHAPE_NOT_SET = -2;
 
 	// TODO: add 'shapes' field to `Objects::Object`
 
@@ -34,8 +32,6 @@ namespace Objects {
 		friend class TextureHandler;
 	private:
 		SelectionManager<SDL_Texture*> textures;
-		int currentTextureId;
-		int currentShapeId;
 		bool visible;
 
 		float angle; // stored as radians

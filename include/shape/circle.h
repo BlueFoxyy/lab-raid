@@ -35,9 +35,9 @@ namespace Shapes {
 	public:
 		HollowCircle(
 			Views::View* view,
-			uint8_t thickness,
 			const Vector2D& center,
 			float radius,
+			uint8_t thickness,
 			SDL_Color color = { 0, 0, 0, 255 }
 		) noexcept;
 		void setThickness(uint8_t newThickness) noexcept;

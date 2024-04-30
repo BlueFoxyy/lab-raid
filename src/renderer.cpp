@@ -50,11 +50,16 @@ SDL_Texture* Renderer::createTexture(CreateTextureKey key, SDL_Surface* surface)
 
 bool Renderer::registerObject(std::shared_ptr<RenderObjectBase> objectPtr) noexcept {
 	if (objectPtr.get() == nullptr) return false;
-	auto it = objects.find(objectPtr);
-	if (it != objects.end()) return false;
-	objects.insert(objectPtr);
+	auto it = objectListMap.find(objectPtr);
+	if (it != objectListMap.end()) return false;
+	objectList.push_back(objectPtr);
+	objectListMap[objectPtr] = --objectList.end();
 	
-	SDL_LogVerbose(SDL_LOG_CATEGORY_APPLICATION, "Renderer: registered object at %p.", objectPtr.get());
+	SDL_LogVerbose(SDL_LOG_CATEGORY_APPLICATION,
+		"Renderer: registered object at %p with list node at %p.",
+		objectPtr.get(),
+		objectListMap.at(objectPtr)
+	);
 	if (std::dynamic_pointer_cast<Objects::Object>(objectPtr)) {
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Renderer: registered object type is Object.");
 	} else if (std::dynamic_pointer_cast<Shapes::Shape>(objectPtr)) {
@@ -66,9 +71,10 @@ bool Renderer::registerObject(std::shared_ptr<RenderObjectBase> objectPtr) noexc
 
 bool Renderer::removeObject(std::shared_ptr<RenderObjectBase> objectPtr) noexcept {
 	if (objectPtr.get() == nullptr) return false;
-	auto it = objects.find(objectPtr);
-	if (it == objects.end()) return false;
-	objects.erase(it);
+	auto it = objectListMap.find(objectPtr);
+	if (it == objectListMap.end()) return false;
+	objectList.erase(it->second);
+	objectListMap.erase(it);
 
 	SDL_LogVerbose(SDL_LOG_CATEGORY_APPLICATION, "Renderer: unregistered object at %p.", objectPtr.get());
 
@@ -88,7 +94,7 @@ void Renderer::render(RenderKey key) {
 
 	int renderSuccess;
 	std::vector<std::weak_ptr<RenderObjectBase>> deleteVec;
-	for (auto& objectWeakPtr : objects) {
+	for (auto& objectWeakPtr : objectList) {
 		if (auto objectSharedPtr = objectWeakPtr.lock()) {
 //			SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION,
 //				"Rendering object at %p.",
@@ -132,8 +138,10 @@ void Renderer::render(RenderKey key) {
 			"Renderer: removed deleted object."
 		);
 		system("pause");
-		objects.erase(objectWeakPtr);
+		removeObject(objectWeakPtr.lock());
 	}
+
+	// TODO: Draw temporary objects here.
 
 	SDL_SetRenderDrawColor(
 		renderer.get(),
@@ -155,13 +163,66 @@ void Renderer::render(RenderKey key) {
 	//debug(); // DEBUG
 }
 
+void Renderer::moveLayerUp(std::shared_ptr<RenderObjectBase> objectPtr) {
+	auto it = objectListMap.find(objectPtr);
+	if (it == objectListMap.end())
+		throw std::invalid_argument("In Renderer::moveLayerUp(): object is not registered.");
+	auto curListIt = it->second;
+	if (curListIt == --objectList.end())
+		return;
+	auto nextListIt = curListIt; nextListIt++;
+	auto nextObjectPtr = *nextListIt;
+	swap(objectListMap[objectPtr], objectListMap[nextObjectPtr]);
+	swap(*curListIt, *nextListIt);
+}
+
+void Renderer::moveLayerDown(std::shared_ptr<RenderObjectBase> objectPtr) {
+	auto it = objectListMap.find(objectPtr);
+	if (it == objectListMap.end())
+		throw std::invalid_argument("In Renderer::moveLayerDown(): object is not registered.");
+	auto curListIt = it->second;
+	if (curListIt == objectList.begin())
+		return;
+	auto prevListIt = curListIt; prevListIt--;
+	auto prevObjectPtr = *prevListIt;
+	swap(objectListMap[objectPtr], objectListMap[prevObjectPtr]);
+	swap(*curListIt, *prevListIt);
+}
+
+void Renderer::moveLayerTop(std::shared_ptr<RenderObjectBase> objectPtr) {
+	auto it = objectListMap.find(objectPtr);
+	if (it == objectListMap.end())
+		throw std::invalid_argument("In Renderer::moveLayerTop(): object is not registered.");
+	auto curListIt = it->second;
+	auto backListIt = --objectList.end();
+	if (curListIt == backListIt)
+		return;
+	auto backObjectPtr = *backListIt;
+	swap(objectListMap[objectPtr], objectListMap[backObjectPtr]);
+	swap(*curListIt, *backListIt);
+}
+
+void Renderer::moveLayerBottom(std::shared_ptr<RenderObjectBase> objectPtr) {
+	auto it = objectListMap.find(objectPtr);
+	if (it == objectListMap.end())
+		throw std::invalid_argument("In Renderer::moveLayerBottom(): object is not registered.");
+	auto curListIt = it->second;
+	auto frontListIt = objectList.begin();
+	if (curListIt == frontListIt)
+		return;
+	auto frontObjectPtr = *frontListIt;
+	swap(objectListMap[objectPtr], objectListMap[frontObjectPtr]);
+	swap(*curListIt, *frontListIt);
+}
+
 void Renderer::clear() noexcept {
-	objects.clear();
+	objectList.clear();
+	objectListMap.clear();
 }
 
 void Renderer::debug() const noexcept {
 	SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Registered objects in Renderer:");
-	for (auto& objectPtr : objects) {
+	for (auto& objectPtr : objectList) {
 		if (auto tmp = objectPtr.lock()) {
 			tmp->debug();
 		} else {

@@ -138,6 +138,25 @@ public:
 };
 /* CAMERA ROTATION TEST COMMANDS */
 
+/* LAYER TEST COMMANDS */
+class PlayerLayerUpCommand : public Commands::Command {
+public:
+	void execute(ExecuteKey key) noexcept override {
+		Renderer::getInstance().moveLayerUp(
+			Global::playerObject
+		);
+	}
+};
+class PlayerLayerDownCommand : public Commands::Command {
+public:
+	void execute(ExecuteKey key) noexcept override {
+		Renderer::getInstance().moveLayerDown(
+			Global::playerObject
+		);
+	}
+};
+/* LAYER TEST COMMANDS */
+
 static void registerCommands(CommandManager& commandManager) {
 	commandManager.registerCommand({
 		{ {SDLK_q, KeyBind::Trigger::TAP} },
@@ -183,6 +202,14 @@ static void registerCommands(CommandManager& commandManager) {
 		{ {SDLK_RIGHT, KeyBind::Trigger::HOLD} },
 		{}
 		}, std::make_shared<RotateCameraClockwiseCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_KP_8, KeyBind::Trigger::TAP} },
+		{}
+		}, std::make_shared<PlayerLayerUpCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_KP_2, KeyBind::Trigger::TAP} },
+		{}
+		}, std::make_shared<PlayerLayerDownCommand>());
 }
 
 int main(int argc, char* argv[]) {
@@ -271,6 +298,7 @@ int main(int argc, char* argv[]) {
 		Global::playerObject->rotate(offsetAngle);
 		Global::arrowObject1->lookAt(Global::playerObject->getPosition());
 
+		// Set crosshair position
 		Vector2D hudCursorPosition = Global::hudView->transformFromRender(
 			InputHandler::getInstance().getMousePosition()
 		);

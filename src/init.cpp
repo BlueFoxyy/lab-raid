@@ -93,9 +93,9 @@ namespace Global {
 		);
 		hollowCircle1 = std::make_shared<Shapes::HollowCircle>(
 			Global::playerCamera.get(),
-			10,
 			Vector2D{ 0, 0 },
-			100
+			100,
+			10
 		);
 		line1 = std::make_shared<Shapes::Line>(
 			Global::playerCamera.get(),
@@ -137,9 +137,9 @@ namespace Global {
 		);
 		crosshairCircle1 = std::make_shared<Shapes::HollowCircle>(
 			Global::hudView.get(),
-			2,
 			Vector2D{ 0, 0 },
-			13.5
+			13.5,
+			2
 		);
 		SDL_ShowCursor(SDL_DISABLE);
 
@@ -159,6 +159,8 @@ namespace Global {
 		Renderer::getInstance().registerObject(crosshairLine1);
 		Renderer::getInstance().registerObject(crosshairLine2);
 		Renderer::getInstance().registerObject(crosshairCircle1);
+
+		Renderer::getInstance().moveLayerTop(playerObject);
 
 		//object->rotate(M_PI / 2);
 		//object->flipHorizontal();

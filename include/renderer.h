@@ -7,13 +7,16 @@
 #include <shape/shape.h>
 #include <SDL2/SDL.h>
 #include <memory>
-#include <set>
+#include <list>
+#include <map>
 #include <stdexcept>
 #include <format>
 
 namespace Objects {
 	class Object;
 }
+
+// TODO: Consider wrapping object layer management into a LayerManager class.
 
 // Singleton is needed as the renderer can only be initialized at runtime.
 /**
@@ -42,9 +45,14 @@ public: // TODO: change this to private, this is for testing purposes.
 	};
 
 private:
+	using ObjectWeakPtr = std::weak_ptr<RenderObjectBase>;
+	using ObjectList = std::list<ObjectWeakPtr>;
+
+private:
 	sdl_unique_ptr<SDL_Window> window;
 	sdl_unique_ptr<SDL_Renderer> renderer;
-	std::set<std::weak_ptr<RenderObjectBase>, std::owner_less<std::weak_ptr<RenderObjectBase>>> objects;
+	std::map<ObjectWeakPtr, ObjectList::iterator, std::owner_less<ObjectWeakPtr>> objectListMap;
+	ObjectList objectList;
 
 	/// <summary>
 	/// Creates window and renderer.
@@ -92,6 +100,16 @@ public:
 	/// </summary>
 	/// <param name="key">Access Control Key</param>
 	void render(RenderKey key);
+	
+	/// <summary>
+	/// Moves the object up one layer.
+	/// Throws std::invalid_argument
+	/// </summary>
+	/// <param name="objectPtr"></param>
+	void moveLayerUp(std::shared_ptr<RenderObjectBase> objectPtr);
+	void moveLayerDown(std::shared_ptr<RenderObjectBase> objectPtr);
+	void moveLayerTop(std::shared_ptr<RenderObjectBase> objectPtr);
+	void moveLayerBottom(std::shared_ptr<RenderObjectBase> objectPtr);
 
 	/// <summary>
 	/// Clears object set and unloads all textures.
