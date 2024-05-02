@@ -92,23 +92,41 @@ public:
 	/// </summary>
 	/// <param name="objectPtr">std::shared_ptr of the object</param>
 	/// <returns>Whether the object was successfully unregistered.</returns>
-	bool removeObject(std::shared_ptr<RenderObjectBase> objectPtr) noexcept;
+	bool removeObject(std::weak_ptr<RenderObjectBase> objectPtr) noexcept;
 
 	/// <summary>
 	/// Renders every registered object.
 	/// Note: SDL has built-in out of boundaries check.
 	/// </summary>
 	/// <param name="key">Access Control Key</param>
-	void render(RenderKey key);
+	void render(const RenderKey& key);
 	
 	/// <summary>
 	/// Moves the object up one layer.
-	/// Throws std::invalid_argument
+	/// Throws std::invalid_argument if @objectPtr is not registered.
 	/// </summary>
-	/// <param name="objectPtr"></param>
+	/// <param name="objectPtr">The object to be moved.</param>
 	void moveLayerUp(std::shared_ptr<RenderObjectBase> objectPtr);
+
+	/// <summary>
+	/// Moves the object down one layer.
+	/// Throws std::invalid_argument if @objectPtr is not registered.
+	/// </summary>
+	/// <param name="objectPtr">The object to be moved.</param>
 	void moveLayerDown(std::shared_ptr<RenderObjectBase> objectPtr);
+
+	/// <summary>
+	/// Moves the object to the top layer.
+	/// Throws std::invalid_argument if @objectPtr is not registered.
+	/// </summary>
+	/// <param name="objectPtr">The object to be moved.</param>
 	void moveLayerTop(std::shared_ptr<RenderObjectBase> objectPtr);
+
+	/// <summary>
+	/// Moves the object to the bottom layer.
+	/// Throws std::invalid_argument if @objectPtr is not registered.
+	/// </summary>
+	/// <param name="objectPtr">The object to be moved.</param>
 	void moveLayerBottom(std::shared_ptr<RenderObjectBase> objectPtr);
 
 	/// <summary>

@@ -1,0 +1,385 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Namespace List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Commands Namespace Reference}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Config Namespace Reference}{9}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Variable Documentation}{9}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}backgroundColor}{9}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}framerate}{9}{subsubsection.5.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.2.1.3}gameTitle}{10}{subsubsection.5.2.1.3}%
+\contentsline {subsubsection}{\numberline {5.2.1.4}holdTimeThreshold}{10}{subsubsection.5.2.1.4}%
+\contentsline {subsubsection}{\numberline {5.2.1.5}screenHeight}{10}{subsubsection.5.2.1.5}%
+\contentsline {subsubsection}{\numberline {5.2.1.6}screenType}{10}{subsubsection.5.2.1.6}%
+\contentsline {subsubsection}{\numberline {5.2.1.7}screenWidth}{10}{subsubsection.5.2.1.7}%
+\contentsline {subsubsection}{\numberline {5.2.1.8}volume}{10}{subsubsection.5.2.1.8}%
+\contentsline {section}{\numberline {5.3}Functions Namespace Reference}{10}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Global Namespace Reference}{10}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Function Documentation}{11}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}init()}{11}{subsubsection.5.4.1.1}%
+\contentsline {subsection}{\numberline {5.4.2}Variable Documentation}{11}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}arrowObject1}{11}{subsubsection.5.4.2.1}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}arrowObject2}{11}{subsubsection.5.4.2.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.3}blueCircle}{11}{subsubsection.5.4.2.3}%
+\contentsline {subsubsection}{\numberline {5.4.2.4}crosshairCircle1}{11}{subsubsection.5.4.2.4}%
+\contentsline {subsubsection}{\numberline {5.4.2.5}crosshairLine1}{12}{subsubsection.5.4.2.5}%
+\contentsline {subsubsection}{\numberline {5.4.2.6}crosshairLine2}{12}{subsubsection.5.4.2.6}%
+\contentsline {subsubsection}{\numberline {5.4.2.7}fpsManager}{12}{subsubsection.5.4.2.7}%
+\contentsline {subsubsection}{\numberline {5.4.2.8}greenCircle}{12}{subsubsection.5.4.2.8}%
+\contentsline {subsubsection}{\numberline {5.4.2.9}hollowCircle1}{12}{subsubsection.5.4.2.9}%
+\contentsline {subsubsection}{\numberline {5.4.2.10}hudView}{12}{subsubsection.5.4.2.10}%
+\contentsline {subsubsection}{\numberline {5.4.2.11}line1}{12}{subsubsection.5.4.2.11}%
+\contentsline {subsubsection}{\numberline {5.4.2.12}line2}{12}{subsubsection.5.4.2.12}%
+\contentsline {subsubsection}{\numberline {5.4.2.13}line3}{12}{subsubsection.5.4.2.13}%
+\contentsline {subsubsection}{\numberline {5.4.2.14}line4}{12}{subsubsection.5.4.2.14}%
+\contentsline {subsubsection}{\numberline {5.4.2.15}menuView}{13}{subsubsection.5.4.2.15}%
+\contentsline {subsubsection}{\numberline {5.4.2.16}playerCamera}{13}{subsubsection.5.4.2.16}%
+\contentsline {subsubsection}{\numberline {5.4.2.17}playerObject}{13}{subsubsection.5.4.2.17}%
+\contentsline {subsubsection}{\numberline {5.4.2.18}purpleCircle}{13}{subsubsection.5.4.2.18}%
+\contentsline {subsubsection}{\numberline {5.4.2.19}redCircle}{13}{subsubsection.5.4.2.19}%
+\contentsline {subsubsection}{\numberline {5.4.2.20}yellowCircle}{13}{subsubsection.5.4.2.20}%
+\contentsline {section}{\numberline {5.5}Items Namespace Reference}{13}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Objects Namespace Reference}{13}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Shapes Namespace Reference}{14}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Views Namespace Reference}{14}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Variable Documentation}{14}{subsection.5.8.1}%
+\contentsline {subsubsection}{\numberline {5.8.1.1}INIT\_VIEW\_HEIGHT}{14}{subsubsection.5.8.1.1}%
+\contentsline {subsubsection}{\numberline {5.8.1.2}INIT\_VIEW\_WIDTH}{14}{subsubsection.5.8.1.2}%
+\contentsline {chapter}{\numberline {6}Class Documentation}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Objects\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Button Class Reference}{15}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Constructor \& Destructor Documentation}{16}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}Button()}{16}{subsubsection.6.1.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Member Function Documentation}{16}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}onClick()}{16}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}setHovered()}{16}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}update()}{17}{subsubsection.6.1.2.3}%
+\contentsline {section}{\numberline {6.2}Views\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Camera Class Reference}{17}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{18}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Constructor \& Destructor Documentation}{19}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}Camera()}{19}{subsubsection.6.2.2.1}%
+\contentsline {subsection}{\numberline {6.2.3}Member Function Documentation}{19}{subsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.1}getAngle()}{19}{subsubsection.6.2.3.1}%
+\contentsline {subsubsection}{\numberline {6.2.3.2}getRect()}{19}{subsubsection.6.2.3.2}%
+\contentsline {subsubsection}{\numberline {6.2.3.3}getZoom()}{19}{subsubsection.6.2.3.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.4}rotate()}{20}{subsubsection.6.2.3.4}%
+\contentsline {subsubsection}{\numberline {6.2.3.5}setAngle()}{20}{subsubsection.6.2.3.5}%
+\contentsline {subsubsection}{\numberline {6.2.3.6}setDimension()}{20}{subsubsection.6.2.3.6}%
+\contentsline {subsubsection}{\numberline {6.2.3.7}setPivotObject()}{20}{subsubsection.6.2.3.7}%
+\contentsline {subsubsection}{\numberline {6.2.3.8}setPosition()}{21}{subsubsection.6.2.3.8}%
+\contentsline {subsubsection}{\numberline {6.2.3.9}setZoom()}{21}{subsubsection.6.2.3.9}%
+\contentsline {subsubsection}{\numberline {6.2.3.10}transform()}{21}{subsubsection.6.2.3.10}%
+\contentsline {subsubsection}{\numberline {6.2.3.11}transformFromRender()}{21}{subsubsection.6.2.3.11}%
+\contentsline {section}{\numberline {6.3}Shapes\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Circle Class Reference}{22}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Constructor \& Destructor Documentation}{24}{subsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.1.1}Circle()}{24}{subsubsection.6.3.1.1}%
+\contentsline {subsection}{\numberline {6.3.2}Member Function Documentation}{24}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}draw()}{24}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}setCenter()}{24}{subsubsection.6.3.2.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.3}setRadius()}{24}{subsubsection.6.3.2.3}%
+\contentsline {subsection}{\numberline {6.3.3}Member Data Documentation}{24}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}center}{24}{subsubsection.6.3.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.3.2}radius}{25}{subsubsection.6.3.3.2}%
+\contentsline {section}{\numberline {6.4}Commands\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Command Class Reference}{25}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{25}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Constructor \& Destructor Documentation}{25}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}$\sim $Command()}{25}{subsubsection.6.4.2.1}%
+\contentsline {subsection}{\numberline {6.4.3}Member Function Documentation}{25}{subsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.3.1}execute()}{25}{subsubsection.6.4.3.1}%
+\contentsline {section}{\numberline {6.5}Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{26}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{26}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Member Function Documentation}{26}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}registerCommand()}{26}{subsubsection.6.5.2.1}%
+\contentsline {subsubsection}{\numberline {6.5.2.2}update()}{26}{subsubsection.6.5.2.2}%
+\contentsline {section}{\numberline {6.6}Commands\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Execute\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key Class Reference}{27}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Friends And Related Symbol Documentation}{27}{subsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.1.1}CommandManager}{27}{subsubsection.6.6.1.1}%
+\contentsline {section}{\numberline {6.7}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{27}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Shapes\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Hollow\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Circle Class Reference}{27}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Constructor \& Destructor Documentation}{29}{subsection.6.8.1}%
+\contentsline {subsubsection}{\numberline {6.8.1.1}HollowCircle()}{29}{subsubsection.6.8.1.1}%
+\contentsline {subsection}{\numberline {6.8.2}Member Function Documentation}{29}{subsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.1}draw()}{29}{subsubsection.6.8.2.1}%
+\contentsline {subsubsection}{\numberline {6.8.2.2}setThickness()}{29}{subsubsection.6.8.2.2}%
+\contentsline {subsection}{\numberline {6.8.3}Member Data Documentation}{30}{subsection.6.8.3}%
+\contentsline {subsubsection}{\numberline {6.8.3.1}thickness}{30}{subsubsection.6.8.3.1}%
+\contentsline {section}{\numberline {6.9}Views\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::HUD Class Reference}{30}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Constructor \& Destructor Documentation}{31}{subsection.6.9.1}%
+\contentsline {subsubsection}{\numberline {6.9.1.1}HUD()}{31}{subsubsection.6.9.1.1}%
+\contentsline {subsection}{\numberline {6.9.2}Member Function Documentation}{31}{subsection.6.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.2.1}getRect()}{31}{subsubsection.6.9.2.1}%
+\contentsline {subsubsection}{\numberline {6.9.2.2}transform()}{32}{subsubsection.6.9.2.2}%
+\contentsline {subsubsection}{\numberline {6.9.2.3}transformFromRender()}{32}{subsubsection.6.9.2.3}%
+\contentsline {section}{\numberline {6.10}Input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler Class Reference}{33}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Detailed Description}{33}{subsection.6.10.1}%
+\contentsline {subsection}{\numberline {6.10.2}Constructor \& Destructor Documentation}{33}{subsection.6.10.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.1}InputHandler()}{33}{subsubsection.6.10.2.1}%
+\contentsline {subsection}{\numberline {6.10.3}Member Function Documentation}{34}{subsection.6.10.3}%
+\contentsline {subsubsection}{\numberline {6.10.3.1}getInstance()}{34}{subsubsection.6.10.3.1}%
+\contentsline {subsubsection}{\numberline {6.10.3.2}getMousePosition()}{34}{subsubsection.6.10.3.2}%
+\contentsline {subsubsection}{\numberline {6.10.3.3}holdTime()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{34}{subsubsection.6.10.3.3}%
+\contentsline {subsubsection}{\numberline {6.10.3.4}holdTime()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{34}{subsubsection.6.10.3.4}%
+\contentsline {subsubsection}{\numberline {6.10.3.5}isButtonDown()}{34}{subsubsection.6.10.3.5}%
+\contentsline {subsubsection}{\numberline {6.10.3.6}isButtonUp()}{34}{subsubsection.6.10.3.6}%
+\contentsline {subsubsection}{\numberline {6.10.3.7}isKeyDown()}{34}{subsubsection.6.10.3.7}%
+\contentsline {subsubsection}{\numberline {6.10.3.8}isKeyUp()}{35}{subsubsection.6.10.3.8}%
+\contentsline {subsubsection}{\numberline {6.10.3.9}operator=()}{35}{subsubsection.6.10.3.9}%
+\contentsline {subsubsection}{\numberline {6.10.3.10}pollButtonPress()}{35}{subsubsection.6.10.3.10}%
+\contentsline {subsubsection}{\numberline {6.10.3.11}pollButtonRelease()}{35}{subsubsection.6.10.3.11}%
+\contentsline {subsubsection}{\numberline {6.10.3.12}pollKeyPress()}{35}{subsubsection.6.10.3.12}%
+\contentsline {subsubsection}{\numberline {6.10.3.13}pollKeyRelease()}{36}{subsubsection.6.10.3.13}%
+\contentsline {subsubsection}{\numberline {6.10.3.14}pollMouseScroll()}{36}{subsubsection.6.10.3.14}%
+\contentsline {subsubsection}{\numberline {6.10.3.15}receiveEvent()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{36}{subsubsection.6.10.3.15}%
+\contentsline {subsubsection}{\numberline {6.10.3.16}receiveEvent()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{36}{subsubsection.6.10.3.16}%
+\contentsline {subsubsection}{\numberline {6.10.3.17}receiveEvent()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{36}{subsubsection.6.10.3.17}%
+\contentsline {section}{\numberline {6.11}Items\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Item Class Reference}{37}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Constructor \& Destructor Documentation}{37}{subsection.6.11.1}%
+\contentsline {subsubsection}{\numberline {6.11.1.1}Item()}{37}{subsubsection.6.11.1.1}%
+\contentsline {section}{\numberline {6.12}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bind Struct Reference}{37}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Detailed Description}{38}{subsection.6.12.1}%
+\contentsline {subsection}{\numberline {6.12.2}Member Enumeration Documentation}{38}{subsection.6.12.2}%
+\contentsline {subsubsection}{\numberline {6.12.2.1}Trigger}{38}{subsubsection.6.12.2.1}%
+\contentsline {subsection}{\numberline {6.12.3}Constructor \& Destructor Documentation}{38}{subsection.6.12.3}%
+\contentsline {subsubsection}{\numberline {6.12.3.1}KeyBind()}{38}{subsubsection.6.12.3.1}%
+\contentsline {subsection}{\numberline {6.12.4}Friends And Related Symbol Documentation}{38}{subsection.6.12.4}%
+\contentsline {subsubsection}{\numberline {6.12.4.1}operator$<$}{38}{subsubsection.6.12.4.1}%
+\contentsline {subsection}{\numberline {6.12.5}Member Data Documentation}{38}{subsection.6.12.5}%
+\contentsline {subsubsection}{\numberline {6.12.5.1}buttons}{38}{subsubsection.6.12.5.1}%
+\contentsline {subsubsection}{\numberline {6.12.5.2}ID}{39}{subsubsection.6.12.5.2}%
+\contentsline {subsubsection}{\numberline {6.12.5.3}KeyBindCount}{39}{subsubsection.6.12.5.3}%
+\contentsline {subsubsection}{\numberline {6.12.5.4}keys}{39}{subsubsection.6.12.5.4}%
+\contentsline {section}{\numberline {6.13}Shapes\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Line Class Reference}{39}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Constructor \& Destructor Documentation}{41}{subsection.6.13.1}%
+\contentsline {subsubsection}{\numberline {6.13.1.1}Line()}{41}{subsubsection.6.13.1.1}%
+\contentsline {subsection}{\numberline {6.13.2}Member Function Documentation}{41}{subsection.6.13.2}%
+\contentsline {subsubsection}{\numberline {6.13.2.1}draw()}{41}{subsubsection.6.13.2.1}%
+\contentsline {subsubsection}{\numberline {6.13.2.2}setBeginPoint()}{41}{subsubsection.6.13.2.2}%
+\contentsline {subsubsection}{\numberline {6.13.2.3}setEndPoint()}{41}{subsubsection.6.13.2.3}%
+\contentsline {subsubsection}{\numberline {6.13.2.4}setThickness()}{41}{subsubsection.6.13.2.4}%
+\contentsline {subsection}{\numberline {6.13.3}Member Data Documentation}{41}{subsection.6.13.3}%
+\contentsline {subsubsection}{\numberline {6.13.3.1}beginPoint}{41}{subsubsection.6.13.3.1}%
+\contentsline {subsubsection}{\numberline {6.13.3.2}endPoint}{42}{subsubsection.6.13.3.2}%
+\contentsline {subsubsection}{\numberline {6.13.3.3}thickness}{42}{subsubsection.6.13.3.3}%
+\contentsline {section}{\numberline {6.14}Objects\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Object Class Reference}{42}{section.6.14}%
+\contentsline {subsection}{\numberline {6.14.1}Detailed Description}{44}{subsection.6.14.1}%
+\contentsline {subsection}{\numberline {6.14.2}Constructor \& Destructor Documentation}{44}{subsection.6.14.2}%
+\contentsline {subsubsection}{\numberline {6.14.2.1}Object()}{44}{subsubsection.6.14.2.1}%
+\contentsline {subsubsection}{\numberline {6.14.2.2}$\sim $Object()}{44}{subsubsection.6.14.2.2}%
+\contentsline {subsection}{\numberline {6.14.3}Member Function Documentation}{44}{subsection.6.14.3}%
+\contentsline {subsubsection}{\numberline {6.14.3.1}debug()}{44}{subsubsection.6.14.3.1}%
+\contentsline {subsubsection}{\numberline {6.14.3.2}flipHorizontal()}{44}{subsubsection.6.14.3.2}%
+\contentsline {subsubsection}{\numberline {6.14.3.3}flipVertical()}{45}{subsubsection.6.14.3.3}%
+\contentsline {subsubsection}{\numberline {6.14.3.4}getAngle()}{45}{subsubsection.6.14.3.4}%
+\contentsline {subsubsection}{\numberline {6.14.3.5}getDimension()}{45}{subsubsection.6.14.3.5}%
+\contentsline {subsubsection}{\numberline {6.14.3.6}getFlipFlag()}{45}{subsubsection.6.14.3.6}%
+\contentsline {subsubsection}{\numberline {6.14.3.7}getPosition()}{45}{subsubsection.6.14.3.7}%
+\contentsline {subsubsection}{\numberline {6.14.3.8}getRenderRect()}{46}{subsubsection.6.14.3.8}%
+\contentsline {subsubsection}{\numberline {6.14.3.9}getTexture()}{46}{subsubsection.6.14.3.9}%
+\contentsline {subsubsection}{\numberline {6.14.3.10}getTextureCount()}{46}{subsubsection.6.14.3.10}%
+\contentsline {subsubsection}{\numberline {6.14.3.11}getVisibility()}{46}{subsubsection.6.14.3.11}%
+\contentsline {subsubsection}{\numberline {6.14.3.12}lookAt()}{46}{subsubsection.6.14.3.12}%
+\contentsline {subsubsection}{\numberline {6.14.3.13}move()}{47}{subsubsection.6.14.3.13}%
+\contentsline {subsubsection}{\numberline {6.14.3.14}nextTexture()}{47}{subsubsection.6.14.3.14}%
+\contentsline {subsubsection}{\numberline {6.14.3.15}previousTexture()}{47}{subsubsection.6.14.3.15}%
+\contentsline {subsubsection}{\numberline {6.14.3.16}rotate()}{47}{subsubsection.6.14.3.16}%
+\contentsline {subsubsection}{\numberline {6.14.3.17}setAngle()}{47}{subsubsection.6.14.3.17}%
+\contentsline {subsubsection}{\numberline {6.14.3.18}setTexture()}{48}{subsubsection.6.14.3.18}%
+\contentsline {subsubsection}{\numberline {6.14.3.19}setVisibility()}{48}{subsubsection.6.14.3.19}%
+\contentsline {subsubsection}{\numberline {6.14.3.20}stretch()}{48}{subsubsection.6.14.3.20}%
+\contentsline {subsubsection}{\numberline {6.14.3.21}stretchX()}{49}{subsubsection.6.14.3.21}%
+\contentsline {subsubsection}{\numberline {6.14.3.22}stretchY()}{49}{subsubsection.6.14.3.22}%
+\contentsline {subsubsection}{\numberline {6.14.3.23}update()}{49}{subsubsection.6.14.3.23}%
+\contentsline {subsection}{\numberline {6.14.4}Friends And Related Symbol Documentation}{49}{subsection.6.14.4}%
+\contentsline {subsubsection}{\numberline {6.14.4.1}TextureHandler}{49}{subsubsection.6.14.4.1}%
+\contentsline {section}{\numberline {6.15}Objects\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Player Class Reference}{50}{section.6.15}%
+\contentsline {section}{\numberline {6.16}Shapes\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Rect Class Reference}{52}{section.6.16}%
+\contentsline {subsection}{\numberline {6.16.1}Member Data Documentation}{53}{subsection.6.16.1}%
+\contentsline {subsubsection}{\numberline {6.16.1.1}dimension}{53}{subsubsection.6.16.1.1}%
+\contentsline {subsubsection}{\numberline {6.16.1.2}position}{53}{subsubsection.6.16.1.2}%
+\contentsline {section}{\numberline {6.17}Renderer Class Reference}{53}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Detailed Description}{54}{subsection.6.17.1}%
+\contentsline {subsection}{\numberline {6.17.2}Constructor \& Destructor Documentation}{54}{subsection.6.17.2}%
+\contentsline {subsubsection}{\numberline {6.17.2.1}Renderer()}{54}{subsubsection.6.17.2.1}%
+\contentsline {subsection}{\numberline {6.17.3}Member Function Documentation}{55}{subsection.6.17.3}%
+\contentsline {subsubsection}{\numberline {6.17.3.1}clear()}{55}{subsubsection.6.17.3.1}%
+\contentsline {subsubsection}{\numberline {6.17.3.2}createTexture()}{55}{subsubsection.6.17.3.2}%
+\contentsline {subsubsection}{\numberline {6.17.3.3}debug()}{55}{subsubsection.6.17.3.3}%
+\contentsline {subsubsection}{\numberline {6.17.3.4}getInstance()}{55}{subsubsection.6.17.3.4}%
+\contentsline {subsubsection}{\numberline {6.17.3.5}moveLayerBottom()}{55}{subsubsection.6.17.3.5}%
+\contentsline {subsubsection}{\numberline {6.17.3.6}moveLayerDown()}{55}{subsubsection.6.17.3.6}%
+\contentsline {subsubsection}{\numberline {6.17.3.7}moveLayerTop()}{56}{subsubsection.6.17.3.7}%
+\contentsline {subsubsection}{\numberline {6.17.3.8}moveLayerUp()}{56}{subsubsection.6.17.3.8}%
+\contentsline {subsubsection}{\numberline {6.17.3.9}operator=()}{56}{subsubsection.6.17.3.9}%
+\contentsline {subsubsection}{\numberline {6.17.3.10}registerObject()}{56}{subsubsection.6.17.3.10}%
+\contentsline {subsubsection}{\numberline {6.17.3.11}removeObject()}{56}{subsubsection.6.17.3.11}%
+\contentsline {subsubsection}{\numberline {6.17.3.12}render()}{57}{subsubsection.6.17.3.12}%
+\contentsline {section}{\numberline {6.18}Renderer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Render\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key Class Reference}{57}{section.6.18}%
+\contentsline {subsection}{\numberline {6.18.1}Constructor \& Destructor Documentation}{57}{subsection.6.18.1}%
+\contentsline {subsubsection}{\numberline {6.18.1.1}RenderKey()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{57}{subsubsection.6.18.1.1}%
+\contentsline {subsubsection}{\numberline {6.18.1.2}RenderKey()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{57}{subsubsection.6.18.1.2}%
+\contentsline {section}{\numberline {6.19}Render\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Class Reference}{58}{section.6.19}%
+\contentsline {subsection}{\numberline {6.19.1}Detailed Description}{58}{subsection.6.19.1}%
+\contentsline {subsection}{\numberline {6.19.2}Member Function Documentation}{58}{subsection.6.19.2}%
+\contentsline {subsubsection}{\numberline {6.19.2.1}debug()}{58}{subsubsection.6.19.2.1}%
+\contentsline {section}{\numberline {6.20}sdl\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}deleter Struct Reference}{58}{section.6.20}%
+\contentsline {subsection}{\numberline {6.20.1}Detailed Description}{59}{subsection.6.20.1}%
+\contentsline {subsection}{\numberline {6.20.2}Member Function Documentation}{59}{subsection.6.20.2}%
+\contentsline {subsubsection}{\numberline {6.20.2.1}operator()()\hspace {0.1cm}{\footnotesize \ttfamily [1/12]}}{59}{subsubsection.6.20.2.1}%
+\contentsline {subsubsection}{\numberline {6.20.2.2}operator()()\hspace {0.1cm}{\footnotesize \ttfamily [2/12]}}{59}{subsubsection.6.20.2.2}%
+\contentsline {subsubsection}{\numberline {6.20.2.3}operator()()\hspace {0.1cm}{\footnotesize \ttfamily [3/12]}}{59}{subsubsection.6.20.2.3}%
+\contentsline {subsubsection}{\numberline {6.20.2.4}operator()()\hspace {0.1cm}{\footnotesize \ttfamily [4/12]}}{59}{subsubsection.6.20.2.4}%
+\contentsline {subsubsection}{\numberline {6.20.2.5}operator()()\hspace {0.1cm}{\footnotesize \ttfamily [5/12]}}{59}{subsubsection.6.20.2.5}%
+\contentsline {subsubsection}{\numberline {6.20.2.6}operator()()\hspace {0.1cm}{\footnotesize \ttfamily [6/12]}}{60}{subsubsection.6.20.2.6}%
+\contentsline {subsubsection}{\numberline {6.20.2.7}operator()()\hspace {0.1cm}{\footnotesize \ttfamily [7/12]}}{60}{subsubsection.6.20.2.7}%
+\contentsline {subsubsection}{\numberline {6.20.2.8}operator()()\hspace {0.1cm}{\footnotesize \ttfamily [8/12]}}{60}{subsubsection.6.20.2.8}%
+\contentsline {subsubsection}{\numberline {6.20.2.9}operator()()\hspace {0.1cm}{\footnotesize \ttfamily [9/12]}}{60}{subsubsection.6.20.2.9}%
+\contentsline {subsubsection}{\numberline {6.20.2.10}operator()()\hspace {0.1cm}{\footnotesize \ttfamily [10/12]}}{60}{subsubsection.6.20.2.10}%
+\contentsline {subsubsection}{\numberline {6.20.2.11}operator()()\hspace {0.1cm}{\footnotesize \ttfamily [11/12]}}{60}{subsubsection.6.20.2.11}%
+\contentsline {subsubsection}{\numberline {6.20.2.12}operator()()\hspace {0.1cm}{\footnotesize \ttfamily [12/12]}}{60}{subsubsection.6.20.2.12}%
+\contentsline {section}{\numberline {6.21}Selection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager$<$ T $>$ Class Template Reference}{60}{section.6.21}%
+\contentsline {subsection}{\numberline {6.21.1}Constructor \& Destructor Documentation}{61}{subsection.6.21.1}%
+\contentsline {subsubsection}{\numberline {6.21.1.1}SelectionManager()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{61}{subsubsection.6.21.1.1}%
+\contentsline {subsubsection}{\numberline {6.21.1.2}SelectionManager()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{61}{subsubsection.6.21.1.2}%
+\contentsline {subsection}{\numberline {6.21.2}Member Function Documentation}{61}{subsection.6.21.2}%
+\contentsline {subsubsection}{\numberline {6.21.2.1}add()}{61}{subsubsection.6.21.2.1}%
+\contentsline {subsubsection}{\numberline {6.21.2.2}get()}{62}{subsubsection.6.21.2.2}%
+\contentsline {subsubsection}{\numberline {6.21.2.3}getSelectionId()}{62}{subsubsection.6.21.2.3}%
+\contentsline {subsubsection}{\numberline {6.21.2.4}next()}{62}{subsubsection.6.21.2.4}%
+\contentsline {subsubsection}{\numberline {6.21.2.5}prev()}{62}{subsubsection.6.21.2.5}%
+\contentsline {subsubsection}{\numberline {6.21.2.6}remove()}{62}{subsubsection.6.21.2.6}%
+\contentsline {subsubsection}{\numberline {6.21.2.7}set()}{63}{subsubsection.6.21.2.7}%
+\contentsline {subsubsection}{\numberline {6.21.2.8}size()}{63}{subsubsection.6.21.2.8}%
+\contentsline {subsection}{\numberline {6.21.3}Member Data Documentation}{63}{subsection.6.21.3}%
+\contentsline {subsubsection}{\numberline {6.21.3.1}SELECTION\_NOT\_SET}{63}{subsubsection.6.21.3.1}%
+\contentsline {section}{\numberline {6.22}Shapes\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Shape Class Reference}{64}{section.6.22}%
+\contentsline {subsection}{\numberline {6.22.1}Constructor \& Destructor Documentation}{65}{subsection.6.22.1}%
+\contentsline {subsubsection}{\numberline {6.22.1.1}Shape()}{65}{subsubsection.6.22.1.1}%
+\contentsline {subsubsection}{\numberline {6.22.1.2}$\sim $Shape()}{65}{subsubsection.6.22.1.2}%
+\contentsline {subsection}{\numberline {6.22.2}Member Function Documentation}{65}{subsection.6.22.2}%
+\contentsline {subsubsection}{\numberline {6.22.2.1}draw()}{65}{subsubsection.6.22.2.1}%
+\contentsline {subsubsection}{\numberline {6.22.2.2}getColor()}{65}{subsubsection.6.22.2.2}%
+\contentsline {subsubsection}{\numberline {6.22.2.3}setColor()}{66}{subsubsection.6.22.2.3}%
+\contentsline {subsection}{\numberline {6.22.3}Member Data Documentation}{66}{subsection.6.22.3}%
+\contentsline {subsubsection}{\numberline {6.22.3.1}color}{66}{subsubsection.6.22.3.1}%
+\contentsline {subsubsection}{\numberline {6.22.3.2}view}{66}{subsubsection.6.22.3.2}%
+\contentsline {section}{\numberline {6.23}Texture\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler Class Reference}{66}{section.6.23}%
+\contentsline {subsection}{\numberline {6.23.1}Detailed Description}{67}{subsection.6.23.1}%
+\contentsline {subsection}{\numberline {6.23.2}Constructor \& Destructor Documentation}{67}{subsection.6.23.2}%
+\contentsline {subsubsection}{\numberline {6.23.2.1}TextureHandler()}{67}{subsubsection.6.23.2.1}%
+\contentsline {subsection}{\numberline {6.23.3}Member Function Documentation}{67}{subsection.6.23.3}%
+\contentsline {subsubsection}{\numberline {6.23.3.1}getInstance()}{67}{subsubsection.6.23.3.1}%
+\contentsline {subsubsection}{\numberline {6.23.3.2}getTexture()}{67}{subsubsection.6.23.3.2}%
+\contentsline {subsubsection}{\numberline {6.23.3.3}operator=()}{67}{subsubsection.6.23.3.3}%
+\contentsline {section}{\numberline {6.24}Vector2D Class Reference}{68}{section.6.24}%
+\contentsline {subsection}{\numberline {6.24.1}Constructor \& Destructor Documentation}{68}{subsection.6.24.1}%
+\contentsline {subsubsection}{\numberline {6.24.1.1}Vector2D()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{68}{subsubsection.6.24.1.1}%
+\contentsline {subsubsection}{\numberline {6.24.1.2}Vector2D()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{68}{subsubsection.6.24.1.2}%
+\contentsline {subsection}{\numberline {6.24.2}Member Function Documentation}{69}{subsection.6.24.2}%
+\contentsline {subsubsection}{\numberline {6.24.2.1}cross()}{69}{subsubsection.6.24.2.1}%
+\contentsline {subsubsection}{\numberline {6.24.2.2}dot()}{69}{subsubsection.6.24.2.2}%
+\contentsline {subsubsection}{\numberline {6.24.2.3}getX()}{69}{subsubsection.6.24.2.3}%
+\contentsline {subsubsection}{\numberline {6.24.2.4}getY()}{69}{subsubsection.6.24.2.4}%
+\contentsline {subsubsection}{\numberline {6.24.2.5}len()}{69}{subsubsection.6.24.2.5}%
+\contentsline {subsubsection}{\numberline {6.24.2.6}len2()}{69}{subsubsection.6.24.2.6}%
+\contentsline {subsubsection}{\numberline {6.24.2.7}norm()}{69}{subsubsection.6.24.2.7}%
+\contentsline {subsubsection}{\numberline {6.24.2.8}rotate()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{69}{subsubsection.6.24.2.8}%
+\contentsline {subsubsection}{\numberline {6.24.2.9}rotate()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{70}{subsubsection.6.24.2.9}%
+\contentsline {subsubsection}{\numberline {6.24.2.10}zero()}{70}{subsubsection.6.24.2.10}%
+\contentsline {subsection}{\numberline {6.24.3}Friends And Related Symbol Documentation}{70}{subsection.6.24.3}%
+\contentsline {subsubsection}{\numberline {6.24.3.1}operator$\ast $}{70}{subsubsection.6.24.3.1}%
+\contentsline {subsubsection}{\numberline {6.24.3.2}operator$\ast $=}{70}{subsubsection.6.24.3.2}%
+\contentsline {subsubsection}{\numberline {6.24.3.3}operator+}{70}{subsubsection.6.24.3.3}%
+\contentsline {subsubsection}{\numberline {6.24.3.4}operator+=}{70}{subsubsection.6.24.3.4}%
+\contentsline {subsubsection}{\numberline {6.24.3.5}operator-\/\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{70}{subsubsection.6.24.3.5}%
+\contentsline {subsubsection}{\numberline {6.24.3.6}operator-\/\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{70}{subsubsection.6.24.3.6}%
+\contentsline {subsubsection}{\numberline {6.24.3.7}operator-\/=}{71}{subsubsection.6.24.3.7}%
+\contentsline {subsubsection}{\numberline {6.24.3.8}operator/}{71}{subsubsection.6.24.3.8}%
+\contentsline {subsubsection}{\numberline {6.24.3.9}operator/=}{71}{subsubsection.6.24.3.9}%
+\contentsline {section}{\numberline {6.25}Views\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::View Class Reference}{71}{section.6.25}%
+\contentsline {subsection}{\numberline {6.25.1}Detailed Description}{72}{subsection.6.25.1}%
+\contentsline {subsection}{\numberline {6.25.2}Constructor \& Destructor Documentation}{73}{subsection.6.25.2}%
+\contentsline {subsubsection}{\numberline {6.25.2.1}View()}{73}{subsubsection.6.25.2.1}%
+\contentsline {subsubsection}{\numberline {6.25.2.2}$\sim $View()}{73}{subsubsection.6.25.2.2}%
+\contentsline {subsection}{\numberline {6.25.3}Member Function Documentation}{73}{subsection.6.25.3}%
+\contentsline {subsubsection}{\numberline {6.25.3.1}getAngle()}{73}{subsubsection.6.25.3.1}%
+\contentsline {subsubsection}{\numberline {6.25.3.2}getDimension()}{73}{subsubsection.6.25.3.2}%
+\contentsline {subsubsection}{\numberline {6.25.3.3}getPosition()}{73}{subsubsection.6.25.3.3}%
+\contentsline {subsubsection}{\numberline {6.25.3.4}getRect()}{73}{subsubsection.6.25.3.4}%
+\contentsline {subsubsection}{\numberline {6.25.3.5}getZoom()}{74}{subsubsection.6.25.3.5}%
+\contentsline {subsubsection}{\numberline {6.25.3.6}transform()}{74}{subsubsection.6.25.3.6}%
+\contentsline {subsubsection}{\numberline {6.25.3.7}transformFromRender()}{74}{subsubsection.6.25.3.7}%
+\contentsline {subsection}{\numberline {6.25.4}Member Data Documentation}{75}{subsection.6.25.4}%
+\contentsline {subsubsection}{\numberline {6.25.4.1}dimension}{75}{subsubsection.6.25.4.1}%
+\contentsline {subsubsection}{\numberline {6.25.4.2}position}{75}{subsubsection.6.25.4.2}%
+\contentsline {chapter}{\numberline {7}File Documentation}{77}{chapter.7}%
+\contentsline {section}{\numberline {7.1}include/command/command.h File Reference}{77}{section.7.1}%
+\contentsline {section}{\numberline {7.2}command.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{78}{section.7.2}%
+\contentsline {section}{\numberline {7.3}include/command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.h File Reference}{79}{section.7.3}%
+\contentsline {section}{\numberline {7.4}command\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{80}{section.7.4}%
+\contentsline {section}{\numberline {7.5}include/config.h File Reference}{80}{section.7.5}%
+\contentsline {section}{\numberline {7.6}config.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{81}{section.7.6}%
+\contentsline {section}{\numberline {7.7}include/game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.h File Reference}{82}{section.7.7}%
+\contentsline {section}{\numberline {7.8}game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{82}{section.7.8}%
+\contentsline {section}{\numberline {7.9}include/init.h File Reference}{82}{section.7.9}%
+\contentsline {section}{\numberline {7.10}init.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{84}{section.7.10}%
+\contentsline {section}{\numberline {7.11}include/input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}handler.h File Reference}{84}{section.7.11}%
+\contentsline {subsection}{\numberline {7.11.1}Enumeration Type Documentation}{85}{subsection.7.11.1}%
+\contentsline {subsubsection}{\numberline {7.11.1.1}MouseButton}{85}{subsubsection.7.11.1.1}%
+\contentsline {section}{\numberline {7.12}input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{86}{section.7.12}%
+\contentsline {section}{\numberline {7.13}include/object/button.h File Reference}{87}{section.7.13}%
+\contentsline {section}{\numberline {7.14}button.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{87}{section.7.14}%
+\contentsline {section}{\numberline {7.15}include/object/item/item.h File Reference}{88}{section.7.15}%
+\contentsline {section}{\numberline {7.16}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{88}{section.7.16}%
+\contentsline {section}{\numberline {7.17}include/object/object.h File Reference}{89}{section.7.17}%
+\contentsline {section}{\numberline {7.18}object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{90}{section.7.18}%
+\contentsline {section}{\numberline {7.19}include/object/player.h File Reference}{91}{section.7.19}%
+\contentsline {section}{\numberline {7.20}player.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{91}{section.7.20}%
+\contentsline {section}{\numberline {7.21}include/render\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}base.h File Reference}{92}{section.7.21}%
+\contentsline {section}{\numberline {7.22}render\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}base.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{92}{section.7.22}%
+\contentsline {section}{\numberline {7.23}include/renderer.h File Reference}{92}{section.7.23}%
+\contentsline {section}{\numberline {7.24}renderer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{93}{section.7.24}%
+\contentsline {section}{\numberline {7.25}include/shape/circle.h File Reference}{94}{section.7.25}%
+\contentsline {section}{\numberline {7.26}circle.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{95}{section.7.26}%
+\contentsline {section}{\numberline {7.27}include/shape/line.h File Reference}{96}{section.7.27}%
+\contentsline {section}{\numberline {7.28}line.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{97}{section.7.28}%
+\contentsline {section}{\numberline {7.29}include/shape/rect.h File Reference}{98}{section.7.29}%
+\contentsline {section}{\numberline {7.30}rect.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{98}{section.7.30}%
+\contentsline {section}{\numberline {7.31}include/shape/shape.h File Reference}{99}{section.7.31}%
+\contentsline {section}{\numberline {7.32}shape.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{100}{section.7.32}%
+\contentsline {section}{\numberline {7.33}include/shape/shapes.h File Reference}{100}{section.7.33}%
+\contentsline {section}{\numberline {7.34}shapes.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{101}{section.7.34}%
+\contentsline {section}{\numberline {7.35}include/texture/texture\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}handler.h File Reference}{101}{section.7.35}%
+\contentsline {section}{\numberline {7.36}texture\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{102}{section.7.36}%
+\contentsline {section}{\numberline {7.37}include/utility/functions.h File Reference}{102}{section.7.37}%
+\contentsline {section}{\numberline {7.38}functions.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{102}{section.7.38}%
+\contentsline {section}{\numberline {7.39}include/utility/pointer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}wrappers.h File Reference}{103}{section.7.39}%
+\contentsline {subsection}{\numberline {7.39.1}Typedef Documentation}{104}{subsection.7.39.1}%
+\contentsline {subsubsection}{\numberline {7.39.1.1}sdl\_unique\_ptr}{104}{subsubsection.7.39.1.1}%
+\contentsline {subsection}{\numberline {7.39.2}Function Documentation}{104}{subsection.7.39.2}%
+\contentsline {subsubsection}{\numberline {7.39.2.1}sdl\_make\_shared()}{104}{subsubsection.7.39.2.1}%
+\contentsline {section}{\numberline {7.40}pointer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}wrappers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{104}{section.7.40}%
+\contentsline {section}{\numberline {7.41}include/utility/selection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.h File Reference}{105}{section.7.41}%
+\contentsline {section}{\numberline {7.42}selection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{105}{section.7.42}%
+\contentsline {section}{\numberline {7.43}include/utility/utility.h File Reference}{106}{section.7.43}%
+\contentsline {subsection}{\numberline {7.43.1}Macro Definition Documentation}{107}{subsection.7.43.1}%
+\contentsline {subsubsection}{\numberline {7.43.1.1}\_USE\_MATH\_DEFINES}{107}{subsubsection.7.43.1.1}%
+\contentsline {subsection}{\numberline {7.43.2}Function Documentation}{107}{subsection.7.43.2}%
+\contentsline {subsubsection}{\numberline {7.43.2.1}normalizeAngle()}{107}{subsubsection.7.43.2.1}%
+\contentsline {subsubsection}{\numberline {7.43.2.2}polarToCartesian()}{108}{subsubsection.7.43.2.2}%
+\contentsline {section}{\numberline {7.44}utility.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{108}{section.7.44}%
+\contentsline {section}{\numberline {7.45}include/utility/vector2d.h File Reference}{108}{section.7.45}%
+\contentsline {section}{\numberline {7.46}vector2d.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{109}{section.7.46}%
+\contentsline {section}{\numberline {7.47}include/view/camera.h File Reference}{110}{section.7.47}%
+\contentsline {section}{\numberline {7.48}camera.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{111}{section.7.48}%
+\contentsline {section}{\numberline {7.49}include/view/hud.h File Reference}{111}{section.7.49}%
+\contentsline {section}{\numberline {7.50}hud.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{112}{section.7.50}%
+\contentsline {section}{\numberline {7.51}include/view/view.h File Reference}{112}{section.7.51}%
+\contentsline {section}{\numberline {7.52}view.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{114}{section.7.52}%
+\contentsline {section}{\numberline {7.53}include/view/views.h File Reference}{114}{section.7.53}%
+\contentsline {section}{\numberline {7.54}views.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{115}{section.7.54}%
+\contentsline {chapter}{Index}{117}{section*.195}%

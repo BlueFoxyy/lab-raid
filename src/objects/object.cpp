@@ -26,6 +26,10 @@ namespace Objects {
 	}
 	
 	float Object::getAngle(void) const noexcept {
+		return angle;
+	}
+
+	float Object::getRenderAngle(void) const noexcept {
 		return angle - view->getAngle();
 	}
 
@@ -158,6 +162,7 @@ namespace Objects {
 		);
 	}
 
+	/*
 	Vector2D Object::getRenderRelativePosition(Vector2D renderPosition) const noexcept {
 		auto renderRect = getRenderRect();
 		Vector2D objectRenderPosition = { renderRect.x, renderRect.y };
@@ -167,8 +172,10 @@ namespace Objects {
 			diffVector.getY() * view->getDimension().getY() / view->getZoom() / Config::screenHeight
 		};
 		diffVector -= getDimension() / 2;
+		diffVector.rotate(view->getAngle());
 		return diffVector;
 	}
+	*/
 
 	void Object::update(void) noexcept {}
 }

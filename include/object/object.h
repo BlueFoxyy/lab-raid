@@ -8,7 +8,6 @@
 #include <texture/texture_handler.h>
 #include <view/view.h>
 #include <config.h>
-#include <shape/shape.h>
 #include <SDL2/SDL.h>
 #include <memory>
 #include <string>
@@ -18,7 +17,6 @@
 
 namespace Views { class View; }
 class TextureHandler;
-namespace Shapes { class Shape; }
 
 namespace Objects {
 
@@ -65,6 +63,12 @@ namespace Objects {
 		/// </summary>
 		/// <returns>The angle which the object is facing.</returns>
 		float getAngle(void) const noexcept;
+
+		/// <summary>
+		/// Gets the render angle of the object.
+		/// </summary>
+		/// <returns>The render angle of the object</returns>
+		float getRenderAngle(void) const noexcept;
 		
 		/// <summary>
 		/// Sets rotation angle to @param newAngle radians.
@@ -188,22 +192,14 @@ namespace Objects {
 		/// </summary>
 		/// <returns>The SDL_FRect for rendering.</returns>
 		SDL_FRect getRenderRect(void) const noexcept;
-
-		/// <summary>
-		/// Gets the relative render distance vector between 
-		/// this object and @param renderPosition.
-		/// The vector is stretched to view dimensions.
-		/// </summary>
-		/// <param name="renderPosition">The position to be compared.</param>
-		/// <returns>The difference vector from object to @param renderPosition.</returns>
-		Vector2D getRenderRelativePosition(Vector2D renderPosition) const noexcept;
+		//Vector2D getRenderRelativePosition(Vector2D renderPosition) const noexcept;
 
 		/// <summary>
 		/// Updates the object state.
 		/// </summary>
-		void update(void) noexcept;
+		virtual void update(void) noexcept;
 
 		// debug
-		void debug(void) const noexcept;
+		void debug(void) const noexcept override;
 	};
 }

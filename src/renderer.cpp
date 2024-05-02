@@ -60,28 +60,30 @@ bool Renderer::registerObject(std::shared_ptr<RenderObjectBase> objectPtr) noexc
 		objectPtr.get(),
 		objectListMap.at(objectPtr)
 	);
+
+	/*
 	if (std::dynamic_pointer_cast<Objects::Object>(objectPtr)) {
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Renderer: registered object type is Object.");
 	} else if (std::dynamic_pointer_cast<Shapes::Shape>(objectPtr)) {
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "Renderer: registered object type is Shape.");
 	}
+	*/
 
 	return true;
 }
 
-bool Renderer::removeObject(std::shared_ptr<RenderObjectBase> objectPtr) noexcept {
-	if (objectPtr.get() == nullptr) return false;
+bool Renderer::removeObject(std::weak_ptr<RenderObjectBase> objectPtr) noexcept {
 	auto it = objectListMap.find(objectPtr);
 	if (it == objectListMap.end()) return false;
 	objectList.erase(it->second);
 	objectListMap.erase(it);
 
-	SDL_LogVerbose(SDL_LOG_CATEGORY_APPLICATION, "Renderer: unregistered object at %p.", objectPtr.get());
+	SDL_LogVerbose(SDL_LOG_CATEGORY_APPLICATION, "Renderer: unregistered object.");
 
 	return true;
 }
 
-void Renderer::render(RenderKey key) {
+void Renderer::render(const RenderKey& key) {
 	static int beginTick, endTick;
 	beginTick = SDL_GetTicks();
 
@@ -113,7 +115,7 @@ void Renderer::render(RenderKey key) {
 					objectPtr->getTexture(),
 					NULL,
 					std::make_unique<SDL_FRect>(objectPtr->getRenderRect()).get(),
-					-objectPtr->getAngle() * 180 / PI,
+					-objectPtr->getRenderAngle() * 180 / PI,
 					NULL,
 					objectPtr->getFlipFlag()
 				);
@@ -137,8 +139,8 @@ void Renderer::render(RenderKey key) {
 		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION,
 			"Renderer: removed deleted object."
 		);
-		system("pause");
-		removeObject(objectWeakPtr.lock());
+		//system("pause");
+		removeObject(objectWeakPtr);
 	}
 
 	// TODO: Draw temporary objects here.
@@ -193,26 +195,18 @@ void Renderer::moveLayerTop(std::shared_ptr<RenderObjectBase> objectPtr) {
 	auto it = objectListMap.find(objectPtr);
 	if (it == objectListMap.end())
 		throw std::invalid_argument("In Renderer::moveLayerTop(): object is not registered.");
-	auto curListIt = it->second;
-	auto backListIt = --objectList.end();
-	if (curListIt == backListIt)
-		return;
-	auto backObjectPtr = *backListIt;
-	swap(objectListMap[objectPtr], objectListMap[backObjectPtr]);
-	swap(*curListIt, *backListIt);
+	objectList.erase(it->second);
+	objectList.push_back(objectPtr);
+	it->second = --objectList.end();
 }
 
 void Renderer::moveLayerBottom(std::shared_ptr<RenderObjectBase> objectPtr) {
 	auto it = objectListMap.find(objectPtr);
 	if (it == objectListMap.end())
 		throw std::invalid_argument("In Renderer::moveLayerBottom(): object is not registered.");
-	auto curListIt = it->second;
-	auto frontListIt = objectList.begin();
-	if (curListIt == frontListIt)
-		return;
-	auto frontObjectPtr = *frontListIt;
-	swap(objectListMap[objectPtr], objectListMap[frontObjectPtr]);
-	swap(*curListIt, *frontListIt);
+	objectList.erase(it->second);
+	objectList.push_front(objectPtr);
+	it->second = objectList.begin();
 }
 
 void Renderer::clear() noexcept {

@@ -62,7 +62,7 @@ namespace Shapes {
 				renderer,
 				static_cast<Sint16>(prev.getX()),
 				static_cast<Sint16>(prev.getY()),
-				static_cast<Sint16>(cur.getX()), 
+				static_cast<Sint16>(cur.getX()),
 				static_cast<Sint16>(cur.getY()),
 				static_cast<Uint8>(ceilf(thickness * view->getZoom())),
 				color.r, color.g, color.b, color.a

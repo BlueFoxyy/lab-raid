@@ -153,6 +153,9 @@
     <ClInclude Include="include\render_object_base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\object\bullet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\init.cpp">
@@ -203,6 +206,9 @@
     <ClCompile Include="src\render_object_base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\objects\bullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\arrow.bmp">
@@ -224,6 +230,6 @@
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
     <None Include="resources\rooms\small_room.lvl" />
-    <None Include="src\utilities\selection_manager.tpp" />
+    <None Include="src\utilities\selection_manager.hpp" />
   </ItemGroup>
 </Project>

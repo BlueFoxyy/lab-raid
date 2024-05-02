@@ -1,0 +1,69 @@
+\doxysection{include/input\+\_\+handler.h File Reference}
+\hypertarget{input__handler_8h}{}\label{input__handler_8h}\index{include/input\_handler.h@{include/input\_handler.h}}
+{\ttfamily \#include $<$utility/vector2d.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Include dependency graph for input\+\_\+handler.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{input__handler_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{input__handler_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_input_handler}{Input\+Handler}}
+\begin{DoxyCompactList}\small\item\em This is a global singleton class of handling user inputs. Wrapper class of SDL\+\_\+\+Poll\+Event and events handling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a684d325a7303f52e64011467ff5c5758}{LEFT}} = SDL\+\_\+\+BUTTON\+\_\+\+LEFT
+, \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a43eedd8685eb86592022f8da962e3474}{MIDDLE}} = SDL\+\_\+\+BUTTON\+\_\+\+MIDDLE
+, \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a21507b40c80068eda19865706fdc2403}{RIGHT}} = SDL\+\_\+\+BUTTON\+\_\+\+RIGHT
+, \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63abb7f5ae6220c9828e5ec91faf054197c}{X1}} = SDL\+\_\+\+BUTTON\+\_\+\+X1
+, \newline
+\mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a54105bddbfe3f639d49cbe8f5182c958}{X2}} = SDL\+\_\+\+BUTTON\+\_\+\+X2
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}\label{input__handler_8h_af5fb1c855e4857f45b94220718c66b63} 
+\index{input\_handler.h@{input\_handler.h}!MouseButton@{MouseButton}}
+\index{MouseButton@{MouseButton}!input\_handler.h@{input\_handler.h}}
+\doxysubsubsection{\texorpdfstring{MouseButton}{MouseButton}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{input__handler_8h_af5fb1c855e4857f45b94220718c66b63}{Mouse\+Button}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!input\_handler.h@{input\_handler.h}}\index{input\_handler.h@{input\_handler.h}!LEFT@{LEFT}}}\Hypertarget{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a684d325a7303f52e64011467ff5c5758}\label{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a684d325a7303f52e64011467ff5c5758} 
+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIDDLE@{MIDDLE}!input\_handler.h@{input\_handler.h}}\index{input\_handler.h@{input\_handler.h}!MIDDLE@{MIDDLE}}}\Hypertarget{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a43eedd8685eb86592022f8da962e3474}\label{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a43eedd8685eb86592022f8da962e3474} 
+MIDDLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!input\_handler.h@{input\_handler.h}}\index{input\_handler.h@{input\_handler.h}!RIGHT@{RIGHT}}}\Hypertarget{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a21507b40c80068eda19865706fdc2403}\label{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a21507b40c80068eda19865706fdc2403} 
+RIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X1@{X1}!input\_handler.h@{input\_handler.h}}\index{input\_handler.h@{input\_handler.h}!X1@{X1}}}\Hypertarget{input__handler_8h_af5fb1c855e4857f45b94220718c66b63abb7f5ae6220c9828e5ec91faf054197c}\label{input__handler_8h_af5fb1c855e4857f45b94220718c66b63abb7f5ae6220c9828e5ec91faf054197c} 
+X1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X2@{X2}!input\_handler.h@{input\_handler.h}}\index{input\_handler.h@{input\_handler.h}!X2@{X2}}}\Hypertarget{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a54105bddbfe3f639d49cbe8f5182c958}\label{input__handler_8h_af5fb1c855e4857f45b94220718c66b63a54105bddbfe3f639d49cbe8f5182c958} 
+X2&\\
+\hline
+
+\end{DoxyEnumFields}

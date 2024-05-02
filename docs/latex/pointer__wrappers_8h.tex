@@ -1,0 +1,53 @@
+\doxysection{include/utility/pointer\+\_\+wrappers.h File Reference}
+\hypertarget{pointer__wrappers_8h}{}\label{pointer__wrappers_8h}\index{include/utility/pointer\_wrappers.h@{include/utility/pointer\_wrappers.h}}
+{\ttfamily \#include $<$SDL2/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Include dependency graph for pointer\+\_\+wrappers.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{pointer__wrappers_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pointer__wrappers_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsdl__deleter}{sdl\+\_\+deleter}}
+\begin{DoxyCompactList}\small\item\em Generic deleter functor for SDL resources. For use with std smart pointers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Resource $>$ }\\using \mbox{\hyperlink{pointer__wrappers_8h_ad0468ce334010879cf52d7f821d98871}{sdl\+\_\+unique\+\_\+ptr}} = std\+::unique\+\_\+ptr$<$Resource, \mbox{\hyperlink{structsdl__deleter}{sdl\+\_\+deleter}}$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Resource $>$ }\\std\+::shared\+\_\+ptr$<$ Resource $>$ \mbox{\hyperlink{pointer__wrappers_8h_a78d8e7ad3bf7e47bf6f6bdda0dc5f6b6}{sdl\+\_\+make\+\_\+shared}} (Resource \texorpdfstring{$\ast$}{*}resource)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{pointer__wrappers_8h_ad0468ce334010879cf52d7f821d98871}\label{pointer__wrappers_8h_ad0468ce334010879cf52d7f821d98871} 
+\index{pointer\_wrappers.h@{pointer\_wrappers.h}!sdl\_unique\_ptr@{sdl\_unique\_ptr}}
+\index{sdl\_unique\_ptr@{sdl\_unique\_ptr}!pointer\_wrappers.h@{pointer\_wrappers.h}}
+\doxysubsubsection{\texorpdfstring{sdl\_unique\_ptr}{sdl\_unique\_ptr}}
+{\footnotesize\ttfamily template$<$typename Resource $>$ \\
+using \mbox{\hyperlink{pointer__wrappers_8h_ad0468ce334010879cf52d7f821d98871}{sdl\+\_\+unique\+\_\+ptr}} = std\+::unique\+\_\+ptr$<$Resource, \mbox{\hyperlink{structsdl__deleter}{sdl\+\_\+deleter}}$>$}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{pointer__wrappers_8h_a78d8e7ad3bf7e47bf6f6bdda0dc5f6b6}\label{pointer__wrappers_8h_a78d8e7ad3bf7e47bf6f6bdda0dc5f6b6} 
+\index{pointer\_wrappers.h@{pointer\_wrappers.h}!sdl\_make\_shared@{sdl\_make\_shared}}
+\index{sdl\_make\_shared@{sdl\_make\_shared}!pointer\_wrappers.h@{pointer\_wrappers.h}}
+\doxysubsubsection{\texorpdfstring{sdl\_make\_shared()}{sdl\_make\_shared()}}
+{\footnotesize\ttfamily template$<$typename Resource $>$ \\
+std\+::shared\+\_\+ptr$<$ Resource $>$ sdl\+\_\+make\+\_\+shared (\begin{DoxyParamCaption}\item[{Resource \texorpdfstring{$\ast$}{*}}]{resource }\end{DoxyParamCaption})}
+

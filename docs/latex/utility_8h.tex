@@ -1,0 +1,80 @@
+\doxysection{include/utility/utility.h File Reference}
+\hypertarget{utility_8h}{}\label{utility_8h}\index{include/utility/utility.h@{include/utility/utility.h}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include "{}vector2d.\+h"{}}\newline
+Include dependency graph for utility.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{utility_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{utility_8h_a525335710b53cb064ca56b936120431e}{\+\_\+\+USE\+\_\+\+MATH\+\_\+\+DEFINES}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{utility_8h_ae56d6b03832f7d25bc5529b2b7590224}{normalize\+Angle}} (float angle) noexcept
+\begin{DoxyCompactList}\small\item\em Helper function to normalize angle to \mbox{[}0, 2pi) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{utility_8h_ada61a7421ae408c733a6d9561516beb4}{polar\+To\+Cartesian}} (float radius, float theta)
+\begin{DoxyCompactList}\small\item\em Helper function to to transform polar coordinates to cartesian coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{utility_8h_a525335710b53cb064ca56b936120431e}\label{utility_8h_a525335710b53cb064ca56b936120431e} 
+\index{utility.h@{utility.h}!\_USE\_MATH\_DEFINES@{\_USE\_MATH\_DEFINES}}
+\index{\_USE\_MATH\_DEFINES@{\_USE\_MATH\_DEFINES}!utility.h@{utility.h}}
+\doxysubsubsection{\texorpdfstring{\_USE\_MATH\_DEFINES}{\_USE\_MATH\_DEFINES}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+MATH\+\_\+\+DEFINES}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{utility_8h_ae56d6b03832f7d25bc5529b2b7590224}\label{utility_8h_ae56d6b03832f7d25bc5529b2b7590224} 
+\index{utility.h@{utility.h}!normalizeAngle@{normalizeAngle}}
+\index{normalizeAngle@{normalizeAngle}!utility.h@{utility.h}}
+\doxysubsubsection{\texorpdfstring{normalizeAngle()}{normalizeAngle()}}
+{\footnotesize\ttfamily float normalize\+Angle (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Helper function to normalize angle to \mbox{[}0, 2pi) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & input angle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+normalized angle
+\end{DoxyReturn}
+\Hypertarget{utility_8h_ada61a7421ae408c733a6d9561516beb4}\label{utility_8h_ada61a7421ae408c733a6d9561516beb4} 
+\index{utility.h@{utility.h}!polarToCartesian@{polarToCartesian}}
+\index{polarToCartesian@{polarToCartesian}!utility.h@{utility.h}}
+\doxysubsubsection{\texorpdfstring{polarToCartesian()}{polarToCartesian()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} polar\+To\+Cartesian (\begin{DoxyParamCaption}\item[{float}]{radius,  }\item[{float}]{theta }\end{DoxyParamCaption})}
+
+
+
+Helper function to to transform polar coordinates to cartesian coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & input radius\\
+\hline
+{\em theta} & input angele (radians)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the transformed cartesian coordinates
+\end{DoxyReturn}

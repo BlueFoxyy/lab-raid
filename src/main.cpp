@@ -2,15 +2,15 @@
 #include <renderer.h>
 #include <command/command.h>
 #include <command_manager.h>
-
 #include <shape/shapes.h>
 #include <init.h>
 #include <SDL2/SDL.h>
 #include <cstdlib>
 #include <stdexcept>
 #include <algorithm>
-
 #include <memory>
+#include <vector>
+#include <queue>
 
 static const int TICKS_PER_SEC = 1000;
 static const float gunOffset = 16.5;
@@ -26,7 +26,7 @@ static T timedDifference(T value) noexcept {
 
 class MoveUpCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		controlledObject.lock()->move(
 			Vector2D(0, -timedDifference(playerSpeed)).rotate(
 				Global::playerCamera->getAngle()
@@ -36,7 +36,7 @@ public:
 };
 class MoveDownCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		controlledObject.lock()->move(
 			Vector2D(0, timedDifference(playerSpeed)).rotate(
 				Global::playerCamera->getAngle()
@@ -46,7 +46,7 @@ public:
 };
 class MoveLeftCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		controlledObject.lock()->move(
 			Vector2D(-timedDifference(playerSpeed), 0).rotate(
 				Global::playerCamera->getAngle()
@@ -56,7 +56,7 @@ public:
 };
 class MoveRightCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		controlledObject.lock()->move(
 			Vector2D(timedDifference(playerSpeed), 0).rotate(
 				Global::playerCamera->getAngle()
@@ -66,13 +66,13 @@ public:
 };
 class QuitCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		quit = true;
 	}
 };
 class SwitchControlCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		auto tempObject = controlledObject.lock();
 		if (tempObject == Global::playerObject)
 			controlledObject = Global::arrowObject1;
@@ -94,7 +94,7 @@ public:
 		Global::playerCamera->setZoom(zoomMultiplier);
 	}
 
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		command();
 	}
 };
@@ -107,14 +107,14 @@ public:
 		Global::playerCamera->setZoom(zoomMultiplier);
 	}
 
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		command();
 	}
 };
 
 class ResetZoomCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		zoomMultiplier = 1.0f;
 		Global::playerCamera->setZoom(zoomMultiplier);
 	}
@@ -125,14 +125,14 @@ public:
 float rotateSpeed = 2.0f * (float)M_PI;
 class RotateCameraClockwiseCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		Global::playerCamera->rotate(timedDifference(rotateSpeed));
 	}
 };
 
 class RotateCameraCounterClockwiseCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		Global::playerCamera->rotate(-timedDifference(rotateSpeed));
 	}
 };
@@ -141,7 +141,7 @@ public:
 /* LAYER TEST COMMANDS */
 class PlayerLayerUpCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		Renderer::getInstance().moveLayerUp(
 			Global::playerObject
 		);
@@ -149,7 +149,7 @@ public:
 };
 class PlayerLayerDownCommand : public Commands::Command {
 public:
-	void execute(ExecuteKey key) noexcept override {
+	void execute(const ExecuteKey& key) noexcept override {
 		Renderer::getInstance().moveLayerDown(
 			Global::playerObject
 		);
@@ -157,6 +157,26 @@ public:
 };
 /* LAYER TEST COMMANDS */
 
+/* BULLET TEST COMMANDS */
+std::deque<std::shared_ptr<Objects::Bullet>> bullets;
+class CreateBulletCommand : public Commands::Command {
+public:
+	void execute(const ExecuteKey& key) noexcept override {
+		auto bullet = std::make_shared<Objects::Bullet>(
+			Global::playerCamera.get(),
+			Global::playerObject->getPosition() + 
+				Vector2D{ 48 , gunOffset }.rotate(
+				Global::playerObject->getAngle()
+			),
+			Global::playerObject->getAngle()
+		);
+		bullets.push_back(bullet);
+		Renderer::getInstance().registerObject(bullet);
+	}
+};
+/* BULLET TEST COMMANDS */
+
+// register commands
 static void registerCommands(CommandManager& commandManager) {
 	commandManager.registerCommand({
 		{ {SDLK_q, KeyBind::Trigger::TAP} },
@@ -210,17 +230,15 @@ static void registerCommands(CommandManager& commandManager) {
 		{ {SDLK_KP_2, KeyBind::Trigger::TAP} },
 		{}
 		}, std::make_shared<PlayerLayerDownCommand>());
+	commandManager.registerCommand({
+		{},
+		{ {MouseButton::LEFT, KeyBind::Trigger::TAP} }
+		}, std::make_shared<CreateBulletCommand>());
 }
 
 int main(int argc, char* argv[]) {
+	// initialize
 	Global::init();
-
-	/*
-	// PENGAY mission
-	while (true) {
-		std::cout << "Hello PENGAY!\n";
-	}
-	*/
 
 	curTick = prevTick = 0;
 	prevTick = SDL_GetTicks();
@@ -237,10 +255,12 @@ int main(int argc, char* argv[]) {
 
 	SDL_Event event;
 	while (not quit) {
+		// calculate elapsed ticks
 		prevTick = curTick;
 		curTick = SDL_GetTicks();
 		diffTick = curTick - prevTick;
 
+		// register inputs
 		while (SDL_PollEvent(&event) != 0) {
 			switch (event.type) {
 			case SDL_QUIT:
@@ -259,22 +279,23 @@ int main(int argc, char* argv[]) {
 			}
 		}
 
+		// execute registered commands
 		commandManager.update();
 
 //		Global::playerObject->rotate(0.01);
 //		Global::object->rotate(-0.02);
 //		Global::playerObject->lookAt(Global::object->getPosition());
 
+		// get cursor's virtual position in game coordinate system
 		Vector2D cursorPosition =
-			Global::playerObject->getPosition()
-			+ Global::playerObject->getRenderRelativePosition(
+			Global::playerCamera->transformFromRender(
 				InputHandler::getInstance().getMousePosition()
 			);
+
+		// set player to look at cursor
 		Global::playerObject->lookAt(cursorPosition);
-		Global::playerObject->rotate(
-			Global::playerCamera->getAngle()
-		);
 		
+		// smooth scrolling
 		float scrollY = InputHandler::getInstance().pollMouseScroll().getY();
 		if (scrollY > 0) {
 			zoomInTimer = 20;
@@ -292,10 +313,13 @@ int main(int argc, char* argv[]) {
 			ZoomOutCommand::command();
 		}
 
+		// adjust angle so that the gun points at the cursor instead of player look at the cursor
 		Vector2D distVector = cursorPosition - Global::playerObject->getPosition();
 		float offsetAngle = gunOffset / distVector.len();
 //		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "offsetAngle = %lf", offsetAngle);
 		Global::playerObject->rotate(offsetAngle);
+
+		// set arrow to look at the player object.
 		Global::arrowObject1->lookAt(Global::playerObject->getPosition());
 
 		// Set crosshair position
@@ -331,6 +355,17 @@ int main(int argc, char* argv[]) {
 
 		SDL_SetRenderDrawColor(Renderer::getInstance().getRawRenderer(), 0xFF, 0xFF, 0xFF, 0xFF);
 		*/
+
+		for (auto bullet : bullets) {
+			bullet->update();
+		}
+		while (not bullets.empty()) {
+			const auto& bullet = bullets.front();
+			if (bullet->getAliveTime() > 2000)
+				bullets.pop_front();
+			else
+				break;
+		}
 
 		try {
 			Renderer::getInstance().render({});

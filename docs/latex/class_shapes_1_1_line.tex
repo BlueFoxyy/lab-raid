@@ -1,0 +1,135 @@
+\doxysection{Shapes\+::Line Class Reference}
+\hypertarget{class_shapes_1_1_line}{}\label{class_shapes_1_1_line}\index{Shapes::Line@{Shapes::Line}}
+
+
+{\ttfamily \#include $<$line.\+h$>$}
+
+
+
+Inheritance diagram for Shapes\+::Line\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_shapes_1_1_line__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Shapes\+::Line\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_shapes_1_1_line__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shapes_1_1_line_acbd76305ba57590367a0fc08d6d285ad}{Line}} (\mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_shapes_1_1_shape_a61b5c9d0178925857cc03cb894d6a878}{view}}, \mbox{\hyperlink{class_vector2_d}{Vector2D}} \+\_\+begin\+Point, \mbox{\hyperlink{class_vector2_d}{Vector2D}} \+\_\+end\+Point, uint8\+\_\+t \+\_\+thickness, SDL\+\_\+\+Color \mbox{\hyperlink{class_shapes_1_1_shape_a4a82ce802aea95a2b68588d9dc6a891f}{color}}=\{0, 0, 0, 255\}) noexcept
+\item 
+void \mbox{\hyperlink{class_shapes_1_1_line_a6db51d8a1b4c156be8020d1ecfc43c25}{set\+Begin\+Point}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} new\+Begin\+Point) noexcept
+\item 
+void \mbox{\hyperlink{class_shapes_1_1_line_a5e6dc803510cfb27d59a9e2dbd99dcd1}{set\+End\+Point}} (\mbox{\hyperlink{class_vector2_d}{Vector2D}} new\+End\+Point) noexcept
+\item 
+void \mbox{\hyperlink{class_shapes_1_1_line_a4ec01290dd6ceb4231b884c7a1bedf7f}{set\+Thickness}} (uint8\+\_\+t new\+Thickness) noexcept
+\item 
+void \mbox{\hyperlink{class_shapes_1_1_line_a7365480aaf928c2b024050cab5f57322}{draw}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer) const noexcept override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_shapes_1_1_shape}{Shapes\+::\+Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shapes_1_1_shape_a43dde932255e213ddef0bae12c1025c4}{Shape}} (\mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_shapes_1_1_shape_a61b5c9d0178925857cc03cb894d6a878}{view}}, const SDL\+\_\+\+Color \&\mbox{\hyperlink{class_shapes_1_1_shape_a4a82ce802aea95a2b68588d9dc6a891f}{color}}=\{ 0, 0, 0, 255 \})
+\item 
+virtual \mbox{\hyperlink{class_shapes_1_1_shape_ae3a5e797f28757c8060df14e2c2e20df}{\texorpdfstring{$\sim$}{\string~}\+Shape}} ()
+\item 
+void \mbox{\hyperlink{class_shapes_1_1_shape_ad4ff5aadd6850816218acaac75f091bb}{set\+Color}} (const SDL\+\_\+\+Color \&new\+Color) noexcept
+\item 
+SDL\+\_\+\+Color \mbox{\hyperlink{class_shapes_1_1_shape_aed2988789e73cfdc900816b86acf6f58}{get\+Color}} (void) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_render_object_base_ab640bb12371cdff15da2694777db1961}{debug}} (void) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_shapes_1_1_line_a858809f1b8675f0c66b659fbbe423cf7}{begin\+Point}}
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_shapes_1_1_line_a5213e5f312d3731e9d04f42f0fb82f5e}{end\+Point}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_shapes_1_1_line_a53865bf3110717110530dcea764df55d}{thickness}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_shapes_1_1_shape}{Shapes\+::\+Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_shapes_1_1_shape_a61b5c9d0178925857cc03cb894d6a878}{view}}
+\begin{DoxyCompactList}\small\item\em Calls draw function after transforming coordinates with view. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Color \mbox{\hyperlink{class_shapes_1_1_shape_a4a82ce802aea95a2b68588d9dc6a891f}{color}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_shapes_1_1_line_acbd76305ba57590367a0fc08d6d285ad}\label{class_shapes_1_1_line_acbd76305ba57590367a0fc08d6d285ad} 
+\index{Shapes::Line@{Shapes::Line}!Line@{Line}}
+\index{Line@{Line}!Shapes::Line@{Shapes::Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}}
+{\footnotesize\ttfamily Shapes\+::\+Line\+::\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}}]{view,  }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{\+\_\+begin\+Point,  }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{\+\_\+end\+Point,  }\item[{uint8\+\_\+t}]{\+\_\+thickness,  }\item[{SDL\+\_\+\+Color}]{color = {\ttfamily \{0,~0,~0,~255\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shapes_1_1_line_a7365480aaf928c2b024050cab5f57322}\label{class_shapes_1_1_line_a7365480aaf928c2b024050cab5f57322} 
+\index{Shapes::Line@{Shapes::Line}!draw@{draw}}
+\index{draw@{draw}!Shapes::Line@{Shapes::Line}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Shapes\+::\+Line\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_shapes_1_1_shape_a89d9f9daa494e1ccdfb5fc6dc930b20e}{Shapes\+::\+Shape}}.
+
+\Hypertarget{class_shapes_1_1_line_a6db51d8a1b4c156be8020d1ecfc43c25}\label{class_shapes_1_1_line_a6db51d8a1b4c156be8020d1ecfc43c25} 
+\index{Shapes::Line@{Shapes::Line}!setBeginPoint@{setBeginPoint}}
+\index{setBeginPoint@{setBeginPoint}!Shapes::Line@{Shapes::Line}}
+\doxysubsubsection{\texorpdfstring{setBeginPoint()}{setBeginPoint()}}
+{\footnotesize\ttfamily void Shapes\+::\+Line\+::set\+Begin\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{new\+Begin\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_shapes_1_1_line_a5e6dc803510cfb27d59a9e2dbd99dcd1}\label{class_shapes_1_1_line_a5e6dc803510cfb27d59a9e2dbd99dcd1} 
+\index{Shapes::Line@{Shapes::Line}!setEndPoint@{setEndPoint}}
+\index{setEndPoint@{setEndPoint}!Shapes::Line@{Shapes::Line}}
+\doxysubsubsection{\texorpdfstring{setEndPoint()}{setEndPoint()}}
+{\footnotesize\ttfamily void Shapes\+::\+Line\+::set\+End\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{new\+End\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{class_shapes_1_1_line_a4ec01290dd6ceb4231b884c7a1bedf7f}\label{class_shapes_1_1_line_a4ec01290dd6ceb4231b884c7a1bedf7f} 
+\index{Shapes::Line@{Shapes::Line}!setThickness@{setThickness}}
+\index{setThickness@{setThickness}!Shapes::Line@{Shapes::Line}}
+\doxysubsubsection{\texorpdfstring{setThickness()}{setThickness()}}
+{\footnotesize\ttfamily void Shapes\+::\+Line\+::set\+Thickness (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{new\+Thickness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_shapes_1_1_line_a858809f1b8675f0c66b659fbbe423cf7}\label{class_shapes_1_1_line_a858809f1b8675f0c66b659fbbe423cf7} 
+\index{Shapes::Line@{Shapes::Line}!beginPoint@{beginPoint}}
+\index{beginPoint@{beginPoint}!Shapes::Line@{Shapes::Line}}
+\doxysubsubsection{\texorpdfstring{beginPoint}{beginPoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Shapes\+::\+Line\+::begin\+Point\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_shapes_1_1_line_a5213e5f312d3731e9d04f42f0fb82f5e}\label{class_shapes_1_1_line_a5213e5f312d3731e9d04f42f0fb82f5e} 
+\index{Shapes::Line@{Shapes::Line}!endPoint@{endPoint}}
+\index{endPoint@{endPoint}!Shapes::Line@{Shapes::Line}}
+\doxysubsubsection{\texorpdfstring{endPoint}{endPoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Shapes\+::\+Line\+::end\+Point\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_shapes_1_1_line_a53865bf3110717110530dcea764df55d}\label{class_shapes_1_1_line_a53865bf3110717110530dcea764df55d} 
+\index{Shapes::Line@{Shapes::Line}!thickness@{thickness}}
+\index{thickness@{thickness}!Shapes::Line@{Shapes::Line}}
+\doxysubsubsection{\texorpdfstring{thickness}{thickness}}
+{\footnotesize\ttfamily uint8\+\_\+t Shapes\+::\+Line\+::thickness\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/shape/\mbox{\hyperlink{line_8h}{line.\+h}}\end{DoxyCompactItemize}

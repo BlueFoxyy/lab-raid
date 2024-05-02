@@ -151,6 +151,7 @@
     <ClInclude Include="include\geometry\shapes.h" />
     <ClInclude Include="include\init.h" />
     <ClInclude Include="include\input_handler.h" />
+    <ClInclude Include="include\object\bullet.h" />
     <ClInclude Include="include\object\button.h" />
     <ClInclude Include="include\object\item\item.h" />
     <ClInclude Include="include\object\object.h" />
@@ -178,6 +179,7 @@
     <ClCompile Include="src\init.cpp" />
     <ClCompile Include="src\input_handler.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\objects\bullet.cpp" />
     <ClCompile Include="src\objects\button.cpp" />
     <ClCompile Include="src\objects\object.cpp" />
     <ClCompile Include="src\renderer.cpp" />
@@ -200,7 +202,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
-    <None Include="src\utilities\selection_manager.tpp" />
+    <None Include="src\utilities\selection_manager.hpp" />
     <None Include="resources\rooms\small_room.lvl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

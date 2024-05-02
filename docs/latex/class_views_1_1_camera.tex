@@ -1,0 +1,298 @@
+\doxysection{Views\+::Camera Class Reference}
+\hypertarget{class_views_1_1_camera}{}\label{class_views_1_1_camera}\index{Views::Camera@{Views::Camera}}
+
+
+\doxylink{class_views_1_1_camera}{Camera} for following object or stationary view.  
+
+
+
+
+{\ttfamily \#include $<$camera.\+h$>$}
+
+
+
+Inheritance diagram for Views\+::Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_views_1_1_camera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Views\+::Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{class_views_1_1_camera__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_views_1_1_camera_a3b436b79d81cc0341c64f5f69caf51ca}{Camera}} ()
+\item 
+void \mbox{\hyperlink{class_views_1_1_camera_aa6f898f4c59c73fa5d4ab45d2dbc3d3c}{set\+Pivot\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_objects_1_1_object}{Objects\+::\+Object}} $>$ pivot\+Object) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the pivot object of the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_views_1_1_camera_ab1fd8660bd01ae2a30135f18fbff971c}{set\+Position}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&new\+Position) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the position of the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_views_1_1_camera_a8ba4e3d8001c3b3a3700ec662e400086}{set\+Dimension}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&new\+Dimension)
+\begin{DoxyCompactList}\small\item\em Sets the dimensions of the camera. The new dimension vector should be positive in both components. Throws std\+::invalid\+\_\+argument if the new dimension vector is invalid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_views_1_1_camera_ad2cd0b64c9e9aec8a9af30bdc2e44649}{set\+Zoom}} (float zoom)
+\begin{DoxyCompactList}\small\item\em Sets the zoom level of the camera. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_views_1_1_camera_a84dd006c7427b266cb4ae767f49f6f2a}{get\+Zoom}} (void) const noexcept override
+\begin{DoxyCompactList}\small\item\em Gets the zoom level of the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_views_1_1_camera_a1869bfea8e47fc1878a1275a1fe67601}{set\+Angle}} (float angle) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the rotation angle of the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_views_1_1_camera_a0a11e84b8f45251c3f9c75906ce8e11a}{rotate}} (float diff\+Angle) noexcept
+\begin{DoxyCompactList}\small\item\em Rotates the view by @diff\+Angle. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_views_1_1_camera_ab4c5c80da9211c08e5d4f6f0af998f8a}{get\+Angle}} (void) const noexcept override
+\begin{DoxyCompactList}\small\item\em Gets the rotation angle of the camera. \end{DoxyCompactList}\item 
+SDL\+\_\+\+FRect \mbox{\hyperlink{class_views_1_1_camera_a19123e2aed9d63753bbc04c8e92ede25}{get\+Rect}} (const \mbox{\hyperlink{class_objects_1_1_object}{Objects\+::\+Object}} \&object) const noexcept override
+\begin{DoxyCompactList}\small\item\em Gets the render rect for. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_views_1_1_camera_aa5212966d2ea02e139cc2acc26e2f3e3}{transform}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&\mbox{\hyperlink{class_views_1_1_view_a8b0a4d504eaad06b59fcc048302d614b}{position}}) const noexcept override
+\begin{DoxyCompactList}\small\item\em Gets the transformed render position of. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_views_1_1_camera_a82f30a05399435b980c0a771134e8497}{transform\+From\+Render}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&render\+Position) const noexcept override
+\begin{DoxyCompactList}\small\item\em Gets the virtual position of. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_views_1_1_view_acc49fb0c1448a75bfb8481a5ccf913ea}{\texorpdfstring{$\sim$}{\string~}\+View}} ()
+\item 
+virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_views_1_1_view_a0656709fd4b6ba1c560ae91f3f946d17}{get\+Dimension}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the virtual dimension of the view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_views_1_1_view_a514d2e9994738070a413f2d1cd04e4fd}{View}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&\+\_\+position, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&\+\_\+dimension)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_views_1_1_view_a8b0a4d504eaad06b59fcc048302d614b}{position}}
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_views_1_1_view_ad764dcbad3657d94d0a81b14c6cb4488}{dimension}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_views_1_1_camera}{Camera} for following object or stationary view. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_views_1_1_camera_a3b436b79d81cc0341c64f5f69caf51ca}\label{class_views_1_1_camera_a3b436b79d81cc0341c64f5f69caf51ca} 
+\index{Views::Camera@{Views::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Views::Camera@{Views::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Views\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_views_1_1_camera_ab4c5c80da9211c08e5d4f6f0af998f8a}\label{class_views_1_1_camera_ab4c5c80da9211c08e5d4f6f0af998f8a} 
+\index{Views::Camera@{Views::Camera}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!Views::Camera@{Views::Camera}}
+\doxysubsubsection{\texorpdfstring{getAngle()}{getAngle()}}
+{\footnotesize\ttfamily float Views\+::\+Camera\+::get\+Angle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the rotation angle of the camera. 
+
+\begin{DoxyReturn}{Returns}
+The rotation angle of the camera.
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_views_1_1_view_af12fed86a58728dc3e19e7c48c93df51}{Views\+::\+View}}.
+
+\Hypertarget{class_views_1_1_camera_a19123e2aed9d63753bbc04c8e92ede25}\label{class_views_1_1_camera_a19123e2aed9d63753bbc04c8e92ede25} 
+\index{Views::Camera@{Views::Camera}!getRect@{getRect}}
+\index{getRect@{getRect}!Views::Camera@{Views::Camera}}
+\doxysubsubsection{\texorpdfstring{getRect()}{getRect()}}
+{\footnotesize\ttfamily SDL\+\_\+\+FRect Views\+::\+Camera\+::get\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_objects_1_1_object}{Objects\+::\+Object}} \&}]{object }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the render rect for. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object.} & \\
+\hline
+{\em object} & The object to be rendered.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The render rect of
+
+object.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_views_1_1_view_af05904e80ec82ee07494d2dedf440c7e}{Views\+::\+View}}.
+
+\Hypertarget{class_views_1_1_camera_a84dd006c7427b266cb4ae767f49f6f2a}\label{class_views_1_1_camera_a84dd006c7427b266cb4ae767f49f6f2a} 
+\index{Views::Camera@{Views::Camera}!getZoom@{getZoom}}
+\index{getZoom@{getZoom}!Views::Camera@{Views::Camera}}
+\doxysubsubsection{\texorpdfstring{getZoom()}{getZoom()}}
+{\footnotesize\ttfamily float Views\+::\+Camera\+::get\+Zoom (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the zoom level of the view. 
+
+\begin{DoxyReturn}{Returns}
+The zoom level of the view.
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_views_1_1_view_abafa0017ee91d53098bf292a754801fd}{Views\+::\+View}}.
+
+\Hypertarget{class_views_1_1_camera_a0a11e84b8f45251c3f9c75906ce8e11a}\label{class_views_1_1_camera_a0a11e84b8f45251c3f9c75906ce8e11a} 
+\index{Views::Camera@{Views::Camera}!rotate@{rotate}}
+\index{rotate@{rotate}!Views::Camera@{Views::Camera}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Views\+::\+Camera\+::rotate (\begin{DoxyParamCaption}\item[{float}]{diff\+Angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Rotates the view by @diff\+Angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em diff\+Angle} & The angle to rotate by.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_views_1_1_camera_a1869bfea8e47fc1878a1275a1fe67601}\label{class_views_1_1_camera_a1869bfea8e47fc1878a1275a1fe67601} 
+\index{Views::Camera@{Views::Camera}!setAngle@{setAngle}}
+\index{setAngle@{setAngle}!Views::Camera@{Views::Camera}}
+\doxysubsubsection{\texorpdfstring{setAngle()}{setAngle()}}
+{\footnotesize\ttfamily void Views\+::\+Camera\+::set\+Angle (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the rotation angle of the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The rotation angle to be set.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_views_1_1_camera_a8ba4e3d8001c3b3a3700ec662e400086}\label{class_views_1_1_camera_a8ba4e3d8001c3b3a3700ec662e400086} 
+\index{Views::Camera@{Views::Camera}!setDimension@{setDimension}}
+\index{setDimension@{setDimension}!Views::Camera@{Views::Camera}}
+\doxysubsubsection{\texorpdfstring{setDimension()}{setDimension()}}
+{\footnotesize\ttfamily void Views\+::\+Camera\+::set\+Dimension (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{new\+Dimension }\end{DoxyParamCaption})}
+
+
+
+Sets the dimensions of the camera. The new dimension vector should be positive in both components. Throws std\+::invalid\+\_\+argument if the new dimension vector is invalid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Dimension} & The new dimensions of the camera.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_views_1_1_camera_aa6f898f4c59c73fa5d4ab45d2dbc3d3c}\label{class_views_1_1_camera_aa6f898f4c59c73fa5d4ab45d2dbc3d3c} 
+\index{Views::Camera@{Views::Camera}!setPivotObject@{setPivotObject}}
+\index{setPivotObject@{setPivotObject}!Views::Camera@{Views::Camera}}
+\doxysubsubsection{\texorpdfstring{setPivotObject()}{setPivotObject()}}
+{\footnotesize\ttfamily void Views\+::\+Camera\+::set\+Pivot\+Object (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_objects_1_1_object}{Objects\+::\+Object}} $>$}]{pivot\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the pivot object of the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pivot\+Object} & The object to pivot on.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_views_1_1_camera_ab1fd8660bd01ae2a30135f18fbff971c}\label{class_views_1_1_camera_ab1fd8660bd01ae2a30135f18fbff971c} 
+\index{Views::Camera@{Views::Camera}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Views::Camera@{Views::Camera}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Views\+::\+Camera\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the position of the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & The new positions of the camera.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_views_1_1_camera_ad2cd0b64c9e9aec8a9af30bdc2e44649}\label{class_views_1_1_camera_ad2cd0b64c9e9aec8a9af30bdc2e44649} 
+\index{Views::Camera@{Views::Camera}!setZoom@{setZoom}}
+\index{setZoom@{setZoom}!Views::Camera@{Views::Camera}}
+\doxysubsubsection{\texorpdfstring{setZoom()}{setZoom()}}
+{\footnotesize\ttfamily void Views\+::\+Camera\+::set\+Zoom (\begin{DoxyParamCaption}\item[{float}]{zoom }\end{DoxyParamCaption})}
+
+
+
+Sets the zoom level of the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zoom} & should be positive. Throws std\+::invalid\+\_\+argument if\\
+\hline
+{\em zoom} & is invalid.\\
+\hline
+{\em zoom} & The zoom level to be set.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_views_1_1_camera_aa5212966d2ea02e139cc2acc26e2f3e3}\label{class_views_1_1_camera_aa5212966d2ea02e139cc2acc26e2f3e3} 
+\index{Views::Camera@{Views::Camera}!transform@{transform}}
+\index{transform@{transform}!Views::Camera@{Views::Camera}}
+\doxysubsubsection{\texorpdfstring{transform()}{transform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Views\+::\+Camera\+::transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the transformed render position of. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position.} & \\
+\hline
+{\em position} & The virtual position to be transformed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The render position after transformation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_views_1_1_view_a96e9dbf7f60b3810c4a7b0fd4e771ef3}{Views\+::\+View}}.
+
+\Hypertarget{class_views_1_1_camera_a82f30a05399435b980c0a771134e8497}\label{class_views_1_1_camera_a82f30a05399435b980c0a771134e8497} 
+\index{Views::Camera@{Views::Camera}!transformFromRender@{transformFromRender}}
+\index{transformFromRender@{transformFromRender}!Views::Camera@{Views::Camera}}
+\doxysubsubsection{\texorpdfstring{transformFromRender()}{transformFromRender()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Views\+::\+Camera\+::transform\+From\+Render (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{render\+Position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the virtual position of. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+Position.} & \\
+\hline
+{\em render\+Position} & The render position to be transformed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The virtual position after transformation.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_views_1_1_view_af38ed9d4be9f41ae9bd34f6e4d5020b4}{Views\+::\+View}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/view/\mbox{\hyperlink{camera_8h}{camera.\+h}}\end{DoxyCompactItemize}

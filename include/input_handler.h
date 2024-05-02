@@ -62,8 +62,8 @@ public:
 	// Keyboard functions
 
 	/// <summary>
-	/// Checks if a key is pressed. (SDL_KeyDown)
-	/// Is only true when the key was not held down.
+	/// Polls if a key is pressed. (SDL_KeyDown)
+	/// Is only true when the key was not held down in the previous tick.
 	/// </summary>
 	/// <param name="key">SDL_Keycode key value.</param>
 	/// <returns>Whether the key was pressed.</returns>
@@ -71,6 +71,7 @@ public:
 	
 	/// <summary>
 	/// Checks if a key is released. (SDL_KeyUp)
+	/// Is only true when the key was held down in the last tick.
 	/// </summary>
 	/// <param name="key">SDL_Keycode key value.</param>
 	/// <returns>Whether the key was released.</returns>

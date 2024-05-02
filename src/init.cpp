@@ -26,7 +26,6 @@ namespace Global {
 
 	void init(void) {
 		SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_VERBOSE);
-		//SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO);
 
 		if (SDL_InitSubSystem(SDL_INIT_EVERYTHING) < 0) {
 			SDL_LogCritical(
@@ -141,16 +140,18 @@ namespace Global {
 			13.5,
 			2
 		);
+
+		// disable cursor, replaced with crosshair
 		SDL_ShowCursor(SDL_DISABLE);
 
 		Renderer::getInstance().registerObject(playerObject);
 		Renderer::getInstance().registerObject(arrowObject1);
 		Renderer::getInstance().registerObject(arrowObject2);
+		Renderer::getInstance().registerObject(purpleCircle);
 		Renderer::getInstance().registerObject(yellowCircle);
 		Renderer::getInstance().registerObject(greenCircle);
 		Renderer::getInstance().registerObject(blueCircle);
 		Renderer::getInstance().registerObject(redCircle);
-		Renderer::getInstance().registerObject(purpleCircle);
 		Renderer::getInstance().registerObject(hollowCircle1);
 		Renderer::getInstance().registerObject(line1);
 		Renderer::getInstance().registerObject(line2);
@@ -159,7 +160,7 @@ namespace Global {
 		Renderer::getInstance().registerObject(crosshairLine1);
 		Renderer::getInstance().registerObject(crosshairLine2);
 		Renderer::getInstance().registerObject(crosshairCircle1);
-
+		
 		Renderer::getInstance().moveLayerTop(playerObject);
 
 		//object->rotate(M_PI / 2);

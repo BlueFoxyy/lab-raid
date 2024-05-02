@@ -1,6 +1,7 @@
 #pragma once
 
 #include <object/object.h>
+#include <object/bullet.h>
 #include <view/views.h>
 #include <renderer.h>
 #include <config.h>

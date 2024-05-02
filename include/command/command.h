@@ -20,6 +20,6 @@ namespace Commands {
 		};
 	public:
 		virtual ~Command() {};
-		virtual void execute(ExecuteKey) {};
+		virtual void execute(const ExecuteKey&) {};
 	};
 }

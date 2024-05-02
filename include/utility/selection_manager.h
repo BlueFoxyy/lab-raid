@@ -67,4 +67,4 @@ public:
 	int getSelectionId(void) const noexcept;
 };
 
-#include "../../src/utilities/selection_manager.tpp"
+#include "../../src/utilities/selection_manager.hpp"

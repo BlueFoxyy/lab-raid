@@ -1,5 +1,6 @@
 #pragma once
 
+#include <renderer.h>
 #include <utility/pointer_wrappers.h>
 #include <object/object.h>
 #include <SDL2/SDL.h>

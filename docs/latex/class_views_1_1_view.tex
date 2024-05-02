@@ -1,0 +1,235 @@
+\doxysection{Views\+::View Class Reference}
+\hypertarget{class_views_1_1_view}{}\label{class_views_1_1_view}\index{Views::View@{Views::View}}
+
+
+\doxylink{class_views_1_1_view}{View}\+: defines a view area, translates the objects\textquotesingle{} virtual rects to real rendering rects.  
+
+
+
+
+{\ttfamily \#include $<$view.\+h$>$}
+
+
+
+Inheritance diagram for Views\+::View\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{class_views_1_1_view__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Views\+::View\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_views_1_1_view__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_views_1_1_view_acc49fb0c1448a75bfb8481a5ccf913ea}{\texorpdfstring{$\sim$}{\string~}\+View}} ()
+\item 
+virtual SDL\+\_\+\+FRect \mbox{\hyperlink{class_views_1_1_view_af05904e80ec82ee07494d2dedf440c7e}{get\+Rect}} (const \mbox{\hyperlink{class_objects_1_1_object}{Objects\+::\+Object}} \&object) const noexcept=0
+\begin{DoxyCompactList}\small\item\em Gets the render rect for. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_views_1_1_view_a96e9dbf7f60b3810c4a7b0fd4e771ef3}{transform}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&\mbox{\hyperlink{class_views_1_1_view_a8b0a4d504eaad06b59fcc048302d614b}{position}}) const noexcept=0
+\begin{DoxyCompactList}\small\item\em Gets the transformed render position of. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_views_1_1_view_af38ed9d4be9f41ae9bd34f6e4d5020b4}{transform\+From\+Render}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&render\+Position) const noexcept=0
+\begin{DoxyCompactList}\small\item\em Gets the virtual position of. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_views_1_1_view_a08c7cfae85ac3182bfc753a5313d6447}{get\+Position}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the virtual position of the view. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_views_1_1_view_a0656709fd4b6ba1c560ae91f3f946d17}{get\+Dimension}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the virtual dimension of the view. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_views_1_1_view_af12fed86a58728dc3e19e7c48c93df51}{get\+Angle}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the rotation angle of the view. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_views_1_1_view_abafa0017ee91d53098bf292a754801fd}{get\+Zoom}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the zoom level of the view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_views_1_1_view_a514d2e9994738070a413f2d1cd04e4fd}{View}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&\+\_\+position, const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&\+\_\+dimension)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_views_1_1_view_a8b0a4d504eaad06b59fcc048302d614b}{position}}
+\item 
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_views_1_1_view_ad764dcbad3657d94d0a81b14c6cb4488}{dimension}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_views_1_1_view}{View}\+: defines a view area, translates the objects\textquotesingle{} virtual rects to real rendering rects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_views_1_1_view_a514d2e9994738070a413f2d1cd04e4fd}\label{class_views_1_1_view_a514d2e9994738070a413f2d1cd04e4fd} 
+\index{Views::View@{Views::View}!View@{View}}
+\index{View@{View}!Views::View@{Views::View}}
+\doxysubsubsection{\texorpdfstring{View()}{View()}}
+{\footnotesize\ttfamily Views\+::\+View\+::\+View (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{\+\_\+position,  }\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{\+\_\+dimension }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_views_1_1_view_acc49fb0c1448a75bfb8481a5ccf913ea}\label{class_views_1_1_view_acc49fb0c1448a75bfb8481a5ccf913ea} 
+\index{Views::View@{Views::View}!````~View@{\texorpdfstring{$\sim$}{\string~}View}}
+\index{````~View@{\texorpdfstring{$\sim$}{\string~}View}!Views::View@{Views::View}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}View()}{\string~View()}}
+{\footnotesize\ttfamily virtual Views\+::\+View\+::\texorpdfstring{$\sim$}{\string~}\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_views_1_1_view_af12fed86a58728dc3e19e7c48c93df51}\label{class_views_1_1_view_af12fed86a58728dc3e19e7c48c93df51} 
+\index{Views::View@{Views::View}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!Views::View@{Views::View}}
+\doxysubsubsection{\texorpdfstring{getAngle()}{getAngle()}}
+{\footnotesize\ttfamily virtual float Views\+::\+View\+::get\+Angle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the rotation angle of the view. 
+
+\begin{DoxyReturn}{Returns}
+The virtual angle of the view.
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_views_1_1_camera_ab4c5c80da9211c08e5d4f6f0af998f8a}{Views\+::\+Camera}}.
+
+\Hypertarget{class_views_1_1_view_a0656709fd4b6ba1c560ae91f3f946d17}\label{class_views_1_1_view_a0656709fd4b6ba1c560ae91f3f946d17} 
+\index{Views::View@{Views::View}!getDimension@{getDimension}}
+\index{getDimension@{getDimension}!Views::View@{Views::View}}
+\doxysubsubsection{\texorpdfstring{getDimension()}{getDimension()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} Views\+::\+View\+::get\+Dimension (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the virtual dimension of the view. 
+
+\begin{DoxyReturn}{Returns}
+The virtual dimension of the view.
+\end{DoxyReturn}
+\Hypertarget{class_views_1_1_view_a08c7cfae85ac3182bfc753a5313d6447}\label{class_views_1_1_view_a08c7cfae85ac3182bfc753a5313d6447} 
+\index{Views::View@{Views::View}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Views::View@{Views::View}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} Views\+::\+View\+::get\+Position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the virtual position of the view. 
+
+\begin{DoxyReturn}{Returns}
+The virtual position of the view.
+\end{DoxyReturn}
+\Hypertarget{class_views_1_1_view_af05904e80ec82ee07494d2dedf440c7e}\label{class_views_1_1_view_af05904e80ec82ee07494d2dedf440c7e} 
+\index{Views::View@{Views::View}!getRect@{getRect}}
+\index{getRect@{getRect}!Views::View@{Views::View}}
+\doxysubsubsection{\texorpdfstring{getRect()}{getRect()}}
+{\footnotesize\ttfamily virtual SDL\+\_\+\+FRect Views\+::\+View\+::get\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_objects_1_1_object}{Objects\+::\+Object}} \&}]{object }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the render rect for. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object.} & \\
+\hline
+{\em object} & The object to be rendered.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The render rect of
+
+object.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_views_1_1_h_u_d_a23a7b7051b5bef85590f145d0b4c259f}{Views\+::\+HUD}}, and \mbox{\hyperlink{class_views_1_1_camera_a19123e2aed9d63753bbc04c8e92ede25}{Views\+::\+Camera}}.
+
+\Hypertarget{class_views_1_1_view_abafa0017ee91d53098bf292a754801fd}\label{class_views_1_1_view_abafa0017ee91d53098bf292a754801fd} 
+\index{Views::View@{Views::View}!getZoom@{getZoom}}
+\index{getZoom@{getZoom}!Views::View@{Views::View}}
+\doxysubsubsection{\texorpdfstring{getZoom()}{getZoom()}}
+{\footnotesize\ttfamily virtual float Views\+::\+View\+::get\+Zoom (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the zoom level of the view. 
+
+\begin{DoxyReturn}{Returns}
+The zoom level of the view.
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_views_1_1_camera_a84dd006c7427b266cb4ae767f49f6f2a}{Views\+::\+Camera}}.
+
+\Hypertarget{class_views_1_1_view_a96e9dbf7f60b3810c4a7b0fd4e771ef3}\label{class_views_1_1_view_a96e9dbf7f60b3810c4a7b0fd4e771ef3} 
+\index{Views::View@{Views::View}!transform@{transform}}
+\index{transform@{transform}!Views::View@{Views::View}}
+\doxysubsubsection{\texorpdfstring{transform()}{transform()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} Views\+::\+View\+::transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the transformed render position of. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position.} & \\
+\hline
+{\em position} & The virtual position to be transformed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The render position after transformation.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_views_1_1_camera_aa5212966d2ea02e139cc2acc26e2f3e3}{Views\+::\+Camera}}, and \mbox{\hyperlink{class_views_1_1_h_u_d_af524a2ac306813ce9af2d2c7f63402ac}{Views\+::\+HUD}}.
+
+\Hypertarget{class_views_1_1_view_af38ed9d4be9f41ae9bd34f6e4d5020b4}\label{class_views_1_1_view_af38ed9d4be9f41ae9bd34f6e4d5020b4} 
+\index{Views::View@{Views::View}!transformFromRender@{transformFromRender}}
+\index{transformFromRender@{transformFromRender}!Views::View@{Views::View}}
+\doxysubsubsection{\texorpdfstring{transformFromRender()}{transformFromRender()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_vector2_d}{Vector2D}} Views\+::\+View\+::transform\+From\+Render (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{render\+Position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the virtual position of. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+Position.} & \\
+\hline
+{\em render\+Position} & The render position to be transformed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The virtual position after transformation.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_views_1_1_camera_a82f30a05399435b980c0a771134e8497}{Views\+::\+Camera}}, and \mbox{\hyperlink{class_views_1_1_h_u_d_a5c904c37e27748d60f07f3ec23907e4c}{Views\+::\+HUD}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_views_1_1_view_ad764dcbad3657d94d0a81b14c6cb4488}\label{class_views_1_1_view_ad764dcbad3657d94d0a81b14c6cb4488} 
+\index{Views::View@{Views::View}!dimension@{dimension}}
+\index{dimension@{dimension}!Views::View@{Views::View}}
+\doxysubsubsection{\texorpdfstring{dimension}{dimension}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Views\+::\+View\+::dimension\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_views_1_1_view_a8b0a4d504eaad06b59fcc048302d614b}\label{class_views_1_1_view_a8b0a4d504eaad06b59fcc048302d614b} 
+\index{Views::View@{Views::View}!position@{position}}
+\index{position@{position}!Views::View@{Views::View}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Views\+::\+View\+::position\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/view/\mbox{\hyperlink{view_8h}{view.\+h}}\end{DoxyCompactItemize}
