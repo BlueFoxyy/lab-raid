@@ -13,7 +13,7 @@
 #include <queue>
 
 static const int TICKS_PER_SEC = 1000;
-static const float gunOffset = 16.5;
+static const float gunOffset = 14;
 static bool quit = false;
 static float playerSpeed = 500;
 static std::weak_ptr<Objects::Object> controlledObject;
