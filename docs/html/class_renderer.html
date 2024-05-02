@@ -80,7 +80,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Required key to call <a class="el" href="#a154b7f1b2005a663edb91f6aaa4088dc" title="Renders every registered object. Note: SDL has built-in out of boundaries check.">render()</a> in.  
+<p>Required key to call <a class="el" href="#a7d79b5b497ea019acf577ed7b77d3247" title="Renders every registered object. Note: SDL has built-in out of boundaries check.">render()</a> in.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="renderer_8h_source.html">renderer.h</a>&gt;</code></p>
@@ -102,20 +102,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab965431b93fb4daf2fa2af00b328856a" id="r_ab965431b93fb4daf2fa2af00b328856a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab965431b93fb4daf2fa2af00b328856a">registerObject</a> (std::shared_ptr&lt; <a class="el" href="class_render_object_base.html">RenderObjectBase</a> &gt; objectPtr) noexcept</td></tr>
 <tr class="memdesc:ab965431b93fb4daf2fa2af00b328856a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get underlying SDL_Renderer renderer.  <br /></td></tr>
 <tr class="separator:ab965431b93fb4daf2fa2af00b328856a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb90c123d62f544427b8a3550d1ce2eb" id="r_acb90c123d62f544427b8a3550d1ce2eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb90c123d62f544427b8a3550d1ce2eb">removeObject</a> (std::shared_ptr&lt; <a class="el" href="class_render_object_base.html">RenderObjectBase</a> &gt; objectPtr) noexcept</td></tr>
-<tr class="memdesc:acb90c123d62f544427b8a3550d1ce2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters the object for rendering.  <br /></td></tr>
-<tr class="separator:acb90c123d62f544427b8a3550d1ce2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a154b7f1b2005a663edb91f6aaa4088dc" id="r_a154b7f1b2005a663edb91f6aaa4088dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a154b7f1b2005a663edb91f6aaa4088dc">render</a> (<a class="el" href="class_renderer_1_1_render_key.html">RenderKey</a> key)</td></tr>
-<tr class="memdesc:a154b7f1b2005a663edb91f6aaa4088dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders every registered object. Note: SDL has built-in out of boundaries check.  <br /></td></tr>
-<tr class="separator:a154b7f1b2005a663edb91f6aaa4088dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32457b0b18154de7a9ad361009a987c2" id="r_a32457b0b18154de7a9ad361009a987c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32457b0b18154de7a9ad361009a987c2">removeObject</a> (std::weak_ptr&lt; <a class="el" href="class_render_object_base.html">RenderObjectBase</a> &gt; objectPtr) noexcept</td></tr>
+<tr class="memdesc:a32457b0b18154de7a9ad361009a987c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters the object for rendering.  <br /></td></tr>
+<tr class="separator:a32457b0b18154de7a9ad361009a987c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d79b5b497ea019acf577ed7b77d3247" id="r_a7d79b5b497ea019acf577ed7b77d3247"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d79b5b497ea019acf577ed7b77d3247">render</a> (const <a class="el" href="class_renderer_1_1_render_key.html">RenderKey</a> &amp;key)</td></tr>
+<tr class="memdesc:a7d79b5b497ea019acf577ed7b77d3247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders every registered object. Note: SDL has built-in out of boundaries check.  <br /></td></tr>
+<tr class="separator:a7d79b5b497ea019acf577ed7b77d3247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30d63627ebb7bb28e455cdbb5a9aa4cf" id="r_a30d63627ebb7bb28e455cdbb5a9aa4cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30d63627ebb7bb28e455cdbb5a9aa4cf">moveLayerUp</a> (std::shared_ptr&lt; <a class="el" href="class_render_object_base.html">RenderObjectBase</a> &gt; objectPtr)</td></tr>
-<tr class="memdesc:a30d63627ebb7bb28e455cdbb5a9aa4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the object up one layer. Throws std::invalid_argument.  <br /></td></tr>
+<tr class="memdesc:a30d63627ebb7bb28e455cdbb5a9aa4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the object up one layer. Throws std::invalid_argument if @objectPtr is not registered.  <br /></td></tr>
 <tr class="separator:a30d63627ebb7bb28e455cdbb5a9aa4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdcbdbc2de3e4ee79e9ddcbb20269139" id="r_acdcbdbc2de3e4ee79e9ddcbb20269139"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdcbdbc2de3e4ee79e9ddcbb20269139">moveLayerDown</a> (std::shared_ptr&lt; <a class="el" href="class_render_object_base.html">RenderObjectBase</a> &gt; objectPtr)</td></tr>
+<tr class="memdesc:acdcbdbc2de3e4ee79e9ddcbb20269139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the object down one layer. Throws std::invalid_argument if @objectPtr is not registered.  <br /></td></tr>
 <tr class="separator:acdcbdbc2de3e4ee79e9ddcbb20269139"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33bea341dec4876252bd11c461d4e0b2" id="r_a33bea341dec4876252bd11c461d4e0b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33bea341dec4876252bd11c461d4e0b2">moveLayerTop</a> (std::shared_ptr&lt; <a class="el" href="class_render_object_base.html">RenderObjectBase</a> &gt; objectPtr)</td></tr>
+<tr class="memdesc:a33bea341dec4876252bd11c461d4e0b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the object to the top layer. Throws std::invalid_argument if @objectPtr is not registered.  <br /></td></tr>
 <tr class="separator:a33bea341dec4876252bd11c461d4e0b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79f800b2a66fad3a0941c417700c2aed" id="r_a79f800b2a66fad3a0941c417700c2aed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79f800b2a66fad3a0941c417700c2aed">moveLayerBottom</a> (std::shared_ptr&lt; <a class="el" href="class_render_object_base.html">RenderObjectBase</a> &gt; objectPtr)</td></tr>
+<tr class="memdesc:a79f800b2a66fad3a0941c417700c2aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the object to the bottom layer. Throws std::invalid_argument if @objectPtr is not registered.  <br /></td></tr>
 <tr class="separator:a79f800b2a66fad3a0941c417700c2aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80dbe663620281582a04e1707da26c16" id="r_a80dbe663620281582a04e1707da26c16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80dbe663620281582a04e1707da26c16">clear</a> () noexcept</td></tr>
 <tr class="memdesc:a80dbe663620281582a04e1707da26c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears object set and unloads all textures.  <br /></td></tr>
@@ -130,7 +133,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a043ea67562a907724f13b6c91705fcb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Required key to call <a class="el" href="#a154b7f1b2005a663edb91f6aaa4088dc" title="Renders every registered object. Note: SDL has built-in out of boundaries check.">render()</a> in. </p>
+<div class="textblock"><p>Required key to call <a class="el" href="#a7d79b5b497ea019acf577ed7b77d3247" title="Renders every registered object. Note: SDL has built-in out of boundaries check.">render()</a> in. </p>
 <p>This is a global singleton class for rendering. Keeps track of current objects, shapes and renders everything onto a set window. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8c6e15f666cb188a936004add75e6c6b" name="a8c6e15f666cb188a936004add75e6c6b"></a>
@@ -284,6 +287,14 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Moves the object to the bottom layer. Throws std::invalid_argument if @objectPtr is not registered. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objectPtr</td><td>The object to be moved.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="acdcbdbc2de3e4ee79e9ddcbb20269139" name="acdcbdbc2de3e4ee79e9ddcbb20269139"></a>
@@ -300,6 +311,14 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Moves the object down one layer. Throws std::invalid_argument if @objectPtr is not registered. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objectPtr</td><td>The object to be moved.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -318,6 +337,14 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Moves the object to the top layer. Throws std::invalid_argument if @objectPtr is not registered. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objectPtr</td><td>The object to be moved.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a30d63627ebb7bb28e455cdbb5a9aa4cf" name="a30d63627ebb7bb28e455cdbb5a9aa4cf"></a>
@@ -335,10 +362,10 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Moves the object up one layer. Throws std::invalid_argument. </p>
+<p>Moves the object up one layer. Throws std::invalid_argument if @objectPtr is not registered. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">objectPtr</td><td></td></tr>
+    <tr><td class="paramname">objectPtr</td><td>The object to be moved.</td></tr>
   </table>
   </dd>
 </dl>
@@ -406,8 +433,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acb90c123d62f544427b8a3550d1ce2eb" name="acb90c123d62f544427b8a3550d1ce2eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb90c123d62f544427b8a3550d1ce2eb">&#9670;&#160;</a></span>removeObject()</h2>
+<a id="a32457b0b18154de7a9ad361009a987c2" name="a32457b0b18154de7a9ad361009a987c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32457b0b18154de7a9ad361009a987c2">&#9670;&#160;</a></span>removeObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -418,7 +445,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool Renderer::removeObject </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_render_object_base.html">RenderObjectBase</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>objectPtr</em></span></td><td>)</td>
+          <td class="paramtype">std::weak_ptr&lt; <a class="el" href="class_render_object_base.html">RenderObjectBase</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>objectPtr</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -440,8 +467,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a154b7f1b2005a663edb91f6aaa4088dc" name="a154b7f1b2005a663edb91f6aaa4088dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a154b7f1b2005a663edb91f6aaa4088dc">&#9670;&#160;</a></span>render()</h2>
+<a id="a7d79b5b497ea019acf577ed7b77d3247" name="a7d79b5b497ea019acf577ed7b77d3247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d79b5b497ea019acf577ed7b77d3247">&#9670;&#160;</a></span>render()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,7 +476,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Renderer::render </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_renderer_1_1_render_key.html">RenderKey</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_renderer_1_1_render_key.html">RenderKey</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

@@ -17,9 +17,9 @@ This is a global singleton class of handling user inputs. Wrapper class of SDL\+
 void \mbox{\hyperlink{class_input_handler_a06449d8500ed922ed79744f27299d56f}{operator=}} (const \mbox{\hyperlink{class_input_handler}{Input\+Handler}} \&)=delete
 \item 
 bool \mbox{\hyperlink{class_input_handler_aec26e0472ad335f89ea32a5bce2e4046}{poll\+Key\+Press}} (SDL\+\_\+\+Keycode key) noexcept
-\begin{DoxyCompactList}\small\item\em Checks if a key is pressed. (SDL\+\_\+\+Key\+Down) Is only true when the key was not held down. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Polls if a key is pressed. (SDL\+\_\+\+Key\+Down) Is only true when the key was not held down in the previous tick. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_input_handler_abc3a82d1161a8e15d16a3e1911fe9f50}{poll\+Key\+Release}} (SDL\+\_\+\+Keycode key) noexcept
-\begin{DoxyCompactList}\small\item\em Checks if a key is released. (SDL\+\_\+\+Key\+Up) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Checks if a key is released. (SDL\+\_\+\+Key\+Up) Is only true when the key was held down in the last tick. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_input_handler_abdb221ae93829471cc9bf105a412b49b}{is\+Key\+Down}} (SDL\+\_\+\+Keycode key) const noexcept
 \begin{DoxyCompactList}\small\item\em Checks if a key is held down. (SDL\+\_\+\+Key\+Down) \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_input_handler_adf349eb1e2419ed4ae0e570df3f6583e}{is\+Key\+Up}} (SDL\+\_\+\+Keycode key) const noexcept
@@ -171,7 +171,7 @@ Whether the key was not held down.
 
 
 
-Checks if a key is pressed. (SDL\+\_\+\+Key\+Down) Is only true when the key was not held down. 
+Polls if a key is pressed. (SDL\+\_\+\+Key\+Down) Is only true when the key was not held down in the previous tick. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -189,7 +189,7 @@ Whether the key was pressed.
 
 
 
-Checks if a key is released. (SDL\+\_\+\+Key\+Up) 
+Checks if a key is released. (SDL\+\_\+\+Key\+Up) Is only true when the key was held down in the last tick. 
 
 
 \begin{DoxyParams}{Parameters}

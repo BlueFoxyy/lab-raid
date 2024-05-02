@@ -1,20 +1,20 @@
 \begin{theindex}
 
   \item {\_USE\_MATH\_DEFINES}
-    \subitem {utility.h}, \hyperpage{107}
+    \subitem {utility.h}, \hyperpage{111}
   \item {\texorpdfstring{$\sim$}{\string~}Command}
-    \subitem {Commands::Command}, \hyperpage{25}
+    \subitem {Commands::Command}, \hyperpage{28}
   \item {\texorpdfstring{$\sim$}{\string~}Object}
-    \subitem {Objects::Object}, \hyperpage{44}
+    \subitem {Objects::Object}, \hyperpage{47}
   \item {\texorpdfstring{$\sim$}{\string~}Shape}
-    \subitem {Shapes::Shape}, \hyperpage{65}
+    \subitem {Shapes::Shape}, \hyperpage{68}
   \item {\texorpdfstring{$\sim$}{\string~}View}
-    \subitem {Views::View}, \hyperpage{73}
+    \subitem {Views::View}, \hyperpage{76}
 
   \indexspace
 
   \item {add}
-    \subitem {SelectionManager$<$ T $>$}, \hyperpage{61}
+    \subitem {SelectionManager$<$ T $>$}, \hyperpage{65}
   \item {arrowObject1}
     \subitem {Global}, \hyperpage{11}
   \item {arrowObject2}
@@ -25,36 +25,38 @@
   \item {backgroundColor}
     \subitem {Config}, \hyperpage{9}
   \item {beginPoint}
-    \subitem {Shapes::Line}, \hyperpage{41}
+    \subitem {Shapes::Line}, \hyperpage{44}
   \item {blueCircle}
     \subitem {Global}, \hyperpage{11}
+  \item {Bullet}
+    \subitem {Objects::Bullet}, \hyperpage{17}
   \item {Button}
-    \subitem {Objects::Button}, \hyperpage{16}
+    \subitem {Objects::Button}, \hyperpage{19}
   \item {buttons}
-    \subitem {KeyBind}, \hyperpage{38}
+    \subitem {KeyBind}, \hyperpage{41}
 
   \indexspace
 
   \item {Camera}
-    \subitem {Views::Camera}, \hyperpage{19}
+    \subitem {Views::Camera}, \hyperpage{21}
   \item {center}
-    \subitem {Shapes::Circle}, \hyperpage{24}
+    \subitem {Shapes::Circle}, \hyperpage{27}
   \item {Circle}
-    \subitem {Shapes::Circle}, \hyperpage{24}
+    \subitem {Shapes::Circle}, \hyperpage{27}
   \item {clear}
-    \subitem {Renderer}, \hyperpage{55}
+    \subitem {Renderer}, \hyperpage{58}
   \item {color}
-    \subitem {Shapes::Shape}, \hyperpage{66}
-  \item {CommandManager}, \hyperpage{26}
-    \subitem {Commands::Command::ExecuteKey}, \hyperpage{27}
-    \subitem {registerCommand}, \hyperpage{26}
-    \subitem {update}, \hyperpage{26}
+    \subitem {Shapes::Shape}, \hyperpage{69}
+  \item {CommandManager}, \hyperpage{29}
+    \subitem {Commands::Command::ExecuteKey}, \hyperpage{30}
+    \subitem {registerCommand}, \hyperpage{29}
+    \subitem {update}, \hyperpage{29}
   \item {Commands}, \hyperpage{9}
-  \item {Commands::Command}, \hyperpage{25}
-    \subitem {\texorpdfstring{$\sim$}{\string~}Command}, \hyperpage{25}
-    \subitem {execute}, \hyperpage{25}
-  \item {Commands::Command::ExecuteKey}, \hyperpage{27}
-    \subitem {CommandManager}, \hyperpage{27}
+  \item {Commands::Command}, \hyperpage{28}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Command}, \hyperpage{28}
+    \subitem {execute}, \hyperpage{28}
+  \item {Commands::Command::ExecuteKey}, \hyperpage{30}
+    \subitem {CommandManager}, \hyperpage{30}
   \item {Config}, \hyperpage{9}
     \subitem {backgroundColor}, \hyperpage{9}
     \subitem {framerate}, \hyperpage{9}
@@ -65,9 +67,9 @@
     \subitem {screenWidth}, \hyperpage{10}
     \subitem {volume}, \hyperpage{10}
   \item {createTexture}
-    \subitem {Renderer}, \hyperpage{55}
+    \subitem {Renderer}, \hyperpage{58}
   \item {cross}
-    \subitem {Vector2D}, \hyperpage{69}
+    \subitem {Vector2D}, \hyperpage{72}
   \item {crosshairCircle1}
     \subitem {Global}, \hyperpage{11}
   \item {crosshairLine1}
@@ -78,33 +80,33 @@
   \indexspace
 
   \item {debug}
-    \subitem {Objects::Object}, \hyperpage{44}
-    \subitem {Renderer}, \hyperpage{55}
-    \subitem {RenderObjectBase}, \hyperpage{58}
+    \subitem {Objects::Object}, \hyperpage{47}
+    \subitem {Renderer}, \hyperpage{58}
+    \subitem {RenderObjectBase}, \hyperpage{62}
   \item {dimension}
-    \subitem {Shapes::Rect}, \hyperpage{53}
-    \subitem {Views::View}, \hyperpage{75}
+    \subitem {Shapes::Rect}, \hyperpage{56}
+    \subitem {Views::View}, \hyperpage{78}
   \item {dot}
-    \subitem {Vector2D}, \hyperpage{69}
+    \subitem {Vector2D}, \hyperpage{72}
   \item {draw}
-    \subitem {Shapes::Circle}, \hyperpage{24}
-    \subitem {Shapes::HollowCircle}, \hyperpage{29}
-    \subitem {Shapes::Line}, \hyperpage{41}
-    \subitem {Shapes::Shape}, \hyperpage{65}
+    \subitem {Shapes::Circle}, \hyperpage{27}
+    \subitem {Shapes::HollowCircle}, \hyperpage{32}
+    \subitem {Shapes::Line}, \hyperpage{44}
+    \subitem {Shapes::Shape}, \hyperpage{69}
 
   \indexspace
 
   \item {endPoint}
-    \subitem {Shapes::Line}, \hyperpage{41}
+    \subitem {Shapes::Line}, \hyperpage{44}
   \item {execute}
-    \subitem {Commands::Command}, \hyperpage{25}
+    \subitem {Commands::Command}, \hyperpage{28}
 
   \indexspace
 
   \item {flipHorizontal}
-    \subitem {Objects::Object}, \hyperpage{44}
+    \subitem {Objects::Object}, \hyperpage{47}
   \item {flipVertical}
-    \subitem {Objects::Object}, \hyperpage{44}
+    \subitem {Objects::Object}, \hyperpage{47}
   \item {fpsManager}
     \subitem {Global}, \hyperpage{12}
   \item {framerate}
@@ -113,53 +115,57 @@
 
   \indexspace
 
-  \item {GameManager}, \hyperpage{27}
+  \item {GameManager}, \hyperpage{30}
   \item {gameTitle}
     \subitem {Config}, \hyperpage{9}
   \item {get}
-    \subitem {SelectionManager$<$ T $>$}, \hyperpage{62}
+    \subitem {SelectionManager$<$ T $>$}, \hyperpage{65}
+  \item {getAliveTime}
+    \subitem {Objects::Bullet}, \hyperpage{17}
   \item {getAngle}
-    \subitem {Objects::Object}, \hyperpage{45}
-    \subitem {Views::Camera}, \hyperpage{19}
-    \subitem {Views::View}, \hyperpage{73}
+    \subitem {Objects::Object}, \hyperpage{48}
+    \subitem {Views::Camera}, \hyperpage{22}
+    \subitem {Views::View}, \hyperpage{76}
   \item {getColor}
-    \subitem {Shapes::Shape}, \hyperpage{65}
+    \subitem {Shapes::Shape}, \hyperpage{69}
   \item {getDimension}
-    \subitem {Objects::Object}, \hyperpage{45}
-    \subitem {Views::View}, \hyperpage{73}
+    \subitem {Objects::Object}, \hyperpage{48}
+    \subitem {Views::View}, \hyperpage{76}
   \item {getFlipFlag}
-    \subitem {Objects::Object}, \hyperpage{45}
+    \subitem {Objects::Object}, \hyperpage{48}
   \item {getInstance}
-    \subitem {InputHandler}, \hyperpage{34}
-    \subitem {Renderer}, \hyperpage{55}
-    \subitem {TextureHandler}, \hyperpage{67}
+    \subitem {InputHandler}, \hyperpage{37}
+    \subitem {Renderer}, \hyperpage{58}
+    \subitem {TextureHandler}, \hyperpage{70}
   \item {getMousePosition}
-    \subitem {InputHandler}, \hyperpage{34}
+    \subitem {InputHandler}, \hyperpage{37}
   \item {getPosition}
-    \subitem {Objects::Object}, \hyperpage{45}
-    \subitem {Views::View}, \hyperpage{73}
+    \subitem {Objects::Object}, \hyperpage{48}
+    \subitem {Views::View}, \hyperpage{76}
   \item {getRect}
-    \subitem {Views::Camera}, \hyperpage{19}
-    \subitem {Views::HUD}, \hyperpage{31}
-    \subitem {Views::View}, \hyperpage{73}
+    \subitem {Views::Camera}, \hyperpage{22}
+    \subitem {Views::HUD}, \hyperpage{34}
+    \subitem {Views::View}, \hyperpage{77}
+  \item {getRenderAngle}
+    \subitem {Objects::Object}, \hyperpage{48}
   \item {getRenderRect}
-    \subitem {Objects::Object}, \hyperpage{45}
+    \subitem {Objects::Object}, \hyperpage{49}
   \item {getSelectionId}
-    \subitem {SelectionManager$<$ T $>$}, \hyperpage{62}
+    \subitem {SelectionManager$<$ T $>$}, \hyperpage{65}
   \item {getTexture}
-    \subitem {Objects::Object}, \hyperpage{46}
-    \subitem {TextureHandler}, \hyperpage{67}
+    \subitem {Objects::Object}, \hyperpage{49}
+    \subitem {TextureHandler}, \hyperpage{70}
   \item {getTextureCount}
-    \subitem {Objects::Object}, \hyperpage{46}
+    \subitem {Objects::Object}, \hyperpage{49}
   \item {getVisibility}
-    \subitem {Objects::Object}, \hyperpage{46}
+    \subitem {Objects::Object}, \hyperpage{49}
   \item {getX}
-    \subitem {Vector2D}, \hyperpage{69}
+    \subitem {Vector2D}, \hyperpage{72}
   \item {getY}
-    \subitem {Vector2D}, \hyperpage{69}
+    \subitem {Vector2D}, \hyperpage{72}
   \item {getZoom}
-    \subitem {Views::Camera}, \hyperpage{19}
-    \subitem {Views::View}, \hyperpage{74}
+    \subitem {Views::Camera}, \hyperpage{22}
+    \subitem {Views::View}, \hyperpage{77}
   \item {Global}, \hyperpage{10}
     \subitem {arrowObject1}, \hyperpage{11}
     \subitem {arrowObject2}, \hyperpage{11}
@@ -188,51 +194,52 @@
   \indexspace
 
   \item {HOLD}
-    \subitem {KeyBind}, \hyperpage{38}
+    \subitem {KeyBind}, \hyperpage{41}
   \item {holdTime}
-    \subitem {InputHandler}, \hyperpage{34}
+    \subitem {InputHandler}, \hyperpage{37}
   \item {holdTimeThreshold}
     \subitem {Config}, \hyperpage{10}
   \item {HollowCircle}
-    \subitem {Shapes::HollowCircle}, \hyperpage{29}
+    \subitem {Shapes::HollowCircle}, \hyperpage{32}
   \item {hollowCircle1}
     \subitem {Global}, \hyperpage{12}
   \item {HUD}
-    \subitem {Views::HUD}, \hyperpage{31}
+    \subitem {Views::HUD}, \hyperpage{34}
   \item {hudView}
     \subitem {Global}, \hyperpage{12}
 
   \indexspace
 
   \item {ID}
-    \subitem {KeyBind}, \hyperpage{38}
-  \item {include/command/command.h}, \hyperpage{77, 78}
-  \item {include/command\_manager.h}, \hyperpage{79, 80}
-  \item {include/config.h}, \hyperpage{80, 81}
-  \item {include/game\_manager.h}, \hyperpage{82}
-  \item {include/init.h}, \hyperpage{82}, \hyperpage{84}
-  \item {include/input\_handler.h}, \hyperpage{84}, \hyperpage{86}
-  \item {include/object/button.h}, \hyperpage{87}
-  \item {include/object/item/item.h}, \hyperpage{88}
-  \item {include/object/object.h}, \hyperpage{89, 90}
-  \item {include/object/player.h}, \hyperpage{91}
-  \item {include/render\_object\_base.h}, \hyperpage{92}
-  \item {include/renderer.h}, \hyperpage{92, 93}
-  \item {include/shape/circle.h}, \hyperpage{94, 95}
-  \item {include/shape/line.h}, \hyperpage{96, 97}
-  \item {include/shape/rect.h}, \hyperpage{98}
-  \item {include/shape/shape.h}, \hyperpage{99, 100}
-  \item {include/shape/shapes.h}, \hyperpage{100, 101}
-  \item {include/texture/texture\_handler.h}, \hyperpage{101, 102}
-  \item {include/utility/functions.h}, \hyperpage{102}
-  \item {include/utility/pointer\_wrappers.h}, \hyperpage{103, 104}
-  \item {include/utility/selection\_manager.h}, \hyperpage{105}
-  \item {include/utility/utility.h}, \hyperpage{106}, \hyperpage{108}
-  \item {include/utility/vector2d.h}, \hyperpage{108, 109}
-  \item {include/view/camera.h}, \hyperpage{110, 111}
-  \item {include/view/hud.h}, \hyperpage{111, 112}
-  \item {include/view/view.h}, \hyperpage{112}, \hyperpage{114}
-  \item {include/view/views.h}, \hyperpage{114, 115}
+    \subitem {KeyBind}, \hyperpage{41}
+  \item {include/command/command.h}, \hyperpage{79, 80}
+  \item {include/command\_manager.h}, \hyperpage{81, 82}
+  \item {include/config.h}, \hyperpage{82, 83}
+  \item {include/game\_manager.h}, \hyperpage{84}
+  \item {include/init.h}, \hyperpage{84}, \hyperpage{86}
+  \item {include/input\_handler.h}, \hyperpage{86}, \hyperpage{88}
+  \item {include/object/bullet.h}, \hyperpage{89, 90}
+  \item {include/object/button.h}, \hyperpage{90, 91}
+  \item {include/object/item/item.h}, \hyperpage{91, 92}
+  \item {include/object/object.h}, \hyperpage{92, 93}
+  \item {include/object/player.h}, \hyperpage{95}
+  \item {include/render\_object\_base.h}, \hyperpage{95, 96}
+  \item {include/renderer.h}, \hyperpage{96, 97}
+  \item {include/shape/circle.h}, \hyperpage{98, 99}
+  \item {include/shape/line.h}, \hyperpage{100, 101}
+  \item {include/shape/rect.h}, \hyperpage{101, 102}
+  \item {include/shape/shape.h}, \hyperpage{102, 103}
+  \item {include/shape/shapes.h}, \hyperpage{104, 105}
+  \item {include/texture/texture\_handler.h}, \hyperpage{105, 106}
+  \item {include/utility/functions.h}, \hyperpage{106}
+  \item {include/utility/pointer\_wrappers.h}, \hyperpage{107, 108}
+  \item {include/utility/selection\_manager.h}, \hyperpage{108, 109}
+  \item {include/utility/utility.h}, \hyperpage{110}, \hyperpage{112}
+  \item {include/utility/vector2d.h}, \hyperpage{112, 113}
+  \item {include/view/camera.h}, \hyperpage{114, 115}
+  \item {include/view/hud.h}, \hyperpage{115, 116}
+  \item {include/view/view.h}, \hyperpage{116}, \hyperpage{118}
+  \item {include/view/views.h}, \hyperpage{118, 119}
   \item {init}
     \subitem {Global}, \hyperpage{11}
   \item {INIT\_VIEW\_HEIGHT}
@@ -240,70 +247,70 @@
   \item {INIT\_VIEW\_WIDTH}
     \subitem {Views}, \hyperpage{14}
   \item {input\_handler.h}
-    \subitem {LEFT}, \hyperpage{85}
-    \subitem {MIDDLE}, \hyperpage{85}
-    \subitem {MouseButton}, \hyperpage{85}
-    \subitem {RIGHT}, \hyperpage{85}
-    \subitem {X1}, \hyperpage{85}
-    \subitem {X2}, \hyperpage{85}
-  \item {InputHandler}, \hyperpage{33}
-    \subitem {getInstance}, \hyperpage{34}
-    \subitem {getMousePosition}, \hyperpage{34}
-    \subitem {holdTime}, \hyperpage{34}
-    \subitem {InputHandler}, \hyperpage{33}
-    \subitem {isButtonDown}, \hyperpage{34}
-    \subitem {isButtonUp}, \hyperpage{34}
-    \subitem {isKeyDown}, \hyperpage{34}
-    \subitem {isKeyUp}, \hyperpage{35}
-    \subitem {operator=}, \hyperpage{35}
-    \subitem {pollButtonPress}, \hyperpage{35}
-    \subitem {pollButtonRelease}, \hyperpage{35}
-    \subitem {pollKeyPress}, \hyperpage{35}
-    \subitem {pollKeyRelease}, \hyperpage{36}
-    \subitem {pollMouseScroll}, \hyperpage{36}
-    \subitem {receiveEvent}, \hyperpage{36}
+    \subitem {LEFT}, \hyperpage{87}
+    \subitem {MIDDLE}, \hyperpage{87}
+    \subitem {MouseButton}, \hyperpage{87}
+    \subitem {RIGHT}, \hyperpage{87}
+    \subitem {X1}, \hyperpage{87}
+    \subitem {X2}, \hyperpage{87}
+  \item {InputHandler}, \hyperpage{36}
+    \subitem {getInstance}, \hyperpage{37}
+    \subitem {getMousePosition}, \hyperpage{37}
+    \subitem {holdTime}, \hyperpage{37}
+    \subitem {InputHandler}, \hyperpage{36}
+    \subitem {isButtonDown}, \hyperpage{37}
+    \subitem {isButtonUp}, \hyperpage{37}
+    \subitem {isKeyDown}, \hyperpage{37}
+    \subitem {isKeyUp}, \hyperpage{38}
+    \subitem {operator=}, \hyperpage{38}
+    \subitem {pollButtonPress}, \hyperpage{38}
+    \subitem {pollButtonRelease}, \hyperpage{38}
+    \subitem {pollKeyPress}, \hyperpage{38}
+    \subitem {pollKeyRelease}, \hyperpage{39}
+    \subitem {pollMouseScroll}, \hyperpage{39}
+    \subitem {receiveEvent}, \hyperpage{39}
   \item {isButtonDown}
-    \subitem {InputHandler}, \hyperpage{34}
+    \subitem {InputHandler}, \hyperpage{37}
   \item {isButtonUp}
-    \subitem {InputHandler}, \hyperpage{34}
+    \subitem {InputHandler}, \hyperpage{37}
   \item {isKeyDown}
-    \subitem {InputHandler}, \hyperpage{34}
+    \subitem {InputHandler}, \hyperpage{37}
   \item {isKeyUp}
-    \subitem {InputHandler}, \hyperpage{35}
+    \subitem {InputHandler}, \hyperpage{38}
   \item {Item}
-    \subitem {Items::Item}, \hyperpage{37}
+    \subitem {Items::Item}, \hyperpage{40}
   \item {Items}, \hyperpage{13}
-  \item {Items::Item}, \hyperpage{37}
-    \subitem {Item}, \hyperpage{37}
+  \item {Items::Item}, \hyperpage{40}
+    \subitem {Item}, \hyperpage{40}
 
   \indexspace
 
-  \item {KeyBind}, \hyperpage{37}
-    \subitem {buttons}, \hyperpage{38}
-    \subitem {HOLD}, \hyperpage{38}
-    \subitem {ID}, \hyperpage{38}
-    \subitem {KeyBind}, \hyperpage{38}
-    \subitem {KeyBindCount}, \hyperpage{39}
-    \subitem {keys}, \hyperpage{39}
-    \subitem {operator$<$}, \hyperpage{38}
-    \subitem {RELEASE}, \hyperpage{38}
-    \subitem {TAP}, \hyperpage{38}
-    \subitem {Trigger}, \hyperpage{38}
+  \item {KeyBind}, \hyperpage{40}
+    \subitem {buttons}, \hyperpage{41}
+    \subitem {HOLD}, \hyperpage{41}
+    \subitem {ID}, \hyperpage{41}
+    \subitem {KeyBind}, \hyperpage{41}
+    \subitem {KeyBindCount}, \hyperpage{42}
+    \subitem {keys}, \hyperpage{42}
+    \subitem {operator$<$}, \hyperpage{41}
+    \subitem {RELEASE}, \hyperpage{41}
+    \subitem {TAP}, \hyperpage{41}
+    \subitem {Trigger}, \hyperpage{41}
   \item {KeyBindCount}
-    \subitem {KeyBind}, \hyperpage{39}
+    \subitem {KeyBind}, \hyperpage{42}
   \item {keys}
-    \subitem {KeyBind}, \hyperpage{39}
+    \subitem {KeyBind}, \hyperpage{42}
 
   \indexspace
 
   \item {LEFT}
-    \subitem {input\_handler.h}, \hyperpage{85}
+    \subitem {input\_handler.h}, \hyperpage{87}
   \item {len}
-    \subitem {Vector2D}, \hyperpage{69}
+    \subitem {Vector2D}, \hyperpage{72}
   \item {len2}
-    \subitem {Vector2D}, \hyperpage{69}
+    \subitem {Vector2D}, \hyperpage{72}
   \item {Line}
-    \subitem {Shapes::Line}, \hyperpage{41}
+    \subitem {Shapes::Line}, \hyperpage{44}
   \item {line1}
     \subitem {Global}, \hyperpage{12}
   \item {line2}
@@ -313,102 +320,107 @@
   \item {line4}
     \subitem {Global}, \hyperpage{12}
   \item {lookAt}
-    \subitem {Objects::Object}, \hyperpage{46}
+    \subitem {Objects::Object}, \hyperpage{49}
 
   \indexspace
 
   \item {menuView}
     \subitem {Global}, \hyperpage{12}
   \item {MIDDLE}
-    \subitem {input\_handler.h}, \hyperpage{85}
+    \subitem {input\_handler.h}, \hyperpage{87}
   \item {MouseButton}
-    \subitem {input\_handler.h}, \hyperpage{85}
+    \subitem {input\_handler.h}, \hyperpage{87}
   \item {move}
-    \subitem {Objects::Object}, \hyperpage{47}
+    \subitem {Objects::Object}, \hyperpage{50}
   \item {moveLayerBottom}
-    \subitem {Renderer}, \hyperpage{55}
+    \subitem {Renderer}, \hyperpage{58}
   \item {moveLayerDown}
-    \subitem {Renderer}, \hyperpage{55}
+    \subitem {Renderer}, \hyperpage{59}
   \item {moveLayerTop}
-    \subitem {Renderer}, \hyperpage{55}
+    \subitem {Renderer}, \hyperpage{59}
   \item {moveLayerUp}
-    \subitem {Renderer}, \hyperpage{56}
+    \subitem {Renderer}, \hyperpage{59}
 
   \indexspace
 
   \item {next}
-    \subitem {SelectionManager$<$ T $>$}, \hyperpage{62}
+    \subitem {SelectionManager$<$ T $>$}, \hyperpage{65}
   \item {nextTexture}
-    \subitem {Objects::Object}, \hyperpage{47}
+    \subitem {Objects::Object}, \hyperpage{50}
   \item {norm}
-    \subitem {Vector2D}, \hyperpage{69}
+    \subitem {Vector2D}, \hyperpage{72}
   \item {normalizeAngle}
-    \subitem {utility.h}, \hyperpage{107}
+    \subitem {utility.h}, \hyperpage{111}
 
   \indexspace
 
   \item {Object}
-    \subitem {Objects::Object}, \hyperpage{44}
+    \subitem {Objects::Object}, \hyperpage{47}
   \item {Objects}, \hyperpage{13}
-  \item {Objects::Button}, \hyperpage{15}
-    \subitem {Button}, \hyperpage{16}
-    \subitem {onClick}, \hyperpage{16}
-    \subitem {setHovered}, \hyperpage{16}
-    \subitem {update}, \hyperpage{16}
-  \item {Objects::Object}, \hyperpage{42}
-    \subitem {\texorpdfstring{$\sim$}{\string~}Object}, \hyperpage{44}
-    \subitem {debug}, \hyperpage{44}
-    \subitem {flipHorizontal}, \hyperpage{44}
-    \subitem {flipVertical}, \hyperpage{44}
-    \subitem {getAngle}, \hyperpage{45}
-    \subitem {getDimension}, \hyperpage{45}
-    \subitem {getFlipFlag}, \hyperpage{45}
-    \subitem {getPosition}, \hyperpage{45}
-    \subitem {getRenderRect}, \hyperpage{45}
-    \subitem {getTexture}, \hyperpage{46}
-    \subitem {getTextureCount}, \hyperpage{46}
-    \subitem {getVisibility}, \hyperpage{46}
-    \subitem {lookAt}, \hyperpage{46}
-    \subitem {move}, \hyperpage{47}
-    \subitem {nextTexture}, \hyperpage{47}
-    \subitem {Object}, \hyperpage{44}
-    \subitem {previousTexture}, \hyperpage{47}
-    \subitem {rotate}, \hyperpage{47}
-    \subitem {setAngle}, \hyperpage{47}
-    \subitem {setTexture}, \hyperpage{48}
-    \subitem {setVisibility}, \hyperpage{48}
-    \subitem {stretch}, \hyperpage{48}
-    \subitem {stretchX}, \hyperpage{48}
-    \subitem {stretchY}, \hyperpage{49}
-    \subitem {TextureHandler}, \hyperpage{49}
-    \subitem {update}, \hyperpage{49}
-  \item {Objects::Player}, \hyperpage{50}
+  \item {Objects::Bullet}, \hyperpage{15}
+    \subitem {Bullet}, \hyperpage{17}
+    \subitem {getAliveTime}, \hyperpage{17}
+    \subitem {update}, \hyperpage{17}
+  \item {Objects::Button}, \hyperpage{18}
+    \subitem {Button}, \hyperpage{19}
+    \subitem {onClick}, \hyperpage{19}
+    \subitem {setHovered}, \hyperpage{19}
+    \subitem {update}, \hyperpage{19}
+  \item {Objects::Object}, \hyperpage{45}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Object}, \hyperpage{47}
+    \subitem {debug}, \hyperpage{47}
+    \subitem {flipHorizontal}, \hyperpage{47}
+    \subitem {flipVertical}, \hyperpage{47}
+    \subitem {getAngle}, \hyperpage{48}
+    \subitem {getDimension}, \hyperpage{48}
+    \subitem {getFlipFlag}, \hyperpage{48}
+    \subitem {getPosition}, \hyperpage{48}
+    \subitem {getRenderAngle}, \hyperpage{48}
+    \subitem {getRenderRect}, \hyperpage{49}
+    \subitem {getTexture}, \hyperpage{49}
+    \subitem {getTextureCount}, \hyperpage{49}
+    \subitem {getVisibility}, \hyperpage{49}
+    \subitem {lookAt}, \hyperpage{49}
+    \subitem {move}, \hyperpage{50}
+    \subitem {nextTexture}, \hyperpage{50}
+    \subitem {Object}, \hyperpage{47}
+    \subitem {previousTexture}, \hyperpage{50}
+    \subitem {rotate}, \hyperpage{50}
+    \subitem {setAngle}, \hyperpage{50}
+    \subitem {setTexture}, \hyperpage{51}
+    \subitem {setVisibility}, \hyperpage{51}
+    \subitem {stretch}, \hyperpage{51}
+    \subitem {stretchX}, \hyperpage{51}
+    \subitem {stretchY}, \hyperpage{52}
+    \subitem {TextureHandler}, \hyperpage{52}
+    \subitem {update}, \hyperpage{52}
+  \item {Objects::Player}, \hyperpage{53}
   \item {onClick}
-    \subitem {Objects::Button}, \hyperpage{16}
+    \subitem {Objects::Button}, \hyperpage{19}
   \item {operator$<$}
-    \subitem {KeyBind}, \hyperpage{38}
+    \subitem {KeyBind}, \hyperpage{41}
   \item {operator()}
-    \subitem {sdl\_deleter}, \hyperpage{59, 60}
+    \subitem {sdl\_deleter}, \hyperpage{62--64}
   \item {operator+}
-    \subitem {Vector2D}, \hyperpage{70}
+    \subitem {Vector2D}, \hyperpage{73}
   \item {operator+=}
-    \subitem {Vector2D}, \hyperpage{70}
+    \subitem {Vector2D}, \hyperpage{73}
   \item {operator-\/}
-    \subitem {Vector2D}, \hyperpage{70}
+    \subitem {Vector2D}, \hyperpage{73, 74}
   \item {operator-\/=}
-    \subitem {Vector2D}, \hyperpage{70}
+    \subitem {Vector2D}, \hyperpage{74}
   \item {operator/}
-    \subitem {Vector2D}, \hyperpage{71}
+    \subitem {Vector2D}, \hyperpage{74}
   \item {operator/=}
-    \subitem {Vector2D}, \hyperpage{71}
+    \subitem {Vector2D}, \hyperpage{74}
   \item {operator=}
-    \subitem {InputHandler}, \hyperpage{35}
-    \subitem {Renderer}, \hyperpage{56}
-    \subitem {TextureHandler}, \hyperpage{67}
+    \subitem {InputHandler}, \hyperpage{38}
+    \subitem {Renderer}, \hyperpage{59}
+    \subitem {TextureHandler}, \hyperpage{71}
   \item {operator\texorpdfstring{$\ast$}{*}}
-    \subitem {Vector2D}, \hyperpage{70}
+    \subitem {Vector2D}, \hyperpage{73}
   \item {operator\texorpdfstring{$\ast$}{*}=}
-    \subitem {Vector2D}, \hyperpage{70}
+    \subitem {Vector2D}, \hyperpage{73}
 
   \indexspace
 
@@ -417,76 +429,76 @@
   \item {playerObject}
     \subitem {Global}, \hyperpage{13}
   \item {pointer\_wrappers.h}
-    \subitem {sdl\_make\_shared}, \hyperpage{104}
-    \subitem {sdl\_unique\_ptr}, \hyperpage{104}
+    \subitem {sdl\_make\_shared}, \hyperpage{108}
+    \subitem {sdl\_unique\_ptr}, \hyperpage{108}
   \item {polarToCartesian}
-    \subitem {utility.h}, \hyperpage{108}
+    \subitem {utility.h}, \hyperpage{112}
   \item {pollButtonPress}
-    \subitem {InputHandler}, \hyperpage{35}
+    \subitem {InputHandler}, \hyperpage{38}
   \item {pollButtonRelease}
-    \subitem {InputHandler}, \hyperpage{35}
+    \subitem {InputHandler}, \hyperpage{38}
   \item {pollKeyPress}
-    \subitem {InputHandler}, \hyperpage{35}
+    \subitem {InputHandler}, \hyperpage{38}
   \item {pollKeyRelease}
-    \subitem {InputHandler}, \hyperpage{36}
+    \subitem {InputHandler}, \hyperpage{39}
   \item {pollMouseScroll}
-    \subitem {InputHandler}, \hyperpage{36}
+    \subitem {InputHandler}, \hyperpage{39}
   \item {position}
-    \subitem {Shapes::Rect}, \hyperpage{53}
-    \subitem {Views::View}, \hyperpage{75}
+    \subitem {Shapes::Rect}, \hyperpage{56}
+    \subitem {Views::View}, \hyperpage{78}
   \item {prev}
-    \subitem {SelectionManager$<$ T $>$}, \hyperpage{62}
+    \subitem {SelectionManager$<$ T $>$}, \hyperpage{66}
   \item {previousTexture}
-    \subitem {Objects::Object}, \hyperpage{47}
+    \subitem {Objects::Object}, \hyperpage{50}
   \item {purpleCircle}
     \subitem {Global}, \hyperpage{13}
 
   \indexspace
 
   \item {radius}
-    \subitem {Shapes::Circle}, \hyperpage{24}
+    \subitem {Shapes::Circle}, \hyperpage{27}
   \item {receiveEvent}
-    \subitem {InputHandler}, \hyperpage{36}
+    \subitem {InputHandler}, \hyperpage{39}
   \item {redCircle}
     \subitem {Global}, \hyperpage{13}
   \item {registerCommand}
-    \subitem {CommandManager}, \hyperpage{26}
+    \subitem {CommandManager}, \hyperpage{29}
   \item {registerObject}
-    \subitem {Renderer}, \hyperpage{56}
+    \subitem {Renderer}, \hyperpage{59}
   \item {RELEASE}
-    \subitem {KeyBind}, \hyperpage{38}
+    \subitem {KeyBind}, \hyperpage{41}
   \item {remove}
-    \subitem {SelectionManager$<$ T $>$}, \hyperpage{62}
+    \subitem {SelectionManager$<$ T $>$}, \hyperpage{66}
   \item {removeObject}
-    \subitem {Renderer}, \hyperpage{56}
+    \subitem {Renderer}, \hyperpage{60}
   \item {render}
-    \subitem {Renderer}, \hyperpage{57}
-  \item {Renderer}, \hyperpage{53}
-    \subitem {clear}, \hyperpage{55}
-    \subitem {createTexture}, \hyperpage{55}
-    \subitem {debug}, \hyperpage{55}
-    \subitem {getInstance}, \hyperpage{55}
-    \subitem {moveLayerBottom}, \hyperpage{55}
-    \subitem {moveLayerDown}, \hyperpage{55}
-    \subitem {moveLayerTop}, \hyperpage{55}
-    \subitem {moveLayerUp}, \hyperpage{56}
-    \subitem {operator=}, \hyperpage{56}
-    \subitem {registerObject}, \hyperpage{56}
-    \subitem {removeObject}, \hyperpage{56}
-    \subitem {render}, \hyperpage{57}
-    \subitem {Renderer}, \hyperpage{54}
-  \item {Renderer::RenderKey}, \hyperpage{57}
-    \subitem {RenderKey}, \hyperpage{57}
-  \item {RenderKey}
-    \subitem {Renderer::RenderKey}, \hyperpage{57}
-  \item {RenderObjectBase}, \hyperpage{58}
+    \subitem {Renderer}, \hyperpage{60}
+  \item {Renderer}, \hyperpage{56}
+    \subitem {clear}, \hyperpage{58}
+    \subitem {createTexture}, \hyperpage{58}
     \subitem {debug}, \hyperpage{58}
+    \subitem {getInstance}, \hyperpage{58}
+    \subitem {moveLayerBottom}, \hyperpage{58}
+    \subitem {moveLayerDown}, \hyperpage{59}
+    \subitem {moveLayerTop}, \hyperpage{59}
+    \subitem {moveLayerUp}, \hyperpage{59}
+    \subitem {operator=}, \hyperpage{59}
+    \subitem {registerObject}, \hyperpage{59}
+    \subitem {removeObject}, \hyperpage{60}
+    \subitem {render}, \hyperpage{60}
+    \subitem {Renderer}, \hyperpage{57}
+  \item {Renderer::RenderKey}, \hyperpage{60}
+    \subitem {RenderKey}, \hyperpage{61}
+  \item {RenderKey}
+    \subitem {Renderer::RenderKey}, \hyperpage{61}
+  \item {RenderObjectBase}, \hyperpage{61}
+    \subitem {debug}, \hyperpage{62}
   \item {RIGHT}
-    \subitem {input\_handler.h}, \hyperpage{85}
+    \subitem {input\_handler.h}, \hyperpage{87}
   \item {rotate}
-    \subitem {Objects::Object}, \hyperpage{47}
-    \subitem {Vector2D}, \hyperpage{69}
-    \subitem {Views::Camera}, \hyperpage{19}
+    \subitem {Objects::Object}, \hyperpage{50}
+    \subitem {Vector2D}, \hyperpage{73}
+    \subitem {Views::Camera}, \hyperpage{22}
 
   \indexspace
 
@@ -496,205 +508,206 @@
     \subitem {Config}, \hyperpage{10}
   \item {screenWidth}
     \subitem {Config}, \hyperpage{10}
-  \item {sdl\_deleter}, \hyperpage{58}
-    \subitem {operator()}, \hyperpage{59, 60}
+  \item {sdl\_deleter}, \hyperpage{62}
+    \subitem {operator()}, \hyperpage{62--64}
   \item {sdl\_make\_shared}
-    \subitem {pointer\_wrappers.h}, \hyperpage{104}
+    \subitem {pointer\_wrappers.h}, \hyperpage{108}
   \item {sdl\_unique\_ptr}
-    \subitem {pointer\_wrappers.h}, \hyperpage{104}
+    \subitem {pointer\_wrappers.h}, \hyperpage{108}
   \item {SELECTION\_NOT\_SET}
-    \subitem {SelectionManager$<$ T $>$}, \hyperpage{63}
+    \subitem {SelectionManager$<$ T $>$}, \hyperpage{67}
   \item {SelectionManager}
-    \subitem {SelectionManager$<$ T $>$}, \hyperpage{61}
-  \item {SelectionManager$<$ T $>$}, \hyperpage{60}
-    \subitem {add}, \hyperpage{61}
-    \subitem {get}, \hyperpage{62}
-    \subitem {getSelectionId}, \hyperpage{62}
-    \subitem {next}, \hyperpage{62}
-    \subitem {prev}, \hyperpage{62}
-    \subitem {remove}, \hyperpage{62}
-    \subitem {SELECTION\_NOT\_SET}, \hyperpage{63}
-    \subitem {SelectionManager}, \hyperpage{61}
-    \subitem {set}, \hyperpage{63}
-    \subitem {size}, \hyperpage{63}
+    \subitem {SelectionManager$<$ T $>$}, \hyperpage{65}
+  \item {SelectionManager$<$ T $>$}, \hyperpage{64}
+    \subitem {add}, \hyperpage{65}
+    \subitem {get}, \hyperpage{65}
+    \subitem {getSelectionId}, \hyperpage{65}
+    \subitem {next}, \hyperpage{65}
+    \subitem {prev}, \hyperpage{66}
+    \subitem {remove}, \hyperpage{66}
+    \subitem {SELECTION\_NOT\_SET}, \hyperpage{67}
+    \subitem {SelectionManager}, \hyperpage{65}
+    \subitem {set}, \hyperpage{66}
+    \subitem {size}, \hyperpage{66}
   \item {set}
-    \subitem {SelectionManager$<$ T $>$}, \hyperpage{63}
+    \subitem {SelectionManager$<$ T $>$}, \hyperpage{66}
   \item {setAngle}
-    \subitem {Objects::Object}, \hyperpage{47}
-    \subitem {Views::Camera}, \hyperpage{20}
+    \subitem {Objects::Object}, \hyperpage{50}
+    \subitem {Views::Camera}, \hyperpage{23}
   \item {setBeginPoint}
-    \subitem {Shapes::Line}, \hyperpage{41}
+    \subitem {Shapes::Line}, \hyperpage{44}
   \item {setCenter}
-    \subitem {Shapes::Circle}, \hyperpage{24}
+    \subitem {Shapes::Circle}, \hyperpage{27}
   \item {setColor}
-    \subitem {Shapes::Shape}, \hyperpage{65}
+    \subitem {Shapes::Shape}, \hyperpage{69}
   \item {setDimension}
-    \subitem {Views::Camera}, \hyperpage{20}
+    \subitem {Views::Camera}, \hyperpage{23}
   \item {setEndPoint}
-    \subitem {Shapes::Line}, \hyperpage{41}
+    \subitem {Shapes::Line}, \hyperpage{44}
   \item {setHovered}
-    \subitem {Objects::Button}, \hyperpage{16}
+    \subitem {Objects::Button}, \hyperpage{19}
   \item {setPivotObject}
-    \subitem {Views::Camera}, \hyperpage{20}
+    \subitem {Views::Camera}, \hyperpage{23}
   \item {setPosition}
-    \subitem {Views::Camera}, \hyperpage{20}
+    \subitem {Views::Camera}, \hyperpage{23}
   \item {setRadius}
-    \subitem {Shapes::Circle}, \hyperpage{24}
+    \subitem {Shapes::Circle}, \hyperpage{27}
   \item {setTexture}
-    \subitem {Objects::Object}, \hyperpage{48}
+    \subitem {Objects::Object}, \hyperpage{51}
   \item {setThickness}
-    \subitem {Shapes::HollowCircle}, \hyperpage{29}
-    \subitem {Shapes::Line}, \hyperpage{41}
+    \subitem {Shapes::HollowCircle}, \hyperpage{32}
+    \subitem {Shapes::Line}, \hyperpage{44}
   \item {setVisibility}
-    \subitem {Objects::Object}, \hyperpage{48}
+    \subitem {Objects::Object}, \hyperpage{51}
   \item {setZoom}
-    \subitem {Views::Camera}, \hyperpage{21}
+    \subitem {Views::Camera}, \hyperpage{24}
   \item {Shape}
-    \subitem {Shapes::Shape}, \hyperpage{65}
+    \subitem {Shapes::Shape}, \hyperpage{68}
   \item {Shapes}, \hyperpage{14}
-  \item {Shapes::Circle}, \hyperpage{22}
-    \subitem {center}, \hyperpage{24}
-    \subitem {Circle}, \hyperpage{24}
-    \subitem {draw}, \hyperpage{24}
-    \subitem {radius}, \hyperpage{24}
-    \subitem {setCenter}, \hyperpage{24}
-    \subitem {setRadius}, \hyperpage{24}
-  \item {Shapes::HollowCircle}, \hyperpage{27}
-    \subitem {draw}, \hyperpage{29}
-    \subitem {HollowCircle}, \hyperpage{29}
-    \subitem {setThickness}, \hyperpage{29}
-    \subitem {thickness}, \hyperpage{30}
-  \item {Shapes::Line}, \hyperpage{39}
-    \subitem {beginPoint}, \hyperpage{41}
-    \subitem {draw}, \hyperpage{41}
-    \subitem {endPoint}, \hyperpage{41}
-    \subitem {Line}, \hyperpage{41}
-    \subitem {setBeginPoint}, \hyperpage{41}
-    \subitem {setEndPoint}, \hyperpage{41}
-    \subitem {setThickness}, \hyperpage{41}
-    \subitem {thickness}, \hyperpage{42}
-  \item {Shapes::Rect}, \hyperpage{52}
-    \subitem {dimension}, \hyperpage{53}
-    \subitem {position}, \hyperpage{53}
-  \item {Shapes::Shape}, \hyperpage{64}
-    \subitem {\texorpdfstring{$\sim$}{\string~}Shape}, \hyperpage{65}
-    \subitem {color}, \hyperpage{66}
-    \subitem {draw}, \hyperpage{65}
-    \subitem {getColor}, \hyperpage{65}
-    \subitem {setColor}, \hyperpage{65}
-    \subitem {Shape}, \hyperpage{65}
-    \subitem {view}, \hyperpage{66}
+  \item {Shapes::Circle}, \hyperpage{25}
+    \subitem {center}, \hyperpage{27}
+    \subitem {Circle}, \hyperpage{27}
+    \subitem {draw}, \hyperpage{27}
+    \subitem {radius}, \hyperpage{27}
+    \subitem {setCenter}, \hyperpage{27}
+    \subitem {setRadius}, \hyperpage{27}
+  \item {Shapes::HollowCircle}, \hyperpage{30}
+    \subitem {draw}, \hyperpage{32}
+    \subitem {HollowCircle}, \hyperpage{32}
+    \subitem {setThickness}, \hyperpage{32}
+    \subitem {thickness}, \hyperpage{33}
+  \item {Shapes::Line}, \hyperpage{42}
+    \subitem {beginPoint}, \hyperpage{44}
+    \subitem {draw}, \hyperpage{44}
+    \subitem {endPoint}, \hyperpage{44}
+    \subitem {Line}, \hyperpage{44}
+    \subitem {setBeginPoint}, \hyperpage{44}
+    \subitem {setEndPoint}, \hyperpage{44}
+    \subitem {setThickness}, \hyperpage{44}
+    \subitem {thickness}, \hyperpage{45}
+  \item {Shapes::Rect}, \hyperpage{55}
+    \subitem {dimension}, \hyperpage{56}
+    \subitem {position}, \hyperpage{56}
+  \item {Shapes::Shape}, \hyperpage{67}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Shape}, \hyperpage{68}
+    \subitem {color}, \hyperpage{69}
+    \subitem {draw}, \hyperpage{69}
+    \subitem {getColor}, \hyperpage{69}
+    \subitem {setColor}, \hyperpage{69}
+    \subitem {Shape}, \hyperpage{68}
+    \subitem {view}, \hyperpage{69}
   \item {size}
-    \subitem {SelectionManager$<$ T $>$}, \hyperpage{63}
+    \subitem {SelectionManager$<$ T $>$}, \hyperpage{66}
   \item {stretch}
-    \subitem {Objects::Object}, \hyperpage{48}
+    \subitem {Objects::Object}, \hyperpage{51}
   \item {stretchX}
-    \subitem {Objects::Object}, \hyperpage{48}
+    \subitem {Objects::Object}, \hyperpage{51}
   \item {stretchY}
-    \subitem {Objects::Object}, \hyperpage{49}
+    \subitem {Objects::Object}, \hyperpage{52}
 
   \indexspace
 
   \item {TAP}
-    \subitem {KeyBind}, \hyperpage{38}
-  \item {TextureHandler}, \hyperpage{66}
-    \subitem {getInstance}, \hyperpage{67}
-    \subitem {getTexture}, \hyperpage{67}
-    \subitem {Objects::Object}, \hyperpage{49}
-    \subitem {operator=}, \hyperpage{67}
-    \subitem {TextureHandler}, \hyperpage{67}
+    \subitem {KeyBind}, \hyperpage{41}
+  \item {TextureHandler}, \hyperpage{69}
+    \subitem {getInstance}, \hyperpage{70}
+    \subitem {getTexture}, \hyperpage{70}
+    \subitem {Objects::Object}, \hyperpage{52}
+    \subitem {operator=}, \hyperpage{71}
+    \subitem {TextureHandler}, \hyperpage{70}
   \item {thickness}
-    \subitem {Shapes::HollowCircle}, \hyperpage{30}
-    \subitem {Shapes::Line}, \hyperpage{42}
+    \subitem {Shapes::HollowCircle}, \hyperpage{33}
+    \subitem {Shapes::Line}, \hyperpage{45}
   \item {transform}
-    \subitem {Views::Camera}, \hyperpage{21}
-    \subitem {Views::HUD}, \hyperpage{32}
-    \subitem {Views::View}, \hyperpage{74}
+    \subitem {Views::Camera}, \hyperpage{24}
+    \subitem {Views::HUD}, \hyperpage{35}
+    \subitem {Views::View}, \hyperpage{77}
   \item {transformFromRender}
-    \subitem {Views::Camera}, \hyperpage{21}
-    \subitem {Views::HUD}, \hyperpage{32}
-    \subitem {Views::View}, \hyperpage{74}
+    \subitem {Views::Camera}, \hyperpage{24}
+    \subitem {Views::HUD}, \hyperpage{35}
+    \subitem {Views::View}, \hyperpage{78}
   \item {Trigger}
-    \subitem {KeyBind}, \hyperpage{38}
+    \subitem {KeyBind}, \hyperpage{41}
 
   \indexspace
 
   \item {update}
-    \subitem {CommandManager}, \hyperpage{26}
-    \subitem {Objects::Button}, \hyperpage{16}
-    \subitem {Objects::Object}, \hyperpage{49}
+    \subitem {CommandManager}, \hyperpage{29}
+    \subitem {Objects::Bullet}, \hyperpage{17}
+    \subitem {Objects::Button}, \hyperpage{19}
+    \subitem {Objects::Object}, \hyperpage{52}
   \item {utility.h}
-    \subitem {\_USE\_MATH\_DEFINES}, \hyperpage{107}
-    \subitem {normalizeAngle}, \hyperpage{107}
-    \subitem {polarToCartesian}, \hyperpage{108}
+    \subitem {\_USE\_MATH\_DEFINES}, \hyperpage{111}
+    \subitem {normalizeAngle}, \hyperpage{111}
+    \subitem {polarToCartesian}, \hyperpage{112}
 
   \indexspace
 
-  \item {Vector2D}, \hyperpage{68}
-    \subitem {cross}, \hyperpage{69}
-    \subitem {dot}, \hyperpage{69}
-    \subitem {getX}, \hyperpage{69}
-    \subitem {getY}, \hyperpage{69}
-    \subitem {len}, \hyperpage{69}
-    \subitem {len2}, \hyperpage{69}
-    \subitem {norm}, \hyperpage{69}
-    \subitem {operator+}, \hyperpage{70}
-    \subitem {operator+=}, \hyperpage{70}
-    \subitem {operator-\/}, \hyperpage{70}
-    \subitem {operator-\/=}, \hyperpage{70}
-    \subitem {operator/}, \hyperpage{71}
-    \subitem {operator/=}, \hyperpage{71}
-    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{70}
-    \subitem {operator\texorpdfstring{$\ast$}{*}=}, \hyperpage{70}
-    \subitem {rotate}, \hyperpage{69}
-    \subitem {Vector2D}, \hyperpage{68}
-    \subitem {zero}, \hyperpage{70}
+  \item {Vector2D}, \hyperpage{71}
+    \subitem {cross}, \hyperpage{72}
+    \subitem {dot}, \hyperpage{72}
+    \subitem {getX}, \hyperpage{72}
+    \subitem {getY}, \hyperpage{72}
+    \subitem {len}, \hyperpage{72}
+    \subitem {len2}, \hyperpage{72}
+    \subitem {norm}, \hyperpage{72}
+    \subitem {operator+}, \hyperpage{73}
+    \subitem {operator+=}, \hyperpage{73}
+    \subitem {operator-\/}, \hyperpage{73, 74}
+    \subitem {operator-\/=}, \hyperpage{74}
+    \subitem {operator/}, \hyperpage{74}
+    \subitem {operator/=}, \hyperpage{74}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{73}
+    \subitem {operator\texorpdfstring{$\ast$}{*}=}, \hyperpage{73}
+    \subitem {rotate}, \hyperpage{73}
+    \subitem {Vector2D}, \hyperpage{72}
+    \subitem {zero}, \hyperpage{73}
   \item {View}
-    \subitem {Views::View}, \hyperpage{73}
+    \subitem {Views::View}, \hyperpage{76}
   \item {view}
-    \subitem {Shapes::Shape}, \hyperpage{66}
+    \subitem {Shapes::Shape}, \hyperpage{69}
   \item {Views}, \hyperpage{14}
     \subitem {INIT\_VIEW\_HEIGHT}, \hyperpage{14}
     \subitem {INIT\_VIEW\_WIDTH}, \hyperpage{14}
-  \item {Views::Camera}, \hyperpage{17}
-    \subitem {Camera}, \hyperpage{19}
-    \subitem {getAngle}, \hyperpage{19}
-    \subitem {getRect}, \hyperpage{19}
-    \subitem {getZoom}, \hyperpage{19}
-    \subitem {rotate}, \hyperpage{19}
-    \subitem {setAngle}, \hyperpage{20}
-    \subitem {setDimension}, \hyperpage{20}
-    \subitem {setPivotObject}, \hyperpage{20}
-    \subitem {setPosition}, \hyperpage{20}
-    \subitem {setZoom}, \hyperpage{21}
-    \subitem {transform}, \hyperpage{21}
-    \subitem {transformFromRender}, \hyperpage{21}
-  \item {Views::HUD}, \hyperpage{30}
-    \subitem {getRect}, \hyperpage{31}
-    \subitem {HUD}, \hyperpage{31}
-    \subitem {transform}, \hyperpage{32}
-    \subitem {transformFromRender}, \hyperpage{32}
-  \item {Views::View}, \hyperpage{71}
-    \subitem {\texorpdfstring{$\sim$}{\string~}View}, \hyperpage{73}
-    \subitem {dimension}, \hyperpage{75}
-    \subitem {getAngle}, \hyperpage{73}
-    \subitem {getDimension}, \hyperpage{73}
-    \subitem {getPosition}, \hyperpage{73}
-    \subitem {getRect}, \hyperpage{73}
-    \subitem {getZoom}, \hyperpage{74}
-    \subitem {position}, \hyperpage{75}
-    \subitem {transform}, \hyperpage{74}
-    \subitem {transformFromRender}, \hyperpage{74}
-    \subitem {View}, \hyperpage{73}
+  \item {Views::Camera}, \hyperpage{20}
+    \subitem {Camera}, \hyperpage{21}
+    \subitem {getAngle}, \hyperpage{22}
+    \subitem {getRect}, \hyperpage{22}
+    \subitem {getZoom}, \hyperpage{22}
+    \subitem {rotate}, \hyperpage{22}
+    \subitem {setAngle}, \hyperpage{23}
+    \subitem {setDimension}, \hyperpage{23}
+    \subitem {setPivotObject}, \hyperpage{23}
+    \subitem {setPosition}, \hyperpage{23}
+    \subitem {setZoom}, \hyperpage{24}
+    \subitem {transform}, \hyperpage{24}
+    \subitem {transformFromRender}, \hyperpage{24}
+  \item {Views::HUD}, \hyperpage{33}
+    \subitem {getRect}, \hyperpage{34}
+    \subitem {HUD}, \hyperpage{34}
+    \subitem {transform}, \hyperpage{35}
+    \subitem {transformFromRender}, \hyperpage{35}
+  \item {Views::View}, \hyperpage{74}
+    \subitem {\texorpdfstring{$\sim$}{\string~}View}, \hyperpage{76}
+    \subitem {dimension}, \hyperpage{78}
+    \subitem {getAngle}, \hyperpage{76}
+    \subitem {getDimension}, \hyperpage{76}
+    \subitem {getPosition}, \hyperpage{76}
+    \subitem {getRect}, \hyperpage{77}
+    \subitem {getZoom}, \hyperpage{77}
+    \subitem {position}, \hyperpage{78}
+    \subitem {transform}, \hyperpage{77}
+    \subitem {transformFromRender}, \hyperpage{78}
+    \subitem {View}, \hyperpage{76}
   \item {volume}
     \subitem {Config}, \hyperpage{10}
 
   \indexspace
 
   \item {X1}
-    \subitem {input\_handler.h}, \hyperpage{85}
+    \subitem {input\_handler.h}, \hyperpage{87}
   \item {X2}
-    \subitem {input\_handler.h}, \hyperpage{85}
+    \subitem {input\_handler.h}, \hyperpage{87}
 
   \indexspace
 
@@ -704,6 +717,6 @@
   \indexspace
 
   \item {zero}
-    \subitem {Vector2D}, \hyperpage{70}
+    \subitem {Vector2D}, \hyperpage{73}
 
 \end{theindex}

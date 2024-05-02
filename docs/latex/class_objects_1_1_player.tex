@@ -32,6 +32,8 @@ virtual \mbox{\hyperlink{class_objects_1_1_object_a3234bb30a32db3f9468749593e81f
 \item 
 float \mbox{\hyperlink{class_objects_1_1_object_abec1786bb427077ac389a0e369b798e4}{get\+Angle}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Returns the angle of the object in radians. The returned angle will be in \mbox{[}0, 2pi), with 0 set at positive x direction, and going counter-\/clockwise. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_objects_1_1_object_a4e206d0b377bdd104ed1388c4e469ea4}{get\+Render\+Angle}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the render angle of the object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_a851f5b67467fb7c2ba7cdbabaafef1a8}{set\+Angle}} (float new\+Angle) noexcept
 \begin{DoxyCompactList}\small\item\em Sets rotation angle to. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_a178460e994fa4d4726f3aab4b58785b4}{rotate}} (float diff\+Angle) noexcept
@@ -72,9 +74,9 @@ virtual void \mbox{\hyperlink{class_objects_1_1_object_ad1a9d89d2ee5aa3bb2b6df7f
 \begin{DoxyCompactList}\small\item\em Make the object face. \end{DoxyCompactList}\item 
 SDL\+\_\+\+FRect \mbox{\hyperlink{class_objects_1_1_object_a8c7b5dbbb37f5ea6e3e6a521a2f5a60f}{get\+Render\+Rect}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets render rectangle for rendering. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_objects_1_1_object_a400221e58f512b410d5f55e6677c3367}{update}} (void) noexcept
+virtual void \mbox{\hyperlink{class_objects_1_1_object_a00c2f6c38bbc3bae3ed14259a88b2a70}{update}} (void) noexcept
 \begin{DoxyCompactList}\small\item\em Updates the object state. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_objects_1_1_object_abb70a9ac7dd473ae23e2a787a08fd7ef}{debug}} (void) const noexcept
+void \mbox{\hyperlink{class_objects_1_1_object_acb5993b839f6820c5fb57c2d10065379}{debug}} (void) const noexcept override
 \end{DoxyCompactItemize}
 
 

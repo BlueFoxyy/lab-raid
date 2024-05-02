@@ -4,43 +4,44 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{pointer__wrappers_8h}{utility/pointer\_wrappers.h}}>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{object_8h}{object/object.h}}>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <map>}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <format>}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_objects}{Objects}}\ \{}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }Object;}
-\DoxyCodeLine{00013\ \}}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{comment}{//\ TODO:\ Add\ support\ for\ text\ textures.}}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_texture_handler}{TextureHandler}}\ \{}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{class\ }TextureRequestKey\ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_objects_1_1_object}{Objects::Object}};}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ TextureRequestKey()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ TextureRequestKey(\textcolor{keyword}{const}\ TextureRequestKey\&)\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00029\ \ \ \ \ \};}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ errorTextureName;}
-\DoxyCodeLine{00033\ \ \ \ \ std::map<std::string,\ sdl\_unique\_ptr<SDL\_Texture>>\ textureDB;}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_texture_handler}{TextureHandler}}();}
-\DoxyCodeLine{00039\ \ \ \ \ }
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ loadTexture(\textcolor{keyword}{const}\ std::string\&\ textureName);}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00049\ \ \ \ \ SDL\_Texture*\ \mbox{\hyperlink{class_texture_handler_a3154a5ba25c0cb38593988d38705be57}{getTexture}}(TextureRequestKey\ key,\ \textcolor{keyword}{const}\ std::string\&\ textureName);}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_texture_handler_a266aec84de0bbef772d264f580052219}{TextureHandler}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_texture_handler}{TextureHandler}}\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_texture_handler_a0bb1e4af6e7beb6e91756c534a8ac981}{operator\ =\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_texture_handler}{TextureHandler}}\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_texture_handler}{TextureHandler}}\&\ \mbox{\hyperlink{class_texture_handler_a544444050682287d388c6fcacb19ab56}{getInstance}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{renderer_8h}{renderer.h}}>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{pointer__wrappers_8h}{utility/pointer\_wrappers.h}}>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{object_8h}{object/object.h}}>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <format>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_objects}{Objects}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }Object;}
+\DoxyCodeLine{00014\ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ TODO:\ Add\ support\ for\ text\ textures.}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_texture_handler}{TextureHandler}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{class\ }TextureRequestKey\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_objects_1_1_object}{Objects::Object}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ TextureRequestKey()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ TextureRequestKey(\textcolor{keyword}{const}\ TextureRequestKey\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ errorTextureName;}
+\DoxyCodeLine{00034\ \ \ \ \ std::map<std::string,\ sdl\_unique\_ptr<SDL\_Texture>>\ textureDB;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_texture_handler}{TextureHandler}}();}
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ loadTexture(\textcolor{keyword}{const}\ std::string\&\ textureName);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ SDL\_Texture*\ \mbox{\hyperlink{class_texture_handler_a3154a5ba25c0cb38593988d38705be57}{getTexture}}(TextureRequestKey\ key,\ \textcolor{keyword}{const}\ std::string\&\ textureName);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_texture_handler_a266aec84de0bbef772d264f580052219}{TextureHandler}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_texture_handler}{TextureHandler}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_texture_handler_a0bb1e4af6e7beb6e91756c534a8ac981}{operator\ =\ }}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_texture_handler}{TextureHandler}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_texture_handler}{TextureHandler}}\&\ \mbox{\hyperlink{class_texture_handler_a544444050682287d388c6fcacb19ab56}{getInstance}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00056\ \};}
 
 \end{DoxyCode}

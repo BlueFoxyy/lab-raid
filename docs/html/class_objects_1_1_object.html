@@ -92,13 +92,15 @@ Inheritance diagram for Objects::Object:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_objects_1_1_object__inherit__graph.png" border="0" usemap="#a_objects_1_1_object_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_objects_1_1_object_inherit__map" id="a_objects_1_1_object_inherit__map">
-<area shape="rect" title="Object type for all renderable objects in the world note: the texture won&#39;t be created until loaded i..." alt="" coords="73,80,186,107"/>
-<area shape="rect" href="class_objects_1_1_button.html" title=" " alt="" coords="5,155,118,181"/>
-<area shape="poly" title=" " alt="" coords="109,120,75,156,71,152,105,116"/>
-<area shape="rect" href="class_objects_1_1_player.html" title=" " alt="" coords="142,155,253,181"/>
-<area shape="poly" title=" " alt="" coords="154,116,188,152,184,156,150,120"/>
-<area shape="rect" href="class_render_object_base.html" title="Empty render object base class category." alt="" coords="64,5,195,32"/>
-<area shape="poly" title=" " alt="" coords="132,48,132,80,127,80,127,48"/>
+<area shape="rect" title="Object type for all renderable objects in the world note: the texture won&#39;t be created until loaded i..." alt="" coords="136,80,249,107"/>
+<area shape="rect" href="class_objects_1_1_bullet.html" title=" " alt="" coords="5,155,113,181"/>
+<area shape="poly" title=" " alt="" coords="157,117,84,156,81,152,155,112"/>
+<area shape="rect" href="class_objects_1_1_button.html" title=" " alt="" coords="136,155,249,181"/>
+<area shape="poly" title=" " alt="" coords="195,122,195,154,190,154,190,122"/>
+<area shape="rect" href="class_objects_1_1_player.html" title=" " alt="" coords="273,155,384,181"/>
+<area shape="poly" title=" " alt="" coords="231,112,306,152,303,156,228,117"/>
+<area shape="rect" href="class_render_object_base.html" title="Empty render object base class category." alt="" coords="127,5,258,32"/>
+<area shape="poly" title=" " alt="" coords="195,48,195,80,190,80,190,48"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -122,6 +124,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abec1786bb427077ac389a0e369b798e4" id="r_abec1786bb427077ac389a0e369b798e4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abec1786bb427077ac389a0e369b798e4">getAngle</a> (void) const noexcept</td></tr>
 <tr class="memdesc:abec1786bb427077ac389a0e369b798e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the angle of the object in radians. The returned angle will be in [0, 2pi), with 0 set at positive x direction, and going counter-clockwise.  <br /></td></tr>
 <tr class="separator:abec1786bb427077ac389a0e369b798e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e206d0b377bdd104ed1388c4e469ea4" id="r_a4e206d0b377bdd104ed1388c4e469ea4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e206d0b377bdd104ed1388c4e469ea4">getRenderAngle</a> (void) const noexcept</td></tr>
+<tr class="memdesc:a4e206d0b377bdd104ed1388c4e469ea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the render angle of the object.  <br /></td></tr>
+<tr class="separator:a4e206d0b377bdd104ed1388c4e469ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a851f5b67467fb7c2ba7cdbabaafef1a8" id="r_a851f5b67467fb7c2ba7cdbabaafef1a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a851f5b67467fb7c2ba7cdbabaafef1a8">setAngle</a> (float newAngle) noexcept</td></tr>
 <tr class="memdesc:a851f5b67467fb7c2ba7cdbabaafef1a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets rotation angle to.  <br /></td></tr>
 <tr class="separator:a851f5b67467fb7c2ba7cdbabaafef1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,11 +187,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c7b5dbbb37f5ea6e3e6a521a2f5a60f" id="r_a8c7b5dbbb37f5ea6e3e6a521a2f5a60f"><td class="memItemLeft" align="right" valign="top">SDL_FRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c7b5dbbb37f5ea6e3e6a521a2f5a60f">getRenderRect</a> (void) const noexcept</td></tr>
 <tr class="memdesc:a8c7b5dbbb37f5ea6e3e6a521a2f5a60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets render rectangle for rendering.  <br /></td></tr>
 <tr class="separator:a8c7b5dbbb37f5ea6e3e6a521a2f5a60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a400221e58f512b410d5f55e6677c3367" id="r_a400221e58f512b410d5f55e6677c3367"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a400221e58f512b410d5f55e6677c3367">update</a> (void) noexcept</td></tr>
-<tr class="memdesc:a400221e58f512b410d5f55e6677c3367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the object state.  <br /></td></tr>
-<tr class="separator:a400221e58f512b410d5f55e6677c3367"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb70a9ac7dd473ae23e2a787a08fd7ef" id="r_abb70a9ac7dd473ae23e2a787a08fd7ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb70a9ac7dd473ae23e2a787a08fd7ef">debug</a> (void) const noexcept</td></tr>
-<tr class="separator:abb70a9ac7dd473ae23e2a787a08fd7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c2f6c38bbc3bae3ed14259a88b2a70" id="r_a00c2f6c38bbc3bae3ed14259a88b2a70"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00c2f6c38bbc3bae3ed14259a88b2a70">update</a> (void) noexcept</td></tr>
+<tr class="memdesc:a00c2f6c38bbc3bae3ed14259a88b2a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the object state.  <br /></td></tr>
+<tr class="separator:a00c2f6c38bbc3bae3ed14259a88b2a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5993b839f6820c5fb57c2d10065379" id="r_acb5993b839f6820c5fb57c2d10065379"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb5993b839f6820c5fb57c2d10065379">debug</a> (void) const noexcept override</td></tr>
+<tr class="separator:acb5993b839f6820c5fb57c2d10065379"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -264,8 +269,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="abb70a9ac7dd473ae23e2a787a08fd7ef" name="abb70a9ac7dd473ae23e2a787a08fd7ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb70a9ac7dd473ae23e2a787a08fd7ef">&#9670;&#160;</a></span>debug()</h2>
+<a id="acb5993b839f6820c5fb57c2d10065379" name="acb5993b839f6820c5fb57c2d10065379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb5993b839f6820c5fb57c2d10065379">&#9670;&#160;</a></span>debug()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,7 +287,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -454,6 +459,34 @@ Friends</h2></td></tr>
 
 <p>Gets the position of the object. </p>
 <dl class="section return"><dt>Returns</dt><dd>The object's location.</dd></dl>
+
+</div>
+</div>
+<a id="a4e206d0b377bdd104ed1388c4e469ea4" name="a4e206d0b377bdd104ed1388c4e469ea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e206d0b377bdd104ed1388c4e469ea4">&#9670;&#160;</a></span>getRenderAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Objects::Object::getRenderAngle </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the render angle of the object. </p>
+<dl class="section return"><dt>Returns</dt><dd>The render angle of the object</dd></dl>
 
 </div>
 </div>
@@ -927,8 +960,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a400221e58f512b410d5f55e6677c3367" name="a400221e58f512b410d5f55e6677c3367"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a400221e58f512b410d5f55e6677c3367">&#9670;&#160;</a></span>update()</h2>
+<a id="a00c2f6c38bbc3bae3ed14259a88b2a70" name="a00c2f6c38bbc3bae3ed14259a88b2a70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c2f6c38bbc3bae3ed14259a88b2a70">&#9670;&#160;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -937,7 +970,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Objects::Object::update </td>
+          <td class="memname">virtual void Objects::Object::update </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -945,12 +978,14 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Updates the object state. </p>
+
+<p>Reimplemented in <a class="el" href="class_objects_1_1_button.html#aa034e4d275eceb5c657b69a660b70e86">Objects::Button</a>, and <a class="el" href="class_objects_1_1_bullet.html#a516100074ed09117555e59af52272dea">Objects::Bullet</a>.</p>
 
 </div>
 </div>

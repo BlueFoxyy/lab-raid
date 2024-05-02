@@ -1,9 +1,11 @@
 <map id="Objects::Object" name="Objects::Object">
-<area shape="rect" id="Node000001" title="Object type for all renderable objects in the world note: the texture won&#39;t be created until loaded i..." alt="" coords="73,80,186,107"/>
-<area shape="rect" id="Node000003" href="$class_objects_1_1_button.html" title=" " alt="" coords="5,155,118,181"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="109,120,75,156,71,152,105,116"/>
-<area shape="rect" id="Node000004" href="$class_objects_1_1_player.html" title=" " alt="" coords="142,155,253,181"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="154,116,188,152,184,156,150,120"/>
-<area shape="rect" id="Node000002" href="$class_render_object_base.html" title="Empty render object base class category." alt="" coords="64,5,195,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,48,132,80,127,80,127,48"/>
+<area shape="rect" id="Node000001" title="Object type for all renderable objects in the world note: the texture won&#39;t be created until loaded i..." alt="" coords="136,80,249,107"/>
+<area shape="rect" id="Node000003" href="$class_objects_1_1_bullet.html" title=" " alt="" coords="5,155,113,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,117,84,156,81,152,155,112"/>
+<area shape="rect" id="Node000004" href="$class_objects_1_1_button.html" title=" " alt="" coords="136,155,249,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="195,122,195,154,190,154,190,122"/>
+<area shape="rect" id="Node000005" href="$class_objects_1_1_player.html" title=" " alt="" coords="273,155,384,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="231,112,306,152,303,156,228,117"/>
+<area shape="rect" id="Node000002" href="$class_render_object_base.html" title="Empty render object base class category." alt="" coords="127,5,258,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,48,195,80,190,80,190,48"/>
 </map>

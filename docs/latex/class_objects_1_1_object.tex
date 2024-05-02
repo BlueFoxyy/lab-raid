@@ -11,11 +11,12 @@
 
 
 
-Inheritance diagram for Objects\+::Object\+:\nopagebreak
+Inheritance diagram for Objects\+::Object\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=266pt]{class_objects_1_1_object__inherit__graph}
+\includegraphics[width=350pt]{class_objects_1_1_object__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -36,6 +37,8 @@ virtual \mbox{\hyperlink{class_objects_1_1_object_a3234bb30a32db3f9468749593e81f
 \item 
 float \mbox{\hyperlink{class_objects_1_1_object_abec1786bb427077ac389a0e369b798e4}{get\+Angle}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Returns the angle of the object in radians. The returned angle will be in \mbox{[}0, 2pi), with 0 set at positive x direction, and going counter-\/clockwise. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_objects_1_1_object_a4e206d0b377bdd104ed1388c4e469ea4}{get\+Render\+Angle}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the render angle of the object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_a851f5b67467fb7c2ba7cdbabaafef1a8}{set\+Angle}} (float new\+Angle) noexcept
 \begin{DoxyCompactList}\small\item\em Sets rotation angle to. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_a178460e994fa4d4726f3aab4b58785b4}{rotate}} (float diff\+Angle) noexcept
@@ -76,9 +79,9 @@ virtual void \mbox{\hyperlink{class_objects_1_1_object_ad1a9d89d2ee5aa3bb2b6df7f
 \begin{DoxyCompactList}\small\item\em Make the object face. \end{DoxyCompactList}\item 
 SDL\+\_\+\+FRect \mbox{\hyperlink{class_objects_1_1_object_a8c7b5dbbb37f5ea6e3e6a521a2f5a60f}{get\+Render\+Rect}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets render rectangle for rendering. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_objects_1_1_object_a400221e58f512b410d5f55e6677c3367}{update}} (void) noexcept
+virtual void \mbox{\hyperlink{class_objects_1_1_object_a00c2f6c38bbc3bae3ed14259a88b2a70}{update}} (void) noexcept
 \begin{DoxyCompactList}\small\item\em Updates the object state. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_objects_1_1_object_abb70a9ac7dd473ae23e2a787a08fd7ef}{debug}} (void) const noexcept
+void \mbox{\hyperlink{class_objects_1_1_object_acb5993b839f6820c5fb57c2d10065379}{debug}} (void) const noexcept override
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -121,11 +124,11 @@ Constructs a new object.
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_objects_1_1_object_abb70a9ac7dd473ae23e2a787a08fd7ef}\label{class_objects_1_1_object_abb70a9ac7dd473ae23e2a787a08fd7ef} 
+\Hypertarget{class_objects_1_1_object_acb5993b839f6820c5fb57c2d10065379}\label{class_objects_1_1_object_acb5993b839f6820c5fb57c2d10065379} 
 \index{Objects::Object@{Objects::Object}!debug@{debug}}
 \index{debug@{debug}!Objects::Object@{Objects::Object}}
 \doxysubsubsection{\texorpdfstring{debug()}{debug()}}
-{\footnotesize\ttfamily void Objects\+::\+Object\+::debug (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::debug (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
 
 
 
@@ -202,6 +205,19 @@ Gets the position of the object.
 
 \begin{DoxyReturn}{Returns}
 The object\textquotesingle{}s location.
+\end{DoxyReturn}
+\Hypertarget{class_objects_1_1_object_a4e206d0b377bdd104ed1388c4e469ea4}\label{class_objects_1_1_object_a4e206d0b377bdd104ed1388c4e469ea4} 
+\index{Objects::Object@{Objects::Object}!getRenderAngle@{getRenderAngle}}
+\index{getRenderAngle@{getRenderAngle}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{getRenderAngle()}{getRenderAngle()}}
+{\footnotesize\ttfamily float Objects\+::\+Object\+::get\+Render\+Angle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the render angle of the object. 
+
+\begin{DoxyReturn}{Returns}
+The render angle of the object
 \end{DoxyReturn}
 \Hypertarget{class_objects_1_1_object_a8c7b5dbbb37f5ea6e3e6a521a2f5a60f}\label{class_objects_1_1_object_a8c7b5dbbb37f5ea6e3e6a521a2f5a60f} 
 \index{Objects::Object@{Objects::Object}!getRenderRect@{getRenderRect}}
@@ -424,15 +440,19 @@ Stretches the object\textquotesingle{}s height by.
 {\em ratio} & Stretch ratio.\\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_objects_1_1_object_a400221e58f512b410d5f55e6677c3367}\label{class_objects_1_1_object_a400221e58f512b410d5f55e6677c3367} 
+\Hypertarget{class_objects_1_1_object_a00c2f6c38bbc3bae3ed14259a88b2a70}\label{class_objects_1_1_object_a00c2f6c38bbc3bae3ed14259a88b2a70} 
 \index{Objects::Object@{Objects::Object}!update@{update}}
 \index{update@{update}!Objects::Object@{Objects::Object}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void Objects\+::\+Object\+::update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily virtual void Objects\+::\+Object\+::update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
 
 
 
 Updates the object state. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_objects_1_1_button_aa034e4d275eceb5c657b69a660b70e86}{Objects\+::\+Button}}, and \mbox{\hyperlink{class_objects_1_1_bullet_a516100074ed09117555e59af52272dea}{Objects\+::\+Bullet}}.
 
 
 

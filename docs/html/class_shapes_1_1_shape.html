@@ -123,8 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a89d9f9daa494e1ccdfb5fc6dc930b20e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43dde932255e213ddef0bae12c1025c4" id="r_a43dde932255e213ddef0bae12c1025c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43dde932255e213ddef0bae12c1025c4">Shape</a> (<a class="el" href="class_views_1_1_view.html">Views::View</a> *<a class="el" href="#a61b5c9d0178925857cc03cb894d6a878">view</a>, const SDL_Color &amp;<a class="el" href="#a4a82ce802aea95a2b68588d9dc6a891f">color</a>={ 0, 0, 0, 255 })</td></tr>
 <tr class="separator:a43dde932255e213ddef0bae12c1025c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3a5e797f28757c8060df14e2c2e20df" id="r_ae3a5e797f28757c8060df14e2c2e20df"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3a5e797f28757c8060df14e2c2e20df">~Shape</a> ()</td></tr>
-<tr class="separator:ae3a5e797f28757c8060df14e2c2e20df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2abe6d4115a3f920a83a9beb9c896c5b" id="r_a2abe6d4115a3f920a83a9beb9c896c5b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2abe6d4115a3f920a83a9beb9c896c5b">~Shape</a> ()=default</td></tr>
+<tr class="separator:a2abe6d4115a3f920a83a9beb9c896c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4ff5aadd6850816218acaac75f091bb" id="r_ad4ff5aadd6850816218acaac75f091bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4ff5aadd6850816218acaac75f091bb">setColor</a> (const SDL_Color &amp;newColor) noexcept</td></tr>
 <tr class="separator:ad4ff5aadd6850816218acaac75f091bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed2988789e73cfdc900816b86acf6f58" id="r_aed2988789e73cfdc900816b86acf6f58"><td class="memItemLeft" align="right" valign="top">SDL_Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed2988789e73cfdc900816b86acf6f58">getColor</a> (void) const noexcept</td></tr>
@@ -136,7 +136,6 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a61b5c9d0178925857cc03cb894d6a878" id="r_a61b5c9d0178925857cc03cb894d6a878"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_views_1_1_view.html">Views::View</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61b5c9d0178925857cc03cb894d6a878">view</a></td></tr>
-<tr class="memdesc:a61b5c9d0178925857cc03cb894d6a878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls draw function after transforming coordinates with view.  <br /></td></tr>
 <tr class="separator:a61b5c9d0178925857cc03cb894d6a878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a82ce802aea95a2b68588d9dc6a891f" id="r_a4a82ce802aea95a2b68588d9dc6a891f"><td class="memItemLeft" align="right" valign="top">SDL_Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a82ce802aea95a2b68588d9dc6a891f">color</a></td></tr>
 <tr class="separator:a4a82ce802aea95a2b68588d9dc6a891f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,8 +162,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae3a5e797f28757c8060df14e2c2e20df" name="ae3a5e797f28757c8060df14e2c2e20df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3a5e797f28757c8060df14e2c2e20df">&#9670;&#160;</a></span>~Shape()</h2>
+<a id="a2abe6d4115a3f920a83a9beb9c896c5b" name="a2abe6d4115a3f920a83a9beb9c896c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2abe6d4115a3f920a83a9beb9c896c5b">&#9670;&#160;</a></span>~Shape()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,7 +180,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -308,14 +307,6 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Calls draw function after transforming coordinates with view. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">view</td><td>The target view port.</td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

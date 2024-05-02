@@ -95,7 +95,8 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">class </span>View;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>};</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shapes.html">Shapes</a> {</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespace_shapes.html">   13</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shapes.html">Shapes</a> {</div>
 <div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_shapes_1_1_circle.html">   14</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_shapes_1_1_circle.html">Circle</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_shapes_1_1_shape.html">Shape</a> {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">protected</span>:</div>
@@ -133,6 +134,7 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
 </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+</div>
 <div class="ttc" id="aclass_shapes_1_1_circle_html"><div class="ttname"><a href="class_shapes_1_1_circle.html">Shapes::Circle</a></div><div class="ttdef"><b>Definition</b> circle.h:14</div></div>
 <div class="ttc" id="aclass_shapes_1_1_circle_html_a0f026a3675eb7e796c58447e8baad7a1"><div class="ttname"><a href="class_shapes_1_1_circle.html#a0f026a3675eb7e796c58447e8baad7a1">Shapes::Circle::draw</a></div><div class="ttdeci">void draw(SDL_Renderer *renderer) const noexcept override</div></div>
 <div class="ttc" id="aclass_shapes_1_1_circle_html_a19f3ba261b037dec93fe15cee5a331bd"><div class="ttname"><a href="class_shapes_1_1_circle.html#a19f3ba261b037dec93fe15cee5a331bd">Shapes::Circle::setRadius</a></div><div class="ttdeci">void setRadius(float newRadius) noexcept</div></div>
@@ -146,12 +148,12 @@ $(function() { codefold.init(0); });
 <div class="ttc" id="aclass_shapes_1_1_hollow_circle_html_a3ffca57250baa0f34dc3c6e5da7e5240"><div class="ttname"><a href="class_shapes_1_1_hollow_circle.html#a3ffca57250baa0f34dc3c6e5da7e5240">Shapes::HollowCircle::setThickness</a></div><div class="ttdeci">void setThickness(uint8_t newThickness) noexcept</div></div>
 <div class="ttc" id="aclass_shapes_1_1_hollow_circle_html_af893a4f2e28971dc7037ea1b0da0b42c"><div class="ttname"><a href="class_shapes_1_1_hollow_circle.html#af893a4f2e28971dc7037ea1b0da0b42c">Shapes::HollowCircle::thickness</a></div><div class="ttdeci">uint8_t thickness</div><div class="ttdef"><b>Definition</b> circle.h:34</div></div>
 <div class="ttc" id="aclass_shapes_1_1_shape_html"><div class="ttname"><a href="class_shapes_1_1_shape.html">Shapes::Shape</a></div><div class="ttdef"><b>Definition</b> shape.h:12</div></div>
-<div class="ttc" id="aclass_shapes_1_1_shape_html_a4a82ce802aea95a2b68588d9dc6a891f"><div class="ttname"><a href="class_shapes_1_1_shape.html#a4a82ce802aea95a2b68588d9dc6a891f">Shapes::Shape::color</a></div><div class="ttdeci">SDL_Color color</div><div class="ttdef"><b>Definition</b> shape.h:20</div></div>
-<div class="ttc" id="aclass_shapes_1_1_shape_html_a61b5c9d0178925857cc03cb894d6a878"><div class="ttname"><a href="class_shapes_1_1_shape.html#a61b5c9d0178925857cc03cb894d6a878">Shapes::Shape::view</a></div><div class="ttdeci">const Views::View * view</div><div class="ttdoc">Calls draw function after transforming coordinates with view.</div><div class="ttdef"><b>Definition</b> shape.h:19</div></div>
+<div class="ttc" id="aclass_shapes_1_1_shape_html_a4a82ce802aea95a2b68588d9dc6a891f"><div class="ttname"><a href="class_shapes_1_1_shape.html#a4a82ce802aea95a2b68588d9dc6a891f">Shapes::Shape::color</a></div><div class="ttdeci">SDL_Color color</div><div class="ttdef"><b>Definition</b> shape.h:16</div></div>
+<div class="ttc" id="aclass_shapes_1_1_shape_html_a61b5c9d0178925857cc03cb894d6a878"><div class="ttname"><a href="class_shapes_1_1_shape.html#a61b5c9d0178925857cc03cb894d6a878">Shapes::Shape::view</a></div><div class="ttdeci">const Views::View * view</div><div class="ttdef"><b>Definition</b> shape.h:15</div></div>
 <div class="ttc" id="aclass_vector2_d_html"><div class="ttname"><a href="class_vector2_d.html">Vector2D</a></div><div class="ttdef"><b>Definition</b> vector2d.h:5</div></div>
 <div class="ttc" id="aclass_views_1_1_view_html"><div class="ttname"><a href="class_views_1_1_view.html">Views::View</a></div><div class="ttdoc">View: defines a view area, translates the objects' virtual rects to real rendering rects.</div><div class="ttdef"><b>Definition</b> view.h:18</div></div>
-<div class="ttc" id="anamespace_shapes_html"><div class="ttname"><a href="namespace_shapes.html">Shapes</a></div><div class="ttdef"><b>Definition</b> object.h:21</div></div>
-<div class="ttc" id="anamespace_views_html"><div class="ttname"><a href="namespace_views.html">Views</a></div><div class="ttdef"><b>Definition</b> object.h:19</div></div>
+<div class="ttc" id="anamespace_shapes_html"><div class="ttname"><a href="namespace_shapes.html">Shapes</a></div><div class="ttdef"><b>Definition</b> circle.h:13</div></div>
+<div class="ttc" id="anamespace_views_html"><div class="ttname"><a href="namespace_views.html">Views</a></div><div class="ttdef"><b>Definition</b> object.h:18</div></div>
 <div class="ttc" id="ashape_8h_html"><div class="ttname"><a href="shape_8h.html">shape.h</a></div></div>
 <div class="ttc" id="autility_8h_html"><div class="ttname"><a href="utility_8h.html">utility.h</a></div></div>
 <div class="ttc" id="avector2d_8h_html"><div class="ttname"><a href="vector2d_8h.html">vector2d.h</a></div></div>

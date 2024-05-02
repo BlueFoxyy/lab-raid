@@ -91,10 +91,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a06449d8500ed922ed79744f27299d56f" id="r_a06449d8500ed922ed79744f27299d56f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06449d8500ed922ed79744f27299d56f">operator=</a> (const <a class="el" href="class_input_handler.html">InputHandler</a> &amp;)=delete</td></tr>
 <tr class="separator:a06449d8500ed922ed79744f27299d56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec26e0472ad335f89ea32a5bce2e4046" id="r_aec26e0472ad335f89ea32a5bce2e4046"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec26e0472ad335f89ea32a5bce2e4046">pollKeyPress</a> (SDL_Keycode key) noexcept</td></tr>
-<tr class="memdesc:aec26e0472ad335f89ea32a5bce2e4046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a key is pressed. (SDL_KeyDown) Is only true when the key was not held down.  <br /></td></tr>
+<tr class="memdesc:aec26e0472ad335f89ea32a5bce2e4046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polls if a key is pressed. (SDL_KeyDown) Is only true when the key was not held down in the previous tick.  <br /></td></tr>
 <tr class="separator:aec26e0472ad335f89ea32a5bce2e4046"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc3a82d1161a8e15d16a3e1911fe9f50" id="r_abc3a82d1161a8e15d16a3e1911fe9f50"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc3a82d1161a8e15d16a3e1911fe9f50">pollKeyRelease</a> (SDL_Keycode key) noexcept</td></tr>
-<tr class="memdesc:abc3a82d1161a8e15d16a3e1911fe9f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a key is released. (SDL_KeyUp)  <br /></td></tr>
+<tr class="memdesc:abc3a82d1161a8e15d16a3e1911fe9f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a key is released. (SDL_KeyUp) Is only true when the key was held down in the last tick.  <br /></td></tr>
 <tr class="separator:abc3a82d1161a8e15d16a3e1911fe9f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdb221ae93829471cc9bf105a412b49b" id="r_abdb221ae93829471cc9bf105a412b49b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdb221ae93829471cc9bf105a412b49b">isKeyDown</a> (SDL_Keycode key) const noexcept</td></tr>
 <tr class="memdesc:abdb221ae93829471cc9bf105a412b49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a key is held down. (SDL_KeyDown)  <br /></td></tr>
@@ -479,7 +479,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks if a key is pressed. (SDL_KeyDown) Is only true when the key was not held down. </p>
+<p>Polls if a key is pressed. (SDL_KeyDown) Is only true when the key was not held down in the previous tick. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>SDL_Keycode key value.</td></tr>
@@ -513,7 +513,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks if a key is released. (SDL_KeyUp) </p>
+<p>Checks if a key is released. (SDL_KeyUp) Is only true when the key was held down in the last tick. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>SDL_Keycode key value.</td></tr>
