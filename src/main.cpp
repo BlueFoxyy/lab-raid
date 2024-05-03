@@ -165,13 +165,17 @@ public:
 		auto bullet = std::make_shared<Objects::Bullet>(
 			Global::playerCamera.get(),
 			Global::playerObject->getPosition() + 
-				Vector2D{ 48 , gunOffset }.rotate(
+				(Vector2D{ 40 , gunOffset } + Objects::Bullet::bulletSize / 2).rotate(
 				Global::playerObject->getAngle()
 			),
 			Global::playerObject->getAngle()
 		);
 		bullets.push_back(bullet);
 		Renderer::getInstance().registerObject(bullet);
+		Renderer::getInstance().moveLayerDown(bullet);
+		Renderer::getInstance().moveLayerDown(bullet);
+		Renderer::getInstance().moveLayerDown(bullet);
+		Renderer::getInstance().moveLayerDown(bullet);
 	}
 };
 /* BULLET TEST COMMANDS */
@@ -232,7 +236,7 @@ static void registerCommands(CommandManager& commandManager) {
 		}, std::make_shared<PlayerLayerDownCommand>());
 	commandManager.registerCommand({
 		{},
-		{ {MouseButton::LEFT, KeyBind::Trigger::TAP} }
+		{ {MouseButton::LEFT, KeyBind::Trigger::HOLD} }
 		}, std::make_shared<CreateBulletCommand>());
 }
 
@@ -380,13 +384,11 @@ int main(int argc, char* argv[]) {
 
 		SDL_framerateDelay(Global::fpsManager.get());
 
-		/*
 		SDL_LogInfo(
 			SDL_LOG_CATEGORY_APPLICATION,
 			"FPS: %d",
 			SDL_getFramerate(Global::fpsManager.get())
-		);
-		*/
+		);		
 	}
 
 	SDL_Quit();

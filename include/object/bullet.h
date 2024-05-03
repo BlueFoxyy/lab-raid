@@ -12,6 +12,7 @@ namespace Objects {
 		Uint32 createdTick;
 		float speed;
 	public:
+		const static Vector2D bulletSize;
 		Bullet(
 			const Views::View* view,
 			Vector2D position,
@@ -21,7 +22,7 @@ namespace Objects {
 				std::vector<std::string> {"bullet"},
 				view,
 				position,
-				Vector2D{ 10, 3 }
+				bulletSize
 			),
 			createdTick(SDL_GetTicks()),
 			speed(speed) {

@@ -25,7 +25,7 @@ namespace Global {
 	std::shared_ptr<Shapes::HollowCircle> crosshairCircle1;
 
 	void init(void) {
-		SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_VERBOSE);
+		SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO);
 
 		if (SDL_InitSubSystem(SDL_INIT_EVERYTHING) < 0) {
 			SDL_LogCritical(
