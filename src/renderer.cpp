@@ -33,6 +33,10 @@ Renderer& Renderer::getInstance(void) noexcept {
 	return gRenderer;
 }
 
+SDL_Window* Renderer::getWindow(void) noexcept {
+	return window.get();
+}
+
 /*
 SDL_Renderer* Renderer::getRenderer(void) noexcept {
 	return renderer.get();

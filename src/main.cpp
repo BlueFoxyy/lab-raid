@@ -180,6 +180,21 @@ public:
 };
 /* BULLET TEST COMMANDS */
 
+/* FULLSCREEN TEST */
+bool fullscreen = false;
+class ToggleFullscreenCommand : public Commands::Command {
+public:
+	void execute(const ExecuteKey& key) noexcept override {
+		if (not fullscreen) {
+			SDL_SetWindowFullscreen(Renderer::getInstance().getWindow(), SDL_WINDOW_FULLSCREEN);
+		} else {
+			SDL_SetWindowFullscreen(Renderer::getInstance().getWindow(), SDL_WINDOW_SHOWN);
+		}
+		fullscreen = not fullscreen;
+	}
+};
+/* FULLSCREEN TEST */
+
 // register commands
 static void registerCommands(CommandManager& commandManager) {
 	commandManager.registerCommand({
@@ -238,6 +253,10 @@ static void registerCommands(CommandManager& commandManager) {
 		{},
 		{ {MouseButton::LEFT, KeyBind::Trigger::HOLD} }
 		}, std::make_shared<CreateBulletCommand>());
+	commandManager.registerCommand({
+		{ {SDLK_RETURN, KeyBind::Trigger::TAP}, {SDLK_LALT, KeyBind::Trigger::HOLD} },
+		{}
+		}, std::make_shared<ToggleFullscreenCommand>());
 }
 
 int main(int argc, char* argv[]) {

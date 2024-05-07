@@ -65,6 +65,10 @@ public:
 	void operator = (const Renderer&) = delete;
 	static Renderer& getInstance(void) noexcept;
 	/* SINGLETON PATTERN */
+	
+	/// @brief Gets game window.
+	/// @return The game window.
+	SDL_Window* getWindow(void) noexcept;
 
 	/// <summary>
 	/// Creates a texture from a SDL_Surface.
