@@ -84,8 +84,12 @@ namespace Views {
 		Vector2D relativePosition = (position - cameraPosition).rotate(-angle) * zoom;
 		float x = relativePosition.getX();
 		float y = relativePosition.getY();
-		x = x / dimension.getX() * Config::screenWidth + Config::screenWidth / 2.0f;
-		y = y / dimension.getY() * Config::screenHeight + Config::screenHeight / 2.0f;
+		float screenWidth, screenHeight;
+		auto windowSize = Renderer::getInstance().getWindowSize();
+		screenWidth = windowSize.getX();
+		screenHeight = windowSize.getY();
+		x = x / dimension.getX() * screenWidth + screenWidth / 2.0f;
+		y = y / dimension.getY() * screenHeight + screenHeight / 2.0f;
 		return { x, y };
 	}
 

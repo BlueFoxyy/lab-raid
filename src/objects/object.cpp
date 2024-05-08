@@ -118,6 +118,13 @@ namespace Objects {
 //		colorMask = newColorMask;
 //	}
 
+	bool Object::collideWith(const Object& other) const noexcept {
+		return rectCollide(
+			this->getRenderRect(), this->getRenderAngle(),
+			other.getRenderRect(), other.getRenderAngle()
+		);
+	}
+
 	void Object::nextTexture(void) noexcept {
 		textures.next();
 	}

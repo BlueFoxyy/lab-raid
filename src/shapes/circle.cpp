@@ -21,7 +21,8 @@ namespace Shapes {
 
 	void Circle::draw(SDL_Renderer* renderer) const noexcept {
 		Vector2D renderCenter = view->transform(center);
-		float renderRadius = radius * view->getZoom();
+		Vector2D renderArc = view->transform(center + Vector2D{radius, 0});
+		float renderRadius = (renderArc - renderCenter).len();
 		filledCircleRGBA(
 			renderer, 
 			static_cast<Sint16>(renderCenter.getX()), 

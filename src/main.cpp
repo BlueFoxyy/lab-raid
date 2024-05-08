@@ -251,7 +251,11 @@ static void registerCommands(CommandManager& commandManager) {
 		}, std::make_shared<PlayerLayerDownCommand>());
 	commandManager.registerCommand({
 		{},
-		{ {MouseButton::LEFT, KeyBind::Trigger::HOLD} }
+		{ {MouseButton::RIGHT, KeyBind::Trigger::HOLD} }
+		}, std::make_shared<CreateBulletCommand>());
+	commandManager.registerCommand({
+		{},
+		{ {MouseButton::LEFT, KeyBind::Trigger::TAP} }
 		}, std::make_shared<CreateBulletCommand>());
 	commandManager.registerCommand({
 		{ {SDLK_RETURN, KeyBind::Trigger::TAP}, {SDLK_LALT, KeyBind::Trigger::HOLD} },
@@ -389,6 +393,23 @@ int main(int argc, char* argv[]) {
 			else
 				break;
 		}
+
+		bool bulletHitArrow = false;
+		bool bulletHitHudArrow = false;
+		for (auto bullet : bullets) {
+			bulletHitArrow = bulletHitArrow or bullet->collideWith(*Global::arrowObject1);
+			bulletHitHudArrow = bulletHitHudArrow or bullet->collideWith(*Global::hudArrow);
+		}
+		if (bulletHitArrow) {
+			Global::hudCircle->setColor({ 0x00, 0xFF, 0x00, 0xFF });
+		} else if (bulletHitHudArrow) {
+			Global::hudCircle->setColor({ 0x00, 0x00, 0xFF, 0xFF });
+		} else {
+			Global::hudCircle->setColor({ 0xFF, 0x00, 0x00, 0x7F });
+		}
+
+		// rotate hud arrow
+		Global::hudArrow->rotate(timedDifference(2*M_PI));
 
 		try {
 			Renderer::getInstance().render({});

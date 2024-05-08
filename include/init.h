@@ -20,7 +20,6 @@ namespace Global {
 	extern std::unique_ptr<Views::HUD> menuView;
 
 	extern std::shared_ptr<Objects::Object> playerObject, arrowObject1;
-	extern std::shared_ptr<Objects::Object> arrowObject2;
 	extern std::shared_ptr<Shapes::Circle> yellowCircle;
 	extern std::shared_ptr<Shapes::Circle> greenCircle;
 	extern std::shared_ptr<Shapes::Circle> blueCircle;
@@ -32,6 +31,9 @@ namespace Global {
 	extern std::shared_ptr<Shapes::Line> line2;
 	extern std::shared_ptr<Shapes::Line> line3;
 	extern std::shared_ptr<Shapes::Line> line4;
+
+	extern std::shared_ptr<Objects::Object> hudArrow;
+	extern std::shared_ptr<Shapes::Circle> hudCircle;
 
 	extern std::shared_ptr<Shapes::Line> crosshairLine1;
 	extern std::shared_ptr<Shapes::Line> crosshairLine2;

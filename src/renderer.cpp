@@ -37,6 +37,12 @@ SDL_Window* Renderer::getWindow(void) noexcept {
 	return window.get();
 }
 
+Vector2D Renderer::getWindowSize(void) const noexcept {
+	int w, h;
+	SDL_GetWindowSize(window.get(), &w, &h);
+	return Vector2D(static_cast<float>(w), static_cast<float>(h));
+}
+
 /*
 SDL_Renderer* Renderer::getRenderer(void) noexcept {
 	return renderer.get();

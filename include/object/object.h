@@ -12,6 +12,7 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include <array>
 #include <unordered_map>
 #include <stdexcept>
 
@@ -145,8 +146,12 @@ namespace Objects {
 		/// Gets the object's visibility.
 		/// </summary>
 		/// <returns>The object's visibility.</returns>
-		bool getVisibility(void) const noexcept;
+		bool getVisibility(void) const noexcept; 
 
+		/// @brief Check if this object collides with `other' object.
+		/// @param other The other object.
+		/// @return If collided.
+		bool collideWith(const Object& other) const noexcept;
 
 		/* TEXTURES */
 		

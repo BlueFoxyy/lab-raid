@@ -84,6 +84,10 @@ public:
 	/// <returns>The underlying renderer.</returns>
 	//SDL_Renderer* getRenderer(void) noexcept;
 
+	/// @brief Gets current window size.
+	/// @return Current window size.
+	Vector2D getWindowSize(void) const noexcept;
+
 	/// <summary>
 	/// Registers the object for rendering.
 	/// </summary>
