@@ -19,7 +19,9 @@ namespace Global {
 	extern std::unique_ptr<Views::HUD> hudView;
 	extern std::unique_ptr<Views::HUD> menuView;
 
-	extern std::shared_ptr<Objects::Object> playerObject, arrowObject1;
+	extern std::shared_ptr<Objects::Object> playerObject;
+	extern std::shared_ptr<Objects::Object> arrowObject1;
+	extern std::shared_ptr<Objects::Object> arrowObject2;
 	extern std::shared_ptr<Shapes::Circle> yellowCircle;
 	extern std::shared_ptr<Shapes::Circle> greenCircle;
 	extern std::shared_ptr<Shapes::Circle> blueCircle;

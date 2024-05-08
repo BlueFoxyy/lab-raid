@@ -1,16 +1,18 @@
 \doxysection{include/utility/utility.h File Reference}
 \hypertarget{utility_8h}{}\label{utility_8h}\index{include/utility/utility.h@{include/utility/utility.h}}
-{\ttfamily \#include $<$cmath$>$}\newline
 {\ttfamily \#include "{}vector2d.\+h"{}}\newline
-Include dependency graph for utility.\+h\+:\nopagebreak
+{\ttfamily \#include $<$SDL2/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+Include dependency graph for utility.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=193pt]{utility_8h__incl}
+\includegraphics[width=322pt]{utility_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,7 +30,9 @@ This graph shows which files directly or indirectly include this file\+:
 float \mbox{\hyperlink{utility_8h_ae56d6b03832f7d25bc5529b2b7590224}{normalize\+Angle}} (float angle) noexcept
 \begin{DoxyCompactList}\small\item\em Helper function to normalize angle to \mbox{[}0, 2pi) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{utility_8h_ada61a7421ae408c733a6d9561516beb4}{polar\+To\+Cartesian}} (float radius, float theta)
-\begin{DoxyCompactList}\small\item\em Helper function to to transform polar coordinates to cartesian coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Helper function to transform polar coordinates to cartesian coordinates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{utility_8h_aa17501151b57dc982d98dc10f7d01b73}{rect\+Collide}} (const SDL\+\_\+\+FRect \&rect1, float angle1, const SDL\+\_\+\+FRect \&rect2, float angle2)
+\begin{DoxyCompactList}\small\item\em Checks if two rectangles collides. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -67,15 +71,39 @@ normalized angle
 
 
 
-Helper function to to transform polar coordinates to cartesian coordinates. 
+Helper function to transform polar coordinates to cartesian coordinates. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em radius} & input radius\\
 \hline
-{\em theta} & input angele (radians)\\
+{\em theta} & input angle (radians)\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 the transformed cartesian coordinates
+\end{DoxyReturn}
+\Hypertarget{utility_8h_aa17501151b57dc982d98dc10f7d01b73}\label{utility_8h_aa17501151b57dc982d98dc10f7d01b73} 
+\index{utility.h@{utility.h}!rectCollide@{rectCollide}}
+\index{rectCollide@{rectCollide}!utility.h@{utility.h}}
+\doxysubsubsection{\texorpdfstring{rectCollide()}{rectCollide()}}
+{\footnotesize\ttfamily bool rect\+Collide (\begin{DoxyParamCaption}\item[{const SDL\+\_\+\+FRect \&}]{rect1,  }\item[{float}]{angle1,  }\item[{const SDL\+\_\+\+FRect \&}]{rect2,  }\item[{float}]{angle2 }\end{DoxyParamCaption})}
+
+
+
+Checks if two rectangles collides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect1} & First rect.\\
+\hline
+{\em angle1} & The rotation of the first rect.\\
+\hline
+{\em rect2} & Second rect.\\
+\hline
+{\em angle2} & The rotation of the second rect.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the rectangles collides.
 \end{DoxyReturn}

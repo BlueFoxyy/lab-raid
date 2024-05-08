@@ -81,19 +81,25 @@ $(function() {
   <div class="headertitle"><div class="title">utility.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
-<code>#include &quot;<a class="el" href="vector2d_8h_source.html">vector2d.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="vector2d_8h_source.html">vector2d.h</a>&quot;</code><br />
+<code>#include &lt;SDL2/SDL.h&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for utility.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="utility_8h__incl.png" border="0" usemap="#ainclude_2utility_2utility_8h" alt=""/></div>
 <map name="ainclude_2utility_2utility_8h" id="ainclude_2utility_2utility_8h">
-<area shape="rect" title=" " alt="" coords="5,5,149,32"/>
-<area shape="rect" title=" " alt="" coords="48,155,106,181"/>
-<area shape="poly" title=" " alt="" coords="76,33,68,66,66,106,72,139,67,140,61,107,63,65,70,32"/>
-<area shape="rect" href="vector2d_8h.html" title=" " alt="" coords="76,80,156,107"/>
-<area shape="poly" title=" " alt="" coords="86,31,104,65,100,68,81,34"/>
-<area shape="poly" title=" " alt="" coords="111,108,93,142,88,140,107,106"/>
+<area shape="rect" title=" " alt="" coords="93,5,236,32"/>
+<area shape="rect" href="vector2d_8h.html" title=" " alt="" coords="5,80,86,107"/>
+<area shape="poly" title=" " alt="" coords="145,35,80,74,78,69,142,30"/>
+<area shape="rect" title=" " alt="" coords="56,155,113,181"/>
+<area shape="poly" title=" " alt="" coords="160,34,101,142,96,140,155,31"/>
+<area shape="rect" title=" " alt="" coords="160,80,254,107"/>
+<area shape="poly" title=" " alt="" coords="174,31,194,65,190,68,169,34"/>
+<area shape="rect" title=" " alt="" coords="278,80,328,107"/>
+<area shape="poly" title=" " alt="" coords="190,30,266,70,264,75,187,35"/>
+<area shape="poly" title=" " alt="" coords="55,106,73,140,68,142,50,108"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -167,8 +173,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:ae56d6b03832f7d25bc5529b2b7590224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to normalize angle to [0, 2pi)  <br /></td></tr>
 <tr class="separator:ae56d6b03832f7d25bc5529b2b7590224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada61a7421ae408c733a6d9561516beb4" id="r_ada61a7421ae408c733a6d9561516beb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2_d.html">Vector2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada61a7421ae408c733a6d9561516beb4">polarToCartesian</a> (float radius, float theta)</td></tr>
-<tr class="memdesc:ada61a7421ae408c733a6d9561516beb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to to transform polar coordinates to cartesian coordinates.  <br /></td></tr>
+<tr class="memdesc:ada61a7421ae408c733a6d9561516beb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to transform polar coordinates to cartesian coordinates.  <br /></td></tr>
 <tr class="separator:ada61a7421ae408c733a6d9561516beb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17501151b57dc982d98dc10f7d01b73" id="r_aa17501151b57dc982d98dc10f7d01b73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa17501151b57dc982d98dc10f7d01b73">rectCollide</a> (const SDL_FRect &amp;rect1, float angle1, const SDL_FRect &amp;rect2, float angle2)</td></tr>
+<tr class="memdesc:aa17501151b57dc982d98dc10f7d01b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if two rectangles collides.  <br /></td></tr>
+<tr class="separator:aa17501151b57dc982d98dc10f7d01b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a525335710b53cb064ca56b936120431e" name="a525335710b53cb064ca56b936120431e"></a>
@@ -239,15 +248,58 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Helper function to to transform polar coordinates to cartesian coordinates. </p>
+<p>Helper function to transform polar coordinates to cartesian coordinates. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">radius</td><td>input radius</td></tr>
-    <tr><td class="paramname">theta</td><td>input angele (radians)</td></tr>
+    <tr><td class="paramname">theta</td><td>input angle (radians)</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the transformed cartesian coordinates</dd></dl>
+
+</div>
+</div>
+<a id="aa17501151b57dc982d98dc10f7d01b73" name="aa17501151b57dc982d98dc10f7d01b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa17501151b57dc982d98dc10f7d01b73">&#9670;&#160;</a></span>rectCollide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rectCollide </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_FRect &amp;</td>          <td class="paramname"><span class="paramname"><em>rect1</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle1</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_FRect &amp;</td>          <td class="paramname"><span class="paramname"><em>rect2</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if two rectangles collides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect1</td><td>First rect.</td></tr>
+    <tr><td class="paramname">angle1</td><td>The rotation of the first rect.</td></tr>
+    <tr><td class="paramname">rect2</td><td>Second rect.</td></tr>
+    <tr><td class="paramname">angle2</td><td>The rotation of the second rect.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the rectangles collides.</dd></dl>
 
 </div>
 </div>

@@ -4,6 +4,7 @@
 #include <command_manager.h>
 #include <shape/shapes.h>
 #include <init.h>
+#include <utility/selection_manager.h>
 #include <SDL2/SDL.h>
 #include <cstdlib>
 #include <stdexcept>
@@ -16,7 +17,6 @@ static const int TICKS_PER_SEC = 1000;
 static const float gunOffset = 14;
 static bool quit = false;
 static float playerSpeed = 500;
-static std::weak_ptr<Objects::Object> controlledObject;
 static uint32_t curTick, prevTick, diffTick;
 
 template<typename T>
@@ -24,10 +24,12 @@ static T timedDifference(T value) noexcept {
 	return value * diffTick / TICKS_PER_SEC;
 }
 
+SelectionManager<std::shared_ptr<Objects::Object>> controlSelector;
+
 class MoveUpCommand : public Commands::Command {
 public:
 	void execute(const ExecuteKey& key) noexcept override {
-		controlledObject.lock()->move(
+		controlSelector.get()->move(
 			Vector2D(0, -timedDifference(playerSpeed)).rotate(
 				Global::playerCamera->getAngle()
 			)
@@ -37,7 +39,7 @@ public:
 class MoveDownCommand : public Commands::Command {
 public:
 	void execute(const ExecuteKey& key) noexcept override {
-		controlledObject.lock()->move(
+		controlSelector.get()->move(
 			Vector2D(0, timedDifference(playerSpeed)).rotate(
 				Global::playerCamera->getAngle()
 			)
@@ -47,7 +49,7 @@ public:
 class MoveLeftCommand : public Commands::Command {
 public:
 	void execute(const ExecuteKey& key) noexcept override {
-		controlledObject.lock()->move(
+		controlSelector.get()->move(
 			Vector2D(-timedDifference(playerSpeed), 0).rotate(
 				Global::playerCamera->getAngle()
 			)
@@ -57,28 +59,27 @@ public:
 class MoveRightCommand : public Commands::Command {
 public:
 	void execute(const ExecuteKey& key) noexcept override {
-		controlledObject.lock()->move(
+		controlSelector.get()->move(
 			Vector2D(timedDifference(playerSpeed), 0).rotate(
 				Global::playerCamera->getAngle()
 			)
 		);
 	}
 };
+class SwitchControlCommand : public Commands::Command {
+public:
+	void execute(const ExecuteKey& key) noexcept override {
+		if (InputHandler::getInstance().isKeyDown(SDLK_LSHIFT))
+			controlSelector.prev();
+		else
+			controlSelector.next();
+		Global::playerCamera->setPivotObject(controlSelector.get());
+	}
+};
 class QuitCommand : public Commands::Command {
 public:
 	void execute(const ExecuteKey& key) noexcept override {
 		quit = true;
-	}
-};
-class SwitchControlCommand : public Commands::Command {
-public:
-	void execute(const ExecuteKey& key) noexcept override {
-		auto tempObject = controlledObject.lock();
-		if (tempObject == Global::playerObject)
-			controlledObject = Global::arrowObject1;
-		else
-			controlledObject = Global::playerObject;
-		Global::playerCamera->setPivotObject(controlledObject.lock());
 	}
 };
 
@@ -218,7 +219,7 @@ static void registerCommands(CommandManager& commandManager) {
 		{}
 		}, std::make_shared<MoveRightCommand>());
 	commandManager.registerCommand({
-		{ {SDLK_TAB, KeyBind::Trigger::TAP}, {SDLK_LSHIFT, KeyBind::Trigger::HOLD} },
+		{ {SDLK_TAB, KeyBind::Trigger::TAP} },
 		{}
 		}, std::make_shared<SwitchControlCommand>());
 	commandManager.registerCommand({
@@ -267,10 +268,12 @@ int main(int argc, char* argv[]) {
 	// initialize
 	Global::init();
 
+	controlSelector.add(Global::playerObject);
+	controlSelector.add(Global::arrowObject1);
+	controlSelector.add(Global::arrowObject2);
+
 	curTick = prevTick = 0;
 	prevTick = SDL_GetTicks();
-
-	controlledObject = Global::playerObject;
 
 	SDL_setFramerate(Global::fpsManager.get(), 144);
 
@@ -348,6 +351,7 @@ int main(int argc, char* argv[]) {
 
 		// set arrow to look at the player object.
 		Global::arrowObject1->lookAt(Global::playerObject->getPosition());
+		Global::arrowObject2->lookAt(Global::playerObject->getPosition());
 
 		// Set crosshair position
 		Vector2D hudCursorPosition = Global::hudView->transformFromRender(
@@ -394,18 +398,22 @@ int main(int argc, char* argv[]) {
 				break;
 		}
 
-		bool bulletHitArrow = false;
+		bool bulletHitArrow1 = false;
+		bool bulletHitArrow2 = false;
 		bool bulletHitHudArrow = false;
 		for (auto bullet : bullets) {
-			bulletHitArrow = bulletHitArrow or bullet->collideWith(*Global::arrowObject1);
+			bulletHitArrow1 = bulletHitArrow1 or bullet->collideWith(*Global::arrowObject1);
+			bulletHitArrow2 = bulletHitArrow2 or bullet->collideWith(*Global::arrowObject2);
 			bulletHitHudArrow = bulletHitHudArrow or bullet->collideWith(*Global::hudArrow);
 		}
-		if (bulletHitArrow) {
+		if (bulletHitArrow1) {
+			Global::hudCircle->setColor({ 0xFF, 0x00, 0x00, 0xFF });
+		} else if (bulletHitArrow2) {
 			Global::hudCircle->setColor({ 0x00, 0xFF, 0x00, 0xFF });
 		} else if (bulletHitHudArrow) {
 			Global::hudCircle->setColor({ 0x00, 0x00, 0xFF, 0xFF });
 		} else {
-			Global::hudCircle->setColor({ 0xFF, 0x00, 0x00, 0x7F });
+			Global::hudCircle->setColor({ 0xFF, 0xFF, 0xFF, 0x7F });
 		}
 
 		// rotate hud arrow

@@ -43,7 +43,7 @@ size_t SelectionManager<T>::size(void) const noexcept {
 
 template<class T>
 void SelectionManager<T>::add(T newSelection) noexcept {
-	if (currentSelection == SELECTION_NOT_SET)
+	if (selections.empty() and currentSelection == SELECTION_NOT_SET)
 		currentSelection = 0;
 	selections.push_back(newSelection);
 }
@@ -60,6 +60,8 @@ void SelectionManager<T>::remove(size_t selectionId) {
 	selections.erase(selections.begin() + selectionId);
 	if (currentSelection >= selectionId)
 		currentSelection--;
+	if (selections.empty())
+		currentSelection = SELECTION_NOT_SET;
 }
 
 template<class T>

@@ -21,10 +21,14 @@ class \mbox{\hyperlink{class_renderer_1_1_render_key}{Render\+Key}}
 \item 
 void \mbox{\hyperlink{class_renderer_aa42607899757d0a1c5e8fe0aa4cb5a7f}{operator=}} (const \mbox{\hyperlink{class_renderer}{Renderer}} \&)=delete
 \item 
+SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_renderer_a5e2026022e39786ab550084b04f64534}{get\+Window}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Gets game window. \end{DoxyCompactList}\item 
 SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_renderer_a3d386b12348c2d9e9de33765bc034e87}{create\+Texture}} (Create\+Texture\+Key key, SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*}surface) const
 \begin{DoxyCompactList}\small\item\em Creates a texture from a SDL\+\_\+\+Surface. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_renderer_ab965431b93fb4daf2fa2af00b328856a}{register\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$ object\+Ptr) noexcept
+\mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_renderer_a5f0c23b3013e82d5c5afefbab0d67997}{get\+Window\+Size}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Get underlying SDL\+\_\+\+Renderer renderer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_renderer_ab965431b93fb4daf2fa2af00b328856a}{register\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$ object\+Ptr) noexcept
+\begin{DoxyCompactList}\small\item\em Registers the object for rendering. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_renderer_a32457b0b18154de7a9ad361009a987c2}{remove\+Object}} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_render_object_base}{Render\+Object\+Base}} $>$ object\+Ptr) noexcept
 \begin{DoxyCompactList}\small\item\em Unregisters the object for rendering. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_renderer_a7d79b5b497ea019acf577ed7b77d3247}{render}} (const \mbox{\hyperlink{class_renderer_1_1_render_key}{Render\+Key}} \&key)
@@ -109,6 +113,37 @@ Prints renderer debug info.
 \doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{class_renderer}{Renderer}} \& Renderer\+::get\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
 
+\Hypertarget{class_renderer_a5e2026022e39786ab550084b04f64534}\label{class_renderer_a5e2026022e39786ab550084b04f64534} 
+\index{Renderer@{Renderer}!getWindow@{getWindow}}
+\index{getWindow@{getWindow}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{getWindow()}{getWindow()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*} Renderer\+::get\+Window (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets game window. 
+
+\begin{DoxyReturn}{Returns}
+The game window. 
+\end{DoxyReturn}
+\Hypertarget{class_renderer_a5f0c23b3013e82d5c5afefbab0d67997}\label{class_renderer_a5f0c23b3013e82d5c5afefbab0d67997} 
+\index{Renderer@{Renderer}!getWindowSize@{getWindowSize}}
+\index{getWindowSize@{getWindowSize}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{getWindowSize()}{getWindowSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2_d}{Vector2D}} Renderer\+::get\+Window\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get underlying SDL\+\_\+\+Renderer renderer. 
+
+\begin{DoxyReturn}{Returns}
+The underlying renderer.
+\end{DoxyReturn}
+
+
+Gets current window size. \begin{DoxyReturn}{Returns}
+Current window size. 
+\end{DoxyReturn}
 \Hypertarget{class_renderer_a79f800b2a66fad3a0941c417700c2aed}\label{class_renderer_a79f800b2a66fad3a0941c417700c2aed} 
 \index{Renderer@{Renderer}!moveLayerBottom@{moveLayerBottom}}
 \index{moveLayerBottom@{moveLayerBottom}!Renderer@{Renderer}}
@@ -183,14 +218,7 @@ Moves the object up one layer. Throws std\+::invalid\+\_\+argument if @object\+P
 
 
 
-Get underlying SDL\+\_\+\+Renderer renderer. 
-
-\begin{DoxyReturn}{Returns}
-The underlying renderer.
-\end{DoxyReturn}
-
-
-Registers the object for rendering.
+Registers the object for rendering. 
 
 
 \begin{DoxyParams}{Parameters}

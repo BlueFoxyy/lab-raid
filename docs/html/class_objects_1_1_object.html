@@ -166,6 +166,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0eae3493810e3a2c20783ee22a3f0636" id="r_a0eae3493810e3a2c20783ee22a3f0636"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0eae3493810e3a2c20783ee22a3f0636">getVisibility</a> (void) const noexcept</td></tr>
 <tr class="memdesc:a0eae3493810e3a2c20783ee22a3f0636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the object's visibility.  <br /></td></tr>
 <tr class="separator:a0eae3493810e3a2c20783ee22a3f0636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52faee98d04e60c2064a5b9a54183d07" id="r_a52faee98d04e60c2064a5b9a54183d07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52faee98d04e60c2064a5b9a54183d07">collideWith</a> (const <a class="el" href="class_objects_1_1_object.html">Object</a> &amp;other) const noexcept</td></tr>
+<tr class="memdesc:a52faee98d04e60c2064a5b9a54183d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this object collides with &lsquo;other&rsquo; object.  <br /></td></tr>
+<tr class="separator:a52faee98d04e60c2064a5b9a54183d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76b312de48c23b0453166916f381d4f5" id="r_a76b312de48c23b0453166916f381d4f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76b312de48c23b0453166916f381d4f5">nextTexture</a> (void) noexcept</td></tr>
 <tr class="memdesc:a76b312de48c23b0453166916f381d4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to next texture, texture ID wraps around.  <br /></td></tr>
 <tr class="separator:a76b312de48c23b0453166916f381d4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -269,6 +272,40 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a52faee98d04e60c2064a5b9a54183d07" name="a52faee98d04e60c2064a5b9a54183d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52faee98d04e60c2064a5b9a54183d07">&#9670;&#160;</a></span>collideWith()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Objects::Object::collideWith </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_objects_1_1_object.html">Object</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if this object collides with &lsquo;other&rsquo; object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The other object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If collided. </dd></dl>
+
+</div>
+</div>
 <a id="acb5993b839f6820c5fb57c2d10065379" name="acb5993b839f6820c5fb57c2d10065379"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb5993b839f6820c5fb57c2d10065379">&#9670;&#160;</a></span>debug()</h2>
 

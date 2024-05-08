@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for Objects\+::Bullet\+:
-\nopagebreak
+Inheritance diagram for Objects\+::Bullet\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,13 +20,13 @@ Collaboration diagram for Objects\+::Bullet\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=178pt]{class_objects_1_1_bullet__coll__graph}
+\includegraphics[width=253pt]{class_objects_1_1_bullet__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_objects_1_1_bullet_a095a185df71bebb745c25e3b4a9481c8}{Bullet}} (const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}view, \mbox{\hyperlink{class_vector2_d}{Vector2D}} position, float angle, float speed=0.\+5f)
+\mbox{\hyperlink{class_objects_1_1_bullet_ae89c888ee820088d7bee63def13df043}{Bullet}} (const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}view, \mbox{\hyperlink{class_vector2_d}{Vector2D}} position, float angle, float speed=7.\+0f)
 \item 
 Uint32 \mbox{\hyperlink{class_objects_1_1_bullet_a9ba0c2c917e836f3bee0b2318115f8ae}{get\+Alive\+Time}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets the alive time of this bullet. \end{DoxyCompactList}\item 
@@ -70,6 +69,8 @@ void \mbox{\hyperlink{class_objects_1_1_object_a9178f5e6996cd09c1cc1537bfcaed9cc
 \begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s visibility. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_objects_1_1_object_a0eae3493810e3a2c20783ee22a3f0636}{get\+Visibility}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets the object\textquotesingle{}s visibility. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_objects_1_1_object_a52faee98d04e60c2064a5b9a54183d07}{collide\+With}} (const \mbox{\hyperlink{class_objects_1_1_object}{Object}} \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if this object collides with `other' object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_a76b312de48c23b0453166916f381d4f5}{next\+Texture}} (void) noexcept
 \begin{DoxyCompactList}\small\item\em Set to next texture, texture ID wraps around. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_aefdb938836233aeb16cb583af56518f3}{previous\+Texture}} (void) noexcept
@@ -86,14 +87,19 @@ SDL\+\_\+\+FRect \mbox{\hyperlink{class_objects_1_1_object_a8c7b5dbbb37f5ea6e3e6
 \begin{DoxyCompactList}\small\item\em Gets render rectangle for rendering. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_acb5993b839f6820c5fb57c2d10065379}{debug}} (void) const noexcept override
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_objects_1_1_bullet_a7350e78e0ed712e20b4801986c947d8c}{bullet\+Size}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_objects_1_1_bullet_a095a185df71bebb745c25e3b4a9481c8}\label{class_objects_1_1_bullet_a095a185df71bebb745c25e3b4a9481c8} 
+\Hypertarget{class_objects_1_1_bullet_ae89c888ee820088d7bee63def13df043}\label{class_objects_1_1_bullet_ae89c888ee820088d7bee63def13df043} 
 \index{Objects::Bullet@{Objects::Bullet}!Bullet@{Bullet}}
 \index{Bullet@{Bullet}!Objects::Bullet@{Objects::Bullet}}
 \doxysubsubsection{\texorpdfstring{Bullet()}{Bullet()}}
-{\footnotesize\ttfamily Objects\+::\+Bullet\+::\+Bullet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}}]{view,  }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{position,  }\item[{float}]{angle,  }\item[{float}]{speed = {\ttfamily 0.5f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Objects\+::\+Bullet\+::\+Bullet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}}]{view,  }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{position,  }\item[{float}]{angle,  }\item[{float}]{speed = {\ttfamily 7.0f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -124,6 +130,15 @@ Updates the object state.
 
 
 Reimplemented from \mbox{\hyperlink{class_objects_1_1_object_a00c2f6c38bbc3bae3ed14259a88b2a70}{Objects\+::\+Object}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_objects_1_1_bullet_a7350e78e0ed712e20b4801986c947d8c}\label{class_objects_1_1_bullet_a7350e78e0ed712e20b4801986c947d8c} 
+\index{Objects::Bullet@{Objects::Bullet}!bulletSize@{bulletSize}}
+\index{bulletSize@{bulletSize}!Objects::Bullet@{Objects::Bullet}}
+\doxysubsubsection{\texorpdfstring{bulletSize}{bulletSize}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector2_d}{Vector2D}} Objects\+::\+Bullet\+::bullet\+Size\hspace{0.3cm}{\ttfamily [static]}}
 
 
 

@@ -96,11 +96,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8c6e15f666cb188a936004add75e6c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa42607899757d0a1c5e8fe0aa4cb5a7f" id="r_aa42607899757d0a1c5e8fe0aa4cb5a7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa42607899757d0a1c5e8fe0aa4cb5a7f">operator=</a> (const <a class="el" href="class_renderer.html">Renderer</a> &amp;)=delete</td></tr>
 <tr class="separator:aa42607899757d0a1c5e8fe0aa4cb5a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2026022e39786ab550084b04f64534" id="r_a5e2026022e39786ab550084b04f64534"><td class="memItemLeft" align="right" valign="top">SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e2026022e39786ab550084b04f64534">getWindow</a> (void) noexcept</td></tr>
+<tr class="memdesc:a5e2026022e39786ab550084b04f64534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets game window.  <br /></td></tr>
+<tr class="separator:a5e2026022e39786ab550084b04f64534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d386b12348c2d9e9de33765bc034e87" id="r_a3d386b12348c2d9e9de33765bc034e87"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d386b12348c2d9e9de33765bc034e87">createTexture</a> (CreateTextureKey key, SDL_Surface *surface) const</td></tr>
 <tr class="memdesc:a3d386b12348c2d9e9de33765bc034e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a texture from a SDL_Surface.  <br /></td></tr>
 <tr class="separator:a3d386b12348c2d9e9de33765bc034e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0c23b3013e82d5c5afefbab0d67997" id="r_a5f0c23b3013e82d5c5afefbab0d67997"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2_d.html">Vector2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f0c23b3013e82d5c5afefbab0d67997">getWindowSize</a> (void) const noexcept</td></tr>
+<tr class="memdesc:a5f0c23b3013e82d5c5afefbab0d67997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get underlying SDL_Renderer renderer.  <br /></td></tr>
+<tr class="separator:a5f0c23b3013e82d5c5afefbab0d67997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab965431b93fb4daf2fa2af00b328856a" id="r_ab965431b93fb4daf2fa2af00b328856a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab965431b93fb4daf2fa2af00b328856a">registerObject</a> (std::shared_ptr&lt; <a class="el" href="class_render_object_base.html">RenderObjectBase</a> &gt; objectPtr) noexcept</td></tr>
-<tr class="memdesc:ab965431b93fb4daf2fa2af00b328856a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get underlying SDL_Renderer renderer.  <br /></td></tr>
+<tr class="memdesc:ab965431b93fb4daf2fa2af00b328856a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the object for rendering.  <br /></td></tr>
 <tr class="separator:ab965431b93fb4daf2fa2af00b328856a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32457b0b18154de7a9ad361009a987c2" id="r_a32457b0b18154de7a9ad361009a987c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32457b0b18154de7a9ad361009a987c2">removeObject</a> (std::weak_ptr&lt; <a class="el" href="class_render_object_base.html">RenderObjectBase</a> &gt; objectPtr) noexcept</td></tr>
 <tr class="memdesc:a32457b0b18154de7a9ad361009a987c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters the object for rendering.  <br /></td></tr>
@@ -272,6 +278,63 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5e2026022e39786ab550084b04f64534" name="a5e2026022e39786ab550084b04f64534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e2026022e39786ab550084b04f64534">&#9670;&#160;</a></span>getWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Window * Renderer::getWindow </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets game window. </p>
+<dl class="section return"><dt>Returns</dt><dd>The game window. </dd></dl>
+
+</div>
+</div>
+<a id="a5f0c23b3013e82d5c5afefbab0d67997" name="a5f0c23b3013e82d5c5afefbab0d67997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f0c23b3013e82d5c5afefbab0d67997">&#9670;&#160;</a></span>getWindowSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector2_d.html">Vector2D</a> Renderer::getWindowSize </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get underlying SDL_Renderer renderer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The underlying renderer.</dd></dl>
+<p>Gets current window size. </p><dl class="section return"><dt>Returns</dt><dd>Current window size. </dd></dl>
+
+</div>
+</div>
 <a id="a79f800b2a66fad3a0941c417700c2aed" name="a79f800b2a66fad3a0941c417700c2aed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a79f800b2a66fad3a0941c417700c2aed">&#9670;&#160;</a></span>moveLayerBottom()</h2>
 
@@ -420,9 +483,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get underlying SDL_Renderer renderer. </p>
-<dl class="section return"><dt>Returns</dt><dd>The underlying renderer.</dd></dl>
-<p>Registers the object for rendering.</p>
+<p>Registers the object for rendering. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">objectPtr</td><td>std::shared_ptr of the object</td></tr>

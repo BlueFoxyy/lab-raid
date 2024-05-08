@@ -11,8 +11,7 @@
 
 
 
-Inheritance diagram for Objects\+::Object\+:
-\nopagebreak
+Inheritance diagram for Objects\+::Object\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -65,6 +64,8 @@ void \mbox{\hyperlink{class_objects_1_1_object_a9178f5e6996cd09c1cc1537bfcaed9cc
 \begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s visibility. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_objects_1_1_object_a0eae3493810e3a2c20783ee22a3f0636}{get\+Visibility}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets the object\textquotesingle{}s visibility. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_objects_1_1_object_a52faee98d04e60c2064a5b9a54183d07}{collide\+With}} (const \mbox{\hyperlink{class_objects_1_1_object}{Object}} \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if this object collides with `other' object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_a76b312de48c23b0453166916f381d4f5}{next\+Texture}} (void) noexcept
 \begin{DoxyCompactList}\small\item\em Set to next texture, texture ID wraps around. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_aefdb938836233aeb16cb583af56518f3}{previous\+Texture}} (void) noexcept
@@ -124,6 +125,24 @@ Constructs a new object.
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_objects_1_1_object_a52faee98d04e60c2064a5b9a54183d07}\label{class_objects_1_1_object_a52faee98d04e60c2064a5b9a54183d07} 
+\index{Objects::Object@{Objects::Object}!collideWith@{collideWith}}
+\index{collideWith@{collideWith}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{collideWith()}{collideWith()}}
+{\footnotesize\ttfamily bool Objects\+::\+Object\+::collide\+With (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_objects_1_1_object}{Object}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Check if this object collides with `other' object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If collided. 
+\end{DoxyReturn}
 \Hypertarget{class_objects_1_1_object_acb5993b839f6820c5fb57c2d10065379}\label{class_objects_1_1_object_acb5993b839f6820c5fb57c2d10065379} 
 \index{Objects::Object@{Objects::Object}!debug@{debug}}
 \index{debug@{debug}!Objects::Object@{Objects::Object}}

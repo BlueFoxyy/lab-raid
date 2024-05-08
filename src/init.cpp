@@ -6,7 +6,9 @@ namespace Global {
 	std::unique_ptr<Views::HUD> hudView;
 	std::unique_ptr<Views::HUD> menuView;
 
-	std::shared_ptr<Objects::Object> playerObject, arrowObject1;
+	std::shared_ptr<Objects::Object> playerObject;
+	std::shared_ptr<Objects::Object> arrowObject1;
+	std::shared_ptr<Objects::Object> arrowObject2;
 	std::shared_ptr<Shapes::Circle> yellowCircle;
 	std::shared_ptr<Shapes::Circle> greenCircle;
 	std::shared_ptr<Shapes::Circle> blueCircle;
@@ -54,6 +56,12 @@ namespace Global {
 			std::vector<std::string>{ "arrow" },
 			playerCamera.get(),
 			Vector2D{ -150, -150 },
+			Vector2D{ 50, 37.5f }
+		);
+		arrowObject2 = std::make_shared<Objects::Object>(
+			std::vector<std::string>{ "arrow" },
+			playerCamera.get(),
+			Vector2D{ 150, 150 },
 			Vector2D{ 50, 37.5f }
 		);
 		yellowCircle = std::make_shared<Shapes::Circle>(
@@ -127,7 +135,7 @@ namespace Global {
 			hudView.get(),
 			hudView->getDimension() + Vector2D(-50, -50),
 			50,
-			SDL_Color{ 0xFF, 0x00, 0x00, 0x7F }
+			SDL_Color{ 0xFF, 0xFF, 0xFF, 0x7F }
 		);
 
 		// CROSSHAIR
@@ -156,6 +164,7 @@ namespace Global {
 		// game
 		Renderer::getInstance().registerObject(playerObject);
 		Renderer::getInstance().registerObject(arrowObject1);
+		Renderer::getInstance().registerObject(arrowObject2);
 		Renderer::getInstance().registerObject(purpleCircle);
 		Renderer::getInstance().registerObject(yellowCircle);
 		Renderer::getInstance().registerObject(greenCircle);

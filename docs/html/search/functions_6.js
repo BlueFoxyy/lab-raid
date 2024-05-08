@@ -16,7 +16,9 @@ var searchData=
   ['gettexture_13',['getTexture',['../class_objects_1_1_object.html#af311007e173e77796feb3dc7015bbb4a',1,'Objects::Object::getTexture()'],['../class_texture_handler.html#a3154a5ba25c0cb38593988d38705be57',1,'TextureHandler::getTexture()']]],
   ['gettexturecount_14',['getTextureCount',['../class_objects_1_1_object.html#afa7a354ed265f7f4e5335e607567ba56',1,'Objects::Object']]],
   ['getvisibility_15',['getVisibility',['../class_objects_1_1_object.html#a0eae3493810e3a2c20783ee22a3f0636',1,'Objects::Object']]],
-  ['getx_16',['getX',['../class_vector2_d.html#a2a0ad3acac338642105d42f02a97f49b',1,'Vector2D']]],
-  ['gety_17',['getY',['../class_vector2_d.html#a407f8bde87bb84ad073f83ceda8c1849',1,'Vector2D']]],
-  ['getzoom_18',['getZoom',['../class_views_1_1_camera.html#a84dd006c7427b266cb4ae767f49f6f2a',1,'Views::Camera::getZoom()'],['../class_views_1_1_view.html#abafa0017ee91d53098bf292a754801fd',1,'Views::View::getZoom()']]]
+  ['getwindow_16',['getWindow',['../class_renderer.html#a5e2026022e39786ab550084b04f64534',1,'Renderer']]],
+  ['getwindowsize_17',['getWindowSize',['../class_renderer.html#a5f0c23b3013e82d5c5afefbab0d67997',1,'Renderer']]],
+  ['getx_18',['getX',['../class_vector2_d.html#a2a0ad3acac338642105d42f02a97f49b',1,'Vector2D']]],
+  ['gety_19',['getY',['../class_vector2_d.html#a407f8bde87bb84ad073f83ceda8c1849',1,'Vector2D']]],
+  ['getzoom_20',['getZoom',['../class_views_1_1_camera.html#a84dd006c7427b266cb4ae767f49f6f2a',1,'Views::Camera::getZoom()'],['../class_views_1_1_view.html#abafa0017ee91d53098bf292a754801fd',1,'Views::View::getZoom()']]]
 ];

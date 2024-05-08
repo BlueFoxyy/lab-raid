@@ -7,5 +7,7 @@ var searchData=
   ['hollowcircle1_4',['hollowCircle1',['../namespace_global.html#ab2967071f045a56eef5f2f4ccd2de657',1,'Global']]],
   ['hud_5',['HUD',['../class_views_1_1_h_u_d.html',1,'Views::HUD'],['../class_views_1_1_h_u_d.html#a6b4105075bf75d337a88da134a7b888f',1,'Views::HUD::HUD()']]],
   ['hud_2eh_6',['hud.h',['../hud_8h.html',1,'']]],
-  ['hudview_7',['hudView',['../namespace_global.html#ad9ef09d82de4f79c676f530528dacd47',1,'Global']]]
+  ['hudarrow_7',['hudArrow',['../namespace_global.html#a8b618ffdd2b44565d11f96dcbb4dbe3b',1,'Global']]],
+  ['hudcircle_8',['hudCircle',['../namespace_global.html#a188eec1612962501060e1072107704ec',1,'Global']]],
+  ['hudview_9',['hudView',['../namespace_global.html#ad9ef09d82de4f79c676f530528dacd47',1,'Global']]]
 ];
