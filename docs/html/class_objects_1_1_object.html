@@ -139,9 +139,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac84e98c02aeab7997429428f762a9638" id="r_ac84e98c02aeab7997429428f762a9638"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2_d.html">Vector2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac84e98c02aeab7997429428f762a9638">getPosition</a> (void) const noexcept</td></tr>
 <tr class="memdesc:ac84e98c02aeab7997429428f762a9638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the position of the object.  <br /></td></tr>
 <tr class="separator:ac84e98c02aeab7997429428f762a9638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee97e93fd82c387ea0a89c235ba5ddde" id="r_aee97e93fd82c387ea0a89c235ba5ddde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee97e93fd82c387ea0a89c235ba5ddde">setPosition</a> (const <a class="el" href="class_vector2_d.html">Vector2D</a> &amp;newPosition) noexcept</td></tr>
+<tr class="memdesc:aee97e93fd82c387ea0a89c235ba5ddde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the object.  <br /></td></tr>
+<tr class="separator:aee97e93fd82c387ea0a89c235ba5ddde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a737a4e82c567b7b9ed88a13c56141559" id="r_a737a4e82c567b7b9ed88a13c56141559"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vector2_d.html">Vector2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a737a4e82c567b7b9ed88a13c56141559">getDimension</a> (void) const noexcept</td></tr>
 <tr class="memdesc:a737a4e82c567b7b9ed88a13c56141559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the dimension of the object.  <br /></td></tr>
 <tr class="separator:a737a4e82c567b7b9ed88a13c56141559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90738fe417d0687d7d9b499ae0e27b2b" id="r_a90738fe417d0687d7d9b499ae0e27b2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90738fe417d0687d7d9b499ae0e27b2b">setDimension</a> (const <a class="el" href="class_vector2_d.html">Vector2D</a> &amp;newDimension)</td></tr>
+<tr class="memdesc:a90738fe417d0687d7d9b499ae0e27b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the dimension of the object. Throws 'std::invalid_argument' if one of the dimensions is negative.  <br /></td></tr>
+<tr class="separator:a90738fe417d0687d7d9b499ae0e27b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9234b7b93dad47988ddc0c18f0cbf417" id="r_a9234b7b93dad47988ddc0c18f0cbf417"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9234b7b93dad47988ddc0c18f0cbf417">move</a> (const <a class="el" href="class_vector2_d.html">Vector2D</a> &amp;translate) noexcept</td></tr>
 <tr class="memdesc:a9234b7b93dad47988ddc0c18f0cbf417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the object by the translate vector.  <br /></td></tr>
 <tr class="separator:a9234b7b93dad47988ddc0c18f0cbf417"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -825,6 +831,52 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a90738fe417d0687d7d9b499ae0e27b2b" name="a90738fe417d0687d7d9b499ae0e27b2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90738fe417d0687d7d9b499ae0e27b2b">&#9670;&#160;</a></span>setDimension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Objects::Object::setDimension </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector2_d.html">Vector2D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>newDimension</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the dimension of the object. Throws 'std::invalid_argument' if one of the dimensions is negative. </p>
+
+</div>
+</div>
+<a id="aee97e93fd82c387ea0a89c235ba5ddde" name="aee97e93fd82c387ea0a89c235ba5ddde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee97e93fd82c387ea0a89c235ba5ddde">&#9670;&#160;</a></span>setPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Objects::Object::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector2_d.html">Vector2D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>newPosition</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the position of the object. </p>
 
 </div>
 </div>

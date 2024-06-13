@@ -42,8 +42,12 @@ SDL\+\_\+\+Renderer\+Flip \mbox{\hyperlink{class_objects_1_1_object_ab919f32b430
 \begin{DoxyCompactList}\small\item\em Returns the flip flag used by SDL. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_objects_1_1_object_ac84e98c02aeab7997429428f762a9638}{get\+Position}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets the position of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_aee97e93fd82c387ea0a89c235ba5ddde}{set\+Position}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&new\+Position) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the position of the object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_objects_1_1_object_a737a4e82c567b7b9ed88a13c56141559}{get\+Dimension}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets the dimension of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a90738fe417d0687d7d9b499ae0e27b2b}{set\+Dimension}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&new\+Dimension)
+\begin{DoxyCompactList}\small\item\em Sets the dimension of the object. Throws \textquotesingle{}std\+::invalid\+\_\+argument\textquotesingle{} if one of the dimensions is negative. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_a9234b7b93dad47988ddc0c18f0cbf417}{move}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&translate) noexcept
 \begin{DoxyCompactList}\small\item\em Moves the object by the translate vector. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_a6eca4e624d67f8f4d3816bf385766e1f}{stretchX}} (float ratio) noexcept

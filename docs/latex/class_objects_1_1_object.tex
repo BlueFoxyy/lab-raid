@@ -46,8 +46,12 @@ SDL\+\_\+\+Renderer\+Flip \mbox{\hyperlink{class_objects_1_1_object_ab919f32b430
 \begin{DoxyCompactList}\small\item\em Returns the flip flag used by SDL. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_objects_1_1_object_ac84e98c02aeab7997429428f762a9638}{get\+Position}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets the position of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_aee97e93fd82c387ea0a89c235ba5ddde}{set\+Position}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&new\+Position) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the position of the object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_objects_1_1_object_a737a4e82c567b7b9ed88a13c56141559}{get\+Dimension}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets the dimension of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a90738fe417d0687d7d9b499ae0e27b2b}{set\+Dimension}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&new\+Dimension)
+\begin{DoxyCompactList}\small\item\em Sets the dimension of the object. Throws \textquotesingle{}std\+::invalid\+\_\+argument\textquotesingle{} if one of the dimensions is negative. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_a9234b7b93dad47988ddc0c18f0cbf417}{move}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&translate) noexcept
 \begin{DoxyCompactList}\small\item\em Moves the object by the translate vector. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_a6eca4e624d67f8f4d3816bf385766e1f}{stretchX}} (float ratio) noexcept
@@ -376,6 +380,26 @@ Sets rotation angle to.
 {\em new\+Angle} & The new angle to set to. (in radians)\\
 \hline
 \end{DoxyParams}
+\Hypertarget{class_objects_1_1_object_a90738fe417d0687d7d9b499ae0e27b2b}\label{class_objects_1_1_object_a90738fe417d0687d7d9b499ae0e27b2b} 
+\index{Objects::Object@{Objects::Object}!setDimension@{setDimension}}
+\index{setDimension@{setDimension}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{setDimension()}{setDimension()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::set\+Dimension (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{new\+Dimension }\end{DoxyParamCaption})}
+
+
+
+Sets the dimension of the object. Throws \textquotesingle{}std\+::invalid\+\_\+argument\textquotesingle{} if one of the dimensions is negative. 
+
+\Hypertarget{class_objects_1_1_object_aee97e93fd82c387ea0a89c235ba5ddde}\label{class_objects_1_1_object_aee97e93fd82c387ea0a89c235ba5ddde} 
+\index{Objects::Object@{Objects::Object}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Objects::Object@{Objects::Object}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Objects\+::\+Object\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the position of the object. 
+
 \Hypertarget{class_objects_1_1_object_a4fb08ddfcc7f2d4d94899e1a530cd003}\label{class_objects_1_1_object_a4fb08ddfcc7f2d4d94899e1a530cd003} 
 \index{Objects::Object@{Objects::Object}!setTexture@{setTexture}}
 \index{setTexture@{setTexture}!Objects::Object@{Objects::Object}}

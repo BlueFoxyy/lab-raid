@@ -15,8 +15,7 @@ Inheritance diagram for Objects\+::Bullet\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Objects\+::Bullet\+:
-\nopagebreak
+Collaboration diagram for Objects\+::Bullet\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,7 +25,7 @@ Collaboration diagram for Objects\+::Bullet\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_objects_1_1_bullet_ae89c888ee820088d7bee63def13df043}{Bullet}} (const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}view, \mbox{\hyperlink{class_vector2_d}{Vector2D}} position, float angle, float speed=7.\+0f)
+\mbox{\hyperlink{class_objects_1_1_bullet_ad92ad7ff15b83ac9e7625987abb58ad7}{Bullet}} (const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}view, \mbox{\hyperlink{class_vector2_d}{Vector2D}} position, float angle, float speed=20.\+0f)
 \item 
 Uint32 \mbox{\hyperlink{class_objects_1_1_bullet_a9ba0c2c917e836f3bee0b2318115f8ae}{get\+Alive\+Time}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets the alive time of this bullet. \end{DoxyCompactList}\item 
@@ -51,8 +50,12 @@ SDL\+\_\+\+Renderer\+Flip \mbox{\hyperlink{class_objects_1_1_object_ab919f32b430
 \begin{DoxyCompactList}\small\item\em Returns the flip flag used by SDL. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_objects_1_1_object_ac84e98c02aeab7997429428f762a9638}{get\+Position}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets the position of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_aee97e93fd82c387ea0a89c235ba5ddde}{set\+Position}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&new\+Position) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the position of the object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class_objects_1_1_object_a737a4e82c567b7b9ed88a13c56141559}{get\+Dimension}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets the dimension of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_objects_1_1_object_a90738fe417d0687d7d9b499ae0e27b2b}{set\+Dimension}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&new\+Dimension)
+\begin{DoxyCompactList}\small\item\em Sets the dimension of the object. Throws \textquotesingle{}std\+::invalid\+\_\+argument\textquotesingle{} if one of the dimensions is negative. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_a9234b7b93dad47988ddc0c18f0cbf417}{move}} (const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \&translate) noexcept
 \begin{DoxyCompactList}\small\item\em Moves the object by the translate vector. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_objects_1_1_object_a6eca4e624d67f8f4d3816bf385766e1f}{stretchX}} (float ratio) noexcept
@@ -95,11 +98,11 @@ static const \mbox{\hyperlink{class_vector2_d}{Vector2D}} \mbox{\hyperlink{class
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_objects_1_1_bullet_ae89c888ee820088d7bee63def13df043}\label{class_objects_1_1_bullet_ae89c888ee820088d7bee63def13df043} 
+\Hypertarget{class_objects_1_1_bullet_ad92ad7ff15b83ac9e7625987abb58ad7}\label{class_objects_1_1_bullet_ad92ad7ff15b83ac9e7625987abb58ad7} 
 \index{Objects::Bullet@{Objects::Bullet}!Bullet@{Bullet}}
 \index{Bullet@{Bullet}!Objects::Bullet@{Objects::Bullet}}
 \doxysubsubsection{\texorpdfstring{Bullet()}{Bullet()}}
-{\footnotesize\ttfamily Objects\+::\+Bullet\+::\+Bullet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}}]{view,  }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{position,  }\item[{float}]{angle,  }\item[{float}]{speed = {\ttfamily 7.0f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Objects\+::\+Bullet\+::\+Bullet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_views_1_1_view}{Views\+::\+View}} \texorpdfstring{$\ast$}{*}}]{view,  }\item[{\mbox{\hyperlink{class_vector2_d}{Vector2D}}}]{position,  }\item[{float}]{angle,  }\item[{float}]{speed = {\ttfamily 20.0f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
