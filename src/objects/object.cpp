@@ -41,9 +41,22 @@ namespace Objects {
 		return position;
 	}
 
+	void Object::setPosition(const Vector2D& newPosition) noexcept {
+		position = newPosition;
+	}
+
 	Vector2D Object::getDimension(void) const noexcept {
 		return dimension;
 	}
+
+	void Object::setDimension(const Vector2D& newDimension) {
+		if (newDimension.getX() < 0 or newDimension.getY() < 0)
+			throw std::invalid_argument(std::format("In Object::setDimension(): Invalid dimensions: ({}, {})",
+				newDimension.getX(), newDimension.getY()
+			));
+		dimension = newDimension;
+	}
+
 
 	void Object::move(const Vector2D& translate) noexcept {
 		position += translate;

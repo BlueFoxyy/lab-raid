@@ -41,5 +41,7 @@ namespace Global {
 	extern std::shared_ptr<Shapes::Line> crosshairLine2;
 	extern std::shared_ptr<Shapes::HollowCircle> crosshairCircle1;
 
+	extern std::shared_ptr<Objects::Object> cameraObject;
+
 	void init();
 }

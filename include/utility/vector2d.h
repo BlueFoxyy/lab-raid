@@ -28,6 +28,7 @@ public:
 	friend Vector2D operator - (const Vector2D&) noexcept;
 	friend Vector2D operator - (const Vector2D&, const Vector2D&) noexcept;
 	friend Vector2D operator * (const Vector2D&, float) noexcept;
+	friend Vector2D operator * (float, const Vector2D&) noexcept;
 	friend Vector2D operator / (const Vector2D&, float) noexcept;
 	friend Vector2D& operator += (Vector2D&, const Vector2D&) noexcept;
 	friend Vector2D& operator -= (Vector2D&, const Vector2D&) noexcept;

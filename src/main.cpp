@@ -317,13 +317,13 @@ int main(int argc, char* argv[]) {
 //		Global::playerObject->lookAt(Global::object->getPosition());
 
 		// get cursor's virtual position in game coordinate system
-		Vector2D cursorPosition =
+		Vector2D playerCursorPosition =
 			Global::playerCamera->transformFromRender(
 				InputHandler::getInstance().getMousePosition()
 			);
 
 		// set player to look at cursor
-		Global::playerObject->lookAt(cursorPosition);
+		Global::playerObject->lookAt(playerCursorPosition);
 		
 		// smooth scrolling
 		float scrollY = InputHandler::getInstance().pollMouseScroll().getY();
@@ -342,9 +342,9 @@ int main(int argc, char* argv[]) {
 			zoomOutTimer--;
 			ZoomOutCommand::command();
 		}
-
+		
 		// adjust angle so that the gun points at the cursor instead of player look at the cursor
-		Vector2D distVector = cursorPosition - Global::playerObject->getPosition();
+		Vector2D distVector = playerCursorPosition - Global::playerObject->getPosition();
 		float offsetAngle = gunOffset / distVector.len();
 //		SDL_LogDebug(SDL_LOG_CATEGORY_APPLICATION, "offsetAngle = %lf", offsetAngle);
 		Global::playerObject->rotate(offsetAngle);
@@ -354,8 +354,9 @@ int main(int argc, char* argv[]) {
 		Global::arrowObject2->lookAt(Global::playerObject->getPosition());
 
 		// Set crosshair position
+		Vector2D cursorPosition = InputHandler::getInstance().getMousePosition();
 		Vector2D hudCursorPosition = Global::hudView->transformFromRender(
-			InputHandler::getInstance().getMousePosition()
+			cursorPosition
 		);
 		Global::crosshairLine1->setBeginPoint(
 			hudCursorPosition + Vector2D{ 0, -31 }
@@ -418,6 +419,12 @@ int main(int argc, char* argv[]) {
 
 		// rotate hud arrow
 		Global::hudArrow->rotate(timedDifference(2*M_PI));
+
+		// set camera object position
+		Global::cameraObject->setPosition(
+			0.75 * Global::playerObject->getPosition()
+			+ 0.25 * playerCursorPosition
+		);
 
 		try {
 			Renderer::getInstance().render({});

@@ -17,7 +17,7 @@ namespace Objects {
 			const Views::View* view,
 			Vector2D position,
 			float angle,
-			float speed = 7.0f
+			float speed = 20.0f
 		) : Object(
 				std::vector<std::string> {"bullet"},
 				view,

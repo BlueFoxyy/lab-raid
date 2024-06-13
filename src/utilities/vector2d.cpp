@@ -41,6 +41,7 @@ Vector2D operator + (const Vector2D& u, const Vector2D& v) noexcept { return Vec
 Vector2D operator - (const Vector2D& u) noexcept { return Vector2D(-u.x, -u.y); }
 Vector2D operator - (const Vector2D& u, const Vector2D& v) noexcept { return u + (-v); }
 Vector2D operator * (const Vector2D& u, float c) noexcept { return Vector2D(u.x * c, u.y * c); }
+Vector2D operator * (float c, const Vector2D& u) noexcept { return Vector2D(u.x * c, u.y * c); }
 Vector2D operator / (const Vector2D& u, float c) noexcept { return Vector2D(u.x / c, u.y / c); }
 Vector2D& operator += (Vector2D& u, const Vector2D& v) noexcept { return u = u + v; }
 Vector2D& operator -= (Vector2D& u, const Vector2D& v) noexcept { return u = u - v; }

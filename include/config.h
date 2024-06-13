@@ -5,8 +5,8 @@
 
 namespace Config {
 	const std::string gameTitle = "Lab Raid";
-	const int screenWidth = 1920*0.7;
-	const int screenHeight = 1080*0.7;
+	const int screenWidth = 1920*7/10;
+	const int screenHeight = 1080*7/10;
 	const int volume = 50;
 	const int framerate = 60;
 	const float holdTimeThreshold = 100;

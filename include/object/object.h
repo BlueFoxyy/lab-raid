@@ -97,10 +97,20 @@ namespace Objects {
 		Vector2D getPosition(void) const noexcept;
 
 		/// <summary>
+		/// Sets the position of the object.
+		/// </summary>
+		void setPosition(const Vector2D& newPosition) noexcept;
+
+		/// <summary>
 		/// Gets the dimension of the object.
 		/// </summary>
 		/// <returns>The object's dimension.</returns>
 		Vector2D getDimension(void) const noexcept;
+
+		/// <summary>
+		/// Sets the dimension of the object. Throws 'std::invalid_argument' if one of the dimensions is negative.
+		/// </summary>
+		void setDimension(const Vector2D& newDimension);
 		
 		/// <summary>
 		/// Moves the object by the translate vector.

@@ -28,6 +28,8 @@ namespace Global {
 	std::shared_ptr<Shapes::Line> crosshairLine2;
 	std::shared_ptr<Shapes::HollowCircle> crosshairCircle1;
 
+	std::shared_ptr<Objects::Object> cameraObject;
+
 	void init(void) {
 		SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO);
 
@@ -95,31 +97,31 @@ namespace Global {
 			SDL_Color{ 220, 36, 200, 127 }
 		);
 		hollowCircle1 = std::make_shared<Shapes::HollowCircle>(
-			Global::playerCamera.get(),
+			playerCamera.get(),
 			Vector2D{ 0, 0 },
 			100,
 			10
 		);
 		line1 = std::make_shared<Shapes::Line>(
-			Global::playerCamera.get(),
+			playerCamera.get(),
 			Vector2D{ -100, -200 },
 			Vector2D{ -100, 200 },
 			10
 		);
 		line2 = std::make_shared<Shapes::Line>(
-			Global::playerCamera.get(),
+			playerCamera.get(),
 			Vector2D{ 100, -200 },
 			Vector2D{ 100, 200 },
 			10
 		);
 		line3 = std::make_shared<Shapes::Line>(
-			Global::playerCamera.get(),
+			playerCamera.get(),
 			Vector2D{ -200, -100 },
 			Vector2D{ 200, -100 },
 			10
 		);
 		line4 = std::make_shared<Shapes::Line>(
-			Global::playerCamera.get(),
+			playerCamera.get(),
 			Vector2D{ -200, 100 },
 			Vector2D{ 200, 100 },
 			10
@@ -140,19 +142,19 @@ namespace Global {
 
 		// CROSSHAIR
 		crosshairLine1 = std::make_shared<Shapes::Line>(
-			Global::hudView.get(),
+			hudView.get(),
 			Vector2D{ 0, -31 },
 			Vector2D{ 0, 31 },
 			2
 		);
 		crosshairLine2 = std::make_shared<Shapes::Line>(
-			Global::hudView.get(),
+			hudView.get(),
 			Vector2D{ -31, 0 },
 			Vector2D{ 31, 0 },
 			2
 		);
 		crosshairCircle1 = std::make_shared<Shapes::HollowCircle>(
-			Global::hudView.get(),
+			hudView.get(),
 			Vector2D{ 0, 0 },
 			13.5,
 			2
@@ -160,6 +162,14 @@ namespace Global {
 
 		// disable cursor, replaced with crosshair
 		SDL_ShowCursor(SDL_DISABLE);
+
+		// 'camera follow' object
+		cameraObject = std::make_shared<Objects::Object>(
+			std::vector<std::string>{}, // no texture
+			playerCamera.get(),
+			Vector2D{0, 0},
+			Vector2D{0, 0}
+		);
 
 		// game
 		Renderer::getInstance().registerObject(playerObject);
@@ -189,7 +199,8 @@ namespace Global {
 		//object->rotate(M_PI / 2);
 		//object->flipHorizontal();
 
-		playerCamera->setPivotObject(playerObject);
+		playerCamera->setPivotObject(cameraObject);
+		//playerCamera->setPivotObject(playerObject);
 		//playerCamera->setPivotObject(object);
 
 		SDL_LogInfo(SDL_LOG_CATEGORY_APPLICATION, "Initialized.");
