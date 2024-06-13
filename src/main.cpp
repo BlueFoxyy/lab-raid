@@ -73,7 +73,10 @@ public:
 			controlSelector.prev();
 		else
 			controlSelector.next();
-		Global::playerCamera->setPivotObject(controlSelector.get());
+		if (controlSelector.get() == Global::playerObject)
+			Global::playerCamera->setPivotObject(Global::cameraObject);
+		else
+			Global::playerCamera->setPivotObject(controlSelector.get());
 	}
 };
 class QuitCommand : public Commands::Command {
@@ -166,7 +169,7 @@ public:
 		auto bullet = std::make_shared<Objects::Bullet>(
 			Global::playerCamera.get(),
 			Global::playerObject->getPosition() + 
-				(Vector2D{ 40 , gunOffset } + Objects::Bullet::bulletSize / 2).rotate(
+				Vector2D{ 40 , gunOffset }.rotate(
 				Global::playerObject->getAngle()
 			),
 			Global::playerObject->getAngle()
