@@ -278,7 +278,7 @@ int main(int argc, char* argv[]) {
 	curTick = prevTick = 0;
 	prevTick = SDL_GetTicks();
 
-	SDL_setFramerate(Global::fpsManager.get(), 144);
+	//SDL_setFramerate(Global::fpsManager.get(), 144);
 
 	CommandManager commandManager;
 	registerCommands(commandManager);
