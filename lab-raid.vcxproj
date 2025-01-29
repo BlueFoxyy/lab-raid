@@ -145,9 +145,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\command\command.h" />
-    <ClInclude Include="include\command_manager.h" />
+    <ClInclude Include="include\managers\command_manager.h" />
     <ClInclude Include="include\config.h" />
-    <ClInclude Include="include\game_manager.h" />
+    <ClInclude Include="include\managers\game_manager.h" />
     <ClInclude Include="include\geometry\shapes.h" />
     <ClInclude Include="include\init.h" />
     <ClInclude Include="include\input_handler.h" />
@@ -175,10 +175,15 @@
     <ClInclude Include="include\utility\selection_manager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\command_manager.cpp" />
-    <ClCompile Include="src\init.cpp" />
+    <ClCompile Include="include\managers\tick_manager.h" />
+    <ClCompile Include="src\initialization\init_commands.cpp" />
+    <ClCompile Include="src\initialization\init_objects.cpp" />
+    <ClCompile Include="src\initialization\init_shapes.cpp" />
+    <ClCompile Include="src\managers\command_manager.cpp" />
+    <ClCompile Include="src\initialization\init.cpp" />
     <ClCompile Include="src\input_handler.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\managers\tick_manager.cpp" />
     <ClCompile Include="src\objects\bullet.cpp" />
     <ClCompile Include="src\objects\button.cpp" />
     <ClCompile Include="src\objects\object.cpp" />

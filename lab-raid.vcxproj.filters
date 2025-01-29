@@ -72,7 +72,7 @@
     <ClInclude Include="include\config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\game_manager.h">
+    <ClInclude Include="include\managers\game_manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\init.h">
@@ -102,7 +102,7 @@
     <ClInclude Include="include\view\views.h">
       <Filter>Header Files\view</Filter>
     </ClInclude>
-    <ClInclude Include="include\command_manager.h">
+    <ClInclude Include="include\managers\command_manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\input_handler.h">
@@ -158,7 +158,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\init.cpp">
+    <ClCompile Include="src\initialization\init.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\main.cpp">
@@ -182,7 +182,7 @@
     <ClCompile Include="src\input_handler.cpp">
       <Filter>Source Files\input</Filter>
     </ClCompile>
-    <ClCompile Include="src\command_manager.cpp">
+    <ClCompile Include="src\managers\command_manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\utilities\vector2d.cpp">
@@ -207,6 +207,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\objects\bullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\initialization\init_commands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\managers\tick_manager.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\managers\tick_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\initialization\init_objects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\initialization\init_shapes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

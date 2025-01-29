@@ -14,4 +14,5 @@ namespace Config {
 	const SDL_WindowFlags screenType = SDL_WINDOW_SHOWN;
 	//const SDL_Color backgroundColor{ 0x1F, 0x1E, 0x33, 0x7F };
 	const SDL_Color backgroundColor{ 0x3F, 0x3F, 0x3F, 0xFF };
+	const float gunOffset = 14;
 }

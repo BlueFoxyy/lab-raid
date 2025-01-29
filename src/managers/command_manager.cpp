@@ -1,6 +1,4 @@
-#include <command_manager.h>
-
-unsigned int KeyBind::KeyBindCount = 0;
+#include <managers/command_manager.h>
 
 bool CommandManager::registerCommand(
 	KeyBind keyBind,
