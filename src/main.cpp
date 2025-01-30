@@ -1,26 +1,10 @@
-#include <config.h>
-#include <renderer.h>
-#include <command/command.h>
-#include <managers/command_manager.h>
-#include <shape/shapes.h>
-#include <init.h>
-#include <utility/selection_manager.h>
 #include <SDL2/SDL.h>
-#include <cstdlib>
-#include <stdexcept>
-#include <algorithm>
-#include <memory>
-#include <vector>
-#include <queue>
+#include <SDL2/SDL2_framerate.h>
+#include <input_handler.h>
+#include <renderer.h>
+#include <exception>
 
-#include "initialization/init_commands.cpp" // TODO: remove this line, included for testing purposes (zoom in / out command definition)
-
-static const int TICKS_PER_SEC = 1000;
-
-template<typename T>
-static T timedDifference(T value) noexcept {
-	return value * diffTick / TICKS_PER_SEC;
-}
+#include "commands.hpp" // TODO: remove this line, included for testing purposes (zoom in / out command definition)
 
 int main(int argc, char* argv[]) {
 	// initialize
@@ -165,7 +149,7 @@ int main(int argc, char* argv[]) {
 		}
 
 		// rotate hud arrow
-		Global::RuntimeObjects::hudArrow->rotate(timedDifference(2*M_PI));
+		Global::RuntimeObjects::hudArrow->rotate(2 * M_PI * Global::tickManager.getDiffTick() / TICKS_PER_SEC);
 
 		// set camera object position
 		Global::RuntimeObjects::camera->setPosition(
@@ -186,11 +170,11 @@ int main(int argc, char* argv[]) {
 
 		SDL_framerateDelay(Global::fpsManager.get());
 
-		SDL_LogInfo(
+		/*SDL_LogInfo(
 			SDL_LOG_CATEGORY_APPLICATION,
 			"FPS: %d",
 			SDL_getFramerate(Global::fpsManager.get())
-		);		
+		);*/		
 	}
 
 	SDL_Quit();

@@ -68,7 +68,7 @@ bool Renderer::registerObject(std::shared_ptr<RenderObjectBase> objectPtr) noexc
 	SDL_LogVerbose(SDL_LOG_CATEGORY_APPLICATION,
 		"Renderer: registered object at %p with list node at %p.",
 		objectPtr.get(),
-		objectListMap.at(objectPtr)
+		objectListMap.at(objectPtr)._Ptr
 	);
 
 	/*
@@ -183,7 +183,7 @@ void Renderer::moveLayerUp(std::shared_ptr<RenderObjectBase> objectPtr) {
 	if (curListIt == --objectList.end())
 		return;
 	auto nextListIt = curListIt; nextListIt++;
-	auto nextObjectPtr = *nextListIt;
+	auto& nextObjectPtr = *nextListIt;
 	swap(objectListMap[objectPtr], objectListMap[nextObjectPtr]);
 	swap(*curListIt, *nextListIt);
 }
@@ -196,7 +196,7 @@ void Renderer::moveLayerDown(std::shared_ptr<RenderObjectBase> objectPtr) {
 	if (curListIt == objectList.begin())
 		return;
 	auto prevListIt = curListIt; prevListIt--;
-	auto prevObjectPtr = *prevListIt;
+	auto& prevObjectPtr = *prevListIt;
 	swap(objectListMap[objectPtr], objectListMap[prevObjectPtr]);
 	swap(*curListIt, *prevListIt);
 }

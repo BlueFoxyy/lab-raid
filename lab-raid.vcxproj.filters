@@ -144,7 +144,7 @@
     <ClInclude Include="include\shape\shapes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\utility\selection_manager.h">
+    <ClInclude Include="include\managers\selection_manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\utility\utility.h">
@@ -156,11 +156,11 @@
     <ClInclude Include="include\object\bullet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\commands.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\initialization\init.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -209,19 +209,13 @@
     <ClCompile Include="src\objects\bullet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\initialization\init_commands.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="include\managers\tick_manager.h">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\managers\tick_manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\initialization\init_objects.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\initialization\init_shapes.cpp">
+    <ClCompile Include="src\initialization\init.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

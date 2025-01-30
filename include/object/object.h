@@ -4,7 +4,7 @@
 #include <utility/utility.h>
 #include <utility/pointer_wrappers.h>
 #include <utility/vector2d.h>
-#include <utility/selection_manager.h>
+#include <managers/selection_manager.h>
 #include <texture/texture_handler.h>
 #include <view/view.h>
 #include <config.h>

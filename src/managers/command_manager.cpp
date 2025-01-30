@@ -1,5 +1,7 @@
 #include <managers/command_manager.h>
 
+unsigned int KeyBind::KeyBindCount;
+
 bool CommandManager::registerCommand(
 	KeyBind keyBind,
 	std::shared_ptr<Commands::Command> command

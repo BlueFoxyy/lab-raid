@@ -1,21 +1,18 @@
 #pragma once
 
-#include <object/object.h>
-#include <object/bullet.h>
-#include <view/views.h>
-#include <renderer.h>
-#include <config.h>
-#include <utility/vector2d.h>
-#include <shape/shapes.h>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL2_framerate.h>
-#include <memory>
-#include <string>
-#include <vector>
-#include <deque>
 
 #include <managers/tick_manager.h>
 #include <managers/command_manager.h>
+#include <managers/selection_manager.h>
+#include <view/views.h>
+#include <deque>
+#include <object/bullet.h>
+#include <shape/shapes.h>
+#include <deque>
+
+constexpr uint32_t TICKS_PER_SEC = 1000;
 
 namespace Global {
 
@@ -61,7 +58,4 @@ namespace Global {
 	};
 
 	void init();
-	void initObjects();
-	void initShapes();
-	void initCommands();
 }
