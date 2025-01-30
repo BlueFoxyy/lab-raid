@@ -159,6 +159,9 @@
     <ClInclude Include="src\commands.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\utility\polygon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -216,6 +219,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\initialization\init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\utility\k_list.hpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utilities\polygon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

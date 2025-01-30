@@ -144,6 +144,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\utility\polygon.h" />
     <ClInclude Include="src\commands.hpp" />
     <ClInclude Include="include\command\command.h" />
     <ClInclude Include="include\managers\command_manager.h" />
@@ -177,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="include\managers\tick_manager.h" />
+    <ClCompile Include="include\utility\k_list.hpp" />
     <ClCompile Include="src\managers\command_manager.cpp" />
     <ClCompile Include="src\initialization\init.cpp" />
     <ClCompile Include="src\input_handler.cpp" />
@@ -191,6 +193,7 @@
     <ClCompile Include="src\shapes\line.cpp" />
     <ClCompile Include="src\shapes\shape.cpp" />
     <ClCompile Include="src\texture_handler.cpp" />
+    <ClCompile Include="src\utilities\polygon.cpp" />
     <ClCompile Include="src\utilities\utility.cpp" />
     <ClCompile Include="src\utilities\vector2d.cpp" />
     <ClCompile Include="src\views\camera.cpp" />

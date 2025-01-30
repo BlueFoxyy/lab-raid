@@ -7,9 +7,9 @@
 #include <managers/command_manager.h>
 #include <managers/selection_manager.h>
 #include <view/views.h>
-#include <deque>
 #include <object/bullet.h>
 #include <shape/shapes.h>
+
 #include <deque>
 
 constexpr uint32_t TICKS_PER_SEC = 1000;
